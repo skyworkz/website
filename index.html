@@ -476,7 +476,7 @@
                           Understand, implement, and automate security controls, secure network segmenting and secrets management in a dynamic (multicloud) environment with AWS IAM, KMS, EC2 Systems Manager, Cognito, SAM, CloudTrail, X-Ray or similar services on Google or Azure.
                           <br>
                           <br>
-                          Manage, monitor and finetune applications optimally. 
+                          Manage, monitor and finetune applications optimally.
                           <br>
                           <br>
                           Wait. There is more?
@@ -507,7 +507,7 @@
                       <p class="g-line-height-1_4 mb-0">You are a seasoned craftsman with passion for programming. And able to communicate and coach the advantages of the cloud to both business, agile teams in DevOps cloud development. They get that you get the cloud and through you become as passionate as you are about building cloud native applications.
                           <br>
                           <br>
-                          You are a polyglot Programmer (Java, Scala, Javacript/Typescript, Go, Python) and you know the relevant ecosystem needed for building highly scalable enterprise applications like no other.  
+                          You are a polyglot Programmer (Java, Scala, Javacript/Typescript, Go, Python) and you know the relevant ecosystem needed for building highly scalable enterprise applications like no other.
                           <br>
                           <br>
                           There is no infrastructure that has not been coded, no service deployment that has not been automated.
@@ -600,30 +600,30 @@
             <div class="row">
               <div class="col-md-9 g-mb-25 g-mb-0--md">
                 <div class="row">
-                  <div class="col-sm-6 form-group g-mb-30">
-                    <input id="inputGroup1_1" class="form-control h-100 g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" type="text" placeholder="Your name">
+                    <div class="col-sm-6 form-group g-mb-30">
+                      <input id="contact-name" class="form-control h-100 g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" type="text" placeholder="Your name">
+                    </div>
+
+                    <div class="col-sm-6 form-group g-mb-30">
+                      <input id="contact-phone" class="form-control h-100 g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" type="tel" placeholder="Your phone">
+                    </div>
+
+                    <div class="col-sm-6 form-group g-mb-30">
+                      <input id="contact-email" class="form-control h-100 g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" type="email" placeholder="Email *">
+                    </div>
+
+                    <div class="col-sm-6 form-group g-mb-30">
+                      <input id="contact-subject" class="form-control h-100 g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" type="text" placeholder="Subject">
+                    </div>
+
+                    <div class="col-md-12 form-group g-mb-30">
+                      <textarea id="contact-text" class="form-control g-resize-none g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" rows="4" placeholder="Message"></textarea>
+                    </div>
                   </div>
 
-                  <div class="col-sm-6 form-group g-mb-30">
-                    <input id="inputGroup1_2" class="form-control h-100 g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" type="tel" placeholder="Your phone">
+                  <div class="text-center">
+                    <button class="btn u-btn-primary btn-md text-uppercase g-line-height-1 g-font-weight-700 g-font-size-11 rounded-0 g-py-12 g-px-25 mb-0" type="submit" role="button" onClick="submitToAPI(event)">Send message</button>
                   </div>
-
-                  <div class="col-sm-6 form-group g-mb-30">
-                    <input id="inputGroup1_3" class="form-control h-100 g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" type="email" placeholder="Email *">
-                  </div>
-
-                  <div class="col-sm-6 form-group g-mb-30">
-                    <input id="inputGroup1_4" class="form-control h-100 g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" type="text" placeholder="Subject">
-                  </div>
-
-                  <div class="col-md-12 form-group g-mb-30">
-                    <textarea id="inputGroup1_5" class="form-control g-resize-none g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" rows="4" placeholder="Message"></textarea>
-                  </div>
-                </div>
-
-                <div class="text-center">
-                  <button class="btn u-btn-primary btn-md text-uppercase g-line-height-1 g-font-weight-700 g-font-size-11 rounded-0 g-py-12 g-px-25 mb-0" type="submit" role="button">Send message</button>
-                </div>
               </div>
 
               <div class="col-md-3">
@@ -778,6 +778,39 @@
           $.HSCore.components.HSTabs.init('[role="tablist"]');
         }, 200);
       });
+
+      function submitToAPI(e) {
+         e.preventDefault();
+         var URL = "https://m6fzpoiq5h.execute-api.eu-west-1.amazonaws.com/1/contact-us";
+         var name = $("#contact-name").val();
+         var phone = $("#contact-phone").val();
+         var email = $("#contact-email").val();
+         var desc = $("#contact-text").val();
+         var subject = $("#contact-subject").val();
+         var data = {
+            name : name,
+            phone : phone,
+            email : email,
+            desc : desc,
+            subject : subject
+          };
+
+         $.ajax({
+           type: "POST",
+           url : URL,
+           dataType: "json",
+           crossDomain: "true",
+           contentType: "application/json; charset=utf-8",
+           data: JSON.stringify(data),
+
+
+           success: function () {
+             location.reload();
+           },
+           error: function () {
+             console.log("Email failed");
+           }});
+       }
     </script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtt1z99GtrHZt_IcnK-wryNsQ30A112J0&callback=initMap" async></script>
