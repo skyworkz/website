@@ -24,10 +24,10 @@ languageCode = "en-us"
       weight = 4
       name = "Careers"
       url = "/careers"
-    [[menu.header]]
-      weight = 4
-      name = "Blog"
-      url = "/blog"
+    #[[menu.header]]
+    #  weight = 4
+    #  name = "Blog"
+    #  url = "/blog"
     [[menu.header]]
       weight = 5
       name = "Contact"
@@ -41,10 +41,10 @@ languageCode = "en-us"
       weight = 2
       name = "Contact"
       url = "/contact"
-    [[menu.footer]]
-      weight = 4
-      name = "Blog"
-      url = "/blog"
+    #[[menu.footer]]
+    #  weight = 4
+    #  name = "Blog"
+    #  url = "/blog"
 
   [params.work]
     bgImage = "img/work.jpg"
@@ -68,7 +68,7 @@ languageCode = "en-us"
       url = "/services"
 
   [params.blog]
-    enable = true
+    enable = false
     title = "Get The Latest On What We're doing"
     subtitle = "Catch up with us, anytime and anywhere"
 
