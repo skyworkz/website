@@ -243,18 +243,18 @@ font header .navbar-default .navbar-nav li a:hover {
 .masthead {
   height: 100vh;
   min-height: 500px;
-  background-image: url("/img/clouds.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: darken;
-  z-index: -10;
 }
 
 #slider {
   position: relative;
   display: flex;
   align-items: center;
+  background-image: url("/img/clouds.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  z-index: -10;
 }
 
 .slider {
