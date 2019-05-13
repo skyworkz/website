@@ -1,0 +1,65 @@
+enable: true
+title: Some of our latest projects
+subtitle: Don’t just take our word for it. Check out some of our latest work.
+
+# google support the latest technology for image optimization. you can also optimize your image from https://www.ps2pdf.com/convert-jpg-to-webp here.
+portfolio:
+  - category: Engineering
+    image: "jumbo.jpg"
+    name: Jumbo
+    teaser: >
+      Development of a scalable Cloud platform
+    description: >
+      Development of a scalable Cloud platform
+  - category: Engineering
+    image: "nike.jpg"
+    name: Nike
+    teaser: >
+      Development of a scalable DevOps platform
+    description: >
+      Development of a scalable DevOps platform
+  - category: Development
+    image: "hbr.jpg"
+    name: Port of Rotterdam
+    teaser: >
+      Development of an application to track containers
+    description: >
+      Development of an application to track containers
+  - category: Development
+    image: "carepay.jpg"
+    name: Carepay
+    teaser: >
+      Developing a mobile based wallet for healthcare services
+    description: >
+      Developing a mobile based wallet for healthcare services
+  - category: Consulting
+    image: "transavia.jpg"
+    name: Transavia
+    teaser: >
+      Improving the quality and automation of testing
+    description: >
+      Improving the quality and automation of testing
+
+vendors:
+  - image: "/img/vendors/aws.png"
+    url: "#"
+  - image: "/img/vendors/azure.png"
+    url: "#"
+  - image: "/img/vendors/gcp.png"
+    url: "#"
+  - image: "/img/vendors/kubernetes.png"
+    url: "#"
+  - image: "/img/vendors/hashicorp.png"
+    url: "#"
+
+clients:
+  - image: "/img/clients/nike.png"
+    url: "#"
+  - image: "/img/clients/transavia.png"
+    url: "#"
+  - image: "/img/clients/jumbo.png"
+    url: "#"
+  - image: "/img/clients/carepay.png"
+    url: "#"
+  - image: "/img/clients/hbr.png"
+    url: "#"

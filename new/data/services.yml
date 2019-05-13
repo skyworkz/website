@@ -1,0 +1,35 @@
+enable: true
+title: Our Services
+subtitle: >
+  The cloud works fundamentally different. We know how. At skyworkz we have engineers and developers that know what works and what doesn’t work in the cloud, whether it's AWS, Google Cloud or Azure.
+content:
+
+  - icon: fa fa-cloud
+    name: Cloud Infrastructure
+    text: >
+      The public cloud is fundamentally different compared to on-premise infrastructure. Servers and containers are ephemeral, autoscalers take care of the scalability and orchestration is done in code. This requires a different way of working. No more managing pets, but herding cattle.
+
+  - icon: fa fa-sitemap
+    name: Cloud Architecture
+    text: >
+      By leveraging cloud technologies like containerization and serverless, applications become resilient, responsive and scalable. This enables developers to build cost-effective microservices. But the cost model also changes. And what about privacy, compliance and security? Our engineers can help.
+
+  - icon: icon ion-logo-tux
+    name: Cloud Development
+    text: >
+      It's hard to keep up with the innovation pace of the cloud. Every year, hundreds of new services are developed by Amazon, Microsoft and Google. This enables you to leverage innovative cloud services, so your developers can focus on building business value.
+
+  - icon: icon ion-md-git-network
+    name: True DevOps
+    text: >
+      On-premise DevOps requires jacks of all trades to keep things running smoothly. But with the cloud, every developer can work on things like pipelines, monitoring and other non-functionals. The cloud enables true DevOps: your team builds it, runs it and manages it. All without a traditional operations department.
+
+  - icon: icon ion-md-people
+    name: Workshops
+    text: >
+      Whether you are just starting with the cloud or you are already cloud-native, our tailor-made workshops can give you guidance, feedback and insights. We provide workshops focused on cloud, containerization, CI/CD and cloud-native development.
+
+  - icon: icon ion-md-school
+    name: We train your stack
+    text: >
+      Moving to the cloud often means investing in new skills. Developers have to learn concepts like infrastructure as code, containerization and ephemeral infrastructure. We help by training your developers your stack, so you can continue building business value.

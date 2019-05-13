@@ -1,0 +1,86 @@
+{{ partial "global-header.html" . }}
+
+
+<!-- Team Start -->
+<section id="portfolio-work">
+    <div class="container">
+
+    <!-- Intro -->
+    <div class="row">
+      <div class="section-title text-center col-md-12">
+        <h2>{{ .Site.Data.team.title }}</h2>
+        <p>{{ .Site.Data.team.subtitle }}</p>
+      </div>
+    </div>
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block">
+              <div class="portfolio-menu">
+                <ul>
+                  {{ $categories := slice }}
+                  {{ range .Site.Data.team.members }}
+                    {{ $categories = $categories | append .category }}
+                  {{ end }}
+                    <li class="filter" data-filter="all">Everyone</li>
+                  {{ range ( $categories | uniq ) }}
+                    <li class="filter" data-filter=".{{ . }}">{{ . }}</li>
+                  {{ end }}
+                </ul>
+              </div>
+              <div class="portfolio-content">
+                <ul id="portfolio-content-active">
+{{ $members := .Site.Data.team.members }}
+{{ $resources := .Resources.ByType "image"}}
+{{ range $resources }}
+  {{ with . }}
+    {{ $imageName := .Name }}
+    {{ $image300:= (.Fill "300x300") }}
+    {{ $image600 := (.Fill "600x600") }}
+
+    {{ range $members}}
+    {{ $id := urlize .name }}
+    {{ if eq .image $imageName }}
+                    <li class="mix {{ .category }}">
+                            <a href="{{ $image600.RelPermalink }}" data-toggle="modal" data-target="#{{ $id }}">
+                        <img class="img-responsive" src="{{ $image300.RelPermalink }}">
+                        <div class="overlay">
+                          <div>
+                            <i class="fa fa-search fz-20"></i>
+                            <h2>{{ .name }}</h2>
+                            <p>{{ .teaser }}</p>
+                          </div>
+                        </div>
+                      </a>
+                  </li>
+                  <div class="modal fade" id="{{ $id }}" tabindex="-1" role="dialog" aria-labelledby="{{ $id }}Title" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                              <h5 class="modal-title" id="{{ $id }}Title">{{ .name }}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                              {{ .description }}
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,109 @@
+title = "Skyworkz"
+baseURL = "https://skyworkz.nl"
+languageCode = "en-us"
+
+# The site's parameters
+[params]
+  home = "Home"
+
+  [menu]
+
+    [[menu.header]]
+      weight = 1
+      name = "Services"
+      url = "/services"
+    [[menu.header]]
+      weight = 2
+      name = "Work"
+      url = "/work"
+    [[menu.header]]
+      weight = 3
+      name = "Team"
+      url = "/team"
+    [[menu.header]]
+      weight = 4
+      name = "Careers"
+      url = "/careers"
+    [[menu.header]]
+      weight = 4
+      name = "Blog"
+      url = "/blog"
+    [[menu.header]]
+      weight = 5
+      name = "Contact"
+      url = "/contact"
+
+    [[menu.footer]]
+      weight = 1
+      name = "About us"
+      url = "/services"
+    [[menu.footer]]
+      weight = 2
+      name = "Contact"
+      url = "/contact"
+    [[menu.footer]]
+      weight = 4
+      name = "Blog"
+      url = "/blog"
+
+  [params.work]
+    bgImage = "img/work.jpg"
+
+  [params.slider]
+    enable = true
+    title = "We are Skyworkz"
+    subtitle = "Cloud developers and engineers"
+    bgImage = "img/slider-bg.jpg"
+    btnText = "Discover Our Projects"
+    url = "#"
+
+  [params.wrapper]
+    enable = true
+    image = "img/wrapper-img.png"
+    title = "The future is Cloud Native."
+    italic = "We are cloud developers and cloud engineers who like to build lasting solutions. Scalable, secure and cost-effective."
+    paragraph = "Skyworkerz know how to make optimal use of the public cloud. By leveraging innovative cloud services, building cloud-native applications and creating a culture of experimentation, they help organisations to become more agile."
+    [params.wrapper.button]
+      caption = "Explore our services"
+      url = "/services"
+
+  [params.blog]
+    enable = true
+    title = "Get The Latest On What We're doing"
+    subtitle = "Catch up with us, anytime and anywhere"
+
+  [params.feature]
+    enable = true
+    title = "Things work differently in the Cloud"
+    bgImage = "img/feature-bg.jpg"
+    content = "Applying traditional ways of working in the cloud won't work because the cloud is fundamentally different. A dynamic and rapidly changing ecosystem of managed services has created a paradigm shift. Companies have to learn and change in order to develop cloud-native applications, but change is hard. Skyworkz can help."
+    [params.feature.button]
+      caption = "Customers we work for"
+      url = "/work"
+
+  [params.call]
+    enable = true
+    bgImage = "img/call-to-action-bg.jpg"
+    title = "We make your organisation cloud ready."
+    paragraph = "We combine innovation with craftsmanship. We are frontrunners in public cloud. Want to learn more?"
+    [params.call.button]
+      url = "/contact"
+      text = "Tell us your story"
+
+  [params.contact]
+    enable = true
+    title = "Drop us a note"
+    subtitle = "Don’t just take our word for it. Check out some of our latest work."
+    [params.contact.form]
+      name = "Your name"
+      email = "Your email"
+      subject = "Your subject"
+      message = "Your message"
+      button = "Send message"
+    [params.contact.box]
+      title = "Stop by for a visit"
+      address = "Tractieweg 42 studio B, Utrecht, The Netherlands"
+      email = "Email: info@skyworkz.nl"
+      phone = "Phone: +31 6 3392 1442"
+    [params.contact.gmaps]
+      title = "Plan your route"

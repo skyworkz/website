@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots -->
+<!-- you may configure it in the front matter of the page or in site params -->
+{{ if or (isset .Params "robots") (isset .Site.Params "robots") }}
+<meta name="robots" content="{{ with .Params.robots }}{{ . }}{{ else }}{{ .Site.Params.robots }}{{ end }}">
+{{ end }}
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory
+     or place appropriate <link .../> etc in favicon.html partial -->
+{{ partial "favicon.html" . }}
+
+<title>{{ .Title }} - Skyworkz, Cloud Engineers and Developers</title>
+
+{{ hugo.Generator }}
+{{ "<!-- Main Stylesheet -->" | safeHTML }}
+
+{{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
+{{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | resources.PostCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity={{ $style.Data.Integrity }} >
+
+<!-- Js -->
+
+{{ $main := resources.Get "js/main.js" }}
+{{ $plugins := resources.Get "js/plugins.js" }}
+{{ $jquery := resources.Get "js/jquery.js" }}
+{{ $bootstrap := resources.Get "js/bootstrap.js" }}
+{{ $carousel := resources.Get "js/owl.carousel.js" }}
+{{ $venobox := resources.Get "js/venobox.js" }}
+
+{{ $defaultJS := slice $jquery $bootstrap $carousel $venobox $plugins $main | resources.Concat "js/global.js" }}
+<script src="{{ $defaultJS.Permalink }}"></script>
+
+{{- partial "head_custom.html" . }}

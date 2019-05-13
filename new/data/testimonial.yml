@@ -1,0 +1,48 @@
+enable: false
+title: Fun Facts About Us
+paragraph: >
+  Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics
+
+number:
+  enable : false
+numbers:
+  - icon: icon ion-ios-chatboxes
+    counter: 2000
+    text: Chats
+  - icon: icon ion-ios-glasses
+    counter: 2000
+    text: Cups of Coffee
+  - icon: icon ion-ios-compose
+    counter: 2000
+    text: Cups of Coffee
+  - icon: icon ion-ios-timer
+    counter: 2000
+    text: Cups of Coffee
+
+peoples:
+  enable : false
+people:
+  - text: >
+      This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd.
+    quoteImg: img/cotation.png
+    image: img/item-img1.jpg
+    name: Rose Ray
+    role: CEO-Themefisher
+  - text: >
+      This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd.
+    quoteImg: img/cotation.png
+    image: img/item-img1.jpg
+    name: Rose Ray
+    role: CEO-Themefisher
+  - text: >
+      This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd.
+    quoteImg: img/cotation.png
+    image: img/item-img1.jpg
+    name: Rose Ray
+    role: CEO-Themefisher
+  - text: >
+      This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd.
+    quoteImg: img/cotation.png
+    image: img/item-img1.jpg
+    name: Rose Ray
+    role: CEO-Themefisher
