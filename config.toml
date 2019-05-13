@@ -58,7 +58,7 @@ languageCode = "en-us"
 
   [params.wrapper]
     enable = true
-    image = "img/wrapper-img.png"
+    image = "img/cloud-native.png"
     title = "The future is Cloud Native."
     italic = "We are cloud developers and cloud engineers who like to build lasting solutions. Scalable, secure and cost-effective."
     paragraph = "Skyworkerz know how to make optimal use of the public cloud. By leveraging innovative cloud services, building cloud-native applications and creating a culture of experimentation, they help organisations to become more agile."

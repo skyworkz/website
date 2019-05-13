@@ -1,13 +1,13 @@
 <section id="feature" style="background-image: url('{{ .Site.Params.feature.bgImage | absURL }}');">
 <div class="container">
   <div class="row">
-    <div class="col-md-6 offset-md-6">
+    <div class="col-6 offset-6">
       <h2 class="text-uppercase">{{ .Site.Params.feature.title }}</h2>
       <p>
       	{{ .Site.Params.feature.content | markdownify }}
       </p>
       {{ with .Site.Params.feature.button }}
-      	<a href="{{ .url }}" class="btn btn-main">{{ .caption }}</a>
+      	<a href="{{ .url }}" class="btn btn-main ">{{ .caption }}</a>
       {{ end }}
     </div>
   </div>
