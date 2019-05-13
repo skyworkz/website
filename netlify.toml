@@ -3,4 +3,4 @@ publish = "public"
 command = "hugo"
 
 [context.deploy-preview]
-command = "hugo -b $DEPLOY_PRIME_URL"
+command = "hugo --buildDrafts --buildFuture --baseURL $DEPLOY_PRIME_URL"
