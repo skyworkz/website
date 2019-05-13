@@ -54,8 +54,7 @@ languageCode = "en-us"
     title = "We are Skyworkz"
     subtitle = "Cloud developers and engineers"
     bgImage = "img/slider-bg.jpg"
-    btnText = "Discover Our Projects"
-    url = "#"
+    btnText = "Learn more"
 
   [params.wrapper]
     enable = true
