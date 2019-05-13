@@ -78,7 +78,7 @@ languageCode = "en-us"
     bgImage = "img/feature-bg.jpg"
     content = "Applying traditional ways of working in the cloud won't work because the cloud is fundamentally different. A dynamic and rapidly changing ecosystem of managed services has created a paradigm shift. Companies have to learn and change in order to develop cloud-native applications, but change is hard. Skyworkz can help."
     [params.feature.button]
-      caption = "Customers we work for"
+      caption = "Customers we work with"
       url = "/work"
 
   [params.call]
