@@ -724,6 +724,7 @@ font header .navbar-default .navbar-nav li a:hover {
   align-items: center;
   justify-content: center;
   display: flex;
+  padding: 30px;
 }
 
 #portfolio-work .block .portfolio-content .position-center {
@@ -1131,7 +1132,7 @@ px      68    160    252    344    436    528    620    712    */
     line-height: 20px;
   }
   #portfolio-work .block .portfolio-content ul li a .overlay {
-    padding-left: 15px;
+    padding: 30px;
   }
   #portfolio-work .block .portfolio-content ul li a .overlay h2 {
     padding-top: 30px;
