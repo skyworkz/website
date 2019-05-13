@@ -3,10 +3,9 @@ $(document).ready(function () {
   $(function () {
     $(document).scroll(function () {
       var $nav = $(".navbar");
-      var $navbarbrand = $(".navbar-brand");
-
       $nav.toggleClass('scrolled navbar-light', $(this).scrollTop() > $nav.height());
 
+      var $navbarbrand = $(".navbar-brand");
       $navbarbrand.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
   });
