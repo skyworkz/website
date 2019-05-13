@@ -150,23 +150,21 @@ header {
 }
 
 .navbar-brand {
+  display: block;
   background-image: url("/img/logo_icon_white.png");
   background-position: center;
   background-repeat: no-repeat;
   min-width: 60px;
   min-height: 60px;
-  padding: 0;
-  margin: 0;
 }
 
 .navbar-brand.scrolled {
+  display: block;
   background-image: url("/img/logo_icon.png");
   background-position: center;
   background-repeat: no-repeat;
   min-width: 60px;
   min-height: 60px;
-  padding: 0;
-  margin: 0;
 }
 
 .navbar a,
@@ -202,34 +200,6 @@ header .navbar-nav {
       padding-right: 30px;
     }
   }
-}
-
-header .navbar {
-  margin-bottom: 0px;
-  border: 0px;
-}
-
-header .navbar-brand {
-  padding-top: 5px;
-}
-
-header .navbar-default {
-  background: none;
-  border: 0px;
-}
-
-header .navbar-default .navbar-nav {
-  padding-top: 10px;
-}
-
-header .navbar-default .navbar-nav li a {
-  color: #333333;
-  padding: 10px 26px;
-  font-size: 15px;
-}
-
-font header .navbar-default .navbar-nav li a:hover {
-  color: #000;
 }
 
 /*---------------------------------------------
@@ -1431,12 +1401,6 @@ px      68    160    252    344    436    */
     bottom: 0;
     left: 0;
     overflow: hidden;
-    z-index: -100;
-    background-image: url("/img/clouds.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: darken;
 }
 
 .fullscreen-bg__video {
@@ -1464,11 +1428,11 @@ px      68    160    252    344    436    */
 
 @media (max-width: 767px) {
   .fullscreen-bg {
-    background-image: url("/img/clouds.jpg");
     background-size: cover;
+    background-image: url("/img/clouds.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-blend-mode: darken;
+    z-index: -100;
   }
 
   .fullscreen-bg__video {
