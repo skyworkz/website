@@ -10,39 +10,53 @@ members:
     teaser: >
       Managing Director
     description: >
-      Development of a scalable Cloud platform
+      As managing director, Bas is always on the lookout for good engineers and challenging assignments.
   - category: Management
     image: "martin.jpg"
     name: Martin Weidner
     teaser: >
       Managing Director
     description: >
-      Development of a scalable DevOps platform
+      As managing director, Martin is always on the lookout for good engineers and challenging assignments.
   - category: Development
     image: "sven.jpg"
     name: Sven Rienstra
     teaser: >
       Cloud Developer
     description: >
-      Development of an application to track containers
+      Sven is one of the Cloud Developers, focused on building cloud-native business applications.
   - category: Engineering
     image: "sander.jpg"
     name: Sander Knape
     teaser: >
-      Cloud Developer
+      Cloud Engineer
     description: >
-      Developing a mobile based wallet for healthcare services
+      Sander likes to build scalable cloud platforms. And he's really good at it.
   - category: Development
     image: "abdul.jpg"
-    name: abdulrahman amri
+    name: Abdulrahman Amri
     teaser: >
       Cloud Developer
     description: >
-      improving the quality and automation of testing
+      Abdul is one of our Cloud Developers, focused on building cloud-native business applications.
   - category: Engineering
     image: "lyle.jpg"
     name: Lyle Henkeman
     teaser: >
+      Cloud Engineer
+    description: >
+      Lyle likes to build scalable cloud platforms. And he's really good at it.
+  - category: Engineering
+    image: "timothy.jpg"
+    name: Timothy Mamo
+    teaser: >
+      Cloud Engineer
+    description: >
+      Timothy likes to build scalable cloud platforms. And he's really good at it.
+  - category: Development
+    image: "mikhail.jpg"
+    name: Mikhail Vaysman
+    teaser: >
       Cloud Developer
     description: >
-      improving the quality and automation of testing
+      Mikhail is one of our Cloud Developers, focused on building cloud-native business applications.
