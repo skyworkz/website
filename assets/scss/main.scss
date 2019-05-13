@@ -1464,13 +1464,11 @@ px      68    160    252    344    436    */
 
 @media (max-width: 767px) {
   .fullscreen-bg {
-    //background-image: url("/img/clouds.jpg");
-    //background-size: cover;
-    //background-position: center;
-    //background-repeat: no-repeat;
-    //background-blend-mode: darken;
-    //filter: blur(8px);
-    //-webkit-filter: blur(8px);
+    background-image: url("/img/clouds.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
   }
 
   .fullscreen-bg__video {
