@@ -7,8 +7,8 @@
 
     <!-- Intro -->
     <div class="row">
-      <div class="section-title">
-        <h2>{{ .Site.Data.services.title }}</h2>
+      <div class="section-title mx-3">
+        <h2 class="mb-2">{{ .Site.Data.services.title }}</h2>
         <p>{{ .Site.Data.services.subtitle }}</p>
       </div>
     </div>
@@ -16,7 +16,7 @@
     <!-- Content -->
     <div class="row">
       {{ range .Site.Data.services.content }}
-      <div class="col-sm-6 col-md-4">
+      <div class="col-sm-6 col-md-4 mx-2">
         <div class="service-item">
           <i class="{{ .icon }}"></i>
           <h4>{{ .name }}</h4>
