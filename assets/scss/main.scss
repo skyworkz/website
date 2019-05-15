@@ -157,8 +157,8 @@ header {
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
-  min-width: 60px;
-  min-height: 60px;
+  width: 51px;
+  height: 51px;
 }
 
 .navbar-brand.scrolled {
@@ -168,8 +168,8 @@ header {
 
   background-position: center;
   background-repeat: no-repeat;
-  min-width: 60px;
-  min-height: 60px;
+  width: 51px;
+  height: 51px;
 }
 
 .navbar a,
@@ -192,42 +192,24 @@ header {
         color: #000;
 }
 
-.navbar-nav > li {
-  float: left;
-  position: relative;
-}
-.navbar .navbar-nav .active a::after {
-  border-bottom: 2px solid $white;
-  bottom: -1px;
-  content: " ";
-  left: 0;
+#magic-line {
   position: absolute;
-  right: 0;
-  margin: 0px 7px;
-}
-.navbar-light .navbar-nav .active a::after {
-  border-bottom: 2px solid $primary;
-  bottom: -1px;
-  content: " ";
+  bottom: 8px;
   left: 0;
-  position: absolute;
-  right: 0;
-  margin: 0px 7px;
+  width: 100px;
+  height: 4px;
+  background: $white;
 }
 
-
-header .navbar-nav {
-  width: 100%;
-  text-align: center;
-  > li {
-    display: inline-block;
-    float: none;
-    > a {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-  }
+#magic-line.scrolled {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: $primary;
 }
+
 
 /*---------------------------------------------
 					Index Start

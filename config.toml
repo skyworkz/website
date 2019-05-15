@@ -10,18 +10,23 @@ languageCode = "en-us"
 
     [[menu.header]]
       weight = 1
+      name = "Home"
+      url = ""
+
+    [[menu.header]]
+      weight = 2
       name = "Services"
       url = "/services"
     [[menu.header]]
-      weight = 2
+      weight = 3
       name = "Work"
       url = "/work"
     [[menu.header]]
-      weight = 3
+      weight = 4
       name = "Team"
       url = "/team"
     [[menu.header]]
-      weight = 4
+      weight = 5
       name = "Careers"
       url = "/careers"
     #[[menu.header]]
