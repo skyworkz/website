@@ -1,0 +1,62 @@
+enable: true
+title: Come work with us
+subtitle: >
+  We're always looking for awesome Cloud developers and engineers to join us. Take a look at these two roles and let us know if you're up for a cup of coffee!
+
+profiles:
+
+  - name: Cloud Engineer
+    text: >
+      You are:
+
+       * **passionate** about infrastructure and able to communicate and coach the advantages of the cloud to both business, agile teams in **DevOps** cloud development. They get that you get the cloud.
+
+       * You are a polyglot **developer/scripter** and would almost call yourself a programmer: Bash, Python, Go, Perl (just joking, no not Perl).
+
+       * There is no type of infrastructure that you haven't coded, no service deployment that you haven't **automated**.
+
+       * Asking for a strong agile background is superfluous for you. Without agile there is no DevOps.
+
+      You did:
+
+       * Deploy applications with infrastructure as code monitoring and cloud native CI/CD pipelines with AWS CodeCommit, CodeBuild, Elastic Beanstalk, CodePipeline, CloudFormation or similar services on Google or Azure.
+
+       * Understand, implement, and automate security controls, secure network segmenting and secrets management in a dynamic (multicloud) environment with AWS IAM, KMS, EC2 Systems Manager, Cognito, SAM, CloudTrail, X-Ray or similar services on Google or Azure.
+
+       * Manage, monitor and fine tune applications optimally.
+
+      Wait. There is more?
+
+       * Experience in Site Reliability Engineering.
+
+       * AWS / GCP/ Microsoft Cloud certifications.
+
+      Check all the boxes? Awesome, we are speechless. Come join us.
+
+  - name: Cloud Developer
+    text: >
+      You are:
+
+       * a seasoned craftsman with passion for programming and able to communicate and coach the advantages of the cloud to both business, agile teams in DevOps cloud development. They get that you get the cloud.
+
+       * a polyglot Programmer (Java, Scala, Javacript/Typescript, Go, Python), with knowledge of the relevant ecosystem needed for building highly scalable enterprise applications like no other.
+
+       * There is no type of infrastructure that you haven't coded, no service deployment that you haven't **automated**.
+
+       * Asking for a strong agile background is superfluous for you. Without agile there is no DevOps.
+
+      You did:
+
+       * Develop web applications using cloud containers or serverless architectures with for example AWS EC2, EKS, IAM, S3, Route S3, Elasticache or similar services on Google or Azure.
+
+       * Design and develop serverless architectures with AWS Lambda, Dynamo DB, Cognito or similar services on Google or Azure.
+
+       * Integrate and decouple applications with for example SQS, SNS, Kinesis or similar services on Google or Azure.
+
+      Not enough? You also have:
+
+       * Deployed applications with infrastructure as code monitoring and cloud native CI/CD pipelines with AWS CodeCommit, CodeBuild, Elastic Beanstalk, CodePipeline, CloudFormation or similar services on Google or Azure.
+
+       * AWS / GCP/ Microsoft Cloud certifications.
+
+      Still interested? Then we should talk.

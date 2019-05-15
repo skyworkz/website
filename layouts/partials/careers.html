@@ -1,0 +1,43 @@
+{{ partial "global-header.html" . }}
+
+{{ if .Site.Data.careers.enable }}
+<!-- Service Start -->
+<section id="service">
+
+  <!-- Intro -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="section-title col-md-8">
+        <h2>{{ .Site.Data.careers.title }}</h2>
+        <p>{{ .Site.Data.careers.subtitle }}</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- Content -->
+    <div class="row justify-content-center">
+      {{ range .Site.Data.careers.profiles }}
+      <div class="col-md-6">
+        <div class="ml-5 mr-5">
+        <div class="service-item text-left">
+          <h4>{{ .name }}</h4>
+          <p>{{ .text | markdownify }}</p>
+        </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="container">
+    <div class="row">
+      <div class="section-title col-md-12">
+        <p>If you're interested, either give us a call or drop us an email. We'll get in touch with you shortly.</p>
+        <a class="btn btn-primary mt-lg-5" href="/contact">Apply now</a>
+      </div>
+    </div>
+  </div>
+
+
+
+</section>
+{{ end }}
