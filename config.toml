@@ -113,3 +113,6 @@ enableRobotsTXT = true
       phone = "Phone: +31 6 3392 1442"
     [params.contact.gmaps]
       title = "Plan your route"
+
+[Author]
+  name = "Bas Tichelaar"
