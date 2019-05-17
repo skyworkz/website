@@ -1,5 +1,4 @@
 title = "Skyworkz, Cloud Engineers and Developers"
-description = "Skyworkz consists of highly skilled Cloud Developers and DevOps engineers, who help companies become Cloud Native."
 baseURL = "https://skyworkz.nl"
 languageCode = "en-us"
 enableRobotsTXT = true
@@ -7,13 +6,14 @@ enableRobotsTXT = true
 # The site's parameters
 [params]
   home = "Home"
+  description = "We are highly skilled Cloud Developers and DevOps engineers, who help companies become Cloud Native."
 
   [menu]
 
     [[menu.header]]
       weight = 1
       name = "Home"
-      url = ""
+      url = "/"
 
     [[menu.header]]
       weight = 2
