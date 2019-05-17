@@ -20,8 +20,9 @@
 {{ "<!-- Main Stylesheet -->" | safeHTML }}
 
 {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
-{{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | resources.PostCSS | resources.Minify | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity={{ $style.Data.Integrity }} >
+{{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
+
+<link rel="stylesheet" href="{{ $style.Permalink }}">
 
 <!-- Js -->
 
