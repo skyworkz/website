@@ -1,26 +1,19 @@
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-<meta name="description" content="{{ $.Param "description" | default .Site.Params.description }}">
-<link rel="canonical" href="{{ .Permalink }}">
-
-{{ partial "favicon.html" . }}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="description" content="{{ $.Param "description" | default .Site.Params.description }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ partial "favicon.html" . }}
 
 {{ if .IsHome -}}
   <title>{{ .Site.Title }}</title>
 {{- else -}}
   <title>{{ .Title }} – {{ .Site.Title }}</title>
 {{- end }}
-
 {{ hugo.Generator }}
-{{ "<!-- Main Stylesheet -->" | safeHTML }}
-
 {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
-
-<link rel="stylesheet" href="{{ $style.Permalink }}">
-
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
 <!-- Js -->
 {{ $main := resources.Get "js/main.js" }}
 {{ $plugins := resources.Get "js/plugins.js" }}
@@ -28,9 +21,6 @@
 {{ $bootstrap := resources.Get "js/bootstrap.js" }}
 {{ $carousel := resources.Get "js/owl.carousel.js" }}
 {{ $venobox := resources.Get "js/venobox.js" }}
-
 {{ $defaultJS := slice $jquery $bootstrap $carousel $venobox $plugins $main | resources.Concat "js/global.js" | resources.Minify | resources.Fingerprint }}
-
-<script src="{{ $defaultJS.Permalink }}"></script>
-
+  <script src="{{ $defaultJS.Permalink }}"></script>
 {{- partial "head_custom.html" . }}
