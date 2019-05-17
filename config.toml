@@ -1,6 +1,7 @@
 title = "Skyworkz"
 baseURL = "https://skyworkz.nl"
 languageCode = "en-us"
+enableRobotsTXT = true
 
 # The site's parameters
 [params]
