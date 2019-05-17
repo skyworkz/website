@@ -25,5 +25,15 @@
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 
 <!-- Js -->
+{{ $main := resources.Get "js/main.js" }}
+{{ $plugins := resources.Get "js/plugins.js" }}
+{{ $jquery := resources.Get "js/jquery.js" }}
+{{ $bootstrap := resources.Get "js/bootstrap.js" }}
+{{ $carousel := resources.Get "js/owl.carousel.js" }}
+{{ $venobox := resources.Get "js/venobox.js" }}
+
+{{ $defaultJS := slice $jquery $bootstrap $carousel $venobox $plugins $main | resources.Concat "js/global.js" | resources.Minify | resources.Fingerprint }}
+
+<script>{{ $defaultJS.Content | safeJS }}</script>
 
 {{- partial "head_custom.html" . }}
