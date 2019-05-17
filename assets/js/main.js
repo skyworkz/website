@@ -1,5 +1,23 @@
 $(document).ready(function () {
 
+  WebFontConfig = {
+          google: { families: [
+                  'Roboto:400,100,300,600',
+                  'Open Sans:400,300,600',
+                  'Volkhov:400italic',
+          ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+  // ]]>
+
   $(function () {
     $(document).scroll(function () {
       var $nav = $(".navbar");

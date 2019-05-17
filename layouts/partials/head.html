@@ -2,19 +2,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+<meta name="description" content="{{ $.Param "description" | default .Site.Params.description }}">
+<link rel="canonical" href="{{ .Permalink }}">
 
-
-<!-- robots -->
-<!-- you may configure it in the front matter of the page or in site params -->
-{{ if or (isset .Params "robots") (isset .Site.Params "robots") }}
-<meta name="robots" content="{{ with .Params.robots }}{{ . }}{{ else }}{{ .Site.Params.robots }}{{ end }}">
-{{ end }}
-
-<!-- Place favicon.ico and apple-touch-icon.png in the root directory
-     or place appropriate <link .../> etc in favicon.html partial -->
 {{ partial "favicon.html" . }}
 
-<title>{{ .Title }} - Skyworkz, Cloud Engineers and Developers</title>
+{{ if .IsHome -}}
+  <title>{{ .Site.Title }}</title>
+{{- else -}}
+  <title>{{ .Title }} – {{ .Site.Title }}</title>
+{{- end }}
 
 {{ hugo.Generator }}
 {{ "<!-- Main Stylesheet -->" | safeHTML }}
@@ -34,26 +31,6 @@
 
 {{ $defaultJS := slice $jquery $bootstrap $carousel $venobox $plugins $main | resources.Concat "js/global.js" | resources.Minify | resources.Fingerprint }}
 
-<script>{{ $defaultJS.Content | safeJS }}</script>
-
-<script type="text/javascript">
-  WebFontConfig = {
-          google: { families: [
-                  'Roboto:400,100,300,600',
-                  'Open Sans:400,300,600',
-                  'Volkhov:400italic',
-          ] }
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })();
-  // ]]>
-</script>
+<script src="{{ $defaultJS.Permalink }}"></script>
 
 {{- partial "head_custom.html" . }}
