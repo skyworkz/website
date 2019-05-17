@@ -12,7 +12,7 @@
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.header }}
                 <li class="nav-item {{ if eq $currentPage.RelPermalink (print .URL "/") }}active{{ end }}">
-                        <a class="nav-link h5" href="{{ .URL }}/">{{ .Name }}</a>
+                        <a class="nav-link h5" href="{{ .URL }}">{{ .Name }}</a>
                 </li>
                 {{ end }}
     </ul>
