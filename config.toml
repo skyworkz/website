@@ -16,19 +16,19 @@ languageCode = "en-us"
     [[menu.header]]
       weight = 2
       name = "Services"
-      url = "/services"
+      url = "/services/"
     [[menu.header]]
       weight = 3
       name = "Work"
-      url = "/work"
+      url = "/work/"
     [[menu.header]]
       weight = 4
       name = "Team"
-      url = "/team"
+      url = "/team/"
     [[menu.header]]
       weight = 5
       name = "Careers"
-      url = "/careers"
+      url = "/careers/"
     #[[menu.header]]
     #  weight = 4
     #  name = "Blog"
@@ -36,16 +36,16 @@ languageCode = "en-us"
     [[menu.header]]
       weight = 5
       name = "Contact"
-      url = "/contact"
+      url = "/contact/"
 
     [[menu.footer]]
       weight = 1
       name = "About us"
-      url = "/services"
+      url = "/services/"
     [[menu.footer]]
       weight = 2
       name = "Contact"
-      url = "/contact"
+      url = "/contact/"
     #[[menu.footer]]
     #  weight = 4
     #  name = "Blog"
@@ -69,7 +69,7 @@ languageCode = "en-us"
     paragraph = "Skyworkerz know how to make optimal use of the public cloud. By leveraging innovative cloud services, building cloud-native applications and creating a culture of experimentation, they help organisations to become more agile."
     [params.wrapper.button]
       caption = "Explore our services"
-      url = "/services"
+      url = "/services/"
 
   [params.blog]
     enable = false
@@ -83,7 +83,7 @@ languageCode = "en-us"
     content = "Applying traditional ways of working in the cloud won't work because the cloud is fundamentally different. A dynamic and rapidly changing ecosystem of managed services has created a paradigm shift. Companies have to learn and change in order to develop cloud-native applications, but change is hard. Skyworkz can help."
     [params.feature.button]
       caption = "Customers we work with"
-      url = "/work"
+      url = "/work/"
 
   [params.call]
     enable = true
@@ -91,7 +91,7 @@ languageCode = "en-us"
     title = "We make your organisation cloud ready."
     paragraph = "We combine innovation with craftsmanship. We are frontrunners in public cloud. Want to learn more?"
     [params.call.button]
-      url = "/contact"
+      url = "/contact/"
       text = "Tell us your story"
 
   [params.contact]
