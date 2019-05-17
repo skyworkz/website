@@ -9,10 +9,6 @@
 @import "../../node_modules/venobox/venobox/venobox";
 @import "../../node_modules/owl-carousel/owl-carousel/owl.carousel";
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
-@import url(https://fonts.googleapis.com/css?family=Volkhov:400italic);
-@import url(https://fonts.googleapis.com/css?family=Pathway+Gothic+One);
 /*
  * This css file includes styles added in the jekyll port of this theme.
  * To find the original style.css that ships with Airspace, read airspace.css
@@ -178,6 +174,18 @@ header {
   color: $white;
 }
 
+.navbar a,
+.navbar a:visited,
+.navbar a:active {
+  color: $white;
+}
+
+.nav-item.active a,
+.nav-item.active a:visited,
+.nav-item.active a:active {
+  color: $color-gray-light-v2;
+}
+
 
 .navbar.scrolled {
   background-color: $white;
@@ -191,25 +199,6 @@ header {
 .navbar.scrolled a:active {
         color: #000;
 }
-
-#magic-line {
-  position: absolute;
-  bottom: 8px;
-  left: 0;
-  width: 100px;
-  height: 4px;
-  background: $white;
-}
-
-#magic-line.scrolled {
-  position: absolute;
-  bottom: 8px;
-  left: 0;
-  width: 100px;
-  height: 4px;
-  background: $primary;
-}
-
 
 /*---------------------------------------------
 					Index Start
