@@ -6,9 +6,8 @@ module.exports = {
                 "Explorer >= 8",
             ]
         },
-        //"postcss-uncss": {
-        //  html: ['public/**/*.html'],
-        //  ignore: ['.fade']
-        //}
+        "postcss-uncss": {
+          html: ['public/**/*.html'],
+        }
     },
 }

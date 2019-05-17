@@ -4,22 +4,20 @@
   "description": "Skyworkz website",
   "main": "index.js",
   "scripts": {
-    "build": "scss-powertools static/scss/name.scss output/compiled.css"
+    "postcss": "mv public/css/style.css public/css/original.css && postcss -c postcss.config.js -o public/css/style.css public/css/original.css"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "animate": "^1.0.0",
-    "bootstrap": "^4.3.1",
-    "normalize.css": "^8.0.1",
-    "tar": "^4.4.8"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
     "animate.css": "^3.7.0",
+    "bootstrap": "^4.3.1",
     "file-loader": "^3.0.1",
     "font-awesome": "^4.7.0",
     "github-syntax-light": "^0.5.0",
     "ionicons": "^4.5.8",
+    "normalize.css": "^8.0.1",
     "owl-carousel": "^1.0.0",
     "postcss-cli": "^6.1.2",
     "postcss-remove-unused-css": "^1.0.4",
