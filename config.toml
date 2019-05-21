@@ -54,13 +54,13 @@ enableRobotsTXT = true
     #  url = "/blog"
 
   [params.work]
-    bgImage = "img/work.jpg"
+    bgImage = "img/work.webp"
 
   [params.slider]
     enable = true
     title = "We are Skyworkz"
     subtitle = "Cloud developers and engineers"
-    bgImage = "img/slider-bg.jpg"
+    bgImage = "img/slider-bg.webp"
     btnText = "Learn more"
 
   [params.wrapper]
@@ -81,7 +81,7 @@ enableRobotsTXT = true
   [params.feature]
     enable = true
     title = "Things work differently in the Cloud"
-    bgImage = "img/feature-bg.jpg"
+    bgImage = "img/feature-bg.webp"
     content = "Applying traditional ways of working in the cloud won't work because the cloud is fundamentally different. A dynamic and rapidly changing ecosystem of managed services has created a paradigm shift. Companies have to learn and change in order to develop cloud-native applications, but change is hard. Skyworkz can help."
     [params.feature.button]
       caption = "Customers we work with"
@@ -89,7 +89,7 @@ enableRobotsTXT = true
 
   [params.call]
     enable = true
-    bgImage = "img/call-to-action-bg.jpg"
+    bgImage = "img/call-to-action-bg.webp"
     title = "We make your organisation cloud ready."
     paragraph = "We combine innovation with craftsmanship. We are frontrunners in public cloud. Want to learn more?"
     [params.call.button]

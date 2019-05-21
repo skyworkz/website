@@ -46,14 +46,14 @@ $(document).ready(function () {
 		autoPlay: 3000,
 		items: 5,
 		itemsDesktop: [1199, 5],
-		itemsDesktopSmall: [979, 5],
+		itemsDesktopSmall: [979, 3],
 	});
 
 	$("#works-logo").owlCarousel({
 		autoPlay: 3000,
 		items: 5,
 		itemsDesktop: [1199, 5],
-		itemsDesktopSmall: [979, 5],
+		itemsDesktopSmall: [979, 3],
 	});
 
 
