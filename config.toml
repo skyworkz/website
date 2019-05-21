@@ -116,3 +116,6 @@ enableRobotsTXT = true
 
 [Author]
   name = "Bas Tichelaar"
+
+[outputs]
+    section = ["html", "json"]
