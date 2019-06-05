@@ -15,11 +15,10 @@
 				{{ range (.Paginator 6).Pages }}
 				<div class="col-md-6">
 					<article class="blog-post">
-						{{ with .Params.image }}
-            <!--<img src="{{ . | absURL }}" class="img-responsive" alt="post-thumb"> --> {{ end }}
+            {{ with .Params.image }}<!--<img src="{{ . | absURL }}" class="img-thumbnail" alt="post-thumb"> -->{{ end }}
 						<a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a>
 						<p>
-							{{ .Summary }}
+              {{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}
 						</p>
 						<a href="{{ .Permalink }}" class="btn btn-main">Read More</a>
 					</article>

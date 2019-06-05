@@ -2,6 +2,10 @@ title = "Skyworkz, Cloud Engineers and Developers"
 baseURL = "https://skyworkz.nl"
 languageCode = "en-us"
 enableRobotsTXT = true
+#pygmentsUseClassies = true
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
+pygmentsUseClasses            = true
 
 # The site's parameters
 [params]
@@ -31,12 +35,12 @@ enableRobotsTXT = true
       weight = 5
       name = "Careers"
       url = "/careers/"
-    #[[menu.header]]
-    #  weight = 4
-    #  name = "Blog"
-    #  url = "/blog"
     [[menu.header]]
-      weight = 5
+      weight = 6
+      name = "Blog"
+      url = "/blog"
+    [[menu.header]]
+      weight = 7
       name = "Contact"
       url = "/contact/"
 
@@ -48,10 +52,10 @@ enableRobotsTXT = true
       weight = 2
       name = "Contact"
       url = "/contact/"
-    #[[menu.footer]]
-    #  weight = 4
-    #  name = "Blog"
-    #  url = "/blog"
+    [[menu.footer]]
+      weight = 4
+      name = "Blog"
+      url = "/blog"
 
   [params.work]
     bgImage = "img/work.webp"
@@ -74,7 +78,7 @@ enableRobotsTXT = true
       url = "/services/"
 
   [params.blog]
-    enable = false
+    enable = true
     title = "Get The Latest On What We're doing"
     subtitle = "Catch up with us, anytime and anywhere"
 
