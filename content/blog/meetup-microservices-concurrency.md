@@ -6,7 +6,7 @@ image: "img/meetup.svg"
 bgImage: "img/meetup.jpg"
 author: "Bas Tichelaar"
 ---
-After our succesful first [meetup about Kubernetes](https://www.meetup.com/nl-NL/Skyworkz/events/260371240/), we have planned the next meetup. This time with more focus on programming. We will start with a talk about how to change architecture in production while at the same time migrating to the cloud. Sven Rienstra, one of our Cloud Developers, will talk about his experience at [majestic.co.uk](https://majestic.co.uk), where he was involved in migrating [nakedwines.com ](https://nakedwines.com) from a monolith into microservices running in the cloud.
+After our succesful first [meetup about Kubernetes](https://www.meetup.com/nl-NL/Skyworkz/events/260371240/), we have set the date for our next meetup: June 27th. This time with more focus on programming. We will start with a talk about how to change architecture in production while at the same time migrating to the cloud. Sven Rienstra, one of our Cloud Developers, will talk about his experience at [majestic.co.uk](https://majestic.co.uk), where he was involved in migrating [nakedwines.com ](https://nakedwines.com) from a monolith into microservices running in the cloud.
 
 After a short break, Mikhail Vaysman will explain 3 different concurrency models: threads and locks, communicating sequential processes and the actor model. He will give code examples and explain when to use which model.
 
