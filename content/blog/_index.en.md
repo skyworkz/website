@@ -1,7 +1,7 @@
 +++
 title = "Blog"
 id = "blog"
-description = "This is meta description for blog page"
+description = "Stay up to date with our blog about DevOps, Cloud and Containers."
 #bgImage = "img/blog.webp"
 bgImage = "img/blog.jpg"
 +++
