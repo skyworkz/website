@@ -112,9 +112,9 @@ pygmentsUseClasses            = true
       button = "Send message"
     [params.contact.box]
       title = "Stop by for a visit"
-      address = "Tractieweg 42 studio B, Utrecht, The Netherlands"
+      address = "Tractieweg 41 studio B, Utrecht, The Netherlands"
       email = "Email: info@skyworkz.nl"
-      phone = "Phone: +31 6 3392 1442"
+      phone = "Phone: +31 6 3392 1442 (Bas) or +31 6 1046 5694 (Martin)"
     [params.contact.gmaps]
       title = "Plan your route"
 
