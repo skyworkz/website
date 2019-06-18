@@ -16,7 +16,8 @@
 				<div class="col-md-6">
 					<article class="blog-post">
             {{ with .Params.image }}<!--<img src="{{ . | absURL }}" class="img-thumbnail" alt="post-thumb"> -->{{ end }}
-						<a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a>
+						<a class="post-title" href="{{ .Permalink }}" style="margin-bottom: 0;">{{ .Title }}</a>
+						<p class="italic" style="margin-top: 0;">By <span class="bold">{{ .Params.author }}</span> on <span class="bold">{{ .Site.Params.dateFormat | default "Jan 2, 2006" | .Date.Format }}</span></p>
 						<p>
               {{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}
 						</p>
