@@ -1,0 +1,31 @@
+{{ if .Site.Data.careers.enable }}
+<!-- Service Start -->
+<section id="service">
+
+    <!-- Content -->
+    <div class="row justify-content-center">
+      {{ range .Site.Data.careers.profiles }}
+      <div class="col-md-4">
+        <div class="ml-5 mr-5">
+        <div class="service-item text-left">
+          <h4>{{ .name }}</h4>
+          <p>{{ .text | markdownify }}</p>
+        </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+
+
+
+
+</section>
+<section class="bg-primary text-white">
+      <div class="text-center">
+        <h2>Did we trigger you?</h2>
+        <p>Great! Writing texts is hard, especially for job offers. But now you're here, let's take the next step. Let's have a coffee (or a beer if you like).</p>
+        <a class="btn btn-outline-light mt-lg-5" href="/contact">Apply now</a>
+      </div>
+</section>
+{{ end }}

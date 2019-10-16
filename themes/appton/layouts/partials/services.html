@@ -1,0 +1,28 @@
+{{ if .Site.Data.services.enable }}
+<!-- Service Start -->
+<section id="service">
+  <div class="container">
+
+    <!-- Intro -->
+    <div class="row">
+      <div class="section-title mx-3">
+        <h2 class="mb-3">{{ .Site.Data.services.title }}</h2>
+        <p>{{ .Site.Data.services.subtitle }}</p>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="row justify-content-center">
+      {{ range .Site.Data.services.content }}
+      <div class="col-sm-6 col-md-4 px-3">
+        <div class="service-item">
+          <i class="{{ .icon }}"></i>
+          <h4>{{ .name }}</h4>
+          <p>{{ .text }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

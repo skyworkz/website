@@ -5,19 +5,30 @@ $ionicons-font-path: "../fonts";
 //$fa-font-path:  "../fonts";
 
 // Bootstrap customization
+$font-size-base: 1.4rem !default;
+$line-height-base: 2;
+
 $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Open Sans", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $headings-font-family:        'Pathway Gothic One', sans-serif;
 $headings-margin-bottom: 0;
 
 $headings-line-height: 1;
 
-$enable-rounded: false;
-
 // Main Colors
 $color-main: #7d7d8f;
 
 // Primary Color
-$primary: #4682B4;
+$blue:    #4682B4;
+$indigo:  #7678ED; 
+$purple:  #2F4858;
+$pink:    #A60067;
+$red:     #F6511D;
+$orange:  #F26419;
+$yellow:  #F6AE2D;
+$green:   #28a745;
+$teal:    #44FFD1;
+$cyan:    #86BBD8;
+
 
 // Custom Color
 $color-gray-light-v1: #b5b5b5;
@@ -33,4 +44,7 @@ $color-blue-dark-v5: #1e1e26;
 
 $body-color: $color-gray-dark-v1;
 
+$input-btn-padding-y: .45rem;
+$input-btn-padding-x: 2.4rem;
 
+$input-btn-font-size: 0.92rem;

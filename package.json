@@ -4,11 +4,14 @@
   "description": "Skyworkz website",
   "main": "index.js",
   "scripts": {
-    "postcss": "cp public/css/style.css public/css/original.css && postcss -c postcss.config.js -o public/css/style.css public/css/original.css"
+    "postcss": "cp public/css/style.css public/css/original.css; postcss -c postcss.config.js -o public/css/style.css public/css/original.css"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "popper.js": "^1.15.0",
+    "webpack": "^4.39.1"
+  },
   "devDependencies": {
     "@fullcalendar/core": "^4.1.0",
     "@fullcalendar/daygrid": "^4.1.0",
@@ -20,8 +23,9 @@
     "fstream": ">=1.0.12",
     "github-syntax-light": "^0.5.0",
     "ionicons": "^4.5.8",
+    "lightbox2": "^2.11.1",
     "normalize.css": "^8.0.1",
-    "owl-carousel": "^1.0.0",
+    "owl.carousel2": "^2.2.1",
     "postcss-cli": "^6.1.2",
     "postcss-remove-unused-css": "^1.0.4",
     "postcss-uncss": "^0.16.1",

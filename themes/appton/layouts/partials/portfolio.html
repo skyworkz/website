@@ -1,0 +1,29 @@
+
+    <section class="pb-0">
+      <div class="container">
+        <div class="text-center">
+          <h2>Portfolio</h2>
+          <p class="lead text-muted mt-2">You can make also a portfolio or image gallery.</p>
+        </div>
+        <div class="portfolio mt-5">
+          <div class="row">
+              {{ $portfolio := .Site.Data.work.portfolio }}
+              {{ $resources := .Resources.ByType "image"}}
+              {{ range $resources }}
+              {{ with . }}
+                {{ $imageName := .Name }}
+                {{ $image380:= (.Fill "380x300") }}
+                {{ $image600 := (.Fill "600x600") }}
+              
+                {{ range $portfolio }}
+                  {{ $id := urlize .name }}
+                  {{ if eq .image $imageName }}
+                  <div class="col-lg-4 p-0"><a href="{{ $image600.RelPermalink }}" data-lightbox="#{{ $id }}" data-title="{{ .name }}" class="portfolio-item"><img src="{{ $image380.RelPermalink }}" alt="image" class="img-fluid"></a></div>
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+              {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>

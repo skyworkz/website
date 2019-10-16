@@ -6,56 +6,21 @@ enableRobotsTXT = true
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
 pygmentsUseClasses            = true
+theme = "appton"
+
+[menu]
+
+    [[menu.main]]
+      weight = 1
+      name = "Home"
+      url = "/"
+      identifier = "home"
+
 
 # The site's parameters
 [params]
   home = "Home"
   description = "We are highly skilled Cloud Developers and DevOps engineers, who help companies become Cloud Native."
-
-  [menu]
-
-    [[menu.header]]
-      weight = 1
-      name = "Home"
-      url = "/"
-
-    [[menu.header]]
-      weight = 2
-      name = "Services"
-      url = "/services/"
-    [[menu.header]]
-      weight = 3
-      name = "Work"
-      url = "/work/"
-    [[menu.header]]
-      weight = 4
-      name = "Team"
-      url = "/team/"
-    [[menu.header]]
-      weight = 5
-      name = "Careers"
-      url = "/careers/"
-    [[menu.header]]
-      weight = 6
-      name = "Blog"
-      url = "/blog"
-    [[menu.header]]
-      weight = 7
-      name = "Contact"
-      url = "/contact/"
-
-    [[menu.footer]]
-      weight = 1
-      name = "About us"
-      url = "/services/"
-    [[menu.footer]]
-      weight = 2
-      name = "Contact"
-      url = "/contact/"
-    [[menu.footer]]
-      weight = 4
-      name = "Blog"
-      url = "/blog"
 
   [params.work]
     bgImage = "img/work.webp"

@@ -1,5 +1,19 @@
 $(document).ready(function () {
 
+	$('.owl-carousel').owlCarousel({
+		loop:true,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:3
+			},
+			1000:{
+				items:5
+			}
+		}
+	})
   WebFontConfig = {
           google: { families: [
                   'Roboto:400,100,300,600',
@@ -17,45 +31,6 @@ $(document).ready(function () {
     s.parentNode.insertBefore(wf, s);
   })();
   // ]]>
-
-  $(function () {
-    $(document).scroll(function () {
-      var $nav = $(".navbar");
-      $nav.toggleClass('scrolled navbar-light', $(this).scrollTop() > $nav.height());
-
-      var $navbarbrand = $(".navbar-brand");
-      $navbarbrand.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-
-      var $magicline = $("#magic-line");
-      $magicline.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-    });
-  });
-
-	$("#portfolio-content-active").mixItUp();
-
-	$("#team-content-active").mixItUp();
-
-
-	$("#testimonial-slider").owlCarousel({
-		paginationSpeed: 500,
-		singleItem: true,
-		autoPlay: 3000,
-	});
-
-	$("#clients-logo").owlCarousel({
-		autoPlay: 3000,
-		items: 5,
-		itemsDesktop: [1199, 5],
-		itemsDesktopSmall: [979, 3],
-	});
-
-	$("#works-logo").owlCarousel({
-		autoPlay: 3000,
-		items: 5,
-		itemsDesktop: [1199, 5],
-		itemsDesktopSmall: [979, 3],
-	});
-
 
 	// google map
 	var map;
@@ -107,7 +82,4 @@ $(document).ready(function () {
 		counter();
 	});
 
-
-	// venobox
-	$('.venobox').venobox();
 });

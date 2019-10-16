@@ -1,0 +1,24 @@
+    <section class="bg-diagonal">
+      <div class="container">
+        <div class="text-center">
+          <h2>Some of the companies we work with</h2>
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <p class="lead text-muted mt-2">From startups to enterprises, we've seen them all.</p>
+            </div>
+          </div>
+        </div>
+        <div class="clients">
+          <div class="owl-carousel">
+              {{ $resources := .Resources.Match "logo*" }}
+              {{ range $resources }}
+              {{ with . }}
+                {{ $imageName := .Name }}
+                {{ $image120:= (.Fit "150x80") }}
+                  <div class="item"><img src="{{ $image120.RelPermalink }}" alt="" class="img-fluid"></div>
+              {{ end }}
+              {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
