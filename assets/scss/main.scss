@@ -311,7 +311,10 @@ STYLE SWITCHER FOR DEMO
 }
 
 .hero-heading {
-  font-weight: 500;
+  font-size: 6rem;
+  line-height: 1;
+  color: $yellow;
+  text-shadow: 5px 5px 0px rgba(0,0,0,0.1);
 }
 
 .subscription-form .form-group {
@@ -380,10 +383,10 @@ STYLE SWITCHER FOR DEMO
 }
 
 .box .icon {
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 5rem;
+  height: 5rem;
   margin: 0 auto;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 // /*
