@@ -60,3 +60,10 @@ members:
       Cloud Developer
     description: >
       Mikhail is one of our Cloud Developers, focused on building cloud-native business applications.
+  - category: Engineering
+    image: "benny.jpg"
+    name: Benny Cornelissen
+    teaser: >
+      Cloud Consultant
+    description: >
+      Benny has many years of experience designing and building secure, reliable and scalable platforms that are easy to use.
