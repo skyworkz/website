@@ -11,6 +11,9 @@ This website is built using:
 
 First, run `npm install` to install all required node modules. Then run `hugo` to build all assets. Finally, run `hugo serve` to access the website at http://localhost:1313.
 
+## Pre-commit
+To use the supplied pre-commit hooks, run `pre-commit install`.
+
 ## Contributing
 
 This website makes heavily use of Hugo for the content management. There are some guidelines to follow:
