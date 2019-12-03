@@ -7,19 +7,25 @@
 
 	{{ partial "header.html" . }}
 
+	<!-- Hero Section-->
+	<section class="hero bg-diagonal">
+		<div class="container">
+			<h1>{{ .Page.Title }}</h1>
+			<div class="post-info-wrapper">
+					<p class="italic">By <span class="bold">{{ .Params.author }}</span> on <span class="bold">{{ .Site.Params.dateFormat | default "Jan 2, 2006" | .Date.Format }}</span></p>
+					</div>
+			<hr />
+		</div>
+	</section>
+
+		
+    
+
 	<div class="post">
 	  <!-- Wrapper Start -->
-	  <section class="section" style="border: 1px dotted #ddd;">
+	  <section style="border: 1px dotted #ddd;">
 	    <div class="container">
-	      <div class="row">
-          <div class="col-md-12">
-	            <h1>{{ .Params.title }}</h1>
-	            <div class="post-info-wrapper">
-	              <p class="italic">By <span class="bold">{{ .Params.author }}</span> on <span class="bold">{{ .Site.Params.dateFormat | default "Jan 2, 2006" | .Date.Format }}</span></p>
-	            </div>
-              </div>
-        </div>
-	            <hr />
+            
 	      <div class="row">
             {{ if isset .Params "image" }}
 	          <div class="col-md-12">
@@ -44,5 +50,7 @@
 	{{ end }}
 
 	{{ partial "footer.html" . }}
+     <!-- JavaScript files-->
+     {{ partial "scripts.html" . }}
 </body>
 </html>

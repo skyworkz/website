@@ -1,14 +1,13 @@
-    <section class="bg-diagonal mt-5">
+    <section class="my-lg-2">
       <div class="container">
         <div class="text-center">
-          <h2>Some of the companies we work with</h2>
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <p class="lead text-muted mt-2">From startups to enterprises, we've seen them all.</p>
+              <p class="lead text-muted mt-2">From startups to enterprises, we've helped them all.</p>
             </div>
           </div>
         </div>
-        <div class="clients">
+        <div class="clients mt-4">
           <div class="owl-carousel">
               {{ $resources := .Resources.Match "logo*" }}
               {{ range $resources }}
