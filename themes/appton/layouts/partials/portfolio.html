@@ -18,7 +18,7 @@
                 {{ range $portfolio }}
                   {{ $id := urlize .name }}
                   {{ if eq .image $imageName }}
-                  <div class="col-lg-4 p-0"><a href="{{ $image600.RelPermalink }}" data-lightbox="#{{ $id }}" data-title="{{ .name }}" class="portfolio-item"><img src="{{ $image380.RelPermalink }}" alt="image" class="img-fluid"></a></div>
+                  <div class="col-lg-4 pb-3"><a href="{{ $image600.RelPermalink }}" data-lightbox="#{{ $id }}" data-title="{{ .name }}" class="portfolio-item"><img src="{{ $image380.RelPermalink }}" alt="image" class="img-fluid"></a></div>
                   {{ end }}
                 {{ end }}
               {{ end }}

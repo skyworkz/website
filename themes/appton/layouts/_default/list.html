@@ -19,19 +19,19 @@
 		</div>
 	</section>
 
-	<section class="blog">
+	<section class="blog bg-diagonal">
 		<div class="container">
 			<div class="row">
 				{{ range (.Paginator 6).Pages }}
-				<div class="col-md-6">
+				<div class="col-md-6 p-md-3">
 					<article class="blog-post">
-            {{ with .Params.image }}<!--<img src="{{ . | absURL }}" class="img-thumbnail" alt="post-thumb"> -->{{ end }}
+            		{{ with .Params.image }}<!--<img src="{{ . | absURL }}" class="img-thumbnail" alt="post-thumb"> -->{{ end }}
 						<h3 class="post-title" href="{{ .Permalink }}">{{ .Title }}</h3>
 						<p class="italic" style="margin-top: 0;">By <span class="bold">{{ .Params.author }}</span> on <span class="bold">{{ .Site.Params.dateFormat | default "Jan 2, 2006" | .Date.Format }}</span></p>
 						<p>
               				{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}
 						</p>
-						<button type="button" href="{{ .Permalink }}" class="btn btn-primary">Read More</a>
+						<a href="{{ .Permalink }}" class="btn btn-primary">Read More</a>
 					</article>
 				</div>
 				{{ end }}

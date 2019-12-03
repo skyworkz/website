@@ -7,28 +7,31 @@
           <div class="col-lg-3 mb-5 mb-lg-0">
             <h5 class="footer-heading">Site pages</h5>
             <ul class="list-unstyled">
-              <li> <a href="index.html" class="footer-link">Home</a></li>
-              <li> <a href="faq.html" class="footer-link">FAQ</a></li>
-              <li> <a href="contact.html" class="footer-link">Contact</a></li>
-              <li> <a href="text.html" class="footer-link">Text Page</a></li>
+                {{ range .Site.Menus.footer }}
+                <li>
+                        <a class="footer-link" href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
             </ul>
           </div>
           <div class="col-lg-3 mb-5 mb-lg-0">
-            <h5 class="footer-heading">Product</h5>
+            <h5 class="footer-heading">Services</h5>
             <ul class="list-unstyled">
-              <li> <a href="#" class="footer-link">Why Appton?</a></li>
-              <li> <a href="#" class="footer-link">Enterprise</a></li>
-              <li> <a href="#" class="footer-link">Blog</a></li>
-              <li> <a href="#" class="footer-link">Pricing</a></li>
+                {{ range .Site.Menus.services }}
+                <li>
+                        <a class="footer-link" href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
             </ul>
           </div>
           <div class="col-lg-3">
             <h5 class="footer-heading">Resources</h5>
             <ul class="list-unstyled">
-              <li> <a href="#" class="footer-link">Download</a></li>
-              <li> <a href="#" class="footer-link">Help Center</a></li>
-              <li> <a href="#" class="footer-link">Guides</a></li>
-              <li> <a href="#" class="footer-link">Partners</a></li>
+                {{ range .Site.Menus.resources }}
+                <li>
+                        <a class="footer-link" href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
             </ul>
           </div>
         </div>

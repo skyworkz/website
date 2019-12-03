@@ -1,14 +1,14 @@
 <header class="header">
 <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container"><a href="./" class="navbar-brand"><img src="/img/logo_text_right.svg" alt="" class="img-fluid"></a>
-          <a class="navbar-brand" href="{{ .Site.BaseURL }}"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="">
-        <i class="fa fa-bars"></i>
-    </span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-md-end" id="navbarCollapse">
-    <ul class="navbar-nav">
+  <div class="container">
+    <a href="./" class="navbar-brand"><img src="/img/logo_text_right.svg" alt="" class="img-fluid"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <i class="fa fa-bars fa-2x text-muted"></i>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-md-end" id="navbarCollapse">
+      <ul class="navbar-nav">
 
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
@@ -16,7 +16,8 @@
                         <a class="nav-link {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
                 </li>
                 {{ end }}
-    </ul><a href="#" data-toggle="modal" data-target="#contact" class="btn btn-outline-primary navbar-btn ml-0 ml-lg-3 rounded-pill text-uppercase">Contact</a>
+      </ul>
+      <a href="#" data-toggle="modal" data-target="#contact" class="btn btn-outline-primary navbar-btn ml-0 ml-lg-3 rounded-pill text-uppercase">Contact</a>
     </div>
   </div>
 </nav>

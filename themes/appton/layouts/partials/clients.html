@@ -3,14 +3,14 @@
         <div class="text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <p class="lead text-muted mt-2">From startups to enterprises, we've helped them all.</p>
+              <p class="text-muted font-weight-lighter mt-2">Companies we work with:</p>
             </div>
           </div>
         </div>
         <div class="clients mt-4">
           <div class="owl-carousel">
               {{ $resources := .Resources.Match "logo*" }}
-              {{ range $resources }}
+              {{ range shuffle $resources }}
               {{ with . }}
                 {{ $imageName := .Name }}
                 {{ $image120:= (.Fit "150x80") }}

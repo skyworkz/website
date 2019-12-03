@@ -16,7 +16,6 @@ menu:
   main:
     title: "Blog"
     weight: 70
-  footer:
+  resources:
     weight: 70
----
->>>>>>> Homepage improvements
+--->>>>>>> Homepage improvements
