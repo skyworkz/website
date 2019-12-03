@@ -8,7 +8,7 @@
 	{{ partial "header.html" . }}
 
 	<!-- Hero Section-->
-	<section class="hero">
+	<section class="hero bg-hero">
 		<div class="container text-center">
 			<h1>{{ .Page.Title }}</h1>
 			<div class="row">
@@ -19,15 +19,15 @@
 		</div>
 	</section>
 
-	<section class="blog bg-diagonal">
+	<section class="blog">
 		<div class="container">
 			<div class="row">
 				{{ range (.Paginator 6).Pages }}
 				<div class="col-md-6 p-md-3">
 					<article class="blog-post">
             		{{ with .Params.image }}<!--<img src="{{ . | absURL }}" class="img-thumbnail" alt="post-thumb"> -->{{ end }}
-						<h3 class="post-title" href="{{ .Permalink }}">{{ .Title }}</h3>
-						<p class="italic" style="margin-top: 0;">By <span class="bold">{{ .Params.author }}</span> on <span class="bold">{{ .Site.Params.dateFormat | default "Jan 2, 2006" | .Date.Format }}</span></p>
+						<h3><a class="text-decoration-none" href="{{ .Permalink }}">{{ .Title }}</a></h3>
+						<p class="font-italic" style="margin-top: 0;">by {{ .Params.author }} on {{ .Site.Params.dateFormat | default "Jan 2, 2006" | .Date.Format }}</p>
 						<p>
               				{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}
 						</p>

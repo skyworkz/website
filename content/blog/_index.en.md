@@ -10,7 +10,7 @@ bgImage = "img/blog.jpg"
 ---
 title: "Blog"
 id: "blog"
-description: "This is meta description for blog page"
+description: "We're professional nerds who like to share our thoughts."
 bgImage: "img/blog.jpg"
 menu:
   main:

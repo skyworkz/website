@@ -2,5 +2,5 @@
 title: "Contact"
 id: "contact"
 bgImage: "img/contact.webp"
-description: "Contact Skyworkz to hire Cloud and DevOps engineers"
+description: "Get in contact with us if you think we can help you."
 ---

@@ -77,7 +77,11 @@ theme = "appton"
       button = "Send message"
     [params.contact.box]
       title = "Stop by for a visit"
+<<<<<<< HEAD
       address = "Tractieweg 41 studio B, Utrecht, The Netherlands"
+=======
+      address = "Tractieweg 41 Studio N, Utrecht, The Netherlands"
+>>>>>>> Fixed blog, team site and other stuff
       email = "Email: info@skyworkz.nl"
       phone = "Phone: +31 6 3392 1442 (Bas) or +31 6 1046 5694 (Martin)"
     [params.contact.gmaps]

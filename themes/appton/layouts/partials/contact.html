@@ -22,7 +22,7 @@
             <div class="form-group-2">
               <textarea class="form-control" rows="3" placeholder="{{ .form.message }}"></textarea>
             </div>
-            <button class="btn btn-default" type="submit">{{ .form.button }}</button>
+            <button class="form-control btn btn-default btn-outline-success" type="submit">{{ .form.button }}</button>
           </form>
         </div>
       </div>
@@ -34,13 +34,13 @@
           <h2>{{ .box.title }}</h2>
           <ul class="list-unstyled address-block">
             <li>
-              <i class="fa fa-map-marker"></i>{{ .box.address }}
+              <i class="fa fa-map-marker mt-1 mr-2"></i>{{ .box.address }}
             </li>
             <li>
-              <i class="fa fa-envelope-o"></i>{{ .box.email }}
+              <i class="fa fa-envelope-o mt-1 mr-2"></i>{{ .box.email }}
             </li>
             <li>
-              <i class="fa fa-phone"></i>{{ .box.phone }}
+              <i class="fa fa-phone mt-1 mr-2"></i>{{ .box.phone }}
             </li>
           </ul>
           <ul class="social-icons">

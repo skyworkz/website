@@ -8,13 +8,16 @@
 	{{ partial "header.html" . }}
 
 	<!-- Hero Section-->
-	<div class="hero bg-diagonal">
+	<div class="hero bg-hero">
 		<div class="container">
+			<div class="row justify-content-center">
+					<div class="col-md-10">
 			<h1>{{ .Page.Title }}</h1>
 			<div class="post-info-wrapper">
-					<p class="italic">By <span class="bold">{{ .Params.author }}</span> on <span class="bold">{{ .Site.Params.dateFormat | default "Jan 2, 2006" | .Date.Format }}</span></p>
+					<p class="font-italic">by {{ .Params.author }} on {{ .Site.Params.dateFormat | default "Jan 2, 2006" | .Date.Format }}</p>
 					</div>
-			<hr />
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -23,21 +26,23 @@
 	  <section>
 	    <div class="container">
             
-	      <div class="row">
+	      <div class="row justify-content-center">
             {{ if isset .Params "image" }}
-	          <div class="col-md-12">
+	          <div class="col-md-10">
               {{ with .Params.image }}<div class="float-right m-5 w-25" ><img src="{{ . | absURL }}" class="img-fluid" alt="post-image"></div>{{ end }}
 	            <p>{{ .Content }}</p>
             </div>
             {{ else }}
-	          <div class="col-md-12">
+	          <div class="col-md-10">
 	            <p>{{ .Content }}</p>
 	          </div>
-            {{ end }}
+			{{ end }}
+			<p class="center-text" style="padding: 30px;">
+					<a class="btn btn-main btn-outline-primary" href="{{ $.Site.BaseURL }}/blog">Back to blog</a>
+				  </p>
+			</div>
 		  </div>
-		  <p class="center-text" style="padding: 30px;">
-				<a class="btn btn-main" href="{{ $.Site.BaseURL }}/blog">Back to blog</a>
-			  </p>
+
 	    </div>
 	  </section>
 

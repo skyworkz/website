@@ -9,4 +9,6 @@ menu:
     weight: 30
   footer:
     title: "Services"
+  services:
+    name: "Cloud Consulting"
 ---

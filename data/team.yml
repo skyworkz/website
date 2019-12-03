@@ -67,3 +67,20 @@ members:
       Cloud Consultant
     description: >
       Benny has many years of experience designing and building secure, reliable and scalable platforms that are easy to use.
+<<<<<<< HEAD
+=======
+  - category: Engineering
+    image: "maarten.jpg"
+    name: Maarten Dirkse
+    teaser: >
+      Cloud Consultant
+    description: >
+      Maarten started as a software engineer, but became an experienced Cloud Consultant.
+  - category: Engineering
+    image: "jeroen.jpg"
+    name: Jeroen Zeegers
+    teaser: >
+      Cloud Consultant
+    description: >
+      Jeroen has many years of experience designing and building secure, reliable and scalable platforms that are easy to use.
+>>>>>>> Fixed blog, team site and other stuff
