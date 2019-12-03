@@ -5,7 +5,10 @@
     <div class="row">
       <div class="col-md-6 col-sm-12">
         <div class="block">
-          <form data-netlify="true" method="POST">
+          <form name="contact" data-netlify="true" method="POST">
+            <p class="d-none">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </p>
             <div class="form-group">
               <input type="text" class="form-control" placeholder="{{ .form.name }}">
             </div>

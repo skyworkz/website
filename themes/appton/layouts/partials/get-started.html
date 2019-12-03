@@ -9,9 +9,12 @@
         </div>
         <div class="row">
           <div class="col-lg-6 mx-auto">
-            <form action="#" class="subscription-form mt-2">
+            <form name="contact" data-netlify="true" method="POST" class="subscription-form mt-2">
               <div class="form-group">
-                <input type="email" name="email" placeholder="Name@company.com" class="form-control">
+                <p class="d-none">
+                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                <input type="email" name="email" placeholder="name@company.com" class="form-control">
                 <button type="submit" class="btn btn-primary">Get Started</button>
               </div>
             </form>
