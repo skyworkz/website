@@ -58,6 +58,13 @@ body {
 *     GENERAL
 * =====================================================
 */
+
+blockquote {
+  padding-left: 2rem;
+  font-style: italic;
+  border-left: 3px solid $color-gray-light-v3;
+}
+
 .text-bold {
   font-weight: 700;
 }
