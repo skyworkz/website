@@ -67,8 +67,6 @@ members:
       Cloud Consultant
     description: >
       Benny has many years of experience designing and building secure, reliable and scalable platforms that are easy to use.
-<<<<<<< HEAD
-=======
   - category: Engineering
     image: "maarten.jpg"
     name: Maarten Dirkse
@@ -83,4 +81,3 @@ members:
       Cloud Consultant
     description: >
       Jeroen has many years of experience designing and building secure, reliable and scalable platforms that are easy to use.
->>>>>>> Fixed blog, team site and other stuff
