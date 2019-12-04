@@ -21,6 +21,13 @@ theme = "appton"
 [params]
   home = "Home"
   description = "We are highly skilled Cloud Developers and DevOps engineers, who help companies become Cloud Native."
+  github = "skyworkz"
+  linkedin = "skyworkz"
+  instagram = "skyworkz"
+  twitter = "SkyworkzNL"
+  author = "Skyworkz"
+  logo = "/img/logo_text_right.svg"
+  header = "Skyworkz Cloud Consultants"
 
   [params.work]
     bgImage = "img/work.webp"
