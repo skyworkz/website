@@ -1,7 +1,7 @@
 ---
 title: "Validating Terraform plans with the Open Policy Agent"
 id: "blog"
-date: 2019-12-04T09:27:21+02:00
+date: 2019-07-20T09:27:21+02:00
 # image: "img/meetup.svg"
 # bgImage: "img/meetup.jpg"
 author: "Lennard Eijsackers"
