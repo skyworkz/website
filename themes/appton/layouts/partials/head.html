@@ -30,4 +30,4 @@
   {{ $mainJS := slice $main | resources.Concat "js/main.js" | resources.Fingerprint }}
   <script defer src="{{ $mainJS.Permalink }}"></script>
 
-  {{ partial "schema.html" . }}
+  {{ partial "schema.html" . | safeHTML }}
