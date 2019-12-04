@@ -1,6 +1,6 @@
 ---
-title: Work
-id: work
-bgImage: "img/work.jpg"
-description: "We work with companies like Nike, Jumbo and the Port of Rotterdam"
+title: Do cloud or do not. There is no try.
+id: home
+image: "img/logo.png"
+description: "We are highly skilled Cloud Developers and DevOps engineers, who help companies become Cloud Native."
 ---
