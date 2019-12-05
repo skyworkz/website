@@ -29,7 +29,7 @@
 	      <div class="row justify-content-center">
             {{ if isset .Params "image" }}
 	          <div class="col-md-10">
-              {{ with .Params.image }}<div class="float-right m-5 w-25" ><img src="{{ . | absURL }}" class="img-fluid" alt="post-image"></div>{{ end }}
+              {{ with .Params.image }}<div class="float-right m-2 w-25" ><img src="{{ . | absURL }}" class="img-fluid" alt="post-image"></div>{{ end }}
 	            <p>{{ .Content }}</p>
             </div>
             {{ else }}
