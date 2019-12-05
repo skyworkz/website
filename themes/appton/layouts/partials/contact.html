@@ -5,28 +5,6 @@
     <div class="row">
       <div class="col-md-6 col-sm-12">
         <div class="block">
-          <form name="contact-form" data-netlify="true" method="POST">
-            <p class="d-none">
-                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-            </p>
-            <div class="form-group">
-              <input type="text" name="name" class="form-control" placeholder="{{ .form.name }}">
-            </div>
-            <div class="form-group">
-              <input type="text" name="email" class="form-control" placeholder="{{ .form.email }}">
-            </div>
-            <div class="form-group">
-              <input type="text" name="subject" class="form-control" placeholder="{{ .form.subject }}">
-            </div>
-            <div class="form-group">
-                <textarea class="form-control" rows="3" placeholder="{{ .form.message }}"></textarea>
-              </div>
-              <button class="form-control btn btn-default btn-outline-success" type="submit">{{ .form.button }}</button>
-          </form>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <div class="block">
 
             <h2>{{ .box.title }}</h2>
             <ul class="list-unstyled address-block">
@@ -57,11 +35,35 @@
             {{ end }}
         </div>
       </div>
+      <div class="col-md-6 col-sm-12">
+          <div class="block">
+              <h2>Send us a message</h2>
+            <form name="contact-form" data-netlify="true" method="POST">
+              <p class="d-none">
+                  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+              </p>
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="{{ .form.name }}">
+              </div>
+              <div class="form-group">
+                <input type="text" name="email" class="form-control" placeholder="{{ .form.email }}">
+              </div>
+              <div class="form-group">
+                <input type="text" name="subject" class="form-control" placeholder="{{ .form.subject }}">
+              </div>
+              <div class="form-group">
+                  <textarea name="message" class="form-control" rows="3" placeholder="{{ .form.message }}"></textarea>
+                </div>
+                <button class="form-control btn btn-default btn-outline-success" type="submit">{{ .form.button }}</button>
+            </form>
+          </div>
+        </div>
     </div>
     <div id="contact-box" class="row">
       <div class="col-md-6 col-sm-12">
 
       </div>
+      
     </div>
   </div>
 </section>
