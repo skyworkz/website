@@ -10,60 +10,57 @@
                 <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
             </p>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="{{ .form.name }}">
+              <input type="text" name="name" class="form-control" placeholder="{{ .form.name }}">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="{{ .form.email }}">
+              <input type="text" name="email" class="form-control" placeholder="{{ .form.email }}">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="{{ .form.subject }}">
+              <input type="text" name="subject" class="form-control" placeholder="{{ .form.subject }}">
             </div>
+            <div class="form-group">
+                <textarea class="form-control" rows="3" placeholder="{{ .form.message }}"></textarea>
+              </div>
+              <button class="form-control btn btn-default btn-outline-success" type="submit">{{ .form.button }}</button>
+          </form>
         </div>
       </div>
       <div class="col-md-6 col-sm-12">
         <div class="block">
-            <div class="form-group-2">
-              <textarea class="form-control" rows="3" placeholder="{{ .form.message }}"></textarea>
+
+            <h2>{{ .box.title }}</h2>
+            <ul class="list-unstyled address-block">
+              <li>
+                <i class="fa fa-map-marker mt-1 mr-2"></i>{{ .box.address }}
+              </li>
+              <li>
+                <i class="fa fa-envelope-o mt-1 mr-2"></i>{{ .box.email }}
+              </li>
+              <li>
+                <i class="fa fa-phone mt-1 mr-2"></i>{{ .box.phone }}
+              </li>
+            </ul>
+            <ul class="social-icons">
+            {{ range .social }}
+              <li>
+                <a href="{{ .url }}"><i class="fa {{ .icon }}"></i></a>
+              </li>
+            {{ end }}
+            </ul>
+            {{ with .gmaps}}
+            <div class="block mt-3">
+              <h2>{{ .title }}</h2>
+                <div class="google-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.622344457853!2d5.077285951700536!3d52.10480437963812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c66fa9fb18e4b3%3A0x87b3c199ee665619!2sSkyworkz!5e0!3m2!1snl!2snl!4v1557736878153!5m2!1snl!2snl" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
             </div>
-            <button class="form-control btn btn-default btn-outline-success" type="submit">{{ .form.button }}</button>
-          </form>
+            {{ end }}
         </div>
       </div>
     </div>
     <div id="contact-box" class="row">
       <div class="col-md-6 col-sm-12">
-        <div class="block">
 
-          <h2>{{ .box.title }}</h2>
-          <ul class="list-unstyled address-block">
-            <li>
-              <i class="fa fa-map-marker mt-1 mr-2"></i>{{ .box.address }}
-            </li>
-            <li>
-              <i class="fa fa-envelope-o mt-1 mr-2"></i>{{ .box.email }}
-            </li>
-            <li>
-              <i class="fa fa-phone mt-1 mr-2"></i>{{ .box.phone }}
-            </li>
-          </ul>
-          <ul class="social-icons">
-          {{ range .social }}
-            <li>
-              <a href="{{ .url }}"><i class="fa {{ .icon }}"></i></a>
-            </li>
-          {{ end }}
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        {{ with .gmaps}}
-        <div class="block">
-          <h2>{{ .title }}</h2>
-            <div class="google-map">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.622344457853!2d5.077285951700536!3d52.10480437963812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c66fa9fb18e4b3%3A0x87b3c199ee665619!2sSkyworkz!5e0!3m2!1snl!2snl!4v1557736878153!5m2!1snl!2snl" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-        </div>
-        {{ end }}
       </div>
     </div>
   </div>

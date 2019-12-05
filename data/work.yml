@@ -7,38 +7,85 @@ portfolio:
   - category: Engineering
     image: "jumbo.jpg"
     name: Jumbo
-    teaser: >
-      Development of a scalable Cloud platform
+    teaser: Developing a Cloud platform for Jumbo
     description: >
-      Development of a scalable Cloud platform
+
+      Jumbo, one of the biggest supermarket chains in the Netherlands,
+      is going digital. To do so, Jumbo needs a scalable cloud platform
+      to deliver software faster.
+      
+
+      Skyworkz helps Jumbo making sense of the cloud and implementing
+      a DevOps culture.
+
+
   - category: Engineering
     image: "nike.jpg"
     name: Nike
-    teaser: >
-      Development of a scalable DevOps platform
+    teaser: Building a data platform for Nike
     description: >
-      Development of a scalable DevOps platform
+      Nike, one of the biggest sports brands in the world, is headquartered 
+      in the Netherlands. They have one of the most awesome workplaces: people
+      sporting all day, an in-house Nike store and even a Starbucks inside the
+      office. It's one of the coolest places to work as a Cloud engineer.
+
+
+      Skyworkz helps Nike setting up a solid data plaform on AWS that can keep
+      up with an ever-changing consumer market.
+
   - category: Development
     image: "hbr.jpg"
     name: Port of Rotterdam
-    teaser: >
-      Development of an application to track containers
+    teaser: Developing Boxinsider using serverless technologies
     description: >
-      Development of an application to track containers
+      Port of Rotterdam developed a platform that helps loaders
+      and expeditors plan, monitor and manage their container
+      logistics.
+
+
+      Skyworkz helped the Port of Rotterdam developing the application
+      using Scala and AWS.
+
+
+      [Read more about Boxinsider](https://www.portofrotterdam.com/nl/tools-services/boxinsider)
+
+
   - category: Development
     image: "carepay.jpg"
     name: Carepay
-    teaser: >
-      Developing a mobile based wallet for healthcare services
+    teaser: Building a scalable cloud platform for healthcare at Carepay
     description: >
-      Developing a mobile based wallet for healthcare services
+      In order to scale the healthcare platform to multiple countries in Africa,
+      Carepay asked Skyworkz to help out setting up an AWS based 
+      cloud platform.
+
+
+      By leveraging serverless technologies and container based technologies
+      like **Kubernetes**, Carepay is able to handle millions of users on their
+      platform.
+
+
+      *Carepay is Africa's leading health finance platform*
+
   - category: Consulting
     image: "transavia.jpg"
     name: Transavia
-    teaser: >
-      Improving the quality and automation of testing
+    teaser: Improving the quality and automation of testing at Transavia
     description: >
-      Improving the quality and automation of testing
+
+      In order to improve the quality and automation of testing, 
+      Transavia asked us to do a scan of the teams. The software 
+      Transavia is using for crew rostering and planning is not 
+      developed by Transavia, and each software update could 
+      introduce unwanted side effects.
+
+
+      Skyworkz helped Transavia by scanning the quality of testing
+      and provided recommendations on how to improve and automate 
+      these tests.
+
+
+      *Transavia is a Dutch low-cost airline*
 
 vendors:
   - image: "/img/vendors/aws.png"

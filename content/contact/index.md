@@ -2,5 +2,5 @@
 title: "Contact"
 id: "contact"
 bgImage: "img/contact.webp"
-description: "Get in contact with us if you think we can help you."
+description: "We have delicious coffee and a good place to lunch nearby. When do you have time for a chat?"
 ---
