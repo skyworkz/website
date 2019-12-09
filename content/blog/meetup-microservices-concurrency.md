@@ -2,7 +2,7 @@
 title: "Meetup: From monolith to microservices & Concurrency models explained"
 description: "After our succesful first [meetup about Kubernetes](https://www.meetup.com/nl-NL/Skyworkz/events/260371240/), we have set the date for our next meetup: June 27th. This time with more focus on programming. We will start with a talk about how to change architecture in production while at the same time migrating to the cloud. Sven Rienstra, one of our Cloud Developers, will talk about his experience at [majestic.co.uk](https://majestic.co.uk), where he was involved in migrating [nakedwines.com ](https://nakedwines.com) from a monolith into microservices running in the cloud."
 id: "blog"
-date: 2019-06-05T09:27:21+02:00
+date: "2019-06-05"
 image: "img/meetup.svg"
 author: "Bas Tichelaar"
 audio: []

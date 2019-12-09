@@ -2,7 +2,7 @@
 title: "Five ways to enable developer autonomy in AWS"
 description: "Building platforms on Amazon Web Services (AWS) that enable developers to become autonomous is hard, but not impossible. In this blog post I’ll go through some of the tools and processes that are available to grant this autonomy."
 id: "blog"
-date: 2019-07-23T12:52:12+02:00
+date: "2019-07-23"
 image: "img/blog/autonomy.jpg"
 author: "Sander Knape"
 canonicalUrl: https://sanderknape.com/2019/07/five-ways-enable-developer-autonomy-aws/

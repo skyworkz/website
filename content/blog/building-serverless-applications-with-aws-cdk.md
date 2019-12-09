@@ -2,7 +2,7 @@
 title: "Building serverless applications with the AWS CDK"
 description: "The AWS Cloud Development Kit (AWS CDK) is a new framework for defining Infrastructure as Code (IaC) by AWS. It allows you to write IaC in a set of different languages. At the moment the following languages are supported: Javascript, Typescript, Python, Java, .NET. Support for other languages is coming."
 id: "blog"
-date: 2019-05-31T09:27:21+02:00
+date: "2019-05-31"
 image: "img/AWS-CDK.png"
 bgImage: "img/blog.jpg"
 author: "Sander Knape"

@@ -1,7 +1,7 @@
 ---
 title: "Installing private Git repositories through npm install in Docker"
 id: "blog"
-date: 2019-06-17T13:30:02+02:00
+date: "2019-06-17"
 image: "img/docker.png"
 author: "Sander Knape"
 canonicalUrl: "https://sanderknape.com/2019/06/installing-private-git-repositories-npm-install-docker/"

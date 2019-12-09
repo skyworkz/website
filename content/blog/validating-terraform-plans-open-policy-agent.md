@@ -2,7 +2,7 @@
 title: "Validating Terraform plans with the Open Policy Agent"
 description: "With the Open Policy Agent, teams can validate Terraform plans by writing policies as code."
 id: "blog"
-date: 2019-07-20T09:27:21+02:00
+date: "2019-07-20"
 author: "Lennard Eijsackers"
 audio: []
 images: []
