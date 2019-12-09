@@ -1,10 +1,15 @@
 ---
 title: "Roundup of the most important pre-re:Invent 2019 releases - so far"
+description: "The most exciting time of the year for AWS Enthusiasts is upon us. In exactly seven days, AWS re:Invent 2019 will kick off and everyone is excited to see what great features will be released and announced this time around. This year especially though, many new features are already released the weeks leading up to re:Invent. If you haven’t been paying attention, it was easy to much some great new announcements. Therefore, in this blog post, a roundup of the (in my opinion) most important AWS releases in the past few weeks." 
 id: "blog"
 date: 2019-11-25T09:27:21+02:00
-# image: "img/meetup.svg"
-# bgImage: "img/meetup.jpg"
 author: "Sander Knape"
+audio: []
+images:
+- "img/meetup.svg"
+series: []
+tags: ["AWS", "re:Invent"]
+videos: []
 ---
 The most exciting time of the year for AWS Enthusiasts is upon us. In exactly seven days, AWS re:Invent 2019 will kick off and everyone is excited to see what great features will be released and announced this time around.
 

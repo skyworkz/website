@@ -1,10 +1,14 @@
 ---
 title: "Validating Terraform plans with the Open Policy Agent"
+description: "With the Open Policy Agent, teams can validate Terraform plans by writing policies as code."
 id: "blog"
 date: 2019-07-20T09:27:21+02:00
-# image: "img/meetup.svg"
-# bgImage: "img/meetup.jpg"
 author: "Lennard Eijsackers"
+audio: []
+images: []
+series: []
+tags: ["OPA", "Open Policy Agent", "Terraform"]
+videos: []
 ---
 
 Teams in a DevOps organisation should be free to setup and manage the infrastructure for their services. Terraform is a great way to allow teams to declaratively define their infrastructure needs. However, from a compliance and security perspective, you want to place certain guardrails in place. One such guardrail is of course restricting the set of permissions the teams are given. This stops teams from deploying infrastructure your organisation does not have a need for (Most likely your teams do not need to setup [satellite connections from the cloud](https://aws.amazon.com/ground-station/)) and prevents them from editing resources not managed by them. But it does not cover all rules and regulations that you want to enforce. You also want to ensure that teams do not create public databases, or that the naming convention of your organisation is followed.

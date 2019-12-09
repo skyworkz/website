@@ -1,11 +1,17 @@
 ---
 title: "Five ways to enable developer autonomy in AWS"
+description: "Building platforms on Amazon Web Services (AWS) that enable developers to become autonomous is hard, but not impossible. In this blog post I’ll go through some of the tools and processes that are available to grant this autonomy."
 id: "blog"
 date: 2019-07-23T12:52:12+02:00
 image: "img/blog/autonomy.jpg"
-bgImage: "img/blog.jpg"
 author: "Sander Knape"
 canonicalUrl: https://sanderknape.com/2019/07/five-ways-enable-developer-autonomy-aws/
+audio: []
+images:
+- "img/blog/autonomy.jpg"
+series: []
+tags: ["AWS"]
+videos: []
 ---
 It hasn’t been that long since it was normal to request compute capacity at some operations department within your organization. In fact, it’s probably still pretty common in some organizations. With the move to virtualization and especially the cloud, this process of course has changed dramatically for the good. Not only compute capacity for applications, but also resources such as databases, queues, load balancers and storage are now available virtually unlimited.
 

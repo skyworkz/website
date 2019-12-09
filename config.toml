@@ -20,13 +20,15 @@ theme = "appton"
 # The site's parameters
 [params]
   home = "Home"
-  description = "We are highly skilled Cloud Developers and DevOps engineers, who help companies become Cloud Native."
+  description = "Skyworkz is a boutique consultancy helping companies adopt the public cloud."
+  title = "Skyworkz Cloud Consultants"
   github = "skyworkz"
   linkedin = "skyworkz"
   instagram = "skyworkz"
   twitter = "SkyworkzNL"
   author = "Skyworkz"
   logo = "/img/logo_text_right.svg"
+  images = ["/img/logo_text_right.svg"]
   header = "Skyworkz Cloud Consultants"
 
   [params.work]

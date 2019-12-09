@@ -1,12 +1,17 @@
 ---
 title: "Improving Kubernetes deployments with Helm"
+description: "Helm is a package manager for Kubernetes. It can deploy multiple Kubernetes files and resources as a single package with a single lifecycle. One of the most powerful features of Helm is the templating. This makes it much easier to create templates that can be used by different teams for different purposes. This is especially interesting for templates such as mysql/stable. This Helm Chart can be used for many different purposes such as for a sandbox environment or for production usage. However, the templating can also be used for a few nice-to-have features for more simple deployments that are more homogeneous."
 id: "blog"
 date: 2019-03-15T09:27:21+02:00
-bgImage: "img/blog.jpg"
 image: "img/helm.png"
 author: "Sander Knape"
 canonicalUrl: "https://sanderknape.com/2019/05/building-serverless-applications-aws-cdk"
-summary: "Helm is a package manager for Kubernetes. It can deploy multiple Kubernetes files and resources as a single package with a single lifecycle. One of the most powerful features of Helm is the templating. This makes it much easier to create templates that can be used by different teams for different purposes. This is especially interesting for templates such as mysql/stable. This Helm Chart can be used for many different purposes such as for a sandbox environment or for production usage. However, the templating can also be used for a few nice-to-have features for more simple deployments that are more homogeneous."
+audio: []
+images:
+- "img/helm.png"
+series: []
+tags: ["AWS", "Kubernetes"]
+videos: []
 ---
 
 I recently blogged about [automated deployments to Kubernetes using GitLab](https://sanderknape.com/2019/02/automated-deployments-kubernetes-gitlab/). One of the steps required when automating deployments is replacing the Docker tag with the correct value in the Kubernetes Deployment. In that blog post, this looks like the following:

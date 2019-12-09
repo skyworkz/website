@@ -9,12 +9,11 @@
   <!-- Tweaks for older IEs--><!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-
   {{ hugo.Generator }}
   {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
   {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,800">
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,800">
   <!-- Js -->
   {{ $main := resources.Get "js/main.js" }}
   {{ $plugins := resources.Get "js/plugins.js" }}
@@ -23,11 +22,10 @@
   {{ $lightbox := resources.Get "js/lightbox.js" }}
   {{ $owlcarousel := resources.Get "js/owl.carousel.js" }}
   {{ $defaultJS := slice $jquery $bootstrap $lightbox $plugins | resources.Concat "js/global.js" | resources.Minify | resources.Fingerprint }}
-    <script src="{{ $defaultJS.Permalink }}"></script>
-
+  <script src="{{ $defaultJS.Permalink }}"></script>
   {{ $owlJS := slice $owlcarousel | resources.Concat "js/owl.js" | resources.Fingerprint }}
   <script defer src="{{ $owlJS.Permalink }}"></script>
   {{ $mainJS := slice $main | resources.Concat "js/main.js" | resources.Fingerprint }}
   <script defer src="{{ $mainJS.Permalink }}"></script>
-
   {{ partial "schema.html" . | safeHTML }}
+  {{ template "_internal/opengraph.html" . }}
