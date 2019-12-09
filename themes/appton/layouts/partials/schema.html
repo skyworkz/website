@@ -20,11 +20,18 @@
     { 
         "@context": "http://schema.org", 
         "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://skyworkz.nl"
+        },
         "headline": "{{ .Title }}",
         "genre": "{{ range .Params.tags }}{{ . }} {{ end }}",  
         "url": "{{ .Permalink }}",
         "datePublished": "{{ dateFormat "2006-01-02T15:04:05CET" (default .Date (.PublishDate)) }}",
+        "dateModified": "{{ dateFormat "2006-01-02T15:04:05CET" (default .Date (.PublishDate)) }}",
         "description": "{{ .Description }}",
+        "publisher": "Skyworkz",
+        "image": "{{ .Params.Image }}",
         "author": {
             "@type": "Person",
             "name": "{{ .Site.Params.author }}"
