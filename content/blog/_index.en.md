@@ -1,6 +1,7 @@
 ---
 title: "Blog"
 id: "blog"
+type: "page"
 description: "We're professional nerds who like to share our thoughts."
 bgImage: "img/blog.jpg"
 menu:

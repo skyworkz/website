@@ -4,7 +4,6 @@ description: "The AWS Cloud Development Kit (AWS CDK) is a new framework for def
 id: "blog"
 date: "2019-05-31"
 image: "img/AWS-CDK.png"
-bgImage: "img/blog.jpg"
 author: "Sander Knape"
 canonicalUrl: https://sanderknape.com/2019/05/building-serverless-applications-aws-cdk
 audio: []
