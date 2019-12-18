@@ -10,14 +10,35 @@ members:
     teaser: >
       Managing Director
     description: >
-      As managing director, Bas is always on the lookout for good engineers and challenging assignments.
+      After having worked as a consultant for several years, Bas switched to the dark side. As the 
+      managing director, his job is to hire new Skyworkerz, find awesome assignments and order the 
+      lease cars (and much more of course). But Bas will always be a techie at heart. He has a solid 
+      knowledge of Cloud and DevOps, and is always in for a good technical discussion.
+
+
+      In his spare time he likes to spend time with is son Sem, he loves skiing and traveling, and
+      he is an occasional sporter (road cycling and mountainbiking in the summer, ice skating in the
+      winter).
+      
+
+      You can find him on [Linkedin](https://linkedin.com/in/bastichelaar) and [Twitter](https://twitter.com/bastichelaar).
   - category: Management
     image: "martin.jpg"
     name: Martin Weidner
     teaser: >
-      Managing Director
+      Co-founder and advisor
     description: >
-      As managing director, Martin is always on the lookout for good engineers and challenging assignments.
+      After joining [Dataworkz](https://dataworkz.nl) as a Managing Director, Martin saw an opportunity
+      to build a company focused on the cloud. After having managed two companies, Martin decided to
+      focus on Dataworkz, and to stay an advisor at Skyworkz. He helps Bas behind the scenes to run the
+      company.
+      
+
+      In his spare time, Martin is a fanatic board gamer. You can see him regularly on board game nights
+      in Utrecht.
+
+
+      You can find him on [Linkedin](https://linkedin.com/in/martin-weidner-b52455).
   - category: Development
     image: "sven.jpg"
     name: Sven Rienstra

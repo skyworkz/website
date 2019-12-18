@@ -1,0 +1,11 @@
+enable: true
+title: Social activities
+subtitle: "It's not only about work!"
+
+events:
+  - image: "kerstdiner.jpg"
+    name: Christmas Dinner 2019
+    directory: christmas_2019
+    date: 6-12-2019
+    description: >
+      Christmas dinner 2019

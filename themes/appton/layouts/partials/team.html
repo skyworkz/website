@@ -1,62 +1,98 @@
 <!-- Team Start -->
+<section id="instagram">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="display-5">Work hard, play hard!</h2>
+    </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block">
+            <div class="instagram-content"></div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- Team Start -->
+<div class="bg-diagonal"></div>
 <section id="portfolio-work">
-    <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="block">
-              <div class="portfolio-content">
-                <ul id="portfolio-content-active">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="display-5">Meet the team.</h2>
+    </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block">
+            <div class="portfolio-content">
+              <ul id="portfolio-content-active">
 
 {{ $members := .Site.Data.team.members }}
-{{ $resources := .Resources.ByType "image"}}
+{{ $resources := .Resources.Match "images/members/*" }}
 {{ range $resources }}
-  {{ with . }}
-    {{ $imageName := .Name }}
-    {{ $image300:= (.Fill "300x300") }}
-    {{ $image600 := (.Fill "600x600") }}
+{{ with . }}
 
-    {{ range $members}}
-    {{ $id := urlize .name }}
-    {{ if eq .image $imageName }}
-                    <li class="mix">
-                            <a href="{{ $image600.RelPermalink }}" data-toggle="modal" data-target="#{{ $id }}">
-                        <img class="img-responsive" src="{{ $image300.RelPermalink }}">
-                        <div class="overlay">
-                          <div>
-                            <i class="fa fa-search fz-20"></i>
-                            <h2>{{ .name }}</h2>
-                            <p>{{ .teaser }}</p>
-                          </div>
+  {{ $imageName := .Name }}
+  {{ $image300:= (.Fill "300x300") }}
+  {{ $image600 := (.Fill "600x600") }}
+  
+  {{ range $members}}
+  
+  {{ $id := urlize .name }}
+  {{ if eq (printf "images/members/%s" .image ) $imageName }}
+                  <li class="mix">
+                          <a href="{{ $image600.RelPermalink }}" data-toggle="modal" data-target="#{{ $id }}">
+                      <img class="img-responsive" src="{{ $image300.RelPermalink }}">
+                      <div class="overlay">
+                        <div>
+                          <i class="fa fa-search fz-20"></i>
+                          <h2>{{ .name }}</h2>
+                          <p>{{ .teaser }}</p>
                         </div>
-                      </a>
-                  </li>
-                  <div class="modal fade" id="{{ $id }}" tabindex="-1" role="dialog" aria-labelledby="{{ $id }}Title" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                              <h5 class="modal-title" id="{{ $id }}Title">{{ .name }}</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
                       </div>
-                      <div class="modal-body">
-                              {{ .description }}
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      </div>
+                    </a>
+                </li>
+                <div class="modal fade" id="{{ $id }}" tabindex="-1" role="dialog" aria-labelledby="{{ $id }}Title" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                            <h5 class="modal-title" id="{{ $id }}Title">{{ .name }}</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                            {{ .description | markdownify }}
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
-      {{ end }}
+              </div>
     {{ end }}
   {{ end }}
 {{ end }}
-                </ul>
-              </div>
+{{ end }}
+              </ul>
             </div>
           </div>
         </div>
-    </div>
+      </div>
+  </div>
 </section>
 
+
+
+<script>
+$(window).on('load', function(){
+  $.instagramFeed({
+    'username': 'skyworkz.nl',
+    'container': ".instagram-content",
+    'items': 12,
+    'items_per_row': 3,
+    'display_profile': false,
+    'display_biography': false,
+    'display_gallery': true
+  });
+});
+</script> 

@@ -1136,3 +1136,90 @@ ul#portfolio-content-active {
 #portfolio-work .block .mix {
   //display: none;
 }
+
+#instagram {
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+#instagram .block .instagram-content ul li {
+  float: left;
+  width: 31.5%;
+  overflow: hidden;
+  margin: 3px;
+  position: relative;
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin-bottom: 6px;
+}
+
+
+#instagram .block .instagram-content ul li:hover .overlay {
+  opacity: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#instagram .block .instagram-content ul li a {
+  display: block;
+  color: #fff;
+}
+
+#instagram .block .instagram-content ul li a h2 {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#instagram .block .instagram-content ul li a p {
+  font-size: 15px;
+}
+
+#instagram .block .instagram-content ul li a span {
+  font-style: italic;
+  font-size: 13px;
+  color: #655E7A;
+}
+
+#instagram .block .instagram-content ul img {
+  width: 100%;
+  height: auto;
+}
+
+#instagram .block .instagram-content .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(60, 130, 180, 0.9);
+  opacity: 0;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 30px;
+}
+
+#instagram .block .instagram-content .position-center {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translate(0%, 50%);
+  -moz-transform: translate(0%, 50%);
+  -ms-transform: translate(0%, 50%);
+  transform: translate(0%, 50%);
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
+}
+
+ul#instagram-content-active {
+        padding: 0px;
+}
+
+

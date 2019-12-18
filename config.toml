@@ -7,6 +7,7 @@ pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
 pygmentsUseClasses            = true
 theme = "appton"
+inst_access = ""
 
 [menu]
 

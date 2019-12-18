@@ -1,8 +1,7 @@
 ---
 title: Team
 id: team
-bgImage: "img/meetup.jpg"
-description: "Skyworkz has an awesome team of skilled developers and engineers."
+description: "It's not only about work: it's also about fun. We regularly organise social activities and events. Take a look at our Instagram feed to get an impression!"
 menu:
   main:
     title: "Team"
