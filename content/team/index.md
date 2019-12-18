@@ -1,7 +1,7 @@
 ---
 title: Team
 id: team
-description: "It's not only about work: it's also about fun. We regularly organise social activities and events. Take a look at our Instagram feed to get an impression!"
+description: "It's not only about work: it's also about fun. We regularly organise social activities, and once a year we will go to a conference together."
 menu:
   main:
     title: "Team"
