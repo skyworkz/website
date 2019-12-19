@@ -8,4 +8,5 @@ menu:
     weight: 30
   footer:
     title: "Team"
+    weight: 30
 ---

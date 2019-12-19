@@ -21,7 +21,9 @@
     {{ if isset .Params "id" }}
       {{ partial .Params.id . }}
     {{ else }}
+    <div class="container">
       <main>{{ .Content }}</main>
+    </div>
     {{ end }}
 
      <!-- Footer -->
