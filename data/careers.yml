@@ -9,54 +9,86 @@ profiles:
     text: >
       You are:
 
-       * **passionate** about infrastructure and able to communicate and coach the advantages of the cloud to both business, agile teams in **DevOps** cloud development. They get that you get the cloud.
+       * **passionate** about building scalable and reliable cloud platforms for developers.
+       
+       * constantly **balancing pragmatism and quality**. You hate blocking developers, and you're not a ticket ticker.
+       
+       * able to communicate the advantages of the cloud to both business and techies. 
+       
+       * the go-to person when it comes to the cloud.
 
-       * You are a polyglot **developer/scripter** and would almost call yourself a programmer: Bash, Python, Go, Perl (just joking, no not Perl).
+       * a polyglot **developer/scripter** and would almost call yourself a programmer: Bash, Python, Go, Perl (just joking, no not Perl).
 
-       * There is no type of infrastructure that you haven't coded, no service deployment that you haven't **automated**.
+       * a problem solver. There is no type of infrastructure that you haven't **automated**, no application that you haven't **dockerized**.
 
-       * Asking for a strong agile background is superfluous for you. Without agile there is no DevOps.
+       * allergic to the word **DevOps**: another inflated buzzword. It's all about **collaboration, communication and automation**. No need for buzzwords.
 
       You did:
 
-       * Deploy applications with infrastructure as code monitoring and cloud native CI/CD pipelines with AWS CodeCommit, CodeBuild, Elastic Beanstalk, CodePipeline, CloudFormation or similar services on Google or Azure.
+       * work with cloud based **CI/CD** solutions (for example Github, Gitlab, Google Container Builder, AWS Codebuild or Azure DevOps).
 
-       * Understand, implement, and automate security controls, secure network segmenting and secrets management in a dynamic (multicloud) environment with AWS IAM, KMS, EC2 Systems Manager, Cognito, SAM, CloudTrail, X-Ray or similar services on Google or Azure.
+       * containerize your own desktop (just kidding, why on earth would you do that? Leave that up to Jezzie Frazelle and the likes).
 
-       * Manage, monitor and fine tune applications optimally.
+       * **monitor distributed systems** (e.g. Grafana, Prometheus, Cloudwatch, Stackdriver).
+
+       * configure VPC's, create VPN's and segment networks.
+
+       * secure cloud environments using **IAM**, policies and security rules.
+
+       * implement and automate security controls and policies (Open Policy Agent).
+       
+       * implement **secret management** tools (Vault, AWS Secret Manager and the likes).
+
+       * configure and **tune applications** to run and behave correctly (memory, garbage collection).
 
       Wait. There is more?
 
-       * Experience in Site Reliability Engineering.
+       * It would be great if you have experience in **Site Reliability Engineering**.  
 
-       * AWS / GCP/ Microsoft Cloud certifications.
+       * You know what **Chaos Engineering** is and you can't wait to implement it somewhere.  
 
-      Check all the boxes? Awesome, we are speechless. Come join us.
+       * And to show off on LinkedIn, it would be nice if you have some AWS/GCP/Azure certificates. But experience is more important.  
+
+      So, you check all the boxes? Awesome, we are speechless. Come join us.
 
   - name: Cloud Developer
     text: >
       You are:
 
-       * a seasoned craftsman with passion for programming and able to communicate and coach the advantages of the cloud to both business, agile teams in DevOps cloud development. They get that you get the cloud.
+       * a seasoned **craftsman** with passion for programming
 
-       * a polyglot Programmer (Java, Scala, Javacript/Typescript, Go, Python), with knowledge of the relevant ecosystem needed for building highly scalable enterprise applications like no other.
+       * gather requirements from the business and translate them into actionable backlog items
 
-       * There is no type of infrastructure that you haven't coded, no service deployment that you haven't **automated**.
+       * able to **architect** and write software that is born for the cloud
+       
+       * the go-to person when it comes to cloud. There is no cloud service that you don't know off.
 
-       * Asking for a strong agile background is superfluous for you. Without agile there is no DevOps.
+       * a **polyglot** Programmer (Java, Scala, Javacript/Typescript, Go, Python), and constantly updating yourself with the latest and greatest languages.
+
+       * a seasoned **VIM** user (just kidding, Emacs or VS Code is also fine).
+
+       * allergic to the words DevOps and Agile. **You just get shit done**, you build it you run it.
 
       You did:
 
-       * Develop web applications using cloud containers or serverless architectures with for example AWS EC2, EKS, IAM, S3, Route S3, Elasticache or similar services on Google or Azure.
+       * develop web applications **at scale** using containers or serverless technologies on AWS, GCP or Azure.
 
-       * Design and develop serverless architectures with AWS Lambda, Dynamo DB, Cognito or similar services on Google or Azure.
+       * extensively use **serverless** technologies like queues, databases and other services.
 
-       * Integrate and decouple applications with for example SQS, SNS, Kinesis or similar services on Google or Azure.
+       * use **event sourcing** and know what eventual consistency is.
+
+       * split up complex monoliths into separate **microservices** (and no, a microservices is NOT just a containerized application...).
+
+       * focus on the **full stack**, not only on features. If there is a way to optimize the software delivery pipeline, you're the first to jump on it.
+
+       * implement monitoring on an application level (APM, **distributed tracing**)
 
       Not enough? You also have:
 
-       * Deployed applications with infrastructure as code monitoring and cloud native CI/CD pipelines with AWS CodeCommit, CodeBuild, Elastic Beanstalk, CodePipeline, CloudFormation or similar services on Google or Azure.
+       * solid **networking** knowledge (segmentation, firewalls, loadbalancing), experience with **CI/CD** and troubleshooting distributed systems
 
-       * AWS / GCP/ Microsoft Cloud certifications.
+       * configured **Kubernetes** the hard way (just kidding, leave that up to Kelsey Hightower and the likes...)
 
-      Still interested? Then we should talk.
+       * a bunch of AWS/GCP/Azure certificates. Just cause they look good on LinkedIn.
+
+      Still think you're up to the task? Then we should talk.
