@@ -6,89 +6,102 @@ subtitle: >
 profiles:
 
   - name: Cloud Engineer
+    slug: cloud-engineer
     text: >
-      You are:
 
-       * **passionate** about building scalable and reliable cloud platforms for developers.
-       
-       * constantly **balancing pragmatism and quality**. You hate blocking developers, and you're not a ticket ticker.
-       
-       * able to communicate the advantages of the cloud to both business and techies. 
-       
-       * the go-to person when it comes to the cloud.
+      #### About us
 
-       * a polyglot **developer/scripter** and would almost call yourself a programmer: Bash, Python, Go, Perl (just joking, no not Perl).
+      Skyworks is a boutique consultancy with a focus on cloud based in Utrecht.
+      We are a diverse group of cloud consultants, who like to **share knowledge** and 
+      work on interesting projects. Technology is not only our work but also our
+      passion. But a **healthy work/life balance** is important as well.
 
-       * a problem solver. There is no type of infrastructure that you haven't **automated**, no application that you haven't **dockerized**.
+      #### About the role
 
-       * allergic to the word **DevOps**: another inflated buzzword. It's all about **collaboration, communication and automation**. No need for buzzwords.
+      We are looking for cloud consultants who want to make a difference. Instead
+      of just staffing projects, we closely look to your skills, experience and 
+      ambition, and try to match that with a **challenging assignment**. The projects
+      vary in length between 3 to 18 months. We always help customers with the end in
+      mind: after the project, the client needs to be able to stand on his own feet.
 
-      You did:
+      #### About you
 
-       * work with cloud based **CI/CD** solutions (for example Github, Gitlab, Google Container Builder, AWS Codebuild or Azure DevOps).
+      You are **passionate** about building scalable and reliable cloud platforms for 
+      developers. In your work, you constantly **balance pragmatism and quality**. You're
+      not a ticket ticker but a builder and a teamplayer. You are able to translate 
+      business requirements into practical architecture. You are able to communicate the 
+      advantages of the cloud to both business and techies. 
 
-       * containerize your own desktop (just kidding, why on earth would you do that? Leave that up to Jezzie Frazelle and the likes).
+      
+      Next to that, you're a polyglot **developer/scripter** and would almost call yourself
+      a programmer. But writing business code is less interesting to you, you like to bridge
+      the gap between code and infrastructure. You are a problem solver. There is no type of
+      infrastructure that you haven't **automated**, no application that you haven't
+      **containerized**. You are allergic to the word **DevOps**: another inflated buzzword. 
+      It's all about **collaboration, communication and automation**. No need for buzzwords.
+      
+      #### Good to know
 
-       * **monitor distributed systems** (e.g. Grafana, Prometheus, Cloudwatch, Stackdriver).
+      We expect you to be a consultant: you shape your own assignment, you are entrepreneurial 
+      and you're **not afraid** of new environments. You have been in the Netherlands for more than
+      a year already, so you are familiar with the Dutch culture and way of working.
 
-       * configure VPC's, create VPN's and segment networks.
-
-       * secure cloud environments using **IAM**, policies and security rules.
-
-       * implement and automate security controls and policies (Open Policy Agent).
-       
-       * implement **secret management** tools (Vault, AWS Secret Manager and the likes).
-
-       * configure and **tune applications** to run and behave correctly (memory, garbage collection).
-
-      Wait. There is more?
-
-       * It would be great if you have experience in **Site Reliability Engineering**.  
-
-       * You know what **Chaos Engineering** is and you can't wait to implement it somewhere.  
-
-       * And to show off on LinkedIn, it would be nice if you have some AWS/GCP/Azure certificates. But experience is more important.  
-
-      So, you check all the boxes? Awesome, we are speechless. Come join us.
+      #### Benefits
+      
+      We offer you the usual stuff: a nice salary with a yearly performance bonus, a mobility
+      budget or a lease car, a laptop of your own choice and a generous training budget. But next to
+      that we offer you an environment in which you can learn, both as a professional and as a 
+      person. And last but not least, we offer you the chance to shape the culture of a young and
+      growing consultancy.
 
   - name: Cloud Developer
+    slug: cloud-developer
     text: >
-      You are:
 
-       * a seasoned **craftsman** with passion for programming
+      #### About us
 
-       * gather requirements from the business and translate them into actionable backlog items
+      Skyworks is a boutique consultancy with a focus on cloud based in Utrecht.
+      We are a diverse group of cloud consultants, who like to **share knowledge** and 
+      work on interesting projects. Technology is not only our work but also our
+      passion. But a **healthy work/life balance** is important as well.
 
-       * able to **architect** and write software that is born for the cloud
-       
-       * the go-to person when it comes to cloud. There is no cloud service that you don't know off.
+      #### About the role
 
-       * a **polyglot** Programmer (Java, Scala, Javacript/Typescript, Go, Python), and constantly updating yourself with the latest and greatest languages.
+      We are looking for cloud consultants who want to make a difference. Instead
+      of just staffing projects, we closely look to your skills, experience and 
+      ambition, and try to match that with a **challenging assignment**. The projects
+      vary in length between 3 to 18 months. We always help customers with the end in
+      mind: after the project, the client needs to be able to stand on his own feet.
 
-       * a seasoned **VIM** user (just kidding, Emacs or VS Code is also fine).
+      #### About you
 
-       * allergic to the words DevOps and Agile. **You just get shit done**, you build it you run it.
+      You are a seasoned **craftsman** with a passion for programming. You love to 
+      gather requirements from the business and translate them into actionable backlog items.
+      You are able to **architect** and write software that is born for the cloud. You are
+      the go-to person when it comes to cloud. There is no cloud service that you don't know off.
+      You're a **polyglot** Programmer (Java, Scala, Javacript/Typescript, Go, Python), and 
+      constantly updating yourself with the latest and greatest languages. We expect you to be
+      a seasoned **VIM** user (just kidding, Emacs or VS Code is also fine). And last but not least,
+      you are allergic to the words DevOps and Agile. **You just get shit done**: you build it you run it.
 
-      You did:
 
-       * develop web applications **at scale** using containers or serverless technologies on AWS, GCP or Azure.
+      You have developed web applications **at scale** using containers or serverless technologies on public
+      cloud providers. You know what **event sourcing** and eventual consistency is. You are able to split up 
+      complex monoliths into separate **microservices** (and no, a microservices is NOT just a containerized 
+      application...). You focus on the **full stack**, not only on features. If there is a way to optimize 
+      the software delivery pipeline, you're the first to jump on it.
 
-       * extensively use **serverless** technologies like queues, databases and other services.
+      #### Good to know
 
-       * use **event sourcing** and know what eventual consistency is.
+      We expect you to be a consultant: you shape your own assignment, you are entrepreneurial 
+      and you're **not afraid** of new environments. You have been in the Netherlands for more than
+      a year already, so you are familiar with the Dutch culture and way of working.
 
-       * split up complex monoliths into separate **microservices** (and no, a microservices is NOT just a containerized application...).
-
-       * focus on the **full stack**, not only on features. If there is a way to optimize the software delivery pipeline, you're the first to jump on it.
-
-       * implement monitoring on an application level (APM, **distributed tracing**)
-
-      Not enough? You also have:
-
-       * solid **networking** knowledge (segmentation, firewalls, loadbalancing), experience with **CI/CD** and troubleshooting distributed systems
-
-       * configured **Kubernetes** the hard way (just kidding, leave that up to Kelsey Hightower and the likes...)
-
-       * a bunch of AWS/GCP/Azure certificates. Just cause they look good on LinkedIn.
-
-      Still think you're up to the task? Then we should talk.
+      #### Benefits
+      
+      We offer you the usual stuff: a nice salary with a yearly performance bonus, a mobility
+      budget or a lease car, a laptop of your own choice and a generous training budget. But next to
+      that we offer you an environment in which you can learn, both as a professional and as a 
+      person. And last but not least, we offer you the chance to shape the culture of a young and
+      growing consultancy.
+      

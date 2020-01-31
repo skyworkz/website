@@ -1,0 +1,40 @@
+{{ if .Site.Data.careers.enable }}
+<!-- Service Start -->
+<section id="service">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <div class="embed-responsive embed-responsive-16by9 mb-4">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kaq76j7vMJY?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Content -->
+    <div class="row justify-content-center">
+      
+      {{ range .Site.Data.careers.profiles }}
+      <div class="col-md-6  mt-lg-4">
+        <div class="mx-2">
+        <div class="service-item text-left">
+          <h4>{{ .name }}</h4>
+          <p>{{ .text | markdownify }}</p>
+        </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    </div>
+</section>
+<section class="">
+      <div class="text-center">
+        <h2>Did we trigger you?</h2>
+        <p>Great! Writing texts is hard, especially for job offers. But now you're here, let's take the next step. Let's have a coffee (or a beer if you like).</p>
+        <!-- Calendly link widget begin -->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+        <a class="btn btn-outline-primary mt-lg-2" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/skyworkz/introduction-interview'});return false;">Apply now</a>
+        <!-- Calendly link widget end -->
+      </div>
+</section>
+{{ end }}

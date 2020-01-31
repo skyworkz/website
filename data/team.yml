@@ -53,20 +53,6 @@ members:
       Cloud Engineer
     description: >
       Sander likes to build scalable cloud platforms. And he's really good at it.
-  - category: Development
-    image: "abdul.jpg"
-    name: Abdulrahman Amri
-    teaser: >
-      Cloud Developer
-    description: >
-      Abdul is one of our Cloud Developers, focused on building cloud-native business applications.
-  - category: Engineering
-    image: "lyle.jpg"
-    name: Lyle Henkeman
-    teaser: >
-      Cloud Engineer
-    description: >
-      Lyle likes to build scalable cloud platforms. And he's really good at it.
   - category: Engineering
     image: "timothy.jpg"
     name: Timothy Mamo

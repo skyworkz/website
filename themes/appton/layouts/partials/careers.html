@@ -13,13 +13,47 @@
     <!-- Content -->
     <div class="row justify-content-center">
       
-      {{ range .Site.Data.careers.profiles }}
-      <div class="col-md-6  mt-lg-4">
-        <div class="mx-2">
-        <div class="service-item text-left">
-          <h4>{{ .name }}</h4>
-          <p>{{ .text | markdownify }}</p>
+      
+      <div class="card-deck">
+          <div class="card text-center border-primary">
+            <div class="card-body">
+              <h5 class="card-title">Cloud Engineer</h5>
+              <p class="card-text">You build cloud platforms for developers.</p>
+            </div>
+            <div class="card-footer text-center"><a href="#" class="btn btn-primary" data-toggle="modal" data-target="#cloud-engineer">Read the job description</a></div>
         </div>
+          <div class="card text-center border-warning">
+            <div class="card-body">
+              <h5 class="card-title">Cloud Developer</h5>
+              <p class="card-text">You develop business applications using the cloud.</p>
+            </div>
+            <div class="card-footer text-center"><a href="#" class="btn btn-warning" data-toggle="modal" data-target="#cloud-developer">Read the job description</a></div>
+        </div>
+      </div>
+
+      {{ range .Site.Data.careers.profiles }}
+      <!-- Modal -->
+      <div class="modal fade" id="{{ .slug }}" tabindex="-1" role="dialog" aria-labelledby="{{ .slug }}" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">{{ .name }}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>{{ .text | markdownify }}</p>
+            </div>
+            <div class="modal-footer">
+              <!-- Calendly link widget begin -->
+              <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+              <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+              <a class="btn btn-success" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/skyworkz/introduction-interview'});return false;">Apply now</a>
+              <!-- Calendly link widget end -->
+              <button type="button" class="btn btn-outline-danger">Close</button>
+            </div>
+          </div>
         </div>
       </div>
       {{ end }}
