@@ -45,14 +45,26 @@ members:
     teaser: >
       Cloud Developer
     description: >
-      Sven is one of the Cloud Developers, focused on building cloud-native business applications.
+      As an experienced cloud native software developer Sven loves solving complex puzzles. He likes to 
+      work on challenges where there is no outright obvious solution. His strengths lie in having a 
+      very solid understanding of the software development process and being able to translate this 
+      knowledge in architectures and designs which suit the business needs.
+
+      You can find Sven on [LinkedIn](https://www.linkedin.com/in/sven-rienstra-20597227)
   - category: Engineering
     image: "sander.jpg"
     name: Sander Knape
     teaser: >
       Cloud Engineer
     description: >
-      Sander likes to build scalable cloud platforms. And he's really good at it.
+      As a Cloud Engineer, I love improving productivity and efficiency through automation. He's a 
+      strong advocate for “everything in code”. It’s his strength to look ahead, and to define solid 
+      long-term goals. He gets energy from the challenge of reaching these goals through smaller steps 
+      that bring value by themselves. He combines this with his strong engineering background, that 
+      ranges from front-end development to backend development and (Cloud) operations.
+
+      You can find Sander on [LinkedIn](https://www.linkedin.com/in/sanderknape). He also has his own
+      [blog](https://sanderknape.com/).
   - category: Engineering
     image: "timothy.jpg"
     name: Timothy Mamo
