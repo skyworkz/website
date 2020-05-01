@@ -5,7 +5,7 @@ id: "blog"
 date: "2020-04-30"
 author: "Bas Tichelaar"
 audio: []
-images: ["static/img/blog/google-cloud-serverless-decision-tree.svg"]
+images: ["https://skyworkz.nl/img/blog/google-cloud-serverless-decision-tree.svg"]
 series: []
 tags: ["google cloud", "gcp", "serverless", "google cloud run", "google app engine", "anthos", "google cloud functions"]
 videos: []
