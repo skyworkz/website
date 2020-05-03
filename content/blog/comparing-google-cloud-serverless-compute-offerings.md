@@ -2,7 +2,7 @@
 title: "Comparing Google Cloud Serverless Compute platforms"
 description: "How does Cloud Run compare to App Engine Flex for example? And what is the difference between Cloud Run for Anthos and Cloud Run? To answer these questions I created a quick overview of these platforms that will outline the use cases, benefits and limitations of Google's Serverless Compute offerings." 
 id: "blog"
-date: "2020-04-01"
+date: "2020-05-06"
 author: "Bas Tichelaar"
 audio: []
 images: ["https://skyworkz.nl/img/blog/gcp-serverless-decision-tree.png"]
