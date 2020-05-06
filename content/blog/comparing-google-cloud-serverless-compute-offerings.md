@@ -43,7 +43,7 @@ Below I will go more in depth into the various serverless compute offerings of G
 
 ## <a class="anchor" name="cloudrun"></a>Cloud Run: serverless containers
 
-If you just want to run a container that listens on an HTTP endpoint and serves requests, [Google Cloud Run](https://cloud.google.com/run/docs) does just that. Cloud Run does not build the container for you, that’s something you have to do yourself. Cloud Run only takes care of scaling your container when requests come in, and scales it down again when there is no traffic. Cloud Run is based on [Knative](https://knative.dev/), which leverages Kubernetes for you. 
+If you just want to run a container that listens on an HTTP endpoint and serves requests, [Google Cloud Run](https://cloud.google.com/run/docs) does just that. Cloud Run does not build the container for you, that’s something you have to do yourself. Cloud Run only takes care of scaling your container when requests come in, and scales it down again when there is no traffic. Cloud Run implements the [Knative](https://knative.dev/) API specification, but runs on Google's own infrastructure instead of a Kubernetes cluster. 
 
 Cloud Run is ideal when you just want to a container that listens on an HTTP endpoint or a [Pub/Sub](https://cloud.google.com/pubsub/docs/overview) topic, and you want to keep control over the underlying runtime. You don’t have to manage the server, configure a Kubernetes cluster or create auto scalers. Cloud Run takes care of that.
 
@@ -99,7 +99,7 @@ Cloud Run is ideal when you just want to a container that listens on an HTTP end
                 <ul>
                     <li>You still need a pipeline to go from code to container image (you could leverage <a href="https://cloud.google.com/cloud-build/docs">Google Cloud Build</a> and <a href="https://cloud.google.com/container-registry/docs">Google Container Registry (GCR)</a></li>
                     <li>Does not support HTTP streaming (websockets)</li>
-                    <li>Does not support HTTP/2</li>
+                    <li>Does not support HTTP/2 (requests are converted to HTTP/1.1)</li>
                     <li>Supports unary gRPC API's via the <a href="https://cloud.google.com/endpoints/docs/grpc/get-started-cloud-run">Extensible Service Proxy V2 Beta</a></li>
                 </ul>
             </td>
