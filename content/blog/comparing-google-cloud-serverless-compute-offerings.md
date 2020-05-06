@@ -43,7 +43,7 @@ Below I will go more in depth into the various serverless compute offerings of G
 
 ## <a class="anchor" name="cloudrun"></a>Cloud Run: serverless containers
 
-If you just want to run a container that listens on an HTTP endpoint and serves requests, [Google Cloud Run](https://cloud.google.com/run/docs) does just that. Cloud Run does not build the container for you, that’s something you have to do yourself. Cloud Run only takes care of scaling your container when requests come in, and scales it down again when there is no traffic. Cloud Run implements the [Knative](https://knative.dev/) API specification, but runs on Google's own infrastructure instead of a Kubernetes cluster. 
+If you just want to run a container that listens on an HTTP endpoint and serves requests, [Google Cloud Run](https://cloud.google.com/run/docs) does just that. Cloud Run does not build the container for you, that’s something you have to do yourself. Cloud Run only takes care of scaling your container when requests come in, and scales it down again when there is no traffic. Cloud Run implements the [Knative](https://knative.dev/) API specification, but runs on Google's own infrastructure instead of a Kubernetes cluster. More details on the implementation can be found in [this blogpost by Ahmet Alp Balkan](https://ahmet.im/blog/cloud-run-is-a-knative/). 
 
 Cloud Run is ideal when you just want to a container that listens on an HTTP endpoint or a [Pub/Sub](https://cloud.google.com/pubsub/docs/overview) topic, and you want to keep control over the underlying runtime. You don’t have to manage the server, configure a Kubernetes cluster or create auto scalers. Cloud Run takes care of that.
 
