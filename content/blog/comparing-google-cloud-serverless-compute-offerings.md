@@ -101,6 +101,7 @@ Cloud Run is ideal when you just want to a container that listens on an HTTP end
                     <li>Does not support HTTP streaming (websockets)</li>
                     <li>Does not support HTTP/2 (requests are converted to HTTP/1.1)</li>
                     <li>Supports unary gRPC API's via the <a href="https://cloud.google.com/endpoints/docs/grpc/get-started-cloud-run">Extensible Service Proxy V2 Beta</a></li>
+                    <li>Charges per request in addition to processing time, similar to cloud functions</li>
                 </ul>
             </td>
         </tr>
@@ -178,7 +179,7 @@ If you already have a Kubernetes cluster ([GKE](https://cloud.google.com/kuberne
 
 ## <a class="anchor" name="cloudfunctions"></a>Cloud Functions: serverless functions
 
-For single purpose workloads, running a complete container might be overkill. Especially if it’s event driven. Deploying a Cloud Function could be a better fit. [Cloud Functions](https://cloud.google.com/functions/docs) are single functions that can be triggered by an HTTP request or a Pub/Sub message. You just provide the function, the platform does the rest: packaging, deploying and running your code. When requests come in, it will automatically scale up and back to zero again. There are some limitations: your function needs to be written in either Python, NodeJS, Golang or Java.
+For single purpose workloads, running a complete container might be overkill. Especially if it’s event driven. Deploying a Cloud Function could be a better fit. [Cloud Functions](https://cloud.google.com/functions/docs) are single functions that can be triggered by an HTTP request or a Pub/Sub message. You just provide the function, the platform does the rest: packaging, deploying and running your code. When requests come in, it will automatically scale up and back to zero again. Functions can be an attractive tool for automating business actions such as responding to hiring a new employee or adding a customer to a CRM database. These low frequency events don't warrant hosting a full server nor keeping dependencies of several layers up-to-date. There are some limitations: your function needs to be written in either Python, NodeJS, Golang or Java.
 
 #### Overview
 
@@ -420,5 +421,6 @@ When making a choice between these offerings, keep these things in mind:
  * If you just want to run a simple function, and creating a container would be overkill, Cloud Functions is the best option.
  * If you don’t have a CI/CD in place, and you just want to develop and deploy your entire application, App Engine (Flex) is the go-to solution.
  * If you are building an application that uses HTTP/2 then Cloud Run for Anthos is your only option. But keep in mind that you need to have a Kubernetes cluster up and running. 
+ * If your use-case involves a few hundred or thousand requests per day, Cloud Run or Functions are fine. Millions of requests or more should utilize AppEngine, Kubernetes or Compute engine to avoid per-request charges driving up costs.
 
  Good luck in choosing the right solution for your situation! If you need any help, you know where to find us :)
