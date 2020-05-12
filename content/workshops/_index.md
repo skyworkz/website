@@ -1,7 +1,7 @@
 ---
 title: "Workshops"
 id: workshops
-type: "page"
+type: "workshop"
 description: "blabla"
 ---
 
