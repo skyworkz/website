@@ -46,12 +46,9 @@
               <p>{{ .text | markdownify }}</p>
             </div>
             <div class="modal-footer">
-              <!-- Calendly link widget begin -->
-              <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-              <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-              <a class="btn btn-success" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/skyworkz/introduction-interview'});return false;">Apply now</a>
-              <!-- Calendly link widget end -->
-              <button type="button" class="btn btn-outline-danger" data-dismiss="modal" aria-label="Close">Close</button>
+              <a class="btn btn-success" id="book" href="">Apply now</a>
+              <a class="btn btn-outline-danger" data-dismiss="modal" aria-label="Close">Close</a>
+              <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/interview" data-height data-width data-element="#book" async></script>
             </div>
           </div>
         </div>

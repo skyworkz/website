@@ -104,17 +104,11 @@ One of the best ways to save money is to use auto-scaling. Scale up when there i
     </div>
     <div class="row mt-5">
       <div class="col-lg-12 text-center">
-        <p class="lead divider-subtitle mt-2">So, may we help you save costs in the cloud? Book an appointment now!</p>
+        <p class="lead divider-subtitle mt-2">So, may we help you save costs in the cloud?</p>
       </div>
       <div class="mx-auto">
-        <!-- Calendly link widget begin -->
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-        <a class="btn btn-primary" href=""
-          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/bastichelaar/phonecall'});return false;">Schedule
-          a
-          phone call</a>
-        <!-- Calendly link widget end -->
+        <a class="btn btn-outline-primary mt-lg-2" id="book" href="">Sure, let's have a chat!</a>
+        <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/cost-savings-scan" data-height data-width data-element="#book" async></script>
         </a>
       </div>
     </div>

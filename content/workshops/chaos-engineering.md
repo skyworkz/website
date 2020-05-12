@@ -159,14 +159,8 @@ on what you already have.
         <p>So, do you want to become more confident in building and running your systems? Book a workshop today!</p>
       </div>
       <div class="mx-auto">
-        <!-- Calendly link widget begin -->
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-        <a class="btn btn-primary" href=""
-          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/bastichelaar/phonecall'});return false;">Schedule
-          a
-          phone call</a>
-        <!-- Calendly link widget end -->
+        <a class="btn btn-outline-primary mt-lg-2" id="book" href="">Book now</a>
+        <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/workshop" data-height data-width data-element="#book" async></script>
         </a>
       </div>
     </div>
