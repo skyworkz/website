@@ -7,31 +7,119 @@ image: "img/cloud-cost-optimization.png"
 ---
 
 {{<section>}}
-{{<col-left-10 title="">}}
+{{% col-left-10 title="Become aware of expenditure" %}}
+The cloud offers increased flexibility and agility, which encourages innovation, experimentation and faster development. It elmininates manual processes and offers elasticity and scalability. However, to optimally profit from what the cloud has to offer, you have to adopt a new way of thinking about expenditures.
 
+It is necessary to attribute resource costs to teams and product owners. This drives efficient behavior and helps reduce waste. Finally this allows you to make better informed decisions on where to allocate budget.
 
-{{</col-left-10>}}
+*We will help you get insights in your expenditure by visualising which teams are spending the most and which teams are already cost-efficient.*
+
+{{% /col-left-10 %}}
 
 {{<col-right-2>}}
-{{<img class="img-fluid" src="/img/cost-savings-scan.png">}}
+{{<img class="img-fluid" src="/img/icons/costsavings.svg">}}
 {{</col-right-2>}}
 {{</section>}}
 
 
 {{<section>}}
 {{<col-left-2>}}
-{{<img class="img-fluid" src="/img/cost-savings-scan.png">}}
+{{<img class="img-fluid" src="/img/icons/consultant.svg">}}
 {{</col-left-2>}}
 
-{{<col-right-10 title="This is the title">}}
+{{% col-right-10 title="Cost-effective resources" %}}
 
-Trying to build the perfect solution is almost impossible,
-so accept that things might go wrong and engineer for
-them. At times it is easy to foresee what the issue might be, for example an unexpected surge in customer
-requests, and what the solution could be, implement autoscaling. But how confident are you that your
-solution will
-work (will autoscaling auto scale fast enough?)a
+It is crucial to use the appropriate instances and resources for your workload. A process might take 6 hours on a smaller server but one hour on a larger server that is twice as expensive. This means that the larger server will save you money in the end. Next to that, you might want to use spot instances for non-critical workload, containers instead of VM's and serverless functions for batch workloads.
 
-{{</col-right-10>}}
+*During the scan, we will inspect your workload and used resources. This will lead to example calculations and practical recommendations which will save you money.*
+
+{{% /col-right-10 %}}
 
 {{</section>}}
+
+{{<section>}}
+{{% col-left-10 title="Auto-scale on demand and shutdown at night" %}}
+
+One of the best ways to save money is to use auto-scaling. Scale up when there is demand, and scale down again. With the serverless offerings you can even scale to zero if required. Another way to save money is to make sure your development environments will be shutdown at night, and started again in the morning. This not only saves resources, but is a good test as well to see if you're automation is working correctly.
+
+*The scan will point out where to leverage auto-scaling, and what it will save you over time.*
+
+{{% /col-left-10 %}}
+
+{{<col-right-2>}}
+{{<img class="img-fluid" src="/img/icons/consultant.svg">}}
+{{</col-right-2>}}
+{{</section>}}
+
+{{<raw>}}
+<section class="mt-lg-5">
+  <div class="container text-center text-lg-left mt-5">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h2 class="display-5">Chaos Engineering Workshop</h2>
+        <div class="row">
+          <div class="col-lg-10">
+            <p class="lead divider-subtitle mt-2 text-muted">We provide you with the expertise to learn the principles
+              of chaos engineering. You will learn how to run
+              controlled experiments in order to gain more confidence in your system and make it more resilient. You
+              will also
+              learn the importance of having visibility of the system, and how this can be improved, to be able to debug
+              issues
+              better.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mt-5 mt-lg-0 mb-2 embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item"
+          src="https://www.youtube-nocookie.com/embed/Kila1FvQPXw?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-lg-5 bg-diagonal">
+  <div class="container text-center text-lg-left mt-5">
+    <div class="row align-items-center text-center">
+      <div class="col-lg-8 mx-auto">
+        <h2>Cost savings scan</h2>
+        <p class="lead divider-subtitle mt-2 text-muted">No cure no pay</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="lead divider-subtitle mt-2">
+        <p>
+        In this one-day cost savings scan, we will explore your current cloud environment and provide you with recommendations and example calculations. </p>
+        <p>Our approach:</p>
+        <ul>
+        <li>Explore your current cloud bill</li>
+        <li>Deep dive into your architecture</li>
+        <li>Perform an analysis on the current resource usage</li>
+        <li>Create a cost savings report</li>
+        </ul>
+        </p>
+        <p>If we can't find anything, you don't have to pay us. But we are confident we can help you save (a lot of) money.</p>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-12 text-center">
+        <p class="lead divider-subtitle mt-2">So, may we help you save costs in the cloud? Book an appointment now!</p>
+      </div>
+      <div class="mx-auto">
+        <!-- Calendly link widget begin -->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+        <a class="btn btn-primary" href=""
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/bastichelaar/phonecall'});return false;">Schedule
+          a
+          phone call</a>
+        <!-- Calendly link widget end -->
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+{{</raw>}}

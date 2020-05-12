@@ -1,8 +1,8 @@
 ---
-title: "Workshops"
+title: "Productized consultancy"
 id: workshops
 type: "workshop"
-description: "blabla"
+description: "Training, workshops and quick scans"
 ---
 
 # Test

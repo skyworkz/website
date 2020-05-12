@@ -19,7 +19,8 @@
               <div class="portfolio-content">
                 <ul id="portfolio-content-active">
 {{ $portfolio := .Site.Data.work.portfolio }}
-{{ $resources := .Resources.ByType "image"}}
+{{ with .Site.GetPage "section" "images" }}
+{{ $resources := .Resources.Match "work/*" }}
 {{ range $resources }}
   {{ with . }}
     {{ $imageName := .Name }}
@@ -62,6 +63,7 @@
       {{ end }}
     {{ end }}
   {{ end }}
+{{ end }}
 {{ end }}
                 </ul>
               </div>
