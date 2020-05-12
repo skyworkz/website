@@ -71,16 +71,16 @@ on what you already have.
 </section>
 
 <section class="mt-lg-5 bg-diagonal">
-  <div class="container text-center text-lg-left mt-5">
-    <div class="row align-items-center text-center">
+  <div class="container mt-5">
+    <div class="row text-center">
       <div class="col-lg-8 mx-auto">
         <h2>The program</h2>
         <p class="lead divider-subtitle mt-2 text-muted">This two day workshop consists of theory and practical
           assignments.</p>
       </div>
     </div>
-    <div class="row align-items-center justify-content-md-center">
-      <div class="card-deck">
+    <div class="row">
+      <div class="card-deck col-lg-10 mx-auto">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Workshop Day 1</h5>
