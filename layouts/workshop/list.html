@@ -22,11 +22,10 @@
 	<section class="blog">
 		<div class="container">
 			<div class="row">
-
-				{{ range (.Paginator 4).Pages }}
-				<div class="col-md-6 p-md-3">
+				<div class="col-lg-10 mx-auto">
 					<div class="card-deck">
-					<div class="card" style="width: 18rem;">
+				{{ range (.Paginator 4).Pages }}
+					<div class="card">
 						<div class="embed-responsive embed-responsive-16by9">
 							<a href="{{ .Permalink }}"><img src="{{ .Params.image }}" class="embed-responsive-item card-img-top" alt="post-thumb"></a>
 						</div>
@@ -38,9 +37,9 @@
 						  <a href="{{ .Permalink }}" class="btn btn-primary">Read More</a>
 						</div>
 					  </div>
-					  </div>
-            </div>
 				{{ end }}
+			  </div>
+     		  </div>
 			</div>
 			<div class="col-12 text-center">
 				{{ template "_internal/pagination.html" . }}
