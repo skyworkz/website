@@ -8,7 +8,7 @@ members:
     image: "bas.jpg"
     name: Bas Tichelaar
     teaser: >
-      Managing Director
+      Managing Director | Entreprenerd | Skiing fanatic | Still a techie
     description: >
       After having worked as a consultant for several years, Bas switched to the dark side. As the 
       managing director, his job is to hire new Skyworkerz, find awesome assignments and order the 
@@ -59,7 +59,7 @@ members:
     image: "sven.jpg"
     name: Sven Rienstra
     teaser: >
-      Cloud Developer
+      Cloud Developer | Runner | Formula 1 fan 
     description: >
       As an experienced cloud native software developer Sven loves solving complex puzzles. He likes to 
       work on challenges where there is no outright obvious solution. His strengths lie in having a 
@@ -71,7 +71,7 @@ members:
     image: "sander.jpg"
     name: Sander Knape
     teaser: >
-      Cloud Engineer
+      Cloud Engineer | Gin-Tonic snob | Blogger
     description: >
       As a Cloud Engineer, I love improving productivity and efficiency through automation. He's a 
       strong advocate for “everything in code”. It’s his strength to look ahead, and to define solid 
@@ -85,41 +85,55 @@ members:
     image: "timothy.jpg"
     name: Timothy Mamo
     teaser: >
-      Cloud Engineer
+      Cloud Engineer | Home automator | World traveller
     description: >
       Timothy likes to build scalable cloud platforms. And he's really good at it.
   - category: Development
     image: "mikhail.jpg"
     name: Mikhail Vaysman
     teaser: >
-      Cloud Developer
+      Cloud Developer | Beer snob | Boardgame geek
     description: >
-      Mikhail is one of our Cloud Developers, focused on building cloud-native business applications.
+      Mikhail is a polyglot cloud developer, focused on building cloud-native business applications.
   - category: Engineering
     image: "benny.jpg"
     name: Benny Cornelissen
     teaser: >
-      Cloud Consultant
+      Builder of Clouds | Cyclist | RCC 17096 | Guitar player
     description: >
       Benny has many years of experience designing and building secure, reliable and scalable platforms that are easy to use.
   - category: Engineering
     image: "maarten.jpg"
     name: Maarten Dirkse
     teaser: >
-      Cloud Consultant
+      Cloud Consultant | Politician | Public speaker | Father of 2
     description: >
-      Maarten started as a software engineer, but became an experienced Cloud Consultant.
+      Maarten started his career as an allround software engineer and ended up in the cloud. Next to that he is a city counsil member @ VVD Leiden.
   - category: Engineering
     image: "jeroen.jpg"
     name: Jeroen Zeegers
     teaser: >
-      Cloud Consultant
+      Cloud Consultant | Tesla hacker | Knows everyone
     description: >
       Jeroen has many years of experience designing and building secure, reliable and scalable platforms that are easy to use.
   - category: Engineering
     image: "dushyant.jpg"
     name: Dushyant Chakravorty
     teaser: >
-      Cloud Engineer
+      Cloud Engineer | Indian cook and food lover | Motorcyclist
     description: >
       Dushyant is one of the cloud engineers, he likes to build and manage scalable cloud platforms. 
+  - category: Engineering
+    image: "andy.jpg"
+    name: Andy Gordon
+    teaser: >
+      Hands-on Cloud Architect | Dog lover | Skiing fanatic | Traveller
+    description: >
+      Andy is a hands-on cloud architect with a strong background in AWS and Kubernetes. In his spare time he likes to go skiing as much as possible.
+  - category: Engineering
+    image: "tom.jpg"
+    name: Tom Rogers
+    teaser: >
+      Cloud Developer | World traveller | IoT geek | Tea snob
+    description: >
+      After having worked at companies like BBC and DAZN, Tom joined Skyworkz as a cloud developer. He knows a lot about AWS and is a strong polyglot developer.
