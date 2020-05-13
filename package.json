@@ -25,6 +25,8 @@
     "ionicons": "^4.5.8",
     "lightbox2": "^2.11.1",
     "lodash": ">=4.17.13",
+    "kind-of": ">=6.0.3",
+    "minimist": ">=1.2.3",
     "mixin-deep": ">=1.3.2",
     "normalize.css": "^8.0.1",
     "owl.carousel2": "^2.2.1",
@@ -33,6 +35,7 @@
     "postcss-uncss": "^0.16.1",
     "scss-powertools": "^1.1.0",
     "set-value": ">=2.0.1",
+    "serialize-javascript": ">=2.1.1",
     "uncss": "^0.16.2",
     "url-loader": "^1.1.2",
     "venobox": "^1.8.5"
