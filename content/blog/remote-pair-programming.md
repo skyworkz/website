@@ -5,7 +5,7 @@ id: "blog"
 date: "2020-05-18"
 author: "Benny Cornelissen"
 audio: []
-images: []
+images: ["/img/blog/vscode-live-share.jpg"]
 series: []
 tags: ["cloud", "coding", "productivity"]
 videos: []
@@ -23,6 +23,8 @@ _(This is a summary of an original blog posted on [Benny's blog](https://blog.be
 Most of you will have experiences with some of the 'collaboration approaches' that _don't_ work. Sending code snippets over Slack, for example. No context, poor formatting, no highlighting, no line numbers. Screen sharing, is usually the next option. "Can you zoom in please?", or "Can you scroll down a little?" get annoying pretty quickly. And while combining 'tmux' and 'vim' can _technically_ give you 'multiplayer Vim', it'll be quite a challenge to find two people who enjoy using such a setup. We need something better, without having to resort to 'obnoxious command line stuff from the eighties'.
 
 I'm a Vim guy, but I fully recognize most people aren't. Most of the people around me are using VSCode nowadays, and the solution for our problem happens to be based on VSCode.  The core of our solution is the [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) for VSCode. If you want to Remote Pair Program with a colleague, make sure you both have VSCode and the Live Share extension pack installed. Log into your Microsoft/Github account to make Live Share work, and off you go. That's it. No cloud services, VPNs, or firewall rules.
+
+{{<img src="/img/blog/vscode-live-share.jpg" class="img-fluid" title="VSCode Live Share Session" >}}
 
 It gives you a wide range of options while collaborating:
 
