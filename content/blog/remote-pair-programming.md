@@ -16,7 +16,7 @@ But what if you're not in the same room? Or even the same country? Or what if yo
 
 In my previous project our teams were split between Amsterdam and Nairobi, so we would regularly run into the issue that we needed to collaborate with some not even in the same timezone. So what to do?
 
-_(This is a summary of an original blog posted on [Benny's blog](https://blog.bennycornelissen.nl/post/remote-pair-programming/)_
+_(This is a summary of an original blog posted on [Benny's blog](https://blog.bennycornelissen.nl/post/remote-pair-programming/))_
 
 ## Making it work
 
