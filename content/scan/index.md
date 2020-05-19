@@ -52,32 +52,6 @@ One of the best ways to save money is to use auto-scaling. Scale up when there i
 {{</section>}}
 
 {{<raw>}}
-<section class="mt-lg-5">
-  <div class="container text-center text-lg-left mt-5">
-    <div class="row align-items-center">
-      <div class="col-lg-8">
-        <h2 class="display-5">Chaos Engineering Workshop</h2>
-        <div class="row">
-          <div class="col-lg-10">
-            <p class="lead divider-subtitle mt-2 text-muted">We provide you with the expertise to learn the principles
-              of chaos engineering. You will learn how to run
-              controlled experiments in order to gain more confidence in your system and make it more resilient. You
-              will also
-              learn the importance of having visibility of the system, and how this can be improved, to be able to debug
-              issues
-              better.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mt-5 mt-lg-0 mb-2 embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item"
-          src="https://www.youtube-nocookie.com/embed/Kila1FvQPXw?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1"
-          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="mt-lg-5 bg-diagonal">
   <div class="container text-center text-lg-left mt-5">
