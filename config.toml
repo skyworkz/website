@@ -1,12 +1,10 @@
-title = "Skyworkz Cloud Consultants"
+title = "Skyworkz"
 baseURL = "https://skyworkz.nl"
 languageCode = "en-us"
 enableRobotsTXT = true
-#pygmentsUseClassies = true
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
 pygmentsUseClasses            = true
-#theme = "appton"
 inst_access = ""
 
 [menu]
@@ -22,7 +20,7 @@ inst_access = ""
 [params]
   home = "Home"
   description = "Skyworkz is a boutique consultancy helping companies adopt the public cloud."
-  title = "Skyworkz Cloud Consultants"
+  title = "Skyworkz"
   github = "skyworkz"
   linkedin = "skyworkz"
   instagram = "skyworkz"
@@ -30,7 +28,7 @@ inst_access = ""
   author = "Skyworkz"
   logo = "/img/logo.png"
   images = ["/img/logo.png"]
-  header = "Skyworkz Cloud Consultants"
+  header = "Skyworkz"
 
   [params.work]
     bgImage = "img/work.webp"
