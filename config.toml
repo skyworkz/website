@@ -26,8 +26,8 @@ inst_access = ""
   instagram = "skyworkz"
   twitter = "SkyworkzNL"
   author = "Skyworkz"
-  logo = "/img/logo.png"
-  images = ["/img/logo.png"]
+  logo = "/img/logo/logo.png"
+  images = ["/img/teaser.png"]
   header = "Skyworkz"
 
   [params.work]

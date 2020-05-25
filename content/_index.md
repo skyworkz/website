@@ -1,5 +1,5 @@
 ---
-title: Do cloud or do not. There is no try.
+title: Your cloud journey, our business.
 id: home
 image: "img/logo.png"
 description: "We are highly skilled Cloud Developers and DevOps engineers, who help companies become Cloud Native."
