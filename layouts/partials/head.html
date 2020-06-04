@@ -24,7 +24,7 @@
   {{ $lightbox := resources.Get "js/lightbox.js" }}
   {{ $owlcarousel := resources.Get "js/owl.carousel.js" }}
   {{ $defaultJS := slice $jquery $bootstrap $lightbox $plugins | resources.Concat "js/global.js" | resources.Minify | resources.Fingerprint }}
-  <script src="{{ $defaultJS.Permalink }}"></script>
+  <script defer src="{{ $defaultJS.Permalink }}"></script>
   {{ $owlJS := slice $owlcarousel | resources.Concat "js/owl.js" | resources.Fingerprint }}
   <script defer src="{{ $owlJS.Permalink }}"></script>
   {{ $mainJS := slice $main | resources.Concat "js/main.js" | resources.Fingerprint }}
