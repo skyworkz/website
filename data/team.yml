@@ -137,3 +137,11 @@ members:
       Cloud Developer | World traveller | IoT geek | Tea snob
     description: >
       After having worked at companies like BBC and DAZN, Tom joined Skyworkz as a cloud developer. He knows a lot about AWS and is a strong polyglot developer.
+  - category: Engineering
+    image: "julio.jpg"
+    name: Julio Rosua
+    teaser: >
+      Cloud Engineer | Cryptocurrencies Fan | Bass and guitar player | Craft Beer Snob
+    description: >
+      Julio is hands-on Azure Architect-Enginner highly experienced in MS Technologies and in the last years, working hard with AKS in Azure.
+      
