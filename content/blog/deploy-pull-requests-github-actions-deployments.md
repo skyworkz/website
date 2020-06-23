@@ -23,8 +23,6 @@ When it comes to deploying pull requests, there are a few things you can do:
  
  Something can be said for all options. In many cases it doesn't make sense at all to deploy a pull request (e.g. for libraries). While deploying all your pull requests may sound convenient at first, there are actually some things you'd have to think about:
 
- {{<img src="/img/blog/github_deployments_finished.png" class="img-fluid px-1 w-50 float-right" title="Deploy pull requests with Github" >}}
-
  * What about any dependencies such as databases or other services? Maybe any (automated) integration tests you run also change the state in those dependencies. This might mess up other temporary environments deployed through other pull requests. You may therefore also temporarily spin up copies of those dependencies as part of your pull request. While this is certainly possible, the complexity does increase and it may not be fruitful to spend the effort required to build and maintain this.
  * Deploying all your pull requests might start to get expensive when they need many resources and/or when many pull requests are typically open at the same time. This is especially a waste of money, time and energy when you don't run (useful) automated tests on these environments and no one really ever manually checks them out neither.
 
