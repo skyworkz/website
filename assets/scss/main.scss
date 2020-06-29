@@ -11,6 +11,27 @@
 @import "../../node_modules/owl.carousel2/dist/assets/owl.carousel";
 @import "../../node_modules/owl.carousel2/dist/assets/owl.theme.default";
 
+.deco-img-wide {
+  width: 103%;
+  height: auto;
+  max-width: none;
+  margin-bottom: -1px;
+  margin-top: -1px;
+  margin-left: -3px;
+  display: block;
+}
+
+.diagonal {
+  min-height: 100px;
+}
+.s-intro {
+  margin-top: calc(-20% - 5px);
+}
+
+.relative {
+  position: relative;
+}
+
 html {
 }
 
@@ -36,10 +57,12 @@ body {
   display:block;
   height:30rem;
   width:100%;
-  background: $color-gray-light-v3;
-  background:linear-gradient(90deg, $color-gray-light-v3 0,#fff);
-  -webkit-clip-path:polygon(0 0,100% 0,100% calc(100% - 12.3vw),0 100%);
-  clip-path:polygon(0 0,100% 0,100% calc(100% - 12.3vw),0 100%)
+  object-fit: cover;
+  background: url("/img/bg.jpg");
+  //background: $color-gray-light-v3;
+  //background:linear-gradient(90deg, $color-gray-light-v3 0,#fff);
+  //-webkit-clip-path:polygon(0 0,100% 0,100% calc(100% - 12.3vw),0 100%);
+  //clip-path:polygon(0 0,100% 0,100% calc(100% - 12.3vw),0 100%)
  }
 
  .body--home:before {
@@ -749,22 +772,10 @@ STYLE SWITCHER FOR DEMO
  }
 
  .bg-hero {
-  position:relative
- }
-
- .bg-hero:before {
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:-1;
   display:block;
-  height:30rem;
-  width:100%;
-  background: $color-gray-light-v3;
-  background:linear-gradient(90deg, $color-gray-light-v3 0, #fff);
-  -webkit-clip-path:polygon(0 0,100% 0,100% calc(100% - 12.3vw),0 100%);
-  clip-path:polygon(0 0,100% 0,100% calc(100% - 12.3vw),0 100%)
+  min-height: 95vh;
+  object-fit: cover;
+  background: url("/img/bg.jpg");
  }
 
 a {
