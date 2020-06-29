@@ -37,6 +37,8 @@
     "scss-powertools": "^1.2.1",
     "serialize-javascript": ">=2.1.1",
     "set-value": ">=2.0.1",
+    "serialize-javascript": ">=2.1.1",
+    "set-value": ">=2.0.1",
     "uncss": "^0.16.2",
     "url-loader": "^1.1.2",
     "venobox": "^1.8.5"
