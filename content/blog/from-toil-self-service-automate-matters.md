@@ -21,10 +21,7 @@ This wide variety of work wouldn't be possible without automation. You have more
 
 I don't mind toil per se. What I care about is that because I haven't automated something, someone else now needs to wait for me to do some manual work. I'm essentially blocking the software development lifecycle of my colleagues. Furthermore, as part of the definition of toil, this work also scales linearly. So with more services created and the more developers that join the company, more manual work is required from me.
 
- {{<img src="/img/blog/self-service.png" class="img-fluid px-1 w-50 float-right" title="Build self-service mechanisms to enable autonomy" >}}
-
 I wrote before about some ways to provide autonomy to developers (in that post, specifically in AWS). I definitely believe that providing autonomy is possible by including boundaries for security/costs in automated processes. Instead of performing manual work to do something for a colleague, you can offer this required capability as an automated service: self-service. Without your help, without you “blocking” progress, this self-service capability enables a colleague to get it done autonomously.
-
 
 
 [Continue reading on on Sander's personal webpage](https://sanderknape.com/2020/06/from-toil-self-service-automate-matters/)
