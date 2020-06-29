@@ -6,6 +6,7 @@ date: "2020-06-17"
 author: "Sander Knape"
 audio: []
 images: ["/img/blog/github_deployments_finished.png"]
+image: "/img/blog/github_deployments_finished.png"
 series: []
 tags: ["github", "actions"]
 videos: []
