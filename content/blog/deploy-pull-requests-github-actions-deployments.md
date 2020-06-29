@@ -2,11 +2,7 @@
 title: "Deploy your pull requests with GitHub Actions and GitHub Deployments"
 description: "Performing (automated) tests on pull requests is a powerful mechanism to reduce the feedback loop on code changes. Known as shift left, the idea is that the earlier you find an issue with your code, the easier it is to fix it. For one, as you wrote the code recently it's easier to get back into it. And of course, any code issue that doesn't hit production is another potential issue for your end-users prevented." 
 id: "blog"
-<<<<<<< HEAD
 date: "2020-06-17"
-=======
-date: "2020--06"
->>>>>>> Fixed images
 author: "Sander Knape"
 audio: []
 images: ["/img/blog/github_deployments_finished.png"]
