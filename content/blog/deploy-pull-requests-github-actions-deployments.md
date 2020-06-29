@@ -2,7 +2,11 @@
 title: "Deploy your pull requests with GitHub Actions and GitHub Deployments"
 description: "Performing (automated) tests on pull requests is a powerful mechanism to reduce the feedback loop on code changes. Known as shift left, the idea is that the earlier you find an issue with your code, the easier it is to fix it. For one, as you wrote the code recently it's easier to get back into it. And of course, any code issue that doesn't hit production is another potential issue for your end-users prevented." 
 id: "blog"
+<<<<<<< HEAD
 date: "2020-05-06"
+=======
+date: "2020-06-17"
+>>>>>>> c04618d1966144686c4c6d0335f146ebaefb80d0
 author: "Sander Knape"
 audio: []
 images: ["/img/blog/github_deployments_finished.png"]
@@ -33,4 +37,8 @@ So what if you could decide which pull request to deploy to an environment? In t
 
 
 
+<<<<<<< HEAD
 [Continue reading on Sander Knape's blog](https://sanderknape.com/2020/05/deploy-pull-requests-github-actions-deployments/)
+=======
+[Continue reading on Sander Knape's blog](https://sanderknape.com/2020/05/deploy-pull-requests-github-actions-deployments/)
+>>>>>>> c04618d1966144686c4c6d0335f146ebaefb80d0
