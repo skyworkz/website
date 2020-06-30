@@ -30,7 +30,13 @@
         "datePublished": "{{ dateFormat "2006-01-02T15:04:05CET" (default .Date (.PublishDate)) }}",
         "dateModified": "{{ dateFormat "2006-01-02T15:04:05CET" (default .Date (.PublishDate)) }}",
         "description": "{{ .Description }}",
-        "publisher": "Skyworkz",
+       "publisher": {
+        "@type": "Organization",
+        "name": "Skyworkz",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://skyworkz.nl/img/logo/logo.jpg"
+        }
         "image": "{{ .Params.Image }}",
         "author": {
             "@type": "Person",
