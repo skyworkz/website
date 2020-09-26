@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{ partial "head.html" . }}
+</head>
+<body>
+
+	{{ partial "header.html" . }}
+
+	<!-- Hero Section-->
+	<section class="hero bg-hero">
+		<div class="container text-center">
+			<h1 class="text-white">{{ .Page.Title }}</h1>
+			<div class="row">
+			<div class="col-lg-8 mx-auto">
+				<p class="lead text-white">{{ .Page.Description }}</p>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-lg-5 diagonal-box bg-white">
+		<div class="container content">
+			<div class="integrations">
+			  <div class="row">
+				{{ range .Pages }}
+				{{ with . }}
+	  
+				<div class="col-lg-4">
+				  <div class="box text-center">
+					<div class="icon d-flex align-items-end"><img src="/img/icons/{{ .Params.icon }}" alt="..." class="img-fluid"></div>
+					<h3 class="h4">
+						<a href="{{ if  (isset .Params "url") }}{{ .Params.url }} {{ else }}{{ .Permalink }}{{end}}">{{ .Params.title }}</h3>
+					</a>
+					<p class="font-weight-light">{{ .Params.description }}</p>
+				  </div>
+				</div>
+				{{ end }}
+				{{ end }}
+			  </div>
+			</div>
+		  </div>
+		</section>
+		{{ partial "technologies.html" . }}
+		{{ partial "get-started.html" . }}
+	  
+
+	{{ partial "footer.html" . }}
+
+	<!-- JavaScript files-->
+	{{ partial "scripts.html" . }}
+
+</body>
+</html>

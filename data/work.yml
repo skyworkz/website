@@ -87,6 +87,30 @@ portfolio:
 
       *Transavia is a Dutch low-cost airline*
 
+  - category: Consulting
+    image: "anwb.jpg"
+    name: ANWB
+    teaser: Cloud
+    description: ""
+
+  - category: Consulting
+    image: "piggy.jpg"
+    name: Piggy
+    teaser: Cloud
+    description: ""
+
+  - category: Consulting
+    image: "natuurhuisje.jpg"
+    name: Natuurhuisje
+    teaser: Cloud
+    description: ""
+
+  - category: Consulting
+    image: "dyme.jpg"
+    name: Dyme
+    teaser: Cloud
+    description: ""
+
 vendors:
   - image: "/img/vendors/aws.png"
     url: "#"

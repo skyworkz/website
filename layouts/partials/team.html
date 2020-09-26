@@ -1,6 +1,6 @@
 <!-- Team Start -->
-<section id="instagram">
-  <div class="container">
+<section id="instagram" class="diagonal-box bg-white">
+  <div class="container content mb-5">
     <div class="text-center">
       <h2 class="display-5">It's not all about work...</h2>
     </div>
@@ -14,13 +14,14 @@
 </section>
 
 <!-- Team Start -->
-<div class="bg-diagonal"></div>
-<section id="portfolio-work">
+<section id="portfolio-work" class="bg-muted">
   <div class="container">
+    <div class="row justify-content-md-center">
     <div class="text-center">
       <h2 class="display-5">Meet the team.</h2>
     </div>
-    <div class="row">
+    </div>
+    <div class="row justify-content-md-center">
       <div class="col-md-12">
         <div class="block">
           <div class="portfolio-content">
@@ -40,8 +41,8 @@
               {{ $id := urlize .name }}
               {{ if eq (printf "images/members/%s" .image ) $imageName }}
               <li class="mix">
-                <a href="{{ $image600.RelPermalink }}" data-toggle="modal" data-target="#{{ $id }}">
-                  <img class="img-responsive" src="{{ $image300.RelPermalink }}">
+                <a href="{{ $image600.RelPermalink }}" data-toggle="modal" data-target="#{{ $id }}" class="portfolio-item">
+                  <img src="{{ $image300.RelPermalink }}" class="img-fluid">
                   <div class="overlay">
                     <div>
                       <i class="fa fa-search fz-20"></i>
@@ -82,6 +83,21 @@
   </div>
 </section>
 
+<section class="my-lg-5 bg-diagonal">
+  <div class="container text-center">
+    <h2 class="display-4">Looking for a new adventure?</h2>
+    <div class="row">
+      <div class="col-lg-8 m-auto">
+        <p class="lead text-muted mt-2">We're always looking for good engineers. Interested in joining? Have a look at our job descriptions.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+          <a class="btn btn-warning rounded-pill mt-lg-2" id="book" href="/careers">Careers</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <script>

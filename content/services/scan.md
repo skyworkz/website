@@ -1,9 +1,11 @@
 ---
 title: Cost Savings Scan
 #id: cost-savings-scan
-type: "workshop"
+type: "services"
 summary: "Save costs on your cloud spend"
-image: "img/cloud-cost-optimization.png"
+image: "/img/cloud-cost-optimization.png"
+icon: "profit.svg"
+description: "Cloud can be costly if it's not implemented correctly. We can give you insights and discover possibilities for cost saving." 
 ---
 
 {{<section>}}

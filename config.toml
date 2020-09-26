@@ -30,6 +30,15 @@ inst_access = ""
   images = ["/img/teaser.png"]
   header = "Skyworkz"
 
+  [params.hero]
+    title = "Cloud development for growing companies." 
+    subtitle = "We help start-ups and scale-ups leverage cloud technology - whether it's developing cloud native applications, increasing developer productivity or building reliable cloud platforms."
+
+  [params.about]
+    title = "We scale your business in the cloud."
+    content = "We bring together everything that's required to turn MVP's into scalable, cloud native applications. Skyworkz has built cloud solutions that help [start-ups](/start-ups), [scale-ups]() and [enterprises]() develop high quality software faster."
+    
+
   [params.work]
     bgImage = "img/work.webp"
 
