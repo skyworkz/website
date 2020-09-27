@@ -7,6 +7,8 @@ author: "Sander Knape"
 canonicalUrl: https://sanderknape.com/2020/08/amazon-cognito-jwt-tokens-authenticate-amazon-http-api/
 audio: []
 series: []
+images:
+- "img/blog/cognito.png"
 tags: ["authentication", "jwt", "aws"]
 videos: []
 ---
