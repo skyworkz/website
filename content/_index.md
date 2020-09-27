@@ -1,6 +1,6 @@
 ---
-title: Your cloud journey, our business.
+title: Cloud development for growing companies.
 id: home
 image: "img/teaser.png"
-description: "We build cloud native applications, resilient cloud platforms and help you save costs. We also make sure you can continue the journey yourself by providing mentoring, workshops and training."
+description: "We help start-ups and scale-ups leverage cloud technology - whether it's developing cloud native applications, increasing developer productivity or building reliable cloud platforms."
 ---
