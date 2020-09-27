@@ -36,7 +36,7 @@ inst_access = ""
 
   [params.about]
     title = "We scale your business in the cloud."
-    content = "We bring together everything that's required to turn MVP's into scalable, cloud native applications. Skyworkz has built cloud solutions that help [start-ups](/start-ups), [scale-ups]() and [enterprises]() develop high quality software faster."
+    content = "We bring together everything that's required to turn MVP's into scalable, cloud native applications. Skyworkz has built cloud solutions that help **start-ups**, **scale-ups** and **enterprises** develop high quality software faster."
     
 
   [params.work]
