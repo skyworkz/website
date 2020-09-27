@@ -16,19 +16,23 @@
   <link rel="stylesheet" href="{{ $style.Permalink }}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,800">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-  <!-- Js -->
-  {{ $main := resources.Get "js/main.js" }}
+ 
+  
   {{ $plugins := resources.Get "js/plugins.js" }}
   {{ $jquery := resources.Get "js/jquery.js" }}
   {{ $bootstrap := resources.Get "js/bootstrap.bundle.js" }}
   {{ $lightbox := resources.Get "js/lightbox.js" }}
-  {{ $owlcarousel := resources.Get "js/owl.carousel.js" }}
   {{ $defaultJS := slice $jquery $bootstrap $lightbox $plugins | resources.Concat "js/global.js" | resources.Minify | resources.Fingerprint }}
   <script src="{{ $defaultJS.Permalink }}"></script>
+
+  {{ $owlcarousel := resources.Get "js/owl.carousel.js" }}
   {{ $owlJS := slice $owlcarousel | resources.Concat "js/owl.js" | resources.Fingerprint }}
   <script defer src="{{ $owlJS.Permalink }}"></script>
+
+  {{ $main := resources.Get "js/main.js" }}
   {{ $mainJS := slice $main | resources.Concat "js/main.js" | resources.Fingerprint }}
   <script defer src="{{ $mainJS.Permalink }}"></script>
+
   {{ partial "schema.html" . | safeHTML }}
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}

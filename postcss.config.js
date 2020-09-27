@@ -9,5 +9,5 @@ module.exports = {
         "postcss-uncss": {
           html: ['public/**/*.html'],
         }
-    },
+    }
 }
