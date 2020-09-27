@@ -41,13 +41,13 @@ Reach out to us for more information.
 
 {{<raw>}}
 <section class="bg-white">
-  <div class="container text-center text-lg-left pt-lg-5">
+  <div class="container text-center text-lg-left">
     <div class="row mt-5">
       <div class="col-lg-12 text-center">
-        <p class="lead divider-subtitle mt-2">Interested in our training offerings? Then we should talk.</p>
+        <p class="h4 divider-subtitle mt-2">Interested in our training offerings? Then we should talk.</p>
       </div>
       <div class="mx-auto">
-        <a class="btn btn-outline-primary mt-lg-2" id="book" href="">Let's plan a coffee!</a>
+        <a class="btn btn-warning mt-lg-2" id="book" href="">Let's plan a coffee!</a>
         <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/cost-savings-scan" data-height data-width data-element="#book" async></script>
         </a>
       </div>

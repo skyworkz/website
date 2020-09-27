@@ -57,10 +57,10 @@ But a new culture is not implemented over night. It requires coaching, training 
   <div class="container text-center text-lg-left mt-5">
     <div class="row mt-5">
       <div class="col-lg-12 text-center">
-        <p class="lead divider-subtitle mt-2">Let's have a coffee.</p>
+        <p class="h4 divider-subtitle mt-2">Looking for consultants who can help you out?</p>
       </div>
       <div class="mx-auto">
-        <a class="btn btn-outline-primary mt-lg-2" id="book" href="">Book a timeslot</a>
+        <a class="btn btn-warning mt-lg-2" id="book" href="">Plan a coffee</a>
         <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/cost-savings-scan" data-height data-width data-element="#book" async></script>
         </a>
       </div>

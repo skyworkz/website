@@ -29,7 +29,7 @@ We help you to answer these questions. With our Cloud Kickstart, we get you up a
 
 {{<raw>}}
 
-<section class="bg-muted">
+<section class="bg-muted lead">
   <div class="container text-center text-lg-left pt-lg-5">
   <div class="row">
     <div class="col-lg-6">
@@ -62,10 +62,10 @@ We help you to answer these questions. With our Cloud Kickstart, we get you up a
     </div>
     <div class="row mt-5">
       <div class="col-lg-12 text-center">
-        <p class="lead divider-subtitle mt-2">Interested? Then we should talk.</p>
+        <p class="divider-subtitle mt-2 text-bold h4">Interested? Then we should talk.</p>
       </div>
       <div class="mx-auto">
-        <a class="btn btn-outline-primary mt-lg-2" id="book" href="">Let's plan a coffee!</a>
+        <a class="btn mt-lg-2 btn-warning" id="book" href="">Let's plan a coffee!</a>
         <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/cost-savings-scan" data-height data-width data-element="#book" async></script>
         </a>
       </div>
