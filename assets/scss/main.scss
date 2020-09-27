@@ -309,11 +309,13 @@ nav.navbar {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+
 @media (max-width: 991.98px) {
   nav.navbar {
     background-color: #2F4858;
   }
 }
+
 
 
 
@@ -772,9 +774,9 @@ STYLE SWITCHER FOR DEMO
 /*
  * 1. NAVBAR
  */
-.navbar {
-  padding: 1.5rem 1rem;
-}
+// .navbar {
+//   padding: 1.1rem 1rem;
+// }
 
 .navbar-brand {
   display: inline-block;
@@ -795,9 +797,9 @@ STYLE SWITCHER FOR DEMO
   border-radius: 3rem;
 }
 
-.navbar-toggler:hover, .navbar-toggler:focus {
-  outline: none;
-}
+// .navbar-toggler:hover, .navbar-toggler:focus {
+//   outline: none;
+// }
 
 
 
