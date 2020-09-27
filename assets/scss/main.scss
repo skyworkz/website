@@ -309,6 +309,13 @@ nav.navbar {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+@media (max-width: 991.98px) {
+  nav.navbar {
+    background-color: #2F4858;
+  }
+}
+
+
 
 nav.navbar.active {
   background: #fff;
