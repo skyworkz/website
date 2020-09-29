@@ -1,6 +1,5 @@
 ---
-title: "Products"
-id: workshops
+title: "Workshops"
 type: "workshop"
-description: "Training, workshops and quick scans"
+description: "Hands-on workshops for teams"
 ---

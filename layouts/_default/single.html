@@ -8,22 +8,23 @@
 	{{ partial "header.html" . }}
 
 	<!-- Hero Section-->
+	{{ if isset .Params "bgImage" }}
+	{{ end }}
 	<div class="hero bg-hero">
 		<div class="container">
 			<div class="row justify-content-center">
 					<div class="col-md-10">
-			<h1>{{ .Page.Title }}</h1>
-			<div class="post-info-wrapper">
-					<p class="font-italic">by {{ .Params.author }} on {{ .Site.Params.dateFormat | default "Jan 2, 2006" | .Date.Format }}</p>
+					<h1 class="text-white">{{ .Page.Title }}</h1>
+					<div class="post-info-wrapper">
+					<p class="font-italic text-white">by {{ .Params.author }} on {{ .Site.Params.dateFormat | default "Jan 2, 2006" | .Date.Format }}</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="post">
 	  <!-- Wrapper Start -->
-	  <section>
+	  <section class="post">
 	    <div class="container">
             
 	      <div class="row justify-content-center">
@@ -31,22 +32,23 @@
 	          <div class="col-md-10">
               {{ with (index (.Params.images) 0) }}<div class="float-right m-2 w-50" ><img src="{{ . | absURL }}" class="img-fluid" alt="post-image" title="{{ $.Page.Title }}"></div>{{ end }}
 	            <p>{{ .Content }}</p>
-            </div>
+              </div>
             {{ else }}
 	          <div class="col-md-10">
 	            <p>{{ .Content }}</p>
 	          </div>
 			{{ end }}
+			</div>
+			<div class="row justify-content-center">
+			<div class="col-10 align-self-center text-center">
 			<p class="center-text" style="padding: 30px;">
-					<a class="btn btn-main btn-outline-primary" href="{{ $.Site.BaseURL }}/blog">Back to blog</a>
-				  </p>
+				<a class="btn btn-main btn-warning rounded-pill" href="{{ $.Site.BaseURL }}/blog">Back to blog</a>
+			</p>
 			</div>
 		  </div>
 
 	    </div>
 	  </section>
-
-	</div>
 
 
 	{{ partial "footer.html" . }}

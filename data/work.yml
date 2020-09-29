@@ -87,6 +87,52 @@ portfolio:
 
       *Transavia is a Dutch low-cost airline*
 
+  - category: Consulting
+    image: "anwb.jpg"
+    name: ANWB
+    teaser: Robust IT in the cloud
+    description: >
+      To improve the uptime and reliability of ANWB's services,
+      they decided to make the first steps into the public cloud.
+
+      Skyworkz helped ANWB by creating the first blueprints for a
+      solid foundation in the cloud.      
+
+  - category: Consulting
+    image: "piggy.jpg"
+    name: Piggy
+    teaser: Cloud Kickstart on GCP
+    description: >
+
+      Piggy is building a localty platform for local businesses in
+      the Netherlands. They are currently working together with over
+      4500 local businesses.
+
+      Skyworkz helped Piggy by creating a scalable cloud foundation
+      on GCP, based on Kubernetes and deployed using Terraform.
+
+  - category: Consulting
+    image: "natuurhuisje.jpg"
+    name: Natuurhuisje
+    teaser: Cloud Kickstart on GCP
+    description: >
+      Natuurhuisje (or Nature.house) is the AirBnB for houses in the
+      nature.
+
+      Skyworkz helped Natuurhuisje by creating a scalable cloud foundation
+      on GCP, based on Kubernetes and deployed using Terraform.
+
+  - category: Consulting
+    image: "dyme.jpg"
+    name: Dyme
+    teaser: Cloud Kickstart on GCP
+    description: >
+      Dyme is an app that gives you control over your monthly spent. Using
+      their app, you can save money and cancel unwanted contracts.
+
+      Skyworkz helped Dyme by creating a scalable cloud foundation
+      on GCP, based on Kubernetes and deployed using Terraform.
+
 vendors:
   - image: "/img/vendors/aws.png"
     url: "#"

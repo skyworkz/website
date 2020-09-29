@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+	
 	$('.owl-carousel').owlCarousel({
 		loop:true,
 		autoplay: true,
@@ -14,7 +14,7 @@ $(document).ready(function () {
 				items:3
 			},
 			1000:{
-				items:5
+				items:6
 			}
 		}
 	})
@@ -210,4 +210,32 @@ $(document).ready(function () {
 		);
 	};
 	
+	
 })(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
