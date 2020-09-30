@@ -38,7 +38,13 @@
             "url": "https://skyworkz.nl/img/logo/logo.jpg"
           }
         },
-        "image": "{{ .Params.Image }}",
+        {{ if isset .Params "images" }}
+          {{ with (index (.Params.images) 0) }}
+            "image": "{{ . | absURL }}",
+          {{ end }}
+        {{ else }}
+          "image": "{{ .Params.Image | absURL }}",
+        {{ end }}
         "author": {
             "@type": "Person",
             "name": "{{ .Site.Params.author }}"
