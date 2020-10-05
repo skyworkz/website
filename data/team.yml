@@ -144,4 +144,10 @@ members:
       Cloud Engineer | Cryptocurrencies Fan | Bass and guitar player | Craft Beer Snob
     description: >
       Julio is hands-on Azure Architect-Enginner highly experienced in MS Technologies and in the last years, working hard with AKS in Azure.
-      
+  - category: Engineering
+    image: "tomkennes.jpg"
+    name: Tom Kennes
+    teaser: >
+      Cloud Engineer | Saxophonist | Snowboarding Fanatic | Craft Beer Snob
+    description: >
+      After having worked at KPMG for several years, where he was heavily involved in building the Digital Risk Platform, Tom joined Skyworkz as a Cloud Engineer. He knows a lot about Azure, DevOps and Data Engineering.
