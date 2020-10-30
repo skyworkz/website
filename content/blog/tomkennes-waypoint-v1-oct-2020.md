@@ -14,11 +14,15 @@ series: []
 tags: ["hashicorp", "waypoint", "devops", "ci/cd", "continuous integration", "continuous deployment", "development", 'cloud']
 videos: []
 ---
-# Waypoint? What Point?
+# HashiCorp Waypoint v0.1
+{{<raw>}}
+<br>
+<br>
+{{</raw>}}
 {{<raw>}}
 <ul>
     <li>
-        <a href="#Waypoint-released">Waypoint v0.1 Released!</a>
+        <a href="#Introduction">Introduction</a>
     </li>
     <li>
         <a href="#Saving-pigs">Saving Pigs</a>
@@ -33,7 +37,7 @@ videos: []
         <a href="#Conclusion">Conclusion</a>
     </li>
 </ul>
-<a id="Waypoint-released"></a>
+<a id="Introduction"></a>
 <br>
 <br>
 <br>
@@ -42,7 +46,7 @@ videos: []
 
 
 {{<raw>}}<hr>{{</raw>}}
-# Waypoint v0.1 Released!
+# Introduction
 {{<raw>}}<hr>{{</raw>}}
 This month, HashiCorp presented their new open source project **Waypoint**! Waypoint provides a way to get applications built and deployed to several potential platforms. It builds your code into a container image using {{<raw>}}<a href="https://buildpacks.io/">CNCF Heroku Buildpacks</a>{{</raw>}} or docker and subsequently deploys it onto your preferred platform (currently it supports Kubernetes, HashiCorp Nomad, Amazon ECS, Google Cloud Run, Azure Container Instances and Docker). Next to that, it is fully extendable using a plugin system that would allow Waypoint to work with any tool or platform. Targeting developers in medium- or larger-sized organisations working with complicated environments and steep learning curves, they intend to help developers from non-development work for the simple reason: "Developers just want to deploy!"
 {{< raw >}}
