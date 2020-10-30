@@ -24,7 +24,7 @@ videos: []
         <a href="#Saving-pigs">Saving Pigs</a>
     </li>
     <li>
-        <a href="#Waypoint-demo">Waypoint Demo</a>
+        <a href="#Waypoint-demo">Waypoint Demo (Start reading here if you are only interested in Waypoint.)</a>
     </li>
     <li>
         <a href="#Waypoint-bigger-picture">Waypoint: The Bigger Picture</a>
@@ -44,7 +44,7 @@ videos: []
 {{<raw>}}<hr>{{</raw>}}
 # Waypoint v0.1 Released!
 {{<raw>}}<hr>{{</raw>}}
-This month, HashiCorp presented their new open source project **Waypoint**! Waypoint provides a way to get applications built and deployed to several potential platforms. It builds your code into a container image using CNCF buildpacks or docker and subsequently deploys it onto your preferred platform (currently it supports Kubernetes, HashiCorp Nomad, Amazon ECS, Google Cloud Run, Azure Container Instances and docker). Next to that, it is fully extendable using a plugin system that would allow Waypoint to work with any tool or platform. Targeting developers in medium- or larger-sized organisations working with complicated environments and steep learning curves, they intend to help developers from non-development work for the simple reason: "Developers just want to deploy!"
+This month, HashiCorp presented their new open source project **Waypoint**! Waypoint provides a way to get applications built and deployed to several potential platforms. It builds your code into a container image using {{<raw>}}<a href="https://buildpacks.io/">CNCF Heroku Buildpacks</a>{{</raw>}} or docker and subsequently deploys it onto your preferred platform (currently it supports Kubernetes, HashiCorp Nomad, Amazon ECS, Google Cloud Run, Azure Container Instances and Docker). Next to that, it is fully extendable using a plugin system that would allow Waypoint to work with any tool or platform. Targeting developers in medium- or larger-sized organisations working with complicated environments and steep learning curves, they intend to help developers from non-development work for the simple reason: "Developers just want to deploy!"
 {{< raw >}}
 <br>
 <br>
@@ -91,13 +91,13 @@ Whereas product development focuses on features and require agility, large scale
 <br>
 {{< /raw >}}
 
-In the ideal world, we would like to have both and in many ways this is exactly what we have been trying to accomplish over the last decade. We have merged both agility and stability requirements within one team, and authorized them to take up responsibility and to find a balance. The resulting left-shift of infrastructure responsibilities gave rise to multi-disciplinary Dev-Ops teams, whose focus on shortening release cycles using CI/CD enabled resulted in more stable iterations as well. Business leaders and management also has been playing a pivotal role in this process. By fostering trust, allowing teams to make more mistakes and focusing on defining business value, they ultimately decide the balance between short-term agility and long-term stability.
+In the ideal world, we would like to have both and in many ways this is exactly what we have been trying to accomplish over the last decade. We have merged both agility and stability requirements within one team, and authorized them to take up responsibilities in order to find that balance themselves. The resulting left-shift of infrastructure responsibilities gave rise to multi-disciplinary Dev-Ops teams, whose focus on shortening release cycles using CI/CD enabled resulted in more stable iterations as well. Business leaders and management also have been playing a pivotal role in this process. By fostering trust, allowing teams to make more mistakes and focusing on defining business value, they ultimately decide the balance between short-term agility and long-term stability.
 {{< raw >}}
 <br>
 <br>
 {{< /raw >}}
 
-In turn this gave rise to a whole range of tools focusing on flexible infrastructure (IaS), automated builds and testing (CI) as well as the automation of deployments to production environments. In essence, these tools aid in keeping the stability of the system in check, while allowing features to move forward as fast as possible. Each of these tools do so in a different way. If combined with the Cloud, tools like Terraform or Ansible (IaS) enable infrastructure to be more dynamic while keeping its stability in check. CI keeps agility in check by baking stability requirements into development (e.g. builds and tests). Finally CD has a major impact on stability, if done properly. Given that release cycles are appropriately short, it prevents drift between production and development environments and helps identifying breaking changes.
+In turn this gave rise to a whole range of tools focusing on flexible infrastructure (IaC), automated builds and testing (CI) as well as the automation of deployments to production environments. In essence, these tools aid in keeping the stability of the system in check, while allowing features to move forward as fast as possible. Each of these tools do so in a different way. If combined with the Cloud, tools like Terraform or Ansible (IaC) enable infrastructure to be more dynamic while keeping a close eye on its stability. On the other hand, CI keeps agility in check by baking stability requirements into development (e.g. builds and tests). Finally, CD has a major impact on stability, if done properly. Given that release cycles are appropriately short, it prevents drift between production and development environments and helps identifying breaking changes.
 {{< raw >}}
 <br>
 <br>
@@ -140,19 +140,24 @@ But first; let's step into a typical Waypoint user according to HashiCorp. E.g. 
 <br>
 {{< /raw >}}
 
-To start off, you need to install {{<raw>}}<a href="https://docs.docker.com/desktop/">docker</a>{{</raw>}} and a {{<raw>}} <a href="https://learn.hashicorp.com/tutorials/waypoint/get-started-install?in=waypoint/get-started-kubernetes">waypoint server</a> {{</raw>}} though (see Waypoint docs). And then, deploy!
+To start off, you need to install {{<raw>}}<a href="https://docs.docker.com/desktop/">Docker</a>{{</raw>}} and a {{<raw>}} <a href="https://learn.hashicorp.com/tutorials/waypoint/get-started-install?in=waypoint/get-started-kubernetes">waypoint server</a> {{</raw>}} though... 
+{{< raw >}}
+<br>
+<br>
+{{< /raw >}}
+And then, deploy!
 {{< raw >}}
 <br>
 <br>
 {{< /raw >}}
 
-Right, so... What do we need? Waypoint requires you to write a .hcl-file (HashiCorp Configuration Language, a mix between JSON and YAML), and define a build, deploy and optionally also a release step in there. Here, deploying an application can be seen as staging it, whereas releasing covers configuration around it (load balancers, DNS, etc). 
+Right, so... What do we need? Waypoint requires you to write a .hcl-file (HashiCorp Configuration Language, a mix between JSON and YAML), define a build, deploy and optionally also a release step in there. Here, deploying an application can be seen as staging it, whereas releasing covers configuration around it (load balancers, DNS, etc). 
 {{< raw >}}
 <br>
 <br>
 {{< /raw >}}
 
-We thus define the waypoint.hcl file:
+We thus define the waypoint.hcl file as indicated below. Note that you would put this file in the same repository as where you keep the code you intend to build/deploy/release. Also note that you do not have to provide specifics with regard to what sort of code or framework you are using, since this is automatically detected using the {{<raw>}}<a href="https://buildpacks.io/">Buildpacks</a>{{</raw>}}.
 {{< raw >}}
 <br>
 {{< /raw >}}
@@ -207,13 +212,13 @@ There are already a couple of options available for the build, deploy and releas
 <br>
 {{< /raw >}}
 
-Currently, for the build-stage you either involve the CNCF Heroku web buildpack, to automatically pack your code in a docker image, or you provide your own Dockerfile. For the deployment-stage you can connect to the container platforms from the big cloud providers, your local kubernetes cluster or netlify. Finally, you could also specify a release stage if necessary, otherwise the platform defaults will be applied (for Kubernetes a Service resource for example).
+Currently, for the build-stage you either involve the {{<raw>}}<a href="https://buildpacks.io/">CNCF Heroku Buildpacks</a>{{</raw>}}, to automatically pack your code in a Docker image, or you provide your own Dockerfile. For the deployment-stage you can connect to the container platforms from the big cloud providers, your local kubernetes cluster or Netlify. Finally, you could also specify a release stage if necessary, otherwise the platform defaults will be applied (for Kubernetes a Service resource for example).
 {{< raw >}}
 <br>
 <br>
 {{< /raw >}}
 
-Keeping track of these builds and deployments can become somewhat of a pain, especially with ever growing projects. That is why waypoint comes shipped with a silky smooth UI where you can inspect builds, deployments, releases and their respective logs.
+Keeping track of these builds and deployments can become somewhat of a pain, especially with ever growing projects. That is why Waypoint comes shipped with a silky smooth UI where you can inspect builds, deployments, releases and their respective logs.
 {{< raw >}}
 <br>
 <br>
@@ -246,7 +251,7 @@ As mentioned earlier, in order for Waypoint to work, you need to install a Waypo
 {{< /raw >}}
 
 
-Both the CLI and the UI authenticate to the server with tokens, which is not yet optimized for maintainability. A token gives access to all builds and deployments, but this does not imply that it would also be possible for the user to actually deploy. The build and deploy actions are executed locally when running ```waypoint up/build/deploy/release``` rather than by the server itself. This means that users require to have the credentials corresponding to the deployment platform locally, which might need some explanation towards your risk management department. The only type of access currently available is full access, so fine-grained RBAC access is rightfully present on the roadmap. Same for a mechanism to revoke tokens, audit token usage, inspect an existing token, etc. 
+Both the CLI and the UI authenticate to the server with tokens, which is not yet optimized for maintainability. A token gives access to all builds and deployments, but this does not imply that it would also be possible for the user to actually deploy. The build and deploy actions are executed locally when running ```waypoint up/build/deploy/release``` rather than by the server itself. This means that users require to have the credentials corresponding to the deployment platform locally, which might need some explanation towards your risk management department. The only type of access currently available is full access, so fine-grained RBAC access is rightfully present on the {{<raw>}}<a href="https://www.waypointproject.io/docs/roadmap">roadmap</a>{{</raw>}}. Same for a mechanism to revoke tokens, audit token usage, inspect an existing token, etc. 
 {{< raw >}}
 <br>
 <br>
@@ -270,7 +275,9 @@ It is easy to go back to older build and deployments, analyse their logs and rol
 
 
 ### Automation
-As mentioned previously, Waypoint makes use of the CNCF Heroku buildpack to detect how the code should be packaged into a container image, and hitherto deploys that image using a container orchestrator of choice. Heroku essentially does a similar thing, only that it deploys and hosts for you as well. As such, waypoint does not take away the need to understand the platform you are deploying onto, except for when you would be deploying to netlify (but then what would be the point of using Waypoint?). As such, as an organisation you still need to rely on technical platform expertise. As a developer you are however not required to fully understand dockerfiles and containers for deploying one, which might rejoice some.
+As mentioned previously, Waypoint makes use of the {{<raw>}}<a href="https://buildpacks.io/">CNCF Heroku Buildpacks</a>{{</raw>}} to detect how the code should be packaged into a container image, and thereupon deploys that image using a container orchestrator of choice. Heroku essentially does a similar thing, only that it deploys and hosts for you as well. Instead, Waypoint sits somewhere in the middle between Heroku and fully in-house, because it does not take away the need to understand the platform you are deploying onto. For some scenarious this might be a perfect balance (see <a href="#Conclusion">conclusion</a>)
+
+Keep in mind that developers might not need to understand containerization and infrastructure, but as an organisation you still need to rely on technical platform expertise when using Waypoint. 
 {{< raw >}}
 <br>
 <br>
@@ -280,13 +287,13 @@ As mentioned previously, Waypoint makes use of the CNCF Heroku buildpack to dete
 
 
 ### HashiCorp Otto
-One of the first things that might have come to your mind when reading about Waypoint, might the earlier HashiCorp deployment tool called Otto. Indeed, both tools seem to attempt to provide a solution for the same problem, and it is a bit suspicious that HashiCorp decommissioned Otto simultaneously with releasing Waypoint to the public. It is also important to note that Otto was not very popular to begin with. The opensource community never really has embraced Otto, nor did it attain enough vendor support. Of course it remains to be seen whether Waypoint would be able to avoid the fat of Otto. 
+One of the first things that might have come to your mind when reading about Waypoint, might the earlier HashiCorp deployment tool called Otto. Indeed, both tools seem to attempt to provide a solution for the same problem, and it is a bit suspicious that HashiCorp decommissioned Otto simultaneously with releasing Waypoint to the public. It is also important to note that Otto has not been very popular to begin with. The opensource community never really has embraced Otto, nor did it attain enough vendor support. Of course it remains to be seen whether Waypoint would be able to avoid the fat of Otto. 
 {{< raw >}}
 <br>
 <br>
 {{< /raw >}}
 
-It is however important to note that even though they are similar products, they have been built with different philosophies in mind. As such, waypoint does not manage any infrastructure, whereas Otto made an attempt to do so. With Waypoint you have to bring the infrastructure yourself. Next to that, Otto focused mainly in other HashiCorp tooling, whereas Waypoint has pluggable components for build, deploy and release. With the inclusion of URLs, exec and the UI, Waypoint focuses much more directly on application developers rather than DevOps professionals.
+It is however important to note that even though they are similar products, they have been built with different philosophies in mind. As such, Waypoint does not manage any infrastructure, whereas Otto made an attempt to do so. With Waypoint you have to bring the infrastructure yourself. Next to that, Otto focused mainly in other HashiCorp tooling, whereas Waypoint has pluggable components for build, deploy and release. With the inclusion of URLs, exec and the UI, Waypoint focuses much more directly on application developers rather than DevOps professionals.
 {{< raw >}}
 <a id="Conclusion"></a>
 <br>
@@ -306,7 +313,11 @@ Even though Waypoint presents itself as a solution for medium- and larger-scale 
 <br>
 {{< /raw >}}
 
-With regard to balancing stability and agility, Waypoint offers some nice shortcuts for developers as well as an integrated UI to keep track of earlier builds and deployments, but this increased agility does not leave stability unaffected. On the contrary, whereas HashiCorp's communication and documentation clearly stipulates that it intends to let developers just deploy, it does not offer any tools to do so with stability of the product and production environment in mind and might even introduce (or re-introduce) deployment- and release-related work in the semi-long run. However, in a scenario where taking these shortcuts is justified and less care is required for infrastructure, mitigating risks and guaranteeing stability, waypoint might be an excellent option. If you already have a cluster set up, and you would like to quickly test how the application would behave in the cluster, waypoint might be an excellent option. Or, if you are responsible for a cluster and are looking for more internal applications to be migrated to your cluster, waypoint might be a convenient way to start getting more developers on board.
+With regard to balancing stability and agility, Waypoint offers some nice shortcuts for developers as well as an integrated UI to keep track of earlier builds and deployments, but this increased agility does not leave stability unaffected. On the contrary, whereas HashiCorp's documentation clearly stipulates that it intends to let developers just deploy, it does not offer any tools to do so with stability of the product and production environment in mind and might even introduce (or re-introduce) deployment- and release-related work in the semi-long run.
+
+In a scenario where taking these shortcuts is justified and less care is required for infrastructure, mitigating risks and guaranteeing stability, Waypoint might be an excellent option. If you already have a cluster set up, and you would like to quickly test how the application would behave in the cluster, Waypoint might be an excellent option. Or, if you are responsible for a cluster and are looking for more internal applications to be migrated to your cluster, Waypoint might be a convenient way to start getting more developers on board.
+
+On the other hand, in scenarios where both features and infrastructure are heavily developed, as in commmon the case in projects adopting DevOps, I would strongly advise against using Waypoint v0.1. It might lead to stronger separation of Dev and Ops, because it abstracts infrastructure away for developers, and hence goes against core values of DevOps (see {{<raw>}}<a href="#Saving-pigs">Saving Pigs</a>{{</raw>}}).
 {{< raw >}}
 <br>
 <br>
@@ -318,5 +329,5 @@ When combined with other products form the HashiCorp ecosystem, Waypoint might b
 <br>
 {{< /raw >}}
 
-Overal, there is room for improvement, but I like where Waypoint is going. HashiCorp is actively developing the product and has already laid out a roadmap displaying some of their intentions. If they manage to get backing from the open-source community to buy into their idea, I am certain that I will have to revise some of these comments in the future!
+Overal, there is room for improvement, but I like where Waypoint is going. HashiCorp is actively developing the product and has already laid out a {{<raw>}}<a href="https://www.waypointproject.io/docs/roadmap">roadmap</a>{{</raw>}} displaying some of their intentions. If they manage to get backing from the open-source community to buy into their idea, I am certain that I will have to revise some of these comments in the future!
 
