@@ -28,7 +28,7 @@ videos: []
         <a href="#Saving-pigs">Saving Pigs</a>
     </li>
     <li>
-        <a href="#Waypoint-demo">Waypoint Demo (Start reading here if you are only interested in Waypoint.)</a>
+        <a href="#Waypoint-demo">Waypoint Demo (Start reading here if you are only interested in Waypoint)</a>
     </li>
     <li>
         <a href="#Waypoint-bigger-picture">Waypoint: The Bigger Picture</a>
