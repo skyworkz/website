@@ -5,7 +5,7 @@ description: "Hashicorp Waypoint"
 summary: 'In October 2020, HashiCorp re-entered the space of DevOps and CI/CD by releasing the first version (v0.1) of Waypoint. The tool focuses heavily on developers, claiming that: "Developers just want to deploy!". In this blog post, the primary value of DevOps and CI/CD is explained as a better balancing of agile development efforts and stability-focused SRE efforts. Holding on to this train of though, there currently are a couple of caveats that either need to be addressed by organisations looking to adopt Waypoint v0.1, or require some attention from HashiCorp. 
 '
 id: "id"
-date: "2020-11-04"
+date: "2020-11-03"
 author: "Tom Kennes"
 audio: []
 images:
