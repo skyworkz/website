@@ -45,7 +45,7 @@ videos: []
 {{</raw>}}
 
 
-## Introduction
+{{<raw>}}<h2 class="display-4">Introduction</h2> {{</raw>}}
 This month, HashiCorp presented their new open source project **Waypoint**! Waypoint provides a way to get applications built and deployed to several potential platforms. It builds your code into a container image using {{<raw>}}<a href="https://buildpacks.io/">CNCF Heroku Buildpacks</a>{{</raw>}} or docker and subsequently deploys it onto your preferred platform (currently it supports Kubernetes, HashiCorp Nomad, Amazon ECS, Google Cloud Run, Azure Container Instances and Docker). Next to that, it is fully extendable using a plugin system that would allow Waypoint to work with any tool or platform. Targeting developers in medium- or larger-sized organisations working with complicated environments and steep learning curves, they intend to help developers from non-development work for the simple reason: "Developers just want to deploy!"
 {{< raw >}}
 <br>
@@ -68,7 +68,7 @@ With that I mind, let's get into it!
 {{< /raw >}}
 
 
-## Saving Pigs
+{{<raw>}}<h2 class="display-4">Saving Pigs</h2> {{</raw>}}
 *"You can’t just throw the pig over the wall to us, and then high-five each other in the parking lot, congratulating yourselves on how you made the deadline. Wes is telling us that the pig will prob-ably break its leg, and it’ll be my guys who work all-nighters and week-ends to keep that pig alive."*
 {{< raw >}}
 <br>
@@ -131,7 +131,7 @@ Let's continue before I digress. As the title and introduction suggest, HashiCor
 {{< /raw >}}
 
 
-## Waypoint: Short Demo
+{{<raw>}}<h2 class="display-4">Waypoint: Short Demo</h2> {{</raw>}}
 But first; let's step into a typical Waypoint user according to HashiCorp. E.g. I am a developer and I just want to deploy!
 {{< raw >}}
 <br>
@@ -232,14 +232,17 @@ Keeping track of these builds and deployments can become somewhat of a pain, esp
 <br>
 {{< /raw >}}
 
-## Waypoint: The Bigger Picture
+
+{{<raw>}}<h2 class="display-4">Waypoint: The Bigger Picture</h2> {{</raw>}}
 Truth be told, running ```waypoint up```, clicking the provided URL and seeing my application live, hosted by HashiCorp and with TLS in the place is a lot of fun, but let's try to stay critical here. There are a couple of limitations that might be interesting to take into account when you are considering taking up Waypoint within your organisation.
 {{< raw >}}
 <br>
 <br>
 {{< /raw >}}
 
-### Security
+
+
+{{<raw>}}<h3 class="display-5">Security</h3> {{</raw>}}
 As mentioned earlier, in order for Waypoint to work, you need to install a Waypoint server, where data containing information about earlier builds, deployments, releases as well as logs are stored. 
 {{< raw >}}
 <br>
@@ -260,7 +263,7 @@ Next to that, Waypoint offers a way to store environment variables used in the c
 {{< /raw >}}
 
 
-### Quality Control
+{{<raw>}}<h3 class="display-5">Quality Control</h3> {{</raw>}}
 It is easy to go back to older build and deployments, analyse their logs and rollback failed deployments. It is even possible to exec into live containers and run commands there. As such, I have everything in place to debug my code, and clean up my mess AFTERWARDS! Indeed, in many scenarios you would prefer to avoid bugs creeping into production by testing throughly before deployment. Even though it is in theory possible to integrate this in the build-phase, with a deploy-fast attitude you are bound to run into problems at some point. Next to that, being able to exec into production is a power not to be underestimated. I am not completely against making modifications in production (some scenarios really require this), but best practice (and the overall trend) is to avoid this as much as possible.
 {{< raw >}}
 <br>
@@ -269,8 +272,7 @@ It is easy to go back to older build and deployments, analyse their logs and rol
 
 
 
-
-### Automation
+{{<raw>}}<h3 class="display-5">Automation</h3> {{</raw>}}
 As mentioned previously, Waypoint makes use of the {{<raw>}}<a href="https://buildpacks.io/">CNCF Heroku Buildpacks</a>{{</raw>}} to detect how the code should be packaged into a container image, and thereupon deploys that image using a container orchestrator of choice. Heroku essentially does a similar thing, only that it deploys and hosts for you as well. Instead, Waypoint sits somewhere in the middle between Heroku and fully in-house, because it does not take away the need to understand the platform you are deploying onto. For some scenarious this might be a perfect balance (see <a href="#Conclusion">conclusion</a>)
 
 Keep in mind that developers might not need to understand containerization and infrastructure, but as an organisation you still need to rely on technical platform expertise when using Waypoint. 
@@ -281,8 +283,7 @@ Keep in mind that developers might not need to understand containerization and i
 
 
 
-
-### HashiCorp Otto
+{{<raw>}}<h3 class="display-5">HashiCorp Otto</h3> {{</raw>}}
 One of the first things that might have come to your mind when reading about Waypoint, might the earlier HashiCorp deployment tool called Otto. Indeed, both tools seem to attempt to provide a solution for the same problem, and it is a bit suspicious that HashiCorp decommissioned Otto simultaneously with releasing Waypoint to the public. It is also important to note that Otto has not been very popular to begin with. The opensource community never really has embraced Otto, nor did it attain enough vendor support. Of course it remains to be seen whether Waypoint would be able to avoid the fat of Otto. 
 {{< raw >}}
 <br>
@@ -299,8 +300,7 @@ It is however important to note that even though they are similar products, they
 {{< /raw >}}
 
 
-
-## Conclusion
+{{<raw>}}<h2 class="display-4">Conclusion</h2> {{</raw>}}
 Even though Waypoint presents itself as a solution for medium- and larger-scale organisations, if you are a sizeable organisation there are tools in the market that might suit better (personally I am a huge fan of Azure DevOps). To a single "developer who just wants to deploy" it might be a wonderful tool, but larger scale organisations should also assess the potential risk it could introduce as well as take into account that you still depend on technical expertise regarding your deployment-platform when using Waypoint.
 {{< raw >}}
 <br>
