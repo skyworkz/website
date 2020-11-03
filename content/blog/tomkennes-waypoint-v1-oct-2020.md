@@ -14,7 +14,7 @@ series: []
 tags: ["hashicorp", "waypoint", "devops", "ci/cd", "continuous integration", "continuous deployment", "development", 'cloud']
 videos: []
 ---
-# HashiCorp Waypoint v0.1
+## HashiCorp Waypoint v0.1
 {{<raw>}}
 <br>
 <br>
@@ -45,9 +45,7 @@ videos: []
 {{</raw>}}
 
 
-{{<raw>}}<hr>{{</raw>}}
-# Introduction
-{{<raw>}}<hr>{{</raw>}}
+## Introduction
 This month, HashiCorp presented their new open source project **Waypoint**! Waypoint provides a way to get applications built and deployed to several potential platforms. It builds your code into a container image using {{<raw>}}<a href="https://buildpacks.io/">CNCF Heroku Buildpacks</a>{{</raw>}} or docker and subsequently deploys it onto your preferred platform (currently it supports Kubernetes, HashiCorp Nomad, Amazon ECS, Google Cloud Run, Azure Container Instances and Docker). Next to that, it is fully extendable using a plugin system that would allow Waypoint to work with any tool or platform. Targeting developers in medium- or larger-sized organisations working with complicated environments and steep learning curves, they intend to help developers from non-development work for the simple reason: "Developers just want to deploy!"
 {{< raw >}}
 <br>
@@ -70,9 +68,7 @@ With that I mind, let's get into it!
 {{< /raw >}}
 
 
-{{<raw>}}<hr>{{</raw>}}
-# Saving Pigs
-{{<raw>}}<hr>{{</raw>}}
+## Saving Pigs
 *"You can’t just throw the pig over the wall to us, and then high-five each other in the parking lot, congratulating yourselves on how you made the deadline. Wes is telling us that the pig will prob-ably break its leg, and it’ll be my guys who work all-nighters and week-ends to keep that pig alive."*
 {{< raw >}}
 <br>
@@ -135,9 +131,7 @@ Let's continue before I digress. As the title and introduction suggest, HashiCor
 {{< /raw >}}
 
 
-{{<raw>}}<hr>{{</raw>}}
-# Waypoint: Short Demo
-{{<raw>}}<hr>{{</raw>}}
+## Waypoint: Short Demo
 But first; let's step into a typical Waypoint user according to HashiCorp. E.g. I am a developer and I just want to deploy!
 {{< raw >}}
 <br>
@@ -238,9 +232,7 @@ Keeping track of these builds and deployments can become somewhat of a pain, esp
 <br>
 {{< /raw >}}
 
-{{<raw>}}<hr>{{</raw>}}
-# Waypoint: The Bigger Picture
-{{<raw>}}<hr>{{</raw>}}
+## Waypoint: The Bigger Picture
 Truth be told, running ```waypoint up```, clicking the provided URL and seeing my application live, hosted by HashiCorp and with TLS in the place is a lot of fun, but let's try to stay critical here. There are a couple of limitations that might be interesting to take into account when you are considering taking up Waypoint within your organisation.
 {{< raw >}}
 <br>
@@ -308,9 +300,7 @@ It is however important to note that even though they are similar products, they
 
 
 
-{{<raw>}}<hr>{{</raw>}}
-# Conclusion
-{{<raw>}}<hr>{{</raw>}}
+## Conclusion
 Even though Waypoint presents itself as a solution for medium- and larger-scale organisations, if you are a sizeable organisation there are tools in the market that might suit better (personally I am a huge fan of Azure DevOps). To a single "developer who just wants to deploy" it might be a wonderful tool, but larger scale organisations should also assess the potential risk it could introduce as well as take into account that you still depend on technical expertise regarding your deployment-platform when using Waypoint.
 {{< raw >}}
 <br>
