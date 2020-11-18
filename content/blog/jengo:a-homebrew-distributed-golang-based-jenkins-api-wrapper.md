@@ -75,6 +75,7 @@ In order to prove that the code actually behaves as intended, I have included a 
 Right, so, after coding up the CLI, requests, handling and tests, it is time to take this to the next level. In order to make updating this code in the future easier (which I intend to do), and to be able to distribute this via homebrew later on, there are a couple of things that you might want to take into account:
 - Automatic testing of new code commits
 - Automatic packaging of the code
+- Automatic generation of a Homebrew formula (next section)
 
 {{<raw>}}<h3 class="display-5">Automatic Testing of New Code Commits</h3> {{</raw>}}
 In order to achieve continuous integrating through the automation of tests, we are going to make use of Github Actions and goreleaser. Configuring a Github Action in order to run these tests we have written earlier, can be done with the following workflow:
@@ -98,13 +99,12 @@ jobs:
     - name: Test
       run: go test -v ./...
 ```
-
 Note that we are running this test over a matrix of go-versions and operation systems. For the rest, the execution steps fairly straightforward: install the required Go version, get the code and run the tests using `go test -v ./...`. This makes sure that the tests in all the subfolders are executed, and that the output is a bit more verbose than an overall pass or fail.
 
-If you are interested in some of the results, they should be published {{<raw>}}<a href="https://Github.com/tkennes/jengo/actions">here</a>{{</raw>}}.
+If you are interested in some of the results, they are available {{<raw>}}<a href="https://Github.com/tkennes/jengo/actions">here</a>{{</raw>}}.
 
 {{<raw>}}<h3 class="display-5">Automatic Packaging of the code</h3> {{</raw>}}
-There is a neat little tool called Goreleaser that does this exact thing for you. It provides functionality to automatically package go code into various forms as well as releasing that code as a Homebrew formula. See {{<raw>}}<a href="https://goreleaser.com/quick-start/">here</a>{{</raw>}}.
+There is a neat little tool called {{<raw>}}<a href="https://goreleaser.com/quick-start/">Goreleaser</a>{{</raw>}} that does this exact thing for you. It provides functionality to automatically package go code into various forms as well as releasing that code as a Homebrew formula.
 
 Installation works via homebrew (```brew install goreleaser/tap/goreleaser```), and you can quickly get started with an initial template using ```goreleaser init```. This creates a configuration file called .goreleaser.yml, which might require a bit of tweaking but you can get already quite far with the standard setup. See below:
 
@@ -173,7 +173,7 @@ Note that this Github Action requires a Github secret called CUSTOM_GITHUB_TOKEN
 - Source code (zip)
 - Source code (tar.gz) 
 
-See for example: {{<raw>}}<a href="https://Github.com/tkennes/jengo/releases/tag/v1.3.10">here</a>{{</raw>}}
+Click {{<raw>}}<a href="https://Github.com/tkennes/jengo/releases/tag/v1.3.10">here</a>{{</raw>}} for an example.
 {{<raw>}}
 <br>
 <br>
@@ -273,7 +273,7 @@ class Jengo < Formula
   end
 end
 ```
-Personally, I found this the most complicated step. It is difficult to assess what the impact is from certain settings, and you can only find out by changing and re-running. Also, I had copied the initial version from Goreleaser, and I had to make quite some adjustments before I got it right. It is working at the moment, but I also intend to further explore what options are out there (and maybe put them in some future post).
+Personally, I found this the most complicated step. It is difficult to assess what the impact from certain settings could be. For some you can really only find using some experimentation. Also, I had copied the initial version from Goreleaser, and I had to make quite some adjustments before I got it right for my particular case. It is working at the moment, but I also intend to further explore what options are out there and further optimise them(and maybe put them in some future post).
 {{<raw>}}
 <br>
 <br>
@@ -281,7 +281,7 @@ Personally, I found this the most complicated step. It is difficult to assess wh
 {{</raw>}}
 
 {{<raw>}}<h2 class="display-4">Conclusion</h2> {{</raw>}}
-Anyhow, if you followed the steps outlined above, or if you have taken the shortcut of cloning the repo and changing the names and go code, you should be ready to start distributing your code!
+If you followed the steps outlined above, or if you have taken the shortcut of cloning the repo and changing the names and go code, you should be ready to start distributing your code!
 
 For colleagues working on a Mac, this is the easy part:
 ```bash
@@ -289,11 +289,34 @@ brew tap tkennes/jengo
 brew install jengo
 ```
 
-For colleagues working on Linux, simply install Homebrew ({{<raw>}}<a href="https://docs.brew.sh/Installation">here</a>{{</raw>}}), and you are ready to go as well!
+For colleagues working on Linux, simply {{<raw>}}<a href="https://docs.brew.sh/Installation">install Homebrew </a>{{</raw>}}, and you are ready to go as well!
 
-For colleagues working on a Windows... Well... Good luck!
+For colleagues working on a Windows... Well... {{<raw>}}
+  <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Good luck!
+  </a> {{</raw>}}
 
-Kidding, I have always been working with a Windows up until a couple of weeks ago and I have promised not to become this Windows-bashing-Apple-fanboy. If you want to stick to homebrew, depending on the restrictions laid out by your IT department, you can make use of the Windows Subsystem for Linux (see also: {{<raw>}}<a href="https://medium.com/@edwardbaeg9/using-homebrew-on-windows-10-with-windows-subsystem-for-linux-wsl-c7f1792f88b3">here</a>{{</raw>}}). Alternatively, you could work directly with the Goreleaser build artifacts, but that would require some additional tooling as well. On a side-note, I believe the friendly folks at Goreleaser are looking into solving this issue for you, so you could also consider the Sit-and-Wait Strategy.
+{{<raw>}}
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+<p>
+Kidding!! Can you imagine?
+</p>
+
+<p>
+Anyhow, I have always been working with a Windows up until a couple of weeks ago and I have promised not to become this Windows-bashing-Apple-fanboy. If you want to stick to homebrew, depending on the restrictions laid out by your IT department, you can make use of the <a href="https://medium.com/@edwardbaeg9/using-homebrew-on-windows-10-with-windows-subsystem-for-linux-wsl-c7f1792f88b3">Windows Subsystem for Linux</a>.
+</p>
+
+<p>
+Alternatively, you could work directly with the Goreleaser build artifacts, but that would require some additional tooling as well. </p>
+
+<p>
+On a side-note, I believe the friendly folks at Goreleaser are looking into solving this issue for you, so you could also consider the Sit-and-Wait Strategy.
+</p>
+  </div>
+</div>
+{{</raw>}}
+
 
 Upgrading and testing using brew works in a similar fashion:
 ```
