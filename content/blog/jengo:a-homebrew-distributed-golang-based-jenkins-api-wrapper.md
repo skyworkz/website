@@ -291,7 +291,7 @@ brew install jengo
 
 For colleagues working on Linux, simply {{<raw>}}<a href="https://docs.brew.sh/Installation">install Homebrew </a>{{</raw>}}, and you are ready to go as well!
 
-For colleagues working on a Windows... Well... {{<raw>}}
+For colleagues working on with Windows... Well... {{<raw>}}
   <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Good luck!
   </a> {{</raw>}}
@@ -304,7 +304,7 @@ Kidding!! Can you imagine?
 </p>
 
 <p>
-Anyhow, I have always been working with a Windows up until a couple of weeks ago and I have promised not to become this Windows-bashing-Apple-fanboy. If you want to stick to homebrew, depending on the restrictions laid out by your IT department, you can make use of the <a href="https://medium.com/@edwardbaeg9/using-homebrew-on-windows-10-with-windows-subsystem-for-linux-wsl-c7f1792f88b3">Windows Subsystem for Linux</a>.
+Anyhow, I always have had to work with Windows up until a couple of weeks ago and I have promised not to become this Windows-bashing-Apple-fanboy. If you want to stick to homebrew, depending on the restrictions laid out by your IT department, you can make use of the <a href="https://medium.com/@edwardbaeg9/using-homebrew-on-windows-10-with-windows-subsystem-for-linux-wsl-c7f1792f88b3">Windows Subsystem for Linux</a>.
 </p>
 
 <p>
