@@ -105,6 +105,10 @@ body:not(.modal){
   padding-right: 0px !important;
 }
 
+pre {
+  padding: 10px;
+}
+
 ::-moz-selection { background: $yellow}
 ::selection { background: $yellow; }
 
