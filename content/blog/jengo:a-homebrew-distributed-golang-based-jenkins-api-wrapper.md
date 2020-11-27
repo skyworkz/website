@@ -2,7 +2,7 @@
 title: "Jengo: A Homebrew-distributed Golang-based Jenkins API Wrapper"
 description: "Recently, I have been introduced to a lot of new tools and programs. I made the switch from Windows to Mac and started using Homebrew, started coding using Go and built several pipelines using Github Actions. Next to that, in the near future I will be starting at a new client, which meant I quickly had to get some hands-on experience on Jenkins, among others. As such, I decided to combine those and build a Jenkins API wrapper in Go, "
 id: "blog"
-date: "2020-11-15"
+date: "2020-11-26"
 author: "Tom Kennes"
 audio: []
 series: []
@@ -11,7 +11,7 @@ images:
 tags: ["authentication", "jwt", "aws"]
 videos: []
 ---
-Since I am about to start at a new client, I have been busy digging through some of the tools they use. One of those tools, and central to a lot of what they are doing, is {{<raw>}}<a href="https://www.jenkins.io/">Jenkins</a>{{</raw>}}. In order to catch up, I found myself back zifting through articles and documentation regarding old and newer versions of Jenkins. Although reading the documentation before starting is a sometimes forgotten best practice, I also want to be able to hit the ground running from day 1. E.g. I am going to need a bit more hands-on experience as well.
+Since I am about to start at a new client as DevOps engineer, I have been busy digging through some of the tools they use. Unsurprisingly, one of those tools is {{<raw>}}<a href="https://www.jenkins.io/">Jenkins</a>{{</raw>}}. In order to catch up, I found myself back zifting through articles and documentation regarding old and newer versions of Jenkins. Although reading the documentation before starting is a sometimes forgotten best practice, I also want to be able to hit the ground running from day 1. E.g. I am going to need a bit more hands-on experience as well.
 {{<raw>}}
 <br>
 <br>
@@ -23,7 +23,7 @@ Next to that, I recently made the switch from Windows to MacOS. In the past I ha
 <br>
 {{</raw>}}
 
-Finally, I have started tinkering with {{<raw>}}<a href="https://golang.org/">Go</a>{{</raw>}} recently. Go is a programming language originally created by Google in order to solve some of the problems a company like Google typically faces: tens of thousands of engineers, lots of software and systems, millions of lines of code (especially behind their network servers) being developed by hundreds of programmers, and finally lots of hardware on which all this software was launched. Nowadays it is used by many open-source projects. Personally, I love having a language as easy to write and read as python, without the slow compilation of C++ but some of its speed. 
+Finally, I have started tinkering with {{<raw>}}<a href="https://golang.org/">Go</a>{{</raw>}} recently. Go is a programming language originally created by Google in order to solve some of the problems a company like Google typically faces: tens of thousands of engineers, lots of software and systems, millions of lines of code (especially behind their network servers) being developed by hundreds of programmers, and finally lots of hardware on which all this software was launched. Nowadays it is used by many open-source projects. Personally, I love having a language as easy to write and read as python, without the slow compilation of C++, yet matching some of its speed. 
 {{<raw>}}
 <br>
 <br>
@@ -41,7 +41,6 @@ Next to that, by writing this up in the form of a blog-post, I hope future-me wi
 <br>
 <br>
 {{</raw>}}
-
 
 
 {{<raw>}}<h2 class="display-4">The Go-Part</h2> {{</raw>}}
@@ -108,7 +107,7 @@ jobs:
     - name: Test
       run: go test -v ./...
 ```
-Note that we are running this test over a matrix of go-versions and operation systems. For the rest, the execution steps fairly straightforward: install the required Go version, get the code and run the tests using `go test -v ./...`. This makes sure that the tests in all the subfolders are executed, and that the output is a bit more verbose than an overall pass or fail.
+Note that we are running this test over a matrix of go-versions and operation systems. For the rest, the execution steps are fairly straightforward: install the required Go version, get the code and run the tests using `go test -v ./...`. This makes sure that the tests in all the subfolders are executed, and that the output is a bit more verbose than an overall pass or fail.
 
 If you are interested in some of the results, they are available {{<raw>}}<a href="https://Github.com/tkennes/jengo/actions">here</a>{{</raw>}}.
 
