@@ -7,9 +7,7 @@
   <meta name="robots" content="all,follow">
   <meta name="content-language" content="all,follow">
   <link rel="shortcut icon" href="/favicon.ico">
-  <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
   {{ hugo.Generator }}
   {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
   {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
