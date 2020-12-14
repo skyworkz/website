@@ -1,51 +1,50 @@
-   <footer class="main-footer bg-primary">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 mb-5 mb-lg-0">
-            <div class="footer-logo"><img src="/img/logo/logo_text_right_white.png" alt="..." class="img-fluid"></div>
-          </div>
-          <div class="col-lg-3 mb-5 mb-lg-0">
-            <h5 class="footer-heading">Pages</h5>
-            <ul class="list-unstyled">
-                {{ range .Site.Menus.footer }}
-                <li>
-                        <a class="footer-link" href="{{ .URL }}">{{ .Name }}</a>
-                </li>
-                {{ end }}
-            </ul>
-          </div>
-          <div class="col-lg-5  mb-5 mb-lg-0">
-            <h5 class="footer-heading">Latest blogposts</h5>
-            <ul class="list-unstyled">
-                {{ $posts := where .Site.Pages "Type" "blog" }}
-                {{ range first 3 $posts }}
-                {{ if eq .Type "blog" }}
-                <li>
-                        <a class="footer-link" href="{{ .Permalink }}">{{ .Name }}</a>
-                </li>
-                {{ end }}
-                {{ end }}
-            </ul>
-          </div>
+<footer class="main-footer bg-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 mb-5 mb-lg-0">
+        <div class="footer-logo"><img src="/img/logo/skyworkz_white.svg" alt="..." class="img-fluid"></div>
+      </div>
+      <div class="col-lg-3 mb-5 mb-lg-0">
+        <h5 class="footer-heading">Pages</h5>
+        <ul class="list-unstyled">
+            {{ range .Site.Menus.footer }}
+            <li>
+                    <a class="footer-link" href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+        </ul>
+      </div>
+      <div class="col-lg-5  mb-5 mb-lg-0">
+        <h5 class="footer-heading">Latest blogposts</h5>
+        <ul class="list-unstyled">
+            {{ $posts := where .Site.Pages "Type" "blog" }}
+            {{ range first 3 $posts }}
+            {{ if eq .Type "blog" }}
+            <li>
+                    <a class="footer-link" href="{{ .Permalink }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+            {{ end }}
+        </ul>
+      </div>
+    </div>
+  <div class="container">
+    <div class="copyrights">
+      <div class="row mb-4">
+        <div class="col-lg-6">
+          <p class="copyrights-text mb-3 mb-lg-0">&copy; 2019 Skyworkz B.V.</a></p>
+        </div>
+        <div class="col-lg-6 text-center text-lg-right">
+          <ul class="list-inline social mb-0">
+            <li class="list-inline-item">
+              <a href="https://linkedin.com/company/skyworkz" class="social-link"><i class="fa fa-linkedin"></i></a>
+              <a href="https://twitter.com/skyworkznl" class="social-link"><i class="fa fa-twitter"></i></a>
+              <a href="https://github.com/skyworkz" class="social-link"><i class="fa fa-github"></i></a>
+              <a href="https://meetup.com/skyworkz" class="social-link"><i class="fa fa-meetup"></i></a>
+              <a href="https://instagram.com/skyworkz.nl" class="social-link"><i class="fa fa-instagram"></i></a>
+          </ul>
         </div>
       </div>
-      <div class="copyrights">
-        <div class="container">
-          <div class="row mb-4">
-            <div class="col-lg-6 text-center text-lg-left">
-              <p class="copyrights-text mb-3 mb-lg-0">&copy; 2019 Skyworkz B.V.</a></p>
-            </div>
-            <div class="col-lg-6 text-center text-lg-right">
-              <ul class="list-inline social mb-0">
-                <li class="list-inline-item">
-                  <a href="https://linkedin.com/company/skyworkz" class="social-link"><i class="fa fa-linkedin"></i></a>
-                  <a href="https://twitter.com/skyworkznl" class="social-link"><i class="fa fa-twitter"></i></a>
-                  <a href="https://github.com/skyworkz" class="social-link"><i class="fa fa-github"></i></a>
-                  <a href="https://meetup.com/skyworkz" class="social-link"><i class="fa fa-meetup"></i></a>
-                  <a href="https://instagram.com/skyworkz.nl" class="social-link"><i class="fa fa-instagram"></i></a>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </div>
+</footer>

@@ -24,17 +24,22 @@
 }
 
 .hero {
-  background-color: #4682b4;
+  background-color: #264e63;
   background: 
   linear-gradient(
-    175deg,
-    rgba(47,72,88, 1) 8rem,
-    rgba(246,174,45, 0) 40%,
-    rgba(70,130,180, 0.7) 80%
+    180deg,
+    rgba(0, 0, 0, 0.8) 2rem,
+    rgba(0,0,0, 0) 40%,
+    rgba(0, 0, 0, 0.8) 90%
   ),
-  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23ffffff' stroke-width='66.7' stroke-opacity='0.03' %3E%3Ccircle fill='%234682b4' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23457faf' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23437ba9' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%234278a4' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%2341749e' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%233f7199' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%233e6e94' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%233d6a8e' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%233b6789' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%233a6383' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%2338607e' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23375c78' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23365973' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%2334566e' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23335268' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23324f63' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23304b5d' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%232f4858' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100' height='50' viewBox='0 0 100 50'%3E%3Cdefs%3E%3Crect stroke='%23264e63' stroke-width='0.3' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='2' height='2' patternUnits='userSpaceOnUse'%3E%3Cg stroke='%23264e63' stroke-width='0.3'%3E%3Crect fill='%232a5266' width='1' height='1'/%3E%3Crect fill='%23264e63' width='1' height='1' x='1' y='1'/%3E%3Crect fill='%232f5569' width='1' height='1' y='1'/%3E%3Crect fill='%2333596c' width='1' height='1' x='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='b' width='5' height='11' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23375c6f'%3E%3Cuse xlink:href='%23s' x='2' y='0'/%3E%3Cuse xlink:href='%23s' x='4' y='1'/%3E%3Cuse xlink:href='%23s' x='1' y='2'/%3E%3Cuse xlink:href='%23s' x='2' y='4'/%3E%3Cuse xlink:href='%23s' x='4' y='6'/%3E%3Cuse xlink:href='%23s' x='0' y='8'/%3E%3Cuse xlink:href='%23s' x='3' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='7' height='7' patternUnits='userSpaceOnUse'%3E%3Cg fill='%233c6073'%3E%3Cuse xlink:href='%23s' x='1' y='1'/%3E%3Cuse xlink:href='%23s' x='3' y='4'/%3E%3Cuse xlink:href='%23s' x='5' y='6'/%3E%3Cuse xlink:href='%23s' x='0' y='3'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='11' height='5' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23264e63'%3E%3Cuse xlink:href='%23s' x='1' y='1'/%3E%3Cuse xlink:href='%23s' x='6' y='3'/%3E%3Cuse xlink:href='%23s' x='8' y='2'/%3E%3Cuse xlink:href='%23s' x='3' y='0'/%3E%3Cuse xlink:href='%23s' x='0' y='3'/%3E%3C/g%3E%3Cg fill='%23406376'%3E%3Cuse xlink:href='%23s' x='8' y='3'/%3E%3Cuse xlink:href='%23s' x='4' y='2'/%3E%3Cuse xlink:href='%23s' x='5' y='4'/%3E%3Cuse xlink:href='%23s' x='10' y='0'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='23' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23008987'%3E%3Cuse xlink:href='%23s' x='2' y='5'/%3E%3Cuse xlink:href='%23s' x='23' y='13'/%3E%3Cuse xlink:href='%23s' x='4' y='18'/%3E%3Cuse xlink:href='%23s' x='35' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='61' height='31' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23008987'%3E%3Cuse xlink:href='%23s' x='16' y='0'/%3E%3Cuse xlink:href='%23s' x='13' y='22'/%3E%3Cuse xlink:href='%23s' x='44' y='15'/%3E%3Cuse xlink:href='%23s' x='12' y='11'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100' height='50'/%3E%3Crect fill='url(%23b)' width='100' height='50'/%3E%3Crect fill='url(%23c)' width='100' height='50'/%3E%3Crect fill='url(%23d)' width='100' height='50'/%3E%3Crect fill='url(%23e)' width='100' height='50'/%3E%3Crect fill='url(%23f)' width='100' height='50'/%3E%3C/svg%3E");
+  background-attachment: fixed;
   background-size: cover;
-  
+}
+
+.hero .btn {
+    padding: .8rem 2rem;
+    font-weight: 600;
 }
 
 .gradient-light {
@@ -184,6 +189,7 @@ a {
   transition: all 0.3s;
   display: inline-block;
   font-weight: 600;
+  color: $teal;
 }
 
 a:hover {
@@ -191,9 +197,6 @@ a:hover {
 }
 
 
-.btn {
-  padding: 5px 18px;
-}
 
 .btn-shadow {
   box-shadow: 5px 5px 40px rgba(0,0,0,0.3);
@@ -478,7 +481,7 @@ STYLE SWITCHER FOR DEMO
 .hero-heading {
   font-size: 4rem;
   line-height: 1;
-  color: $yellow;
+  color: $teal;
   text-shadow: 10px 10px 40px rgba(0,0,0,0.5);
 }
 
@@ -791,6 +794,10 @@ STYLE SWITCHER FOR DEMO
   width: 12rem;
 }
 
+.navbar-brand img {
+  height: 50px;
+}
+
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
   font-size: 0.85rem;
@@ -1021,6 +1028,7 @@ a.text-primary:hover, a.text-primary:focus {
 .nav-link {
   font-weight: 600;
   padding: 0.5rem 1rem;
+  color: $teal;
 }
 
 .nav-link:hover {
