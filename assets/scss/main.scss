@@ -317,15 +317,6 @@ nav.navbar {
   transition: all 0.4s;
 }
 
-@media (max-width: 767px) {
-  nav.navbar {
-    background-color: #2F4858;
-  }
-}
-
-
-
-
 nav.navbar.active {
   background: #fff;
   -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
@@ -791,23 +782,59 @@ STYLE SWITCHER FOR DEMO
 }
 
 .navbar-brand img {
-  height: 50px;
+  height: 40px;
 }
 
+.navbar-collapse.collapsing,
+.navbar-collapse.show {
+  background-color: $black !important;
+}
+
+.navbar-toggler.collapsed,
+.navbar-toggler,
+.navbar-toggler:focus {  
+  border: 0px solid transparent;
+  box-shadow: none;
+}
+
+span.navbar-toggler-icon {
+  color: $teal;
+}
+
+.navbar-toggler.collapsed,
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
   font-size: 0.85rem;
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  border: 1px solid transparent;
-  border-radius: 3rem;
 }
 
-// .navbar-toggler:hover, .navbar-toggler:focus {
-//   outline: none;
-// }
+@media (max-width: 992px) {
+  .navbar-collapse {
+      position: fixed;
+      top: 0px; /* adjust to height of navbar */
+      left: 100%;
+      padding: 30px;
+      width: 75%;
+      height: 100%;
+  }
 
+  .navbar-collapse.collapsing {
+      left: -75%;
+      transition: height 0s ease;
+      background-color: $black;
+  }
+
+  .navbar-collapse.show {
+      left: 0;
+      transition: left 300ms ease-in-out;
+  }
+
+  .navbar-toggler.collapsed ~ .navbar-collapse {
+      transition: left 500ms ease-in-out;
+  }
+}
 
 
 /*
@@ -1141,7 +1168,7 @@ a.text-primary:hover, a.text-primary:focus {
   display: inline-block;
   width: 31.5%;
   overflow: hidden;
-  margin: 0.5em 0.5em;
+  margin: 0.5% 0.5%;
   position: relative;
   -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);

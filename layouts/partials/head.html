@@ -18,8 +18,8 @@
   
   {{ $plugins := resources.Get "js/plugins.js" }}
   {{ $jquery := resources.Get "js/jquery.js" }}
-  {{ $bootstrap := resources.Get "js/bootstrap.bundle.js" }}
-  {{ $defaultJS := slice $jquery $bootstrap $plugins | resources.Concat "js/global.js" | resources.Minify | resources.Fingerprint }}
+  {{ $bootstrap := resources.Get "js/bootstrap.js" }}
+  {{ $defaultJS := slice $bootstrap | resources.Concat "js/global.js" | resources.Minify | resources.Fingerprint }}
   <script src="{{ $defaultJS.Permalink }}"></script>
 
   {{ $owlcarousel := resources.Get "js/owl.carousel.js" }}
