@@ -14,18 +14,10 @@ $headings-margin-bottom: 0;
 
 $headings-line-height: 1;
 
-$theme-colors: (
-  "primary":    #00ACA9,
-  "secondary":  #356C89,
-  "danger":     #E30613,
-  "success":    #28a745,
-  "warning":      #FFDD00,
-  "info":       #356C89,
-  "dark":   #1D1D1B
-);
+
 
 // Primary Color
-$blue:    #356C89;
+$blue:    #00B7ED;
 $indigo:  #706F6F; 
 $purple:  #29235C;
 $pink:    #A60067;
@@ -34,11 +26,21 @@ $orange:  #F39200;
 $yellow:  #FFDD00;
 $green:   #28a745;
 $teal:    #00ACA9;
-$cyan:    #86BBD8;
+$cyan:    #356C89;
 $black:   #1D1D1B;
 
 // Main Colors
 $color-main: $black;
+
+$theme-colors: (
+  "primary":    $teal,
+  "secondary":  $blue,
+  "danger":     $red,
+  "success":    $green,
+  "warning":      $yellow,
+  "info":       $cyan,
+  "dark":   $black
+);
 
 // Custom Color
 
