@@ -22,24 +22,23 @@
 	<section class="blog diagonal-box bg-white">
 		<div class="container content pt-5">
 			<div class="row">
-				<div class="col-lg-10 mx-auto">
-					<div class="card-deck">
 				{{ range (.Paginator 4).Pages }}
+				<div class="col-sm-6">
 					<div class="card">
 						<div class="embed-responsive embed-responsive-16by9">
 							<a href="{{ .Permalink }}"><img src="{{ .Params.image }}" class="embed-responsive-item card-img-top" alt="post-thumb"></a>
 						</div>
 						<div class="card-body">
+							<a href="{{ .Permalink }}" class="float-end btn btn-warning">Read More</a>
 						  <h5>{{ .Title }}</h3>
+						  
 						  <p class="card-text">
-							  {{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}
-   					      </p>
-						  <a href="{{ .Permalink }}" class="btn btn-primary">Read More</a>
+							  {{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}				  
+						</p>
 						</div>
 					  </div>
+					</div>
 				{{ end }}
-			  </div>
-     		  </div>
 			</div>
 			<div class="col-12 text-center">
 				{{ template "_internal/pagination.html" . }}

@@ -43,13 +43,12 @@ on what you already have.
 {{</section>}}
 
 {{<raw>}}
-<section class="mt-lg-5">
-  <div class="container text-center text-lg-left mt-5">
-    <div class="row align-items-center">
-      <div class="col-lg-8">
-        <h2 class="display-5">Chaos Engineering Workshop</h2>
-        <div class="row">
-          <div class="col-lg-10">
+
+<section class="mt-lg-5 bg-diagonal">
+  <div class="container mt-5">
+    <div class="row text-center">
+      <div class="col-lg-10 mx-auto">
+      <h2 class="display-5">Chaos Engineering Workshop</h2>
             <p class="lead divider-subtitle mt-2 text-muted">We provide you with the expertise to learn the principles
               of chaos engineering. You will learn how to run
               controlled experiments in order to gain more confidence in your system and make it more resilient. You
@@ -57,22 +56,9 @@ on what you already have.
               learn the importance of having visibility of the system, and how this can be improved, to be able to debug
               issues
               better.</p>
-          </div>
-        </div>
       </div>
-      <div class="col-lg-4 mt-5 mt-lg-0 mb-2 embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item"
-          src="https://www.youtube-nocookie.com/embed/Kila1FvQPXw?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1"
-          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="mt-lg-5 bg-diagonal">
-  <div class="container mt-5">
-    <div class="row text-center">
+      <div class="row text-center">
       <div class="col-lg-8 mx-auto">
         <h2>The program</h2>
         <p class="lead divider-subtitle mt-2 text-muted">This two day workshop consists of theory and practical
@@ -80,7 +66,7 @@ on what you already have.
       </div>
     </div>
     <div class="row">
-      <div class="card-deck col-lg-10 mx-auto">
+      <div class="card-group col-lg-10 mx-auto">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Workshop Day 1</h5>
@@ -158,8 +144,8 @@ on what you already have.
       <div class="col-lg-12 text-center">
         <p>So, do you want to become more confident in building and running your systems? Book a workshop today!</p>
       </div>
-      <div class="mx-auto">
-        <a class="btn btn-outline-primary mt-lg-2" id="book" href="">Book now</a>
+      <div class="mx-auto text-center">
+        <a class="btn btn-warning mt-lg-2" id="book" href="">Book now</a>
         <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/workshop" data-height data-width data-element="#book" async></script>
         </a>
       </div>

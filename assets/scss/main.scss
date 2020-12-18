@@ -38,8 +38,7 @@
 }
 
 .btn {
-    padding: .8rem 2rem;
-    font-weight: 600;
+    font-family: "Maven Pro", sans-serif;
 }
 
 .gradient-light {
@@ -194,6 +193,7 @@ a {
 
 a:hover {
   text-decoration: none;
+  color: $teal-700;
 }
 
 
@@ -297,7 +297,6 @@ button {
   font-size: 3rem;
   font-weight: 500;
   line-height: 1;
-  color: $color-blue-dark-v4;
 }
 
 /* GENERAL MEDIAQUERY */
@@ -466,6 +465,7 @@ STYLE SWITCHER FOR DEMO
 
 
 .hero-heading {
+  font-family: "Poppins", sans-serif;
   font-size: 4rem;
   line-height: 1;
   color: $teal;
@@ -889,8 +889,6 @@ h6,
 .h5,
 .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 300;
   line-height: 1.2;
   color: inherit;
 }
@@ -987,9 +985,8 @@ a.text-primary:hover, a.text-primary:focus {
 }
 
 .page-item.active .page-link {
-  color: #fff;
-  background-color: $yellow;
-  border-color: $blue;
+  color: $white;
+  background-color: $teal
 }
 
 .page-item.disabled .page-link {
@@ -1001,13 +998,12 @@ a.text-primary:hover, a.text-primary:focus {
 .page-link {
   padding: 0.5rem 0.75rem;
   line-height: 1.25;
-  color: $blue;
   background-color: #fff;
   border: 0px solid #dee2e6;
+  color: $teal;
 }
 
 .page-link:hover, .page-link:focus {
-  color: #00448d;
   text-decoration: none;
   background-color: #e9ecef;
   border-color: #dee2e6;
@@ -1047,12 +1043,8 @@ a.text-primary:hover, a.text-primary:focus {
 
 .nav-link {
   font-weight: 600;
+  font-family: "Maven Pro", sans-serif;
   padding: 0.5rem 1rem;
-  color: $teal;
-}
-
-.nav-link:hover {
-  color: $color-gray-light-v1;
 }
 
 .dark-overlay {

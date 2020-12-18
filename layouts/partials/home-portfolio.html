@@ -23,7 +23,7 @@
                   {{ $id := urlize .name }}
                   {{ if eq .image $imageName }}
                   <li class="mix">
-                    <a href="{{ $image600.RelPermalink }}" data-target="#{{ $id }}" data-title="{{ .name }}" data-toggle="modal" class="portfolio-item">
+                    <a href="{{ $image600.RelPermalink }}" data-bs-target="#{{ $id }}" data-title="{{ .name }}" data-bs-toggle="modal" class="portfolio-item">
                       <img src="{{ $image380.RelPermalink }}" alt="image" class="img-fluid">
                       <div class="overlay">
                           <div>
@@ -38,16 +38,12 @@
                     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                                <h4 class="modal-title" id="{{ $id }}Title">{{ .teaser }}</h4>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                          <h4 class="modal-title" id="{{ $id }}Title">{{ .teaser }}</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                           </button>
                         </div>
                         <div class="modal-body">
                                 {{ .description | markdownify  }}
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                       </div>
                     </div>

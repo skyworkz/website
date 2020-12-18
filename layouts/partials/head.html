@@ -12,13 +12,15 @@
   {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
   {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,800">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@600&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
  
   
   {{ $plugins := resources.Get "js/plugins.js" }}
   {{ $jquery := resources.Get "js/jquery.js" }}
-  {{ $bootstrap := resources.Get "js/bootstrap.js" }}
+  {{ $bootstrap := resources.Get "js/bootstrap.bundle.js" }}
   {{ $defaultJS := slice $jquery $bootstrap | resources.Concat "js/global.js" | resources.Minify | resources.Fingerprint }}
   <script src="{{ $defaultJS.Permalink }}"></script>
 

@@ -3,9 +3,9 @@
 <section id="teaser" class="diagonal-box bg-white">
   <div class="container content">
     <div class="row justify-content-center pt-5">
-      <div class="col-md-8 text-center">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kaq76j7vMJY?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="col-md-10 text-center">
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/kaq76j7vMJY?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -13,27 +13,31 @@
   </section>
    
   <section id="jobs" class="bg-white">
-    <div class="row justify-content-center">
-      <h2>Open vacancies</h2>
+    <div class="container">
+    <div class="text-center pb-3">
+      <h2>Job opportunities</h2>
     </div>
     <!-- Content -->
-    <div class="row justify-content-center">
-      <div class="card-deck">
-          <div class="card text-center border-primary">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+          <div class="card h-100 text-center border-primary">
             <div class="card-body">
               <h5 class="card-title">Cloud Engineer</h5>
               <p class="card-text">You build cloud platforms for developers.</p>
             </div>
-            <div class="card-footer text-center"><a href="#" class="btn btn-primary rounded-pill" data-toggle="modal" data-target="#cloud-engineer">Read the job description</a></div>
+            <div class="card-footer text-center"><a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cloud-engineer">Read the job description</a></div>
         </div>
-          <div class="card text-center border-warning">
+      </div>
+      <div class="col">
+          <div class="card h-100 text-center border-warning">
             <div class="card-body">
               <h5 class="card-title">Cloud Developer</h5>
               <p class="card-text">You develop business applications using the cloud.</p>
             </div>
-            <div class="card-footer text-center"><a href="#" class="btn btn-warning rounded-pill" data-toggle="modal" data-target="#cloud-developer">Read the job description</a></div>
+            <div class="card-footer text-center"><a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#cloud-developer">Read the job description</a></div>
         </div>
       </div>
+    </div>
 
       {{ range .Site.Data.careers.profiles }}
       <!-- Modal -->
@@ -42,16 +46,15 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">{{ .name }}</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
               </button>
             </div>
             <div class="modal-body">
               <p>{{ .text | markdownify }}</p>
             </div>
             <div class="modal-footer">
-              <a class="btn btn-success rounded-pill" id="book" href="">Apply now</a>
-              <a class="btn btn-outline-danger rounded-pill" data-dismiss="modal" aria-label="Close">Close</a>
+              <a class="btn btn-success" id="book" href="">Apply now</a>
+              <a class="btn btn-outline-danger" data-bs-dismiss="modal" aria-label="Close">Close</a>
               <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/interview" data-height data-width data-element="#book" async></script>
             </div>
           </div>
@@ -59,15 +62,19 @@
       </div>
       {{ end }}
     </div>
-
+</div>
 </section>
 
 <section>
-      <div class="text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-10 text-center">
         <h2>Did we trigger you?</h2>
         <p>Great! Writing texts is hard, especially for job offers. But now you're here, let's take the next step. Let's have a coffee (or a beer if you like).</p>
-        <a class="btn btn-outline-primary rounded-pill mt-lg-2" id="book" href="">Apply now</a>
+        <a class="btn btn-outline-primary mt-lg-2" id="book" href="">Apply now</a>
         <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/interview" data-height data-width data-element="#book" async></script>
       </div>
+    </div>
+  </div>
 </section>
 {{ end }}
