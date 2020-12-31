@@ -31,7 +31,7 @@ inst_access = ""
   header = "Skyworkz"
 
   [params.hero]
-    title = "Cloud development for growing companies." 
+    title = "Cloud development for fast-growing companies." 
     subtitle = "We help start-ups and scale-ups leverage cloud technology - whether it's developing cloud native applications, increasing developer productivity or building reliable cloud platforms."
 
   [params.about]

@@ -9,38 +9,52 @@ $font-size-base: 1.4rem !default;
 $line-height-base: 2;
 
 $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Open Sans", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$headings-font-family:        'Pathway Gothic One', sans-serif;
+$headings-font-family:        'Maven Pro', sans-serif;
 $headings-margin-bottom: 0;
 
 $headings-line-height: 1;
 
-// Main Colors
-$color-main: #7d7d8f;
+
 
 // Primary Color
-$blue:    #4682B4;
-$indigo:  #7678ED; 
-$purple:  #2F4858;
+$blue:    #00B7ED;
+$indigo:  #706F6F; 
+$purple:  #29235C;
 $pink:    #A60067;
-$red:     #F6511D;
-$orange:  #F26419;
-$yellow:  #f4b443;
+$red:     #E30613;
+$orange:  #F39200;
+$yellow:  #FFDD00;
 $green:   #28a745;
-$teal:    #44FFD1;
-$cyan:    #86BBD8;
+$teal:    #00ACA9;
+$cyan:    #356C89;
+$black:   #1D1D1B;
+
+// Main Colors
+$color-main: $black;
+
+$theme-colors: (
+  "primary":    $teal,
+  "secondary":  $blue,
+  "danger":     $red,
+  "success":    $green,
+  "warning":    $yellow,
+  "info":       $cyan,
+  "dark":       $black,
+  "light":      white
+);
 
 // Custom Color
 
 $color-gray-light-v2: #f5f5f5;
 $color-gray-light-v3: #efeff4;
 $color-gray-light-v1: #93989f;
-$color-gray-dark-v1: #383339;
+$color-gray-dark-v1: #706F6F;
 $color-gray-dark-v3: #9797a2;
 $color-blue-dark-v1: #2d2d37;
 $color-blue-dark-v2: #272730;
 $color-blue-dark-v3: #363643;
 $color-blue-dark-v4: #33333f;
-$color-blue-dark-v5: #1e1e26;
+$color-blue-dark-v5: #1D1D1B;
 
 $body-color: $color-gray-dark-v1;
 

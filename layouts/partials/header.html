@@ -1,14 +1,14 @@
 <header class="header">
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a href="/" class="navbar-brand"><img src="/img/logo/logo_text_right.svg" alt="" class="img-fluid"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <a href="/" class="navbar-brand"><img src="/img/logo/skyworkz_cloud.svg" alt="" class="img-fluid"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon">
-        <i class="fa fa-bars fa-2x text-muted"></i>
+        <i class="fa fa-bars fa-2x"></i>
       </span>
     </button>
-    <div class="collapse navbar-collapse justify-content-md-end" id="navbarCollapse">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
 
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
@@ -17,7 +17,7 @@
                 </li>
                 {{ end }}
       </ul>
-      <a href="/contact" class="btn btn-outline-primary navbar-btn ml-0 ml-lg-3 rounded-pill text-uppercase">Contact</a>
+      <a href="/contact" class="btn btn-primary text-white ms-lg-3 text-uppercase">Contact</a>
     </div>
   </div>
 </nav>

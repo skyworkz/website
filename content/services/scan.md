@@ -56,7 +56,7 @@ One of the best ways to save money is to use auto-scaling. Scale up when there i
 {{<raw>}}
 
 <section class="mt-lg-5 bg-diagonal">
-  <div class="container text-center text-lg-left mt-5">
+  <div class="container text-center text-lg-start mt-5">
     <div class="row align-items-center text-center">
       <div class="col-lg-8 mx-auto">
         <h2>Cost savings scan</h2>
@@ -82,8 +82,8 @@ One of the best ways to save money is to use auto-scaling. Scale up when there i
       <div class="col-lg-12 text-center">
         <p class="lead divider-subtitle mt-2">So, may we help you save costs in the cloud?</p>
       </div>
-      <div class="mx-auto">
-        <a class="btn btn-outline-primary mt-lg-2" id="book" href="">Sure, let's have a chat!</a>
+      <div class="mx-auto text-center">
+        <a class="btn btn-warning mt-lg-2" id="book" href="">Sure, let's have a chat!</a>
         <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/cost-savings-scan" data-height data-width data-element="#book" async></script>
         </a>
       </div>

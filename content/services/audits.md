@@ -24,7 +24,7 @@ This assessment will help you devine the next steps you should take to become mo
 {{<raw>}}
 
 <section class="pt-lg-3 bg-muted">
-  <div class="container text-center text-lg-left">
+  <div class="container text-center text-lg-start">
     <div class="row align-items-center text-center">
       <div class="col-lg-8 mx-auto">
         <h2>Three-day workshop</h2>
@@ -46,7 +46,7 @@ This assessment will help you devine the next steps you should take to become mo
       <div class="col-lg-12 text-center">
         <p class="h3 divider-subtitle mt-2">May we help you in your Cloud journey?</p>
       </div>
-      <div class="mx-auto">
+      <div class="text-center">
         <a class="btn btn-warning mt-lg-2" id="book" href="">Sure, let's have a chat!</a>
         <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/cost-savings-scan" data-height data-width data-element="#book" async></script>
         </a>
