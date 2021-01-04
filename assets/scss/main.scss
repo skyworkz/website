@@ -818,7 +818,6 @@ span.navbar-toggler-icon {
       width: 75%;
       height: 100%;
   }
-<<<<<<< HEAD
 
   .navbar-collapse.collapsing {
       left: -75%;
@@ -826,15 +825,6 @@ span.navbar-toggler-icon {
       background-color: $black;
   }
 
-=======
-
-  .navbar-collapse.collapsing {
-      left: -75%;
-      transition: height 0s ease;
-      background-color: $black;
-  }
-
->>>>>>> 3261e93785907ec5211754b932d108c9b2546dba
   .navbar-collapse.show {
       left: 0;
       transition: left 300ms ease-in-out;
