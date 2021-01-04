@@ -27,7 +27,7 @@ inst_access = ""
   twitter = "SkyworkzNL"
   author = "Skyworkz"
   logo = "/img/logo/logo.png"
-  images = ["/img/teaser.png"]
+  images = ["/img/teaser.jpg"]
   header = "Skyworkz"
 
   [params.hero]
