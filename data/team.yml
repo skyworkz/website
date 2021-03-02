@@ -151,3 +151,16 @@ members:
       Cloud Engineer | Saxophonist | Snowboarding Fanatic | Craft Beer Snob
     description: >
       After having worked at KPMG for several years, where he was heavily involved in building the Digital Risk Platform, Tom joined Skyworkz as a Cloud Engineer. He knows a lot about Azure, DevOps and Data Engineering.
+  - category: Engineering
+    image: "fabiopaiva.jpg"
+    name: Fabio Paiva
+    teaser: >
+      Cloud Developer | Guitar player | Father of 2
+    description: >
+      Fábio is a hands-on Cloud Developer with a strong background in AWS, Terraform and Serverless.
+
+
+      In his spare time he likes to play guitar and have fun with his kids.
+      
+      
+      You can find Fábio on [LinkedIn](https://linkedin.com/in/fabio-dev).
