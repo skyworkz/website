@@ -40,7 +40,7 @@ Our consultants have years of experience building cloud platforms. They can help
 {{<section>}}
 {{% col-left-10 title="DevOps Culture Transformation" %}}
 
-With new technology comes a new way of working. Instead of siloed expertise your engineers need to work together, and become end-to-end responsible for the product the are building. This requires a culture of collaboration, experimentation and trust. We call this DevOps.
+With new technology comes a new way of working. Instead of siloed expertise your engineers need to work together, and become end-to-end responsible for the product they are building. This requires a culture of collaboration, experimentation and trust. We call this DevOps.
 
 But a new culture is not implemented over night. It requires coaching, training and guidance. And, even more important, upper management needs to be involved as well. Our consultants are able to help with this transformation to DevOps. They know how to create a lasting impact.
 
