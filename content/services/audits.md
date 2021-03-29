@@ -10,7 +10,7 @@ icon: tax.svg
 
 Moving to the cloud requires change on a lot of areas: strategy, culture, skills and technology. With our three-day Cloud Native assessment, we will give you insights on where your organisation stands right now. The outcome of the assessment will give you valuable insights on how vulnerable you are when a new competitor emerges. 
 
-This assessment will help you devine the next steps you should take to become more resilient and cloud ready. Through interactive workshops we define the big picture. Individual interviews will help us drill down and get an even better understanding of your current strengths and weaknesses.
+This assessment will help you define the next steps you should take to become more resilient and cloud ready. Through interactive workshops we define the big picture. Individual interviews will help us drill down and get an even better understanding of your current strengths and weaknesses.
 
 **The Cloud Native Assessment maps your current situation and defines a Cloud Native Roadmap.**
 
