@@ -1,6 +1,6 @@
 ---
 title: "Integrating Kubernetes with 1Password for Infrastructure Secrets"
-description: "Decouple your secrets from Kubernetes by using a password manager. Sounds good? According to 1Password this is even enterprise-ready. In this blog I'll show you how to set it up."
+description: "Decouple your secrets from Kubernetes by using a password manager. Sounds good? According to 1Password this is even enterprise-ready. Let's have a look."
 id: "blog"
 date: "2021-07-23"
 author: "Benny Cornelissen"
