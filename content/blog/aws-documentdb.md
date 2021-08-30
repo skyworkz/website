@@ -12,9 +12,9 @@ series: []
 videos: []
 ---
 
-When migrating to AWS, there are so many options at your command. Name any use-case, and probably AWS has got your back. With over 175 AWS services readily available for you to use, you might even have multiple options! Looking for human speech generation, use Polly. Or are you in looking to scale your operation beyond the earth, get busy with satellites using AWS Ground Station. Need to set-up first-line support for your customers? Why not use Amazon Connect? 
+When migrating to AWS, there are so many services you could use! Name any use-case, and probably AWS has got your back. With over 175 AWS services readily available for you to use, you might even have multiple options! Looking for human speech generation? Use Polly. Or are you in looking to scale your operation beyond the earth? Get busy with satellites using AWS Ground Station. Need to set-up first-line support for your customers? Why not use Amazon Connect?
 
-Let me stop there, because I could go on all day! The surplus of available services can be so overwhelming, the somewhat jesterly “Infinidash-experiment” proofs that it can be difficult to discern existing from fictional services ({{<raw>}}<a href="https://dev.to/rainleander/what-is-aws-infinidash-2mjn">here</a>{{</raw>}}).
+Let me stop here, because I could go on all day! The surplus of available services can be so overwhelming, the somewhat jesterly “Infinidash-experiment” proofs that it can be difficult to discern existing from fictional services ({{<raw>}}<a href="https://dev.to/rainleander/what-is-aws-infinidash-2mjn">here</a>{{</raw>}}).
 
 However, just because a service exists, it is not necessarily true that it reeks in a large customer-base. Not all AWS Services are created equal, and some are more equal than others. Or at least, some are more mature and useful than others. On the one hand, there are these services that are omnipresent in most AWS architectures like EC2, S3 or Route53, and on the other hand there are services that are barely used, like AWS Fault Injection Simulator, Amazon Braket and Amazon Sumerian. But then again, maybe I just haven’t yet met anybody who uses those. If you are using these, or other less common AWS resources, let me know!
 
