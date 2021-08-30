@@ -12,13 +12,15 @@ series: []
 videos: []
 ---
 
-When migrating to AWS, there are so many services you could use! Name any use-case, and probably AWS has got your back. With over 175 AWS services readily available for you to use, you might even have multiple options! Looking for human speech generation? Use Polly. Or are you in looking to scale your operation beyond the earth? Get busy with satellites using AWS Ground Station. Need to set-up first-line support for your customers? Why not use Amazon Connect?
+When migrating to AWS, there are so many services you could use! Name any use-case, and probably AWS has got your back. With over 175 AWS services readily available for you to use, you might even have multiple options! Looking for human speech generation? Use Polly. Or are you into scaling your operation beyond the earth? Get busy with satellites using AWS Ground Station. Need to set-up first-line support for your customers? Why not use Amazon Connect?
 
-Let me stop here, because I could go on all day! The surplus of available services can be so overwhelming, the somewhat jesterly “Infinidash-experiment” proofs that it can be difficult to discern existing from fictional services ({{<raw>}}<a href="https://dev.to/rainleander/what-is-aws-infinidash-2mjn">here</a>{{</raw>}}).
+Let me stop here, because I could go on all day! The surplus of available services can be so overwhelming, the somewhat jesterly {{<raw>}}<a href="https://dev.to/rainleander/what-is-aws-infinidash-2mjn">“Infinidash-experiment”</a>{{</raw>}} proofs that it can sometimes even be difficult to discern existing from fictional services.
 
-However, just because a service exists, it is not necessarily true that it reeks in a large customer-base. Not all AWS Services are created equal, and some are more equal than others. Or at least, some are more mature and useful than others. On the one hand, there are these services that are omnipresent in most AWS architectures like EC2, S3 or Route53, and on the other hand there are services that are barely used, like AWS Fault Injection Simulator, Amazon Braket and Amazon Sumerian. But then again, maybe I just haven’t yet met anybody who uses those. If you are using these, or other less common AWS resources, let me know!
+However, just because a service exists does not necessarily means that it collects a large customer-base as well. All AWS Services are created equal, but some are more equal than others. That is, some are more mature and useful than others.
 
-Next to the commonly known and the barely used services, there is also a kind of grey area of stuff that is interesting, seemingly well put together, and yet barely talked about online. One such a service is DocumentDB. Therefore, let me share my thoughts!
+On the one hand, there are these services that are omnipresent in most AWS architectures like EC2, S3 or Route53, and on the other hand there are services that are barely used, like AWS Fault Injection Simulator, Amazon Braket and Amazon Sumerian. But then again, maybe I just haven’t yet met anybody who uses those. If you are a happy cusomter of one of the less common AWS resources, let me know and share your thoughts!
+
+Next to the commonly known and the barely used services, there is also a kind of grey area of stuff that is interesting, seemingly well put together, and yet barely talked about online. One such a service is DocumentDB. Therefore, let me share some of my experience!
 
 {{<raw>}}
 <br>
@@ -59,8 +61,8 @@ As such, there seems to be contradicting information online, and perhaps even an
 <br>
 <br>
 {{</raw>}}
-{{<raw>}}<h2 class="display-4">Why we went for it</h2> {{</raw>}}
-We were busy migrating a large custom application to AWS and migrating from an on-prem MongoDB cluster to AWS was only a small fraction of it. Even though the on-prem shared cluster was sizeable, earlier experimentation already showed that the performance of that application would be much better if the database would be close to it. In contrast, the data stored in this cluster was not larger than several GBs, so there was also a monetary incentive to opt for a smaller version. 
+{{<raw>}}<h2 class="display-4">Why we (still) went for it</h2> {{</raw>}}
+We were busy migrating a large custom application to AWS and migrating from an on-prem MongoDB cluster to AWS was only a small fraction of it. Even though the on-prem shared cluster was sizeable, earlier experimentation already showed that the performance of that application would be much better if the database would be close to it. In contrast, the data stored in this cluster was not larger than several GBs, so there was also a monetary incentive to opt for a more fitting solution.
 
 Next to that, migrating our database-solution to AWS was also driven by the need to be more in control in the future. The on-prem solution was managed by a different team, which was focusing on other things and did not intend to actively maintain it. There were only a handful of teams making use of MongoDB, so I cannot really blame them for it either. However, by taking vertical ownership over the components of our stack, we can move forward faster with regard to applications making use of these MongoDB databases as well as the database itself. With the advent of Cloud, it is generally easier to quickly hit the ground running! So let’s go! :)
 
@@ -113,10 +115,11 @@ db.getCollection('DependencyEntry').find({
     }
 })
 ```
+First things first, in order to debug query performance DocumentDB makes use of a Profiling-logs, which you can enable using DocumentDB parameter groups. Operations longer than the variable profiler_threshold_ms will then be logged and available through CloudWatch under the log group with the name {{<raw>}}<i>/aws/docdb/[name-of-documentdb-cluster]/profiler</i>{{</raw>}}. Note that this does not include queries that fail due to clients closing their connections.
 
-So, obviously we started scaling up our instance. And then we scaled it up again. And then we tried tweaking the number of instances, read-replicas, networking conditions, etc. Since this did not solve our issue, we created a ticket with AWS support. They responded that they are aware of the issue, yet it is not mentioned it their documentation (as of writing).
+After we were able to measure DocumentDB query performance a bit better, we started scaling up our instance. And then we scaled it up again. And then we tried tweaking the number of instances, read-replicas, networking conditions, etc. Since this did not solve our issue, we had no other option but to create a ticket with AWS support.
 
-They mentioned that these types of queries with long in-statements are actually known to give issues and result in exponentially decreasing performance when the number of arguments increases. This is also what we observed after running some tests:
+AWS responded by mentioning that these types of queries with long in-statements are actually known to give issues and result in exponentially decreasing performance when the number of arguments increases. Yet it is not mentioned in their documentation (as of writing). This is also what we observed after running some tests:
 - 25 arguments: 1.14 seconds
 - 50 arguments: 2.23 seconds
 - 100 arguments: 4.57 seconds
@@ -125,14 +128,36 @@ They mentioned that these types of queries with long in-statements are actually 
 - 800 arguments: 47.6 seconds
 
 Contrast this to the performance when running MongoDB as a vanilla container instance in the same Kubernetes-cluster as the applications themselves:
-- 800 arguments: 0.2 seconds
+- 800 arguments: 0.3 seconds
+
+Or even against the on-prem MongoDB cluster:
+- 800 arguments: 1-2 seconds (estimation)
+
+AWS then suggested the following steps in order to mitigate the issue:
+1. Use $or to concatenate multiple $in filters and make sure the number of elements in the $in array is around 100, e.g. db.collection.find({$or: [{position_id:{$in: [<id>*100] }}, {position_id:{$in: [<id>*100] }} …]}) .
+2. Send multiple queries with $in, then merge documents on the application side.
+
+Since the application we were migrating was mostly developed several years ago, and does not fit with the future IT landscape as envisioned by the organisation, this is not a very satisfying answer. Technically it might also be true that the performance of the query as a whole can be greatly improved by cutting up the query and joining the results later on, but the tests also show that it would still not compete with the potential performance gains when MongoDB would be provided from within the cluster.
+
+It is also interesting to point out that from the tests above it is reasonable to assume that the on-prem MongoDB cluster could have a similar performance as DocumentDB. Moving the database back is however not an option, as we would give up ownership and control again. Besides, the performance improvement from the in-cluster MongoDB instance is significant!
+
+{{<raw>}}
+<br>
+<br>
+{{</raw>}}
+{{<raw>}}<h2 class="display-4">Our solution</h2> {{</raw>}}
+We started off with deploying a pod with a vanilla MongoDB container the cluster. Then we made plans to iteratively improve upon the solution following the guidelines as provided by Mongo:
+- {{<raw>}}<a href="https://docs.mongodb.com/manual/administration/production-checklist-operations/">Operations Checklist</a>{{</raw>}}
+- {{<raw>}}<a href="https://docs.mongodb.com/manual/administration/security-checklist/">Security Checklist</a>{{</raw>}}
+
+However, in the end we came across {{<raw>}}<a href="https://www.percona.com/doc/kubernetes-operator-for-psmongodb/index.html">the Percona MongoDB Operator</a>{{</raw>}}, which ticks of most of the boxes in the above checklists and seems to require less maintenance. Maybe that could be a topic for a future blogpost.
 
 {{<raw>}}
 <br>
 <br>
 {{</raw>}}
 {{<raw>}}<h2 class="display-4">Takeaways</h2> {{</raw>}}
-If you are working on a Greenfield project, you will likely work around the limitations, but in case you are migrating from on-premise, your hands might be more tied. For the most common AWS services, like for example EC2, VPC, S3, RDS, Lambda, Route 53, SNS, SQS, ELB, EKS, you should be fine, but for other services AWS development might actually be more in beta than they are letting on in their official correspondence. Hence, be sure to properly test whether the service actually fits your use-case, look for independent information online and be very critical.
+If you are working on a Greenfield project, you will likely work around the limitations, whereas your hands might be more tied when migrating an application from on-premise. For the most common AWS services, like for example EC2, VPC, S3, RDS, Lambda, Route 53, SNS, SQS, ELB, EKS, you should be fine, but for other services AWS development might actually be more in beta than they are letting on in their official correspondence. Hence, be sure to properly test whether the service actually fits your use-case, look for independent information online and be very critical.
 
 {{<raw>}}
 <div style="text-align: center;">
