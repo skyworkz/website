@@ -18,9 +18,9 @@ Let me stop here, because I could go on all day! The surplus of available servic
 
 However, just because a service exists does not necessarily means that it collects a large customer-base as well. All AWS Services are created equal, but some are more equal than others. That is, some are more mature and useful than others.
 
-On the one hand, there are these services that are omnipresent in most AWS architectures like EC2, S3 or Route53, and on the other hand there are services that are barely used, like AWS Fault Injection Simulator, Amazon Braket and Amazon Sumerian. But then again, maybe I just haven’t yet met anybody who uses those. If you are a happy cusomter of one of the less common AWS resources, let me know and share your thoughts!
+On the one hand, there are these services that are omnipresent in most AWS architectures like EC2, S3 or Route53, and on the other hand there are services that are barely used, like AWS Fault Injection Simulator, Amazon Braket and Amazon Sumerian. But then again, maybe I just haven’t yet met anybody who uses those. If you are a happy customer of one of the less common AWS resources, let me know and share your thoughts!
 
-Next to the commonly known and the barely used services, there is also a kind of grey area of stuff that is interesting, seemingly well put together, and yet barely talked about online. One such a service is DocumentDB. Therefore, let me share some of my experience!
+Next to the commonly known and the barely used services, there is also a kind of grey area of stuff that is interesting, seemingly well put together, and yet barely talked about online. One such a service is DocumentDB. Therefore, let me share my experience!
 
 {{<raw>}}
 <br>
@@ -131,7 +131,7 @@ Contrast this to the performance when running MongoDB as a vanilla container ins
 - 800 arguments: 0.3 seconds
 
 Or even against the on-prem MongoDB cluster:
-- 800 arguments: 1-2 seconds (estimation)
+- 800 arguments: 1.7 seconds
 
 AWS then suggested the following steps in order to mitigate the issue:
 1. Use $or to concatenate multiple $in filters and make sure the number of elements in the $in array is around 100, e.g. db.collection.find({$or: [{position_id:{$in: [<id>*100] }}, {position_id:{$in: [<id>*100] }} …]}) .
