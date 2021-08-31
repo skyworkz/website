@@ -18,7 +18,7 @@ Let me stop here, because I could go on all day! The surplus of available servic
 
 However, just because a service exists does not necessarily imply that it collects a large customer-base as well. All AWS Services are created equal, but some are more equal than others. That is, some are more mature and useful than others.
 
-On the one hand, there are these services that are omnipresent in most AWS architectures like EC2, S3 or Route53, and on the other hand there are services that are barely used, like AWS Fault Injection Simulator, Amazon Braket and Amazon Sumerian. But then again, maybe I just have not yet met anybody who uses those. If you are a happy customer of one of the less common AWS resources, let me know and share your thoughts!
+On the one hand, there are these services that are omnipresent in most AWS architectures like EC2, S3 or Route53, and on the other hand there are services that are barely used, like AWS Fault Injection Simulator, Amazon Braket and Amazon Sumerian. But then again, maybe I just have not yet met anybody who uses those. If you are a happy customer of one of the less common AWS resources, let me know and {{<raw>}}<a href="mailto:tomkennes@skyworkz.nl">share your thoughts</a> {{</raw>}}!
 
 Next to the commonly known and the barely used services, there is also a kind of grey area of stuff that is interesting, seemingly well put together, and yet barely talked about online. One such a service is Amazon DocumentDB. Therefore, let me share my experience!
 
@@ -163,3 +163,5 @@ If you are working on a greenfield project, you will likely work around the limi
 <iframe src="https://giphy.com/embed/gw3IWyGkC0rsazTi" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/test-gw3IWyGkC0rsazTi">via GIPHY</a></p>
 </div>
 {{</raw>}}
+
+Get in touch! Send me an {{<raw>}}<a href="mailto:tomkennes@skyworkz.nl">email</a> {{</raw>}} or find me on {{<raw>}}<a href="https://www.linkedin.com/in/tajmkennes/">linkedin</a>{{</raw>}}.
