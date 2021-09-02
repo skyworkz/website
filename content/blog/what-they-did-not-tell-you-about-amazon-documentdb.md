@@ -64,7 +64,7 @@ As such, there seems to be contradicting information online, and perhaps even an
 {{<raw>}}<h2 class="display-4">Why we (still) went for it</h2> {{</raw>}}
 We were in the midst of migrating a large custom application to AWS. Migrating the database from an on-prem MongoDB cluster to AWS was only a small fraction of it. Even though the on-prem shared cluster was sizeable, earlier experimentation already showed that the performance of the application would be much better if the database would be closer to it. In contrast, the data stored in this cluster was not larger than several GBs, so there was also a monetary incentive to opt for a more fitting solution.
 
-Next to that, migrating our database to AWS was also driven by the need to be more in control in the future. The on-prem solution was managed by a different team, which was focusing on other things and did not intend to actively maintain it. There were only a handful of teams making use of MongoDB, so I cannot really blame them for it either. However, by taking vertical ownership over the components of our stack, we knew we could move forward faster in the future! Both with regard to applications making use of these MongoDB databases as well as the database itself. With the advent of Cloud, it is generally easier to quickly hit the ground running! So let’s go! :)
+Next to that, migrating our database to AWS was also driven by the need to be more in control in the future. The on-prem solution was managed by a different team, which was focusing on other things and did not intend to actively maintain it. There were only a handful of teams making use of MongoDB, so I cannot really blame them for it either. However, by taking vertical ownership over the components of our stack, we knew we could move forward faster in the future! Both with regard to applications making use of these MongoDB databases as well as the database itself. With the advent of Cloud, it is also generally easier to quickly hit the ground running! So let’s go! :)
 
 {{<raw>}}
 <br>
@@ -80,11 +80,11 @@ Next to that, we cross-referenced the mongo-operations we were running with the 
 <br>
 {{</raw>}}
 {{<raw>}}<h2 class="display-4">What happened</h2> {{</raw>}}
-We spent some time setting up a complete solution: Terraform in combination with a little bit of CloudFormation for IAC, Jenkins to automate a bit of testing using tfsec and to create an audit log of previous deployments using the build history.
+We spent some time setting up a complete solution: we set up Terraform in combination with a little bit of CloudFormation to manage our infrastructure as code. And we used Jenkins to automate a bit of testing using for example tfsec. The Jenkins build history also serves as an audit trail, allowing us to see who changed what and when.
 
 Then we switched over the applications to make use of Amazon DocumentDB instead of the on-prem version. We did a bit of testing and quickly noticed a large unexpected dip in the performance. Most queries were taking slightly longer overall, compared to when they were run against the on-prem solution. There was however one query which did not complete within 30 second. As a result, the underlying Kubernetes-cluster hosting the application closed the connection as per the egress-configuration.
 
-The exact query we were running, comprised of a generated in-statement with a list of about 800-elements. Each element in turn was composed of a smaller subquery as well. All in all, it looked something like:
+The exact query we were running comprised of a generated in-statement with a list of about 800-elements. Each element in turn was composed of a smaller subquery as well. All in all, it looked something like:
 
 ```json
 db.getCollection('DependencyEntry').find({
@@ -114,9 +114,9 @@ db.getCollection('DependencyEntry').find({
     }
 })
 ```
-First things first, in order to debug query performance Amazon DocumentDB makes use of a Profiling-logs, which you can enable using Amazon DocumentDB parameter groups. Operations longer than the variable profiler_threshold_ms will then be logged and available through CloudWatch under the log group with the name {{<raw>}}<i>/aws/docdb/[name-of-documentdb-cluster]/profiler</i>{{</raw>}}. Note that this does not include queries that fail due to clients closing their connections, so we had to adjust our egress timeout limits accordingly.
+First things first, in order to debug query performance Amazon DocumentDB makes use of a Profiling-logs, which you can enable using Amazon DocumentDB parameter groups. Operations longer than the variable "profiler_threshold_ms" will then be logged and made available through CloudWatch under the log group with the name {{<raw>}}<i>/aws/docdb/[name-of-documentdb-cluster]/profiler</i>{{</raw>}}. Note that this does not include queries that fail due to clients closing their connections, so we first had to adjust our egress timeout limits accordingly.
 
-After we were able to measure Amazon DocumentDB query performance a bit better, we started scaling up our instance. And then we scaled it up again. And then we tried tweaking the number of instances, read-replicas, networking conditions, etc. Since this did not solve our issue, we had no other option but to create a ticket with AWS support.
+After we were able to measure the Amazon DocumentDB query performance a bit better, we started scaling up our instance. And then we scaled it up again. And then we tried tweaking the number of instances, read-replicas, networking conditions, etc. Since this did not solve our issue, we had no other option but to create a ticket with AWS support.
 
 AWS responded by mentioning that these types of queries with long in-statements are actually known to give issues and result in exponentially decreasing performance when the number of arguments increases. Yet, it is not mentioned in their documentation (as of writing). This is also what we observed after running some tests:
 - 25 arguments: 1.14 seconds
@@ -134,7 +134,7 @@ Or even against the on-prem MongoDB cluster:
 
 AWS then suggested the following steps in order to mitigate the issue:
 1. Use $or to concatenate multiple $in filters and make sure the number of elements in the $in array is around 100, e.g. db.collection.find({$or: [{position_id:{$in: [<id>*100] }}, {position_id:{$in: [<id>*100] }} …]}) .
-2. Send multiple queries with $in, then merge documents on the application side.
+2. Send multiple queries with $in, then merge the documents on the application side.
 
 Since the application we were migrating was mostly developed several years ago, and does not fit with the future IT landscape as envisioned by the organization, this is not a very satisfying answer. Technically it might also be true that the performance of the query as a whole can be greatly improved by cutting up the query and joining the results later on, but the tests also show that it would still not compete with the potential performance gains we could get when MongoDB would be provided from within the cluster.
 
@@ -156,7 +156,7 @@ However, in the end we came across {{<raw>}}<a href="https://www.percona.com/doc
 <br>
 {{</raw>}}
 {{<raw>}}<h2 class="display-4">Takeaways</h2> {{</raw>}}
-If you are working on a greenfield project, you will likely work around the limitations, whereas your hands might be more tied when migrating an application from on-premise. For the most common AWS services, like for example EC2, VPC, S3, RDS, Lambda, Route 53, SNS, SQS, ELB, EKS, you should be fine, but for other services AWS development might actually be more in beta than they are letting on in their official correspondence. Hence, be sure to properly test whether the service fits your use-case, look for independent information online and, be very critical.
+If you are working on a greenfield project, you will likely work around the limitations, whereas your hands might be more tied when migrating an application from on-premise. For the most common AWS services, like for example EC2, VPC, S3, RDS, Lambda, Route 53, SNS, SQS, ELB, EKS, you should be fine, but for other services AWS development might actually be more in beta than they are letting on in their official correspondence. Hence, be sure to properly test whether the service fits your use-case, look for independent information online and be very critical.
 
 {{<raw>}}
 <div style="text-align: center;">
