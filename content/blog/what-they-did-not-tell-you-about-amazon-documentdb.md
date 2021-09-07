@@ -1,5 +1,5 @@
 ---
-title: "Something they did not tell you about using Amazon DocumentDB…"
+title: "What they did not tell you about using Amazon DocumentDB…"
 description: "But they should have"
 id: "blog"
 date: "2021-08-30"
