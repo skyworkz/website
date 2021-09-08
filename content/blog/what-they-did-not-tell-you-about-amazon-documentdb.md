@@ -114,7 +114,7 @@ db.getCollection('DependencyEntry').find({
     }
 })
 ```
-First things first, in order to debug query performance Amazon DocumentDB makes use of a Profiling-logs, which you can enable using Amazon DocumentDB parameter groups. Operations longer than the variable "profiler_threshold_ms" will then be logged and made available through CloudWatch under the log group with the name {{<raw>}}<i>/aws/docdb/[name-of-documentdb-cluster]/profiler</i>{{</raw>}}. Note that this does not include queries that fail due to clients closing their connections, so we first had to adjust our egress timeout limits accordingly.
+First things first, in order to debug query performance Amazon DocumentDB makes use of a Profiling-logs, which you can enable using Amazon DocumentDB parameter groups. Operations longer than the variable `profiler_threshold_ms` will then be logged and made available through CloudWatch under the log group with the name `/aws/docdb/[name-of-documentdb-cluster]/profiler`. Note that this does not include queries that fail due to clients closing their connections, so we first had to adjust our egress timeout limits accordingly.
 
 After we were able to measure the Amazon DocumentDB query performance a bit better, we started scaling up our instance. And then we scaled it up again. And then we tried tweaking the number of instances, read-replicas, networking conditions, etc. Since this did not solve our issue, we had no other option but to create a ticket with AWS support.
 
@@ -133,8 +133,8 @@ Or even against the on-prem MongoDB cluster:
 - 800 arguments: 1.7 seconds
 
 AWS then suggested the following steps in order to mitigate the issue:
-1. Use $or to concatenate multiple $in filters and make sure the number of elements in the $in array is around 100, e.g. db.collection.find({$or: [{position_id:{$in: [<id>*100] }}, {position_id:{$in: [<id>*100] }} …]}) .
-2. Send multiple queries with $in, then merge the documents on the application side.
+1. Use $or to concatenate multiple `$in` filters and make sure the number of elements in the `$in` array is around 100, e.g. `db.collection.find({$or: [{position_id:{$in: [<id>*100] }}, {position_id:{$in: [<id>*100] }} …]})` .
+2. Send multiple queries with `$in`, then merge the documents on the application side.
 
 Since the application we were migrating was mostly developed several years ago, and does not fit with the future IT landscape as envisioned by the organization, this is not a very satisfying answer. Technically it might also be true that the performance of the query as a whole can be greatly improved by cutting up the query and joining the results later on, but the tests also show that it would still not compete with the potential performance gains we could get when MongoDB would be provided from within the cluster.
 
