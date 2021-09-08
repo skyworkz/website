@@ -133,7 +133,7 @@ Or even against the on-prem MongoDB cluster:
 - 800 arguments: 1.7 seconds
 
 AWS then suggested the following steps in order to mitigate the issue:
-1. Use $or to concatenate multiple `$in` filters and make sure the number of elements in the `$in` array is around 100, e.g. `db.collection.find({$or: [{position_id:{$in: [<id>*100] }}, {position_id:{$in: [<id>*100] }} …]})` .
+1. Use `$or` to concatenate multiple `$in` filters and make sure the number of elements in the `$in` array is around 100, e.g. `db.collection.find({$or: [{position_id:{$in: [<id>*100] }}, {position_id:{$in: [<id>*100] }} …]})` .
 2. Send multiple queries with `$in`, then merge the documents on the application side.
 
 Since the application we were migrating was mostly developed several years ago, and does not fit with the future IT landscape as envisioned by the organization, this is not a very satisfying answer. Technically it might also be true that the performance of the query as a whole can be greatly improved by cutting up the query and joining the results later on, but the tests also show that it would still not compete with the potential performance gains we could get when MongoDB would be provided from within the cluster.
