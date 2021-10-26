@@ -25,7 +25,7 @@
 
 .hero {
   background-color: #264e63;
-  background: 
+  background:
   linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.8) 2rem,
@@ -124,7 +124,7 @@ pre {
 .post {
   position: relative;
   z-index: 1;
-  
+
   &:before,
   &:after {
     background: $white;
@@ -142,7 +142,7 @@ pre {
     transform: skewY(-4deg);
     transform-origin: 0% 0;
   }
-  
+
   &:after {
     bottom: 0;
     transform: skewY(0deg);
@@ -349,7 +349,7 @@ nav.navbar .dropdown-menu {
 footer.main-footer  {
   position: relative;
   z-index: 1;
-  
+
   &:before,
   &:after {
     background: inherit;
@@ -367,7 +367,7 @@ footer.main-footer  {
     transform: skewY(-4deg);
     transform-origin: 0% 0;
   }
-  
+
   &:after {
     bottom: 0;
     transform: skewY(0deg);
@@ -791,7 +791,7 @@ STYLE SWITCHER FOR DEMO
 
 .navbar-toggler.collapsed,
 .navbar-toggler,
-.navbar-toggler:focus {  
+.navbar-toggler:focus {
   border: 0px solid transparent;
   box-shadow: none;
 }
@@ -1044,6 +1044,17 @@ a.text-primary:hover, a.text-primary:focus {
   font-weight: 600;
   font-family: "Maven Pro", sans-serif;
   padding: 0.5rem 1rem;
+  color: $teal;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: $teal-200;
+}
+
+.nav-link.active {
+  color: $teal-200;
 }
 
 .dark-overlay {
@@ -1260,7 +1271,7 @@ ul#portfolio-content-active {
   display: flex;
 }
 
-@media (max-width: 991.98px) {  
+@media (max-width: 991.98px) {
   .overlay {
     display: none;
   }
