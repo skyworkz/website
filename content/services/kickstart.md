@@ -65,8 +65,7 @@ We help you to answer these questions. With our Cloud Kickstart, we get you up a
         <p class="divider-subtitle mt-2 text-bold h4">Interested? Then we should talk.</p>
       </div>
       <div class="mx-auto text-center">
-        <a class="btn mt-lg-2 btn-warning" id="book" href="">Let's plan a coffee!</a>
-        <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/cost-savings-scan" data-height data-width data-element="#book" async></script>
+        <a class="btn mt-lg-2 btn-warning" id="book" onclick="showZoomSidebar()">Let's plan a coffee!</a>
         </a>
       </div>
     </div>

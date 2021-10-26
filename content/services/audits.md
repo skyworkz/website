@@ -47,8 +47,7 @@ This assessment will help you define the next steps you should take to become mo
         <p class="h3 divider-subtitle mt-2">May we help you in your Cloud journey?</p>
       </div>
       <div class="text-center">
-        <a class="btn btn-warning mt-lg-2" id="book" href="">Sure, let's have a chat!</a>
-        <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/cost-savings-scan" data-height data-width data-element="#book" async></script>
+        <a class="btn btn-warning mt-lg-2" id="book" onclick="showZoomSidebar()">Sure, let's have a chat!</a>
         </a>
       </div>
     </div>

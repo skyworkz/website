@@ -145,8 +145,7 @@ on what you already have.
         <p>So, do you want to become more confident in building and running your systems? Book a workshop today!</p>
       </div>
       <div class="mx-auto text-center">
-        <a class="btn btn-warning mt-lg-2" id="book" href="">Book now</a>
-        <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/workshop" data-height data-width data-element="#book" async></script>
+        <a class="btn btn-warning mt-lg-2" id="book" onclick="showZoomSidebar()">Book now</a>
         </a>
       </div>
     </div>

@@ -60,8 +60,7 @@ But a new culture is not implemented over night. It requires coaching, training 
         <p class="h4 divider-subtitle mt-2">Looking for consultants who can help you out?</p>
       </div>
       <div class="mx-auto">
-        <a class="btn btn-warning mt-lg-2" id="book" href="">Plan a coffee</a>
-        <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/cost-savings-scan" data-height data-width data-element="#book" async></script>
+        <a class="btn btn-warning mt-lg-2" id="book" onclick="showZoomSidebar()">Plan a coffee</a>
         </a>
       </div>
     </div>

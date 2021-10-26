@@ -83,8 +83,7 @@ One of the best ways to save money is to use auto-scaling. Scale up when there i
         <p class="lead divider-subtitle mt-2">So, may we help you save costs in the cloud?</p>
       </div>
       <div class="mx-auto text-center">
-        <a class="btn btn-warning mt-lg-2" id="book" href="">Sure, let's have a chat!</a>
-        <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/cost-savings-scan" data-height data-width data-element="#book" async></script>
+        <a class="btn btn-warning mt-lg-2" id="book" onclick="showZoomSidebar()">Sure, let's have a chat!</a>
         </a>
       </div>
     </div>

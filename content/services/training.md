@@ -47,8 +47,7 @@ Reach out to us for more information.
         <p class="h4 divider-subtitle mt-2">Interested in our training offerings? Then we should talk.</p>
       </div>
       <div class="mx-auto">
-        <a class="btn btn-warning mt-lg-2" id="book" href="">Let's plan a coffee!</a>
-        <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/bastichelaar/cost-savings-scan" data-height data-width data-element="#book" async></script>
+        <a class="btn btn-warning mt-lg-2" id="book" onclick="showZoomSidebar()">Let's plan a coffee!</a>
         </a>
       </div>
     </div>
