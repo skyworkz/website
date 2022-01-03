@@ -2,7 +2,7 @@
 title: "Life of a Consultant: First week at a project"
 description: "As consultants, we switch from one project to the next regularly. But how do you get started? What do you do in your first week at a new project?"
 id: "blog"
-date: "2021-05-06"
+date: "2022-01-03"
 author: "Benny Cornelissen"
 audio: []
 images: []
