@@ -38,7 +38,7 @@ An important distinction to make here is the role you have on the project. We'll
 - You are here *just* to point out what's broken and why
 - You are here to help fix the problems
 
-Usually it will be the second. This means you need to be careful pointing out all the flaws in a condescending way. You're here to help the client fix their issues, not to judge them for having issues. I try to always assume that whatever anyone did was done with the best of intentions, because most of the time, that's exactly what happened. But even if it's not, you'll need those people on your side to help fix whatever is broken, and that is going to be a lot harder if those people feel disrespected by your honesty.
+Usually it will be the second. This means you need to be careful pointing out all the flaws in a not condescending way. You're here to help the client fix their issues, not to judge them for having issues. I try to always assume that whatever anyone did was done with the best of intentions, because most of the time, that's exactly what happened. But even if it's not, you'll need those people on your side to help fix whatever is broken, and that is going to be a lot harder if those people feel disrespected by your honesty.
 
 ## Who are these people?
 As I mentioned, most of the time we'll be brought in to help fix the issues, but that's not going to happen in isolation. It's essential to get to know the people you're going to be working with, the culture, the official as well as the implicit power structures, etcetera. Usually it's pretty clear from the start who your immediate teammates/coworkers are, and who you're going to be reporting to. Start there.
