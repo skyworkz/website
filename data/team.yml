@@ -136,7 +136,7 @@ members:
     teaser: >
       Cloud Engineer | Cryptocurrencies Fan | Bass and guitar player | Craft Beer Snob
     description: >
-      Julio is hands-on Azure Architect-Enginner highly experienced in MS Technologies and in the last years, working hard with AKS in Azure.
+      Julio is hands-on Azure Architect-Enginneer highly experienced in MS Technologies and in the last years, working hard with AKS in Azure.
   - category: Engineering
     image: "tomkennes.jpg"
     name: Tom Kennes
@@ -164,3 +164,16 @@ members:
       Software Engineer | Gamer | Game Developer | Dog Lover
     description: >
       William is an experienced Software Engineer with a broad set of knowledge. Specialized in Cloud Native development and architectures. You will find him playing and developing games into the late night hours.
+  - category: Engineering
+    image: "lee.jpg"
+    name: Lee Beenen
+    teaser: >
+      Cloud Engineer | Software Developer | Cyclist | Runner | Dog Enthousiast
+    description: >
+      Lee has been working with Microsoft technologies for his entire professional career, implementing, maintaining, supporting and developing a host of mission-critical software. 
+      
+
+      He has joined Skyworkz eager to expand and utilize his growing Azure experience in addition to years of experience in CI/CD. 
+      
+      
+      Whenever he's not sitting behind a computer, he's probably outside, on a bike, or just walking the dog.
