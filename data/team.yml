@@ -10,16 +10,16 @@ members:
     teaser: >
       Managing Director | Entreprenerd | Skiing fanatic | Still a techie
     description: >
-      After having worked as a consultant for several years, Bas switched to the dark side. As the 
-      managing director, his job is to hire new Skyworkerz, find awesome assignments and order the 
-      lease cars (and much more of course). But Bas will always be a techie at heart. He has a solid 
+      After having worked as a consultant for several years, Bas switched to the dark side. As the
+      managing director, his job is to hire new Skyworkerz, find awesome assignments and order the
+      lease cars (and much more of course). But Bas will always be a techie at heart. He has a solid
       knowledge of Cloud and DevOps, and is always in for a good technical discussion.
 
 
       In his spare time he likes to spend time with is son Sem, he loves skiing and traveling, and
       he is an occasional sporter (road cycling and mountainbiking in the summer, ice skating in the
       winter).
-      
+
 
       You can find him on [Linkedin](https://linkedin.com/in/bastichelaar) and [Twitter](https://twitter.com/bastichelaar).
   - category: Management
@@ -41,7 +41,7 @@ members:
       to build a company focused on the cloud. After having managed two companies, Martin decided to
       focus on Dataworkz, and to stay an advisor at Skyworkz. He helps Bas behind the scenes to run the
       company.
-      
+
 
       In his spare time, Martin is a fanatic board gamer. You can see him regularly on board game nights
       in Utrecht.
@@ -52,11 +52,11 @@ members:
     image: "sven.jpg"
     name: Sven Rienstra
     teaser: >
-      Cloud Developer | Runner | Formula 1 fan 
+      Cloud Developer | Runner | Formula 1 fan
     description: >
-      As an experienced cloud native software developer Sven loves solving complex puzzles. He likes to 
-      work on challenges where there is no outright obvious solution. His strengths lie in having a 
-      very solid understanding of the software development process and being able to translate this 
+      As an experienced cloud native software developer Sven loves solving complex puzzles. He likes to
+      work on challenges where there is no outright obvious solution. His strengths lie in having a
+      very solid understanding of the software development process and being able to translate this
       knowledge in architectures and designs which suit the business needs.
 
       You can find Sven on [LinkedIn](https://www.linkedin.com/in/sven-rienstra-20597227)
@@ -66,10 +66,10 @@ members:
     teaser: >
       Cloud Engineer | Gin-Tonic snob | Blogger
     description: >
-      As a Cloud Engineer, I love improving productivity and efficiency through automation. He's a 
-      strong advocate for “everything in code”. It’s his strength to look ahead, and to define solid 
-      long-term goals. He gets energy from the challenge of reaching these goals through smaller steps 
-      that bring value by themselves. He combines this with his strong engineering background, that 
+      As a Cloud Engineer, I love improving productivity and efficiency through automation. He's a
+      strong advocate for “everything in code”. It’s his strength to look ahead, and to define solid
+      long-term goals. He gets energy from the challenge of reaching these goals through smaller steps
+      that bring value by themselves. He combines this with his strong engineering background, that
       ranges from front-end development to backend development and (Cloud) operations.
 
       You can find Sander on [LinkedIn](https://www.linkedin.com/in/sanderknape). He also has his own
@@ -92,9 +92,13 @@ members:
     image: "benny.jpg"
     name: Benny Cornelissen
     teaser: >
-      Builder of Clouds | Cyclist | RCC 17096 | Guitar player
+      Cloud Consultant | That Terraform Guy | Cyclist | Guitar Snob
     description: >
-      Benny has many years of experience designing and building secure, reliable and scalable platforms that are easy to use.
+      Benny has been architecting and building platforms for years, going from putting datacenters into containers to putting containers in datacenters, to large-scale cloud platforms. Today, he prefers to take on multi-faceted roles in platform organizations. Need a cloud architect that also knows how to actually build it? Who can spar with managers? Give presentations? Someone who can explain complex Kubernetes scheduling issues by talking about boats and boxes? Benny might be the person you need.
+
+      When Benny isn't working, he's usually riding bikes, or playing guitar.
+
+      You can find Benny on [LinkedIn](https://www.linkedin.com/in/bennycornelissen). He also has his own [blog](https://blog.bennycornelissen.nl/).
   - category: Engineering
     image: "maarten.jpg"
     name: Maarten Dirkse
@@ -115,7 +119,7 @@ members:
     teaser: >
       Cloud Engineer | Indian cook and food lover | Motorcyclist
     description: >
-      Dushyant is one of the cloud engineers, he likes to build and manage scalable cloud platforms. 
+      Dushyant is one of the cloud engineers, he likes to build and manage scalable cloud platforms.
   - category: Engineering
     image: "andy.jpg"
     name: Andy Gordon
@@ -136,7 +140,7 @@ members:
     teaser: >
       Cloud Engineer | Cryptocurrencies Fan | Bass and guitar player | Craft Beer Snob
     description: >
-      Julio is hands-on Azure Architect-Enginner highly experienced in MS Technologies and in the last years, working hard with AKS in Azure.
+      Julio is hands-on Azure Architect-Engineer highly experienced in MS Technologies and in the last years, working hard with AKS in Azure.
   - category: Engineering
     image: "tomkennes.jpg"
     name: Tom Kennes
@@ -155,5 +159,25 @@ members:
 
       In his spare time he likes to play guitar and have fun with his kids.
 
-      
+
       You can find Fábio on [LinkedIn](https://linkedin.com/in/fabio-dev).
+  - category: Engineering
+    image: "william.jpeg"
+    name: William van den Bosch
+    teaser: >
+      Software Engineer | Gamer | Game Developer | Dog Lover
+    description: >
+      William is an experienced Software Engineer with a broad set of knowledge. Specialized in Cloud Native development and architectures. You will find him playing and developing games into the late night hours.
+  - category: Engineering
+    image: "lee.jpg"
+    name: Lee Beenen
+    teaser: >
+      Cloud Engineer | Software Developer | Cyclist | Runner | Dog Enthousiast
+    description: >
+      Lee has been working with Microsoft technologies for his entire professional career, implementing, maintaining, supporting and developing a host of mission-critical software. 
+      
+
+      He has joined Skyworkz eager to expand and utilize his growing Azure experience in addition to years of experience in CI/CD. 
+      
+      
+      Whenever he's not sitting behind a computer, he's probably outside, on a bike, or just walking the dog.
