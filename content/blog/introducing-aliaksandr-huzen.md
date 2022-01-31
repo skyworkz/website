@@ -11,6 +11,7 @@ images:
 - "/team/images/.png"
 tags: ["authentication", "jwt", "aws"]
 videos: []
+draft: true
 ---
 # Who is Aliaksandr Huzen?
 I am technical-minded
