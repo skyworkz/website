@@ -11,6 +11,14 @@ This website is built using:
 
 First, run `npm install` to install all required node modules. Then run `hugo` to build all assets. Finally, run `hugo serve` to access the website at http://localhost:1313.
 
+## Optional: using a Docker image for building the code
+For some reason, `npm` does not work correctly on macOS (or Windows). If you encounter problems when using `hugo` after `npm install` like `hugo` complaining about SASS stuff, you can use the bundled `Dockerfile` as follows:
+```bash
+docker build -t skyworkz .
+docker run -it -v $(pwd):/website skyworkz "npm install"
+docker run -it -v $(pwd):/website -p 1313:1313 skyworkz "hugo serve"
+```
+Now, you can make changed to the website and they will automatically be reflected in the dev server (accessed by navigating to `localhost:1313` as mentioned above.
 ## Pre-commit
 To use the supplied pre-commit hooks, run `pre-commit install`.
 
