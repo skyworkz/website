@@ -74,13 +74,6 @@ members:
 
       You can find Sander on [LinkedIn](https://www.linkedin.com/in/sanderknape). He also has his own
       [blog](https://sanderknape.com/).
-  - category: Engineering
-    image: "timothy.jpg"
-    name: Timothy Mamo
-    teaser: >
-      Cloud Engineer | Home automator | World traveller
-    description: >
-      Timothy likes to build scalable cloud platforms. And he's really good at it.
   - category: Development
     image: "mikhail.jpg"
     name: Mikhail Vaysman
@@ -120,13 +113,6 @@ members:
       Cloud Engineer | Indian cook and food lover | Motorcyclist
     description: >
       Dushyant is one of the cloud engineers, he likes to build and manage scalable cloud platforms.
-  - category: Engineering
-    image: "andy.jpg"
-    name: Andy Gordon
-    teaser: >
-      Hands-on Cloud Architect | Dog lover | Skiing fanatic | Traveller
-    description: >
-      Andy is a hands-on cloud architect with a strong background in AWS and Kubernetes. In his spare time he likes to go skiing as much as possible.
   - category: Engineering
     image: "tom.jpg"
     name: Tom Rogers
@@ -168,6 +154,13 @@ members:
       Software Engineer | Gamer | Game Developer | Dog Lover
     description: >
       William is an experienced Software Engineer with a broad set of knowledge. Specialized in Cloud Native development and architectures. You will find him playing and developing games into the late night hours.
+  - category: Engineering
+    image: "ahmed.jpg"
+    name: Ahmed Elfakharany
+    teaser: >
+      Cloud Engineer | Trainer | Reader
+    description: >
+      Ahmed is an experienced DevOps and cloud engineer. He works with AWS as the main cloud platform. He has experience with IaC tools, CI/CD and automation stuff in general. 
   - category: Engineering
     image: "lee.jpg"
     name: Lee Beenen

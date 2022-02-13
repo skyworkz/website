@@ -81,6 +81,73 @@
     </div>
   </div>
 </section>
+<!-- Alumni Start -->
+<section id="portfolio-work" class="bg-muted">
+  <div class="container mb-5">
+    <div class="text-center">
+      <h2 class="display-5">Alumni</h2>
+      <p class="lead">We like to remember our ex-employees. This is Skyworkz Alumni</p>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col-md-12">
+        <div class="block">
+          <div class="portfolio-content">
+            <ul id="portfolio-content-active">
+
+              {{ $members := .Site.Data.alumni.members }}
+              {{ $resources := .Resources.Match "images/members/*" }}
+              {{ range $resources | shuffle }}
+              {{ with . }}
+
+              {{ $imageName := .Name }}
+              {{ $image300:= (.Fill "300x300") }}
+              {{ $image600 := (.Fill "600x600") }}
+
+              {{ range $members }}
+
+              {{ $id := urlize .name }}
+              {{ if eq (printf "images/members/%s" .image ) $imageName }}
+              <li class="mix">
+                <a href="{{ $image600.RelPermalink }}" data-bs-toggle="modal" data-bs-target="#{{ $id }}" class="portfolio-item">
+                  <img src="{{ $image300.RelPermalink }}" class="img-fluid">
+                  <div class="overlay">
+                    <div>
+                      <i class="fa fa-search fz-20"></i>
+                      <h2>{{ .name }}</h2>
+                      <p>{{ .teaser }}</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <div class="modal fade" id="{{ $id }}" tabindex="-1" role="dialog" aria-labelledby="{{ $id }}Title"
+                   aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="{{ $id }}Title">{{ .name }}</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      {{ .description | markdownify }}
+                      <img src="{{ $image300.RelPermalink }}" class="img-fluid">
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {{ end }}
+              {{ end }}
+              {{ end }}
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="my-lg-5 bg-diagonal">
   <div class="container text-center">

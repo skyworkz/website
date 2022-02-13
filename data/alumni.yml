@@ -1,0 +1,20 @@
+enable: true
+title: Alumni
+subtitle: Alumni (to be changed)
+
+# google support the latest technology for image optimization. you can also optimize your image from https://www.ps2pdf.com/convert-jpg-to-webp here.
+members:
+  - category: Engineering
+    image: "timothy.jpg"
+    name: Timothy Mamo
+    teaser: >
+      Cloud Engineer | Home automator | World traveller
+    description: >
+      Timothy likes to build scalable cloud platforms. And he's really good at it.
+  - category: Engineering
+    image: "andy.jpg"
+    name: Andy Gordon
+    teaser: >
+      Hands-on Cloud Architect | Dog lover | Skiing fanatic | Traveller
+    description: >
+      Andy is a hands-on cloud architect with a strong background in AWS and Kubernetes. In his spare time he likes to go skiing as much as possible.
