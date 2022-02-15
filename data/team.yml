@@ -26,7 +26,7 @@ members:
     image: "basvanderzwet.jpg"
     name: Bas van der Zwet
     teaser: >
-      Co-founder and advisor
+      Advisor
     description: >
       Next to his daily job at [Dataworkz](https://dataworkz.nl) as a Managing Director, Bas is an advisor
       to Skyworkz. With his strong
@@ -35,7 +35,7 @@ members:
     image: "martin.jpg"
     name: Martin Weidner
     teaser: >
-      Co-founder and advisor
+      Advisor
     description: >
       After joining [Dataworkz](https://dataworkz.nl) as a Managing Director, Martin saw an opportunity
       to build a company focused on the cloud. After having managed two companies, Martin decided to
@@ -113,13 +113,6 @@ members:
       Cloud Engineer | Indian cook and food lover | Motorcyclist
     description: >
       Dushyant is one of the cloud engineers, he likes to build and manage scalable cloud platforms.
-  - category: Engineering
-    image: "tom.jpg"
-    name: Tom Rogers
-    teaser: >
-      Cloud Developer | World traveller | IoT geek | Tea snob
-    description: >
-      After having worked at companies like BBC and DAZN, Tom joined Skyworkz as a cloud developer. He knows a lot about AWS and is a strong polyglot developer.
   - category: Engineering
     image: "julio.jpg"
     name: Julio Rosua

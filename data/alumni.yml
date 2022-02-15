@@ -18,3 +18,10 @@ members:
       Hands-on Cloud Architect | Dog lover | Skiing fanatic | Traveller
     description: >
       Andy is a hands-on cloud architect with a strong background in AWS and Kubernetes. In his spare time he likes to go skiing as much as possible.
+ - category: Engineering
+    image: "tom.jpg"
+    name: Tom Rogers
+    teaser: >
+      Cloud Developer | World traveller | IoT geek | Tea snob
+    description: >
+      After having worked at companies like BBC and DAZN, Tom joined Skyworkz as a cloud developer. He knows a lot about AWS and is a strong polyglot developer.
