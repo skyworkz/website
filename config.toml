@@ -31,13 +31,13 @@ inst_access = ""
   header = "Skyworkz"
 
   [params.hero]
-    title = "Cloud Accelerator for fast-growing companies." 
+    title = "Cloud Accelerator for fast-growing companies."
     subtitle = "We accelerate the cloud journey of start-ups and scale-ups - whether it's developing cloud native applications, increasing developer productivity or building reliable cloud platforms."
 
   [params.about]
     title = "We scale your business in the cloud."
     content = "We bring together everything that's required to turn MVP's into scalable, cloud native applications. Skyworkz has built cloud solutions that help **start-ups**, **scale-ups** and **enterprises** develop high quality software faster."
-    
+
 
   [params.work]
     bgImage = "img/work.webp"
@@ -77,7 +77,7 @@ inst_access = ""
     enable = true
     bgImage = "img/call-to-action-bg.webp"
     title = "We make your organisation cloud ready."
-    paragraph = "We combine innovation with craftsmanship. We are frontrunners in public cloud. Want to learn more?"
+    paragraph = "We combine innovation with artisanship. We are frontrunners in public cloud. Want to learn more?"
     [params.call.button]
       url = "/contact/"
       text = "Tell us your story"
