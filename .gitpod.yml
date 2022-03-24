@@ -5,3 +5,7 @@ image:
 tasks:
   - init: npm install
     command: hugo serve
+
+ports:
+  - port: 1313
+    onOpen: open-browser
