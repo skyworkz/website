@@ -1,0 +1,7 @@
+# Docs: https://www.gitpod.io/docs/config-gitpod-file
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: npm install
+    command: hugo serve
