@@ -1,0 +1,11 @@
+# Docs: https://www.gitpod.io/docs/config-gitpod-file
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: npm install
+    command: hugo serve
+
+ports:
+  - port: 1313
+    onOpen: open-browser
