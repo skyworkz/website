@@ -4,8 +4,8 @@ image:
 
 tasks:
   - init: npm install
-    command: hugo serve
+    command: hugo serve --baseURL https://1313-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}/ --appendPort=false
 
 ports:
   - port: 1313
-    onOpen: open-browser
+    onOpen: ignore
