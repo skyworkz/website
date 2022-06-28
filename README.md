@@ -11,6 +11,9 @@ This website is built using:
 
 First, run `npm install` to install all required node modules. Then run `hugo` to build all assets. Finally, run `hugo serve` to access the website at http://localhost:1313.
 
+## Alternative
+Use Gitpod: https://gitpod.io/#https://github.com/skyworkz/website
+
 ## Optional: using a Docker image for building the code
 For some reason, `npm` does not work correctly on macOS (or Windows). If you encounter problems when using `hugo` after `npm install` like `hugo` complaining about SASS stuff, you can use the bundled `Dockerfile` as follows:
 ```bash
