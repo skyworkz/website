@@ -60,20 +60,6 @@ members:
       knowledge in architectures and designs which suit the business needs.
 
       You can find Sven on [LinkedIn](https://www.linkedin.com/in/sven-rienstra-20597227)
-  - category: Engineering
-    image: "sander.jpg"
-    name: Sander Knape
-    teaser: >
-      Cloud Engineer | Blogger
-    description: >
-      As a Cloud Engineer, I love improving productivity and efficiency through automation. He's a
-      strong advocate for “everything in code”. It’s his strength to look ahead, and to define solid
-      long-term goals. He gets energy from the challenge of reaching these goals through smaller steps
-      that bring value by themselves. He combines this with his strong engineering background, that
-      ranges from front-end development to backend development and (Cloud) operations.
-
-      You can find Sander on [LinkedIn](https://www.linkedin.com/in/sanderknape). He also has his own
-      [blog](https://sanderknape.com/).
   - category: Development
     image: "mikhail.jpg"
     name: Mikhail Vaysman
@@ -114,13 +100,6 @@ members:
     description: >
       Dushyant is one of the cloud engineers, he likes to build and manage scalable cloud platforms.
   - category: Engineering
-    image: "julio.jpg"
-    name: Julio Rosua
-    teaser: >
-      Cloud Engineer | Cryptocurrencies Fan | Bass and guitar player
-    description: >
-      Julio is hands-on Azure Architect-Engineer highly experienced in MS Technologies and in the last years, working hard with AKS in Azure.
-  - category: Engineering
     image: "tomkennes.jpg"
     name: Tom Kennes
     teaser: >
@@ -140,13 +119,6 @@ members:
 
 
       You can find Fábio on [LinkedIn](https://linkedin.com/in/fabio-dev).
-  - category: Engineering
-    image: "william.jpeg"
-    name: William van den Bosch
-    teaser: >
-      Software Engineer | Gamer | Game Developer | Dog Lover
-    description: >
-      William is an experienced Software Engineer with a broad set of knowledge. Specialized in Cloud Native development and architectures. You will find him playing and developing games into the late night hours.
   - category: Engineering
     image: "ahmed.jpg"
     name: Ahmed Elfakharany
