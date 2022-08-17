@@ -82,9 +82,13 @@ members:
     image: "maarten.jpg"
     name: Maarten Dirkse
     teaser: >
-      Cloud Consultant | Politician | Public speaker | Father of 2
+      Cloud Consultant | Father of 2 | Public speaker | Cat person
     description: >
-      Maarten started his career as an allround software engineer and ended up in the cloud. Next to that he is a city counsil member @ VVD Leiden.
+      Maarten started his career as an allround software engineer and ended up as a cloud architect. He's still very much convinced that those two roles can be combined quite nicely.
+
+      When Maarten isn't working he's usually spending time with his family, tending to his pepper plants or reminiscing about his political career.
+
+      You can find Maarten on [LinkedIn](https://www.linkedin.com/in/maarten-dirkse-2579914) or on [Twitter](https://twitter.com/mdirkse).
   - category: Engineering
     image: "jeroen.jpg"
     name: Jeroen Zeegers
