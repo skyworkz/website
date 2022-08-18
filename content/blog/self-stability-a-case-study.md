@@ -14,7 +14,7 @@ videos: []
 
 Over the past couple of months, I have had the opportunity to work with Kubernetes (AWS EKS) and its possibilities regarding automatically scaling cluster nodes. At one point, we discovered that the system was stuck in a seemingly infinite loop. It simply did not stop shuffling around workloads, re-creating nodes and destroying them quickly afterwards. In order to get a grip on this issue and discover potential solutions, I dove deep into systemic stability, Markov Chains and statistical simulations. In this blogpost, or war story perhaps, I show you why this can be helpful, how to recognize such a situation and what you can do in order to solve it.
 
-The first section of this post details the concept of self-stability and how it is relevant to IT. What can we learn from it within IT? How should we be thinking about self-stabilizing systems within IT and where could it be beneficial? And what happens when scalers and schedulers do not communicate? Then, I explain my use-case and what happens when an immovable scheduler meets an unstoppable scaler. Then, I show how Markov Chains can help you deduce how stable such a system actually is and what it means to have a more stable system. In the last section, I explain a couple of potential solutions for these sort of problems.
+The first section of this post details the concept of self-stability and how it is relevant to IT. What can we learn from it within IT? How should we be thinking about self-stabilizing systems within IT and where could it be beneficial? And what happens when scalers and schedulers do not communicate? Then, I explain my use-case and what happens when an immovable scheduler meets an unstoppable scaler. Finally, I show how Markov Chains can help you deduce how stable such a system actually is and explain the impact of potential solutions.
 
 
 {{<raw>}}
@@ -46,28 +46,17 @@ This is also why famous physicists are not afraid accepting some calculated risk
 </div>
 {{</raw>}}
 
-A more practical example of a self-stabilizing system, also a bit more goal-oriented than the simple yet delightful pendulum, would be a rocket navigating to the Moon. See the image below (not at scale). You start off on some initial trajectory, and every time you deviate from it, you quickly use your boosters to get back on track and sort of re-calibrate. Easy enough!
-{{<raw>}}
-<br>
-<br>
-{{</raw>}}
-If you are controlling that rocket from Earth, you might be dealing with a bit of noise regarding your measurements. For example, your measuring equipment might not be perfect, and the signal itself might also experience some lag because it needs to all the way travel back home. This is not just a problem for rockets finding their way in outer space, but for many positioning systems in general. Luckily, we can solve this issue by continuously estimating our position based on past estimations and their actual accuracy. If you are curious how to deal with this kind of uncertainty, the {{<raw>}}<a href="https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/">Kalman filter</a>{{</raw>}} would be a great place to start. Anyhow, let's stray away a bit from theory and get into why self-stability might be interesting for you!
-
-
-{{<raw>}}
-{{<img src="/img/blog/self-stability-001-kalman-rocket.png" title="kalman-rocket"  width="1000" height="600" class="img-fluid" alt="Responsive image">}}
-{{</raw>}}
 
 {{<raw>}}
 <br>
 <br>
 {{</raw>}}
 {{<raw>}}<h2 class="display-4">Self-Stability and IT</h2> {{</raw>}}
-If you are working in the broad field of IT, chances are high that you are involved with some form of workload balancing. Whether you are figuring out how to optimize your data analyses, ETL-pipelines, build- or site-performance, or more elementary aspects such as multi-threading, you must have realized at some point that your resources are actually limited. Yes, cloud providers such as AWS, Azure and GCP might be able to provide virtually unlimited resources, your funds are generally not limited. (Also see posts such as {{<raw>}}<a href="https://mijailovic.net/2020/03/28/azure-money-burning/">this one</a>, or <a href="https://morioh.com/p/aa6f5978232e">this one</a>{{</raw>}}).
+If you are working in the broad field of IT, chances are high that you are using some form of workload balancing. Whether you are figuring out how to optimize your data analyses, ETL-pipelines, build- or site-performance, or more elementary aspects such as multi-threading, you must have realized at some point that your resources are actually limited. Yes, cloud providers such as AWS, Azure and GCP might be able to provide virtually unlimited resources, your funds are generally not limited. (Also see posts such as {{<raw>}}<a href="https://mijailovic.net/2020/03/28/azure-money-burning/">this one</a>, or <a href="https://morioh.com/p/aa6f5978232e">this one</a>{{</raw>}}).
 
-Actually... If you are struggling with this, there is {{<raw>}}<a href="https://skyworkz.nl/">this awesome company</a>{{</raw>}} that could help you with that!  (Okay, sorry. This is the only shameless self-marketing in this post, I promise! 😁)
+Actually... If you are struggling with this, there is {{<raw>}}<a href="https://skyworkz.nl/">this awesome company</a>{{</raw>}} that could help you with that!  (Okay, sorry. No more shameless self-marketing in this post, I promise! 😁)
 
-Anyhow, if you are concerned with budgetary- or organizational constraints, you either ought to be thinking about organizing your workload different in order to make better use of the infrastructure at hand, or about making your infrastructure better match your demand. Even if you are currently not thinking about this, if your application, tool or product is successful right now, at some point you probably will.
+Anyhow, if you are concerned with budgetary- or organizational constraints, you either ought to be thinking about organizing your workload differently such that you can make better use of the infrastructure at hand, or about making your infrastructure better match your demand. Even if you are currently not thinking about this, if your application, tool or product is successful right now, at some point you probably will.
 
 Next to that, you might be looking at a system that, in order to save costs, scales according to demand. That is, a system that scales up during demand peak hours and scales down again afterwards. If you are for example running a webshop, you might scale up to 2-5 instances to serve customers during the day and scale down to only 1 at night when times are quiet but you still need to accommodate that occasional late night shopping-spree. Nowadays, with the rise of Kubernetes and Autoscalers, this has become more the norm than the exception. Almost all systems with dynamic workload or demand, make use of some form of automated scheduling and scaling. Either through containers and pods by employing Kubernetes, or through virtual machines (VM) by using vendor-specific VM automatic scalers. With the advent of Kubernetes-as-a-service through GCE, EKS and AKS, you also no longer need to be a sysadmin to make use of these sort of tools.
 
