@@ -102,13 +102,6 @@ members:
     description: >
       Jeroen has many years of experience designing and building secure, reliable and scalable platforms that are easy to use.
   - category: Engineering
-    image: "dushyant.jpg"
-    name: Dushyant Chakravorty
-    teaser: >
-      Cloud Engineer | Indian cook and food lover | Motorcyclist
-    description: >
-      Dushyant is one of the cloud engineers, he likes to build and manage scalable cloud platforms.
-  - category: Engineering
     image: "tomkennes.jpg"
     name: Tom Kennes
     teaser: >

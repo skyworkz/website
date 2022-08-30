@@ -53,3 +53,10 @@ members:
       Software Engineer | Gamer | Game Developer | Dog Lover
     description: >
       William is an experienced Software Engineer with a broad set of knowledge. Specialized in Cloud Native development and architectures. You will find him playing and developing games into the late night hours.
+  - category: Engineering
+    image: "dushyant.jpg"
+    name: Dushyant Chakravorty
+    teaser: >
+      Cloud Engineer | Indian cook and food lover | Motorcyclist
+    description: >
+      Dushyant is one of the cloud engineers, he likes to build and manage scalable cloud platforms.
