@@ -1,0 +1,5 @@
+# Global owners for the entire repository
+*   @skyworkz/website-maintainers
+
+# Just Benny for the GitPod stuff (for now)
+.gitpod.*   @bennycornelissen

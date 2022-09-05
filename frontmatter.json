@@ -1,0 +1,103 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Content preview",
+          "name": "preview",
+          "type": "image"
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "hugo",
+  "frontMatter.content.publicFolder": "static",
+  "frontMatter.taxonomy.tags": [
+    "AWS",
+    "Automation",
+    "Cloud Development Kit",
+    "Cloudfront",
+    "Docker",
+    "Git",
+    "Kubernetes",
+    "Meetup",
+    "OPA",
+    "Open Policy Agent",
+    "PaaS",
+    "S3",
+    "Terraform",
+    "actions",
+    "anthos",
+    "architecture",
+    "authentication",
+    "autonomy",
+    "aws",
+    "blogging",
+    "cdk",
+    "cloud",
+    "coding",
+    "consultancy",
+    "corona",
+    "gcp",
+    "github",
+    "google app engine",
+    "google cloud",
+    "google cloud functions",
+    "google cloud run",
+    "jwt",
+    "kubernetes",
+    "life",
+    "platform",
+    "platform engineering",
+    "productivity",
+    "security",
+    "serverless"
+  ],
+  "frontMatter.taxonomy.categories": [],
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "blog",
+      "path": "[[workspace]]/content/blog"
+    },
+    {
+      "title": "data",
+      "path": "[[workspace]]/data"
+    }
+  ]
+}
