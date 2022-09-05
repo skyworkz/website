@@ -34,7 +34,7 @@
     "postcss-cli": "^7.1.2",
     "postcss-remove-unused-css": "^1.0.4",
     "postcss-uncss": "^0.16.1",
-    "scss-powertools": "^3.2.0",
+    "scss-powertools": "^3.5.0",
     "serialize-javascript": "^5.0.1",
     "set-value": "^4.1.0",
     "uncss": "^0.17.3",
