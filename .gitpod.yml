@@ -1,4 +1,4 @@
-# Docs: https://www.gitpod.io/docs/config-gitpod-file
+
 image:
   file: .gitpod.Dockerfile
 
@@ -9,3 +9,7 @@ tasks:
 ports:
   - port: 1313
     onOpen: ignore
+
+vscode:
+  extensions:
+    - eliostruyf.vscode-front-matter
