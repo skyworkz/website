@@ -13,3 +13,6 @@ ports:
 vscode:
   extensions:
     - eliostruyf.vscode-front-matter
+    - bungcip.better-toml
+    - budparr.language-hugo-vscode
+    - ms-azuretools.vscode-docker
