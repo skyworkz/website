@@ -1,25 +1,25 @@
 ---
 id: blog
-title: Reliable development setups for infrequently used projects
+title: Reliable codified development setups with GitPod
 description: Local development setups are hard, and they often don't age well. This blog
-  outlines how you can fix that with codified cloud-based setups using GitPod
+  outlines how you can fix that with codified cloud-based development setups using GitPod
 author: Benny Cornelissen
 tags:
   - cloud
   - coding
   - productivity
-slug: reliable-development-setups-infrequently-projects
+slug: reliable-codified-development-setups-gitpod
 date: 2022-09-19
 images:
   - "/img/blog/gitpod-illustration.png"
 ---
 
-Local development is hard. Yes, if you pour enough time into it, you can have local setups that work fine, some might even be elegant. But not everyone has that kind of time, and not every project warrants it. Yet too often I find that in order to contribute to an open source project, I first have to time setting up all kinds of stuff to even get started. And it's one thing if it's a project that I use a lot, and have intimate knowledge of, and is built on a tech stack I'm good at. Because that'll probably mean that it's fairly straightforward to get the development setup working properly, and it will also be worth the time I put into it.
+Local development is hard. Yes, if you pour enough time into it, you can have local setups that work fine, some might even be elegant. But not everyone has that kind of time, and not every project warrants it. Too often I find that in order to contribute to an open source project, I first have to set up all kinds of stuff to even get started. And it's one thing if it's a project that I use a lot, and have intimate knowledge of, and is built on a tech stack I'm good at. Because that'll probably mean that it's fairly straightforward to get the development setup working properly, and it will also be worth the time I put into it.
 
 But it might also be the Sykworkz blog. Writing a blogpost like the one you're reading right now _should_ be about getting the content down. It _should_ be mostly about writing some Markdown. But it's not. In order to contribute I need a working setup of our CMS (in the appropriate version), I need to 'NPM install half-the-internet' for some frontend stuff I know very little about, and the rabbit hole goes from there. As a result, people didn't quite feel like contributing as much, or they would just write the Markdown, push it, and hope for the best. Obviously, that's not ideal, so we need something better.
 
 ## Codifying the development setup
-The first thing we want is to 'codify' the development setup. A `README` file that tells you to install a bunch of things and then run some arbitrary commands isn't good enough, and is also very prone to becoming outdated. One of the simples approaches would be to have a `Dockerfile` that provides a repeatable environment for at least running your code.
+The first thing we want is to 'codify' the development setup. A `README` file that tells you to install a bunch of things and then run some arbitrary commands isn't good enough, and is also very prone to becoming outdated. One of the simplest approaches would be to have a `Dockerfile` that provides a repeatable environment for at least running your code.
 
 But why stop there?
 
@@ -112,7 +112,7 @@ tasks:
 ### VSCode plugins and settings
 Finally, we can make life easier for people by offering a properly configured IDE, in our case this IDE is VSCode. We want several plugins to be present, and we can configure all kinds of editor behaviour in default VSCode config files by simply adding a `.vscode` directory to our Git repo.
 
-You can configure 'recommended' plugins in `.vscode/extensions.json` but with GitPod it's recommended to configure plugins in `.gitpod.yml` as it will cause these plugins/extensions to be automatically installed rather than just being recommended. Configuration for VSCode extensions looks like this:
+You can configure 'recommended' plugins in `.vscode/extensions.json` but with GitPod it's recommended to configure plugins in `.gitpod.yml` as it will cause these plugins/extensions to be automatically installed rather than just being recommended. Configuration for VSCode extensions in `.gitpod.yml` looks like this:
 
 ```yaml
 vscode:
@@ -134,7 +134,7 @@ This also means you can directly link to GitPod from your `README`. Now, everyon
 
 {{<img src="/img/blog/gitpod-ssh-vscode-website.png" class="img-fluid" title="GitPod development in desktop VSCode" >}}
 
-## Trying GitPod for myself
+## Trying GitPod for yourself
 If you want to see what GitPod can do for your projects, it's pretty easy. For starters, you can use GitPod for free, and without having to sign up. Just use your existing Github/Gitlab/Bitbucket account, and open any repository you like using the Magic URL. That's all you need to do to get started. For private repositories you need to grant GitPod access to your Github/Gitlab/Bitbucket account.
 
 For more information, check out the [GitPod website](https://www.gitpod.io).
