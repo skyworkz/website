@@ -14,16 +14,20 @@ images:
   - "/img/blog/gitpod-illustration.png"
 ---
 
-Local development is hard. Yes, if you pour enough time into it, you can have local setups that work fine, some might even be elegant. But not everyone has that kind of time, and not every project warrants it. Too often I find that in order to contribute to an open source project, I first have to set up all kinds of stuff to even get started. And it's one thing if it's a project that I use a lot, and have intimate knowledge of, and is built on a tech stack I'm good at. Because that'll probably mean that it's fairly straightforward to get the development setup working properly, and it will also be worth the time I put into it.
+Local development is hard.
 
-But it might also be the Sykworkz blog. Writing a blogpost like the one you're reading right now _should_ be about getting the content down. It _should_ be mostly about writing some Markdown. But it's not. In order to contribute I need a working setup of our CMS (in the appropriate version), I need to 'NPM install half-the-internet' for some frontend stuff I know very little about, and the rabbit hole goes from there. As a result, people didn't quite feel like contributing as much, or they would just write the Markdown, push it, and hope for the best. Obviously, that's not ideal, so we need something better.
+Yes, if you pour enough time into it, you can have local setups that work fine, some might even be elegant. But not everyone has that kind of time, and not every project warrants it.
+
+Too often I find that in order to contribute to an open source project, I first have to set up all kinds of stuff to even get started. And it's one thing if it's a project that I use a lot, and have intimate knowledge of, and is built on a tech stack I'm good at. Because that'll probably mean that it's fairly straightforward to get the development setup working properly, and it will also be worth the time I put into it.
+
+But it might also be the Skyworkz blog. Writing a blogpost like the one you're reading right now _should_ be about getting the content down. It _should_ be mostly about writing some Markdown. But it's not. In order to contribute I need a working setup of our CMS (in the appropriate version), I need to 'NPM install half-the-internet' for some frontend stuff I know very little about, and the rabbit hole goes from there. As a result, people didn't quite feel like contributing as much, or they would just write the Markdown, push it, and hope for the best. Obviously, that's not ideal, so we need something better.
 
 ## Codifying the development setup
 The first thing we want is to 'codify' the development setup. A `README` file that tells you to install a bunch of things and then run some arbitrary commands isn't good enough, and is also very prone to becoming outdated. One of the simplest approaches would be to have a `Dockerfile` that provides a repeatable environment for at least running your code.
 
 But why stop there?
 
-Ideally, a codified development setup for projects I don't touch often would offer me the folliowing things out of the box:
+Ideally, a codified development setup for projects I don't touch often would offer me the following things out of the box:
 
 1. Dev runtime: a means of running my code while developing
 2. Automated validation of project guidelines: if a project has certain standards for formatting, repo structure, or commit messages, the codified development setup should assist me here
@@ -50,9 +54,9 @@ This means we can offer a reliable codified development experience for our proje
 I tested both extensively over the past years, but eventually settled on GitPod as my preferred option for several reasons:
 
 - GitPod supports all major Git providers (Github/Bitbucket/Gitlab) but isn't owned by any of them
+- GitPod allows for a self-hosted setup
 - GitPod is _very_ configurable, while testing it offered more than Codespaces did
 - GitPod integrates with [Tailscale](https://tailscale.com) out of the box
-- GitPod allows for a self-hosted setup
 - GitPod offered more clarity on their roadmap than Microsoft/Github did, who have made several strategic pivots over the past 2 years
 
 ## Creating a codified development experience for the Skyworkz website
