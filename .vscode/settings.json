@@ -2,5 +2,6 @@
     "git.ignoreLimitWarning": true,
     "[markdown]": {
     },
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true
 }
