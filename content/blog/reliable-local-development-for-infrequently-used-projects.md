@@ -142,6 +142,3 @@ This also means you can directly link to GitPod from your `README`. Now, everyon
 If you want to see what GitPod can do for your projects, it's pretty easy. For starters, you can use GitPod for free, and without having to sign up. Just use your existing Github/Gitlab/Bitbucket account, and open any repository you like using the Magic URL. That's all you need to do to get started. For private repositories you need to grant GitPod access to your Github/Gitlab/Bitbucket account.
 
 For more information, check out the [GitPod website](https://www.gitpod.io).
-
-
-
