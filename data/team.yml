@@ -172,10 +172,11 @@ members:
       In his free time he likes to play guitars or go out for a run.
 
   - category: Engineering
-    image: ""
+    image: "liis.jpg"
     name: "Liis Kivistik"
     teaser: "Cloud Engineer | Outdoor lover | Photography enthusiast "
     description: >
       Coming from a background of CI/CD and automation, both on and off the cloud, Liis joined Skyworkz to further apply and grow her knowledge in the world of DevOps, Infra As Code, and Cloud.
 
-      Aside from software, she enjoys recharging outdoors and discovering new hobbies, from cycling trips to dance classes.
+
+      Aside from software, she enjoys recharging outdoors and discovering new hobbies, from cycling to dance classes.
