@@ -24,21 +24,14 @@ members:
     teaser: >
       Cloud Developer | World traveller | IoT geek | Tea snob
     description: >
-      After having worked at companies like BBC and DAZN, Tom joined Skyworkz as a cloud developer. He knows a lot about AWS and is a strong polyglot developer.
+      If Tom has taught us anything, it's that software can definitely help you break habits or develop better ones.
   - category: Engineering
     image: "sander.jpg"
     name: Sander Knape
     teaser: >
       Cloud Engineer | Blogger
     description: >
-      As a Cloud Engineer, I love improving productivity and efficiency through automation. He's a
-      strong advocate for “everything in code”. It’s his strength to look ahead, and to define solid
-      long-term goals. He gets energy from the challenge of reaching these goals through smaller steps
-      that bring value by themselves. He combines this with his strong engineering background, that
-      ranges from front-end development to backend development and (Cloud) operations.
-
-      You can find Sander on [LinkedIn](https://www.linkedin.com/in/sanderknape). He also has his own
-      [blog](https://sanderknape.com/).
+      Sander was one of our very first Cloud Engineers. Legend has it that he and Sven still haven't figured out who officially joined first. His opinions on how to build and organize platforms have made him the (still) undisputed blog king of Skyworkz.
   - category: Engineering
     image: "julio.jpg"
     name: Julio Rosua
