@@ -32,9 +32,9 @@
             {{ with .gmaps}}
             <div class="block">
               <h2>{{ .title }}</h2>
-              <div class="google-map">  
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.622344457853!2d5.077285951700536!3d52.10480437963812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c66fa9fb18e4b3%3A0x87b3c199ee665619!2sSkyworkz!5e0!3m2!1snl!2snl!4v1557736878153!5m2!1snl!2snl" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-    <p>Note that the marker on the map shows the <b>exact</b> location of the Skyworkz office. We share the office with a few other companies, and it's located at the top floor of the building. Streetview doesn't show the entrance yet, but it is there.</p>               
+              <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.622344457853!2d5.077285951700536!3d52.10480437963812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c66fa9fb18e4b3%3A0x87b3c199ee665619!2sSkyworkz!5e0!3m2!1snl!2snl!4v1557736878153!5m2!1snl!2snl" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <p>Note that the marker on the map shows the <b>exact</b> location of the Skyworkz office. We share the office with a few other companies, and it's located at the top floor of the building. Streetview doesn't show the entrance yet, but it is there.</p>
               </div>
             </div>
             {{ end }}
@@ -44,7 +44,8 @@
       <div class="col-12">
           <div class="block">
             <h2>Book a meeting</h2>
-            <div class="calendarhero-inline-widget" data-url="https://meeting.calendarhero.com/meeting/new/6140a9c858a75c0020d98e26/meeting" style="min-width:320px; height:630px;"></div>
+            <p>You can quickly book a meeting or call with Bas yourself using the button below:</p>
+            <a class="btn btn-info mt-lg-2" id="book-meeting-bas" href="https://app.reclaim.ai/m/bas" target="_blank">Schedule Meeting</a>
           </div>
         </div>
         </div>
