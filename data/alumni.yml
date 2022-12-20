@@ -17,7 +17,7 @@ members:
     teaser: >
       Hands-on Cloud Architect | Dog lover | Skiing fanatic | Traveller
     description: >
-      Andy is a hands-on cloud architect with a strong background in AWS and Kubernetes. In his spare time he likes to go skiing as much as possible.
+      Andy joined us as a no-nonsense Cloud Architect who likes to get his hands dirty. He also showed us that whenever you need to choose between socializing at work or spending time with your dog, the correct priority is your dog.
   - category: Engineering
     image: "tom.jpg"
     name: Tom Rogers
@@ -45,11 +45,11 @@ members:
     teaser: >
       Software Engineer | Gamer | Game Developer | Dog Lover
     description: >
-      William is an experienced Software Engineer with a broad set of knowledge. Specialized in Cloud Native development and architectures. You will find him playing and developing games into the late night hours.
+      William is an experienced Software Engineer with a broad set of knowledge. He once built a cloud-native approach to running all kinds of game servers because he could.
   - category: Engineering
     image: "dushyant.jpg"
     name: Dushyant Chakravorty
     teaser: >
       Cloud Engineer | Indian cook and food lover | Motorcyclist
     description: >
-      Dushyant is one of the cloud engineers, he likes to build and manage scalable cloud platforms.
+      Dushyant joined us as a Cloud Engineer, and then schooled us on Indian food.
