@@ -1084,7 +1084,7 @@ a.text-primary:hover, a.text-primary:focus {
 }
 
 /*--
-	portfolio-work Start
+	portfolio-alumni Start
 --*/
 #portfolio-work {
   overflow: hidden;
@@ -1342,4 +1342,167 @@ ul#instagram-content-active {
 
 .embed-responsive .card-img-top {
     object-fit: cover;
+}
+
+/*--
+	portfolio-alumni Start
+--*/
+#portfolio-alumni {
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+#portfolio-alumni .block .portfolio-menu {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+#portfolio-alumni .block .portfolio-menu ul {
+  border: 1px solid #999999;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+#portfolio-alumni .block .portfolio-menu ul li {
+  display: inline-block;
+  padding: 0px 25px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #333333;
+  text-transform: capitalize;
+  position: relative;
+}
+
+#portfolio-alumni .block .portfolio-menu ul .active {
+  color: #655E7A;
+  position: relative;
+}
+
+#portfolio-alumni .block .portfolio-menu ul .active:before {
+  content: "\f0d7";
+  position: absolute;
+  font-family: 'FontAwesome';
+  bottom: -18px;
+  font-size: 30px;
+  width: 20px;
+  left: 0px;
+  right: 0px;
+  top: 23px;
+  margin: 0 auto;
+  color: #fff;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#portfolio-alumni .block .portfolio-menu ul li:hover:before {
+  content: "\f0d7";
+  position: absolute;
+  font-family: 'FontAwesome';
+  bottom: -18px;
+  font-size: 30px;
+  width: 20px;
+  left: 0px;
+  right: 0px;
+  top: 24px;
+  margin: 0 auto;
+  color: #fff;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+/* GENERAL MEDIAQUERY */
+@media (min-width: 991.98px) {
+  #portfolio-alumni .block .portfolio-content ul {
+    display: table;
+  }
+}
+
+#portfolio-alumni .block .portfolio-content ul li {
+  display: inline-block;
+  width: 18.5%;
+  overflow: hidden;
+  margin: 0.5% 0.5%;
+  position: relative;
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 15px;
+  border-color: $color-gray-dark-v1;
+  border: 1px;
+}
+
+#portfolio-alumni .block .portfolio-content ul li:hover .overlay {
+  opacity: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#portfolio-alumni .block .portfolio-content ul li a {
+  color: #fff;
+}
+
+#portfolio-alumni .block .portfolio-content ul li a h2 {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#portfolio-alumni .block .portfolio-content ul li a p {
+  font-size: 15px;
+}
+
+#portfolio-alumni .block .portfolio-content ul li a span {
+  font-style: italic;
+  font-size: 13px;
+  color: #655E7A;
+}
+
+#portfolio-alumni .block .portfolio-content ul img {
+  width: 100%;
+  height: auto;
+}
+
+#portfolio-alumni .block .portfolio-content .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(60, 130, 180, 0.9);
+  opacity: 0;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 30px;
+}
+
+#portfolio-alumni .block .portfolio-content .position-center {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translate(0%, 50%);
+  -moz-transform: translate(0%, 50%);
+  -ms-transform: translate(0%, 50%);
+  transform: translate(0%, 50%);
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
+}
+
+ul#portfolio-content-active {
+        padding: 0px;
 }
