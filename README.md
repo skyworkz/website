@@ -10,7 +10,9 @@ This website is built using:
 ## Development
 
 ### GitPod
-The easiest way to work on the Skyworkz website is to use GitPod. GitPod offers a browser-based VSCode setup that has a completely pre-configured setup for the website, including a running Hugo development server. You can use GitPod free of charge with your Github account. To use Gitpod, visit: https://gitpod.io/#https://github.com/skyworkz/website
+The easiest way to work on the Skyworkz website is to use GitPod. GitPod offers a browser-based VSCode setup that has a completely pre-configured setup for the website, including a running Hugo development server. You can use GitPod free of charge with your Github account. To use Gitpod, hit the button below:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/skyworkz/website)
 
 ### Optional: using a Docker image for building the code
 If for some reason, you can't or don't want to use Gitpod, you can use a local Docker setup. If you encounter problems when using `hugo` after `npm install` like `hugo` complaining about SASS stuff, you can use the bundled `Dockerfile` as follows:
