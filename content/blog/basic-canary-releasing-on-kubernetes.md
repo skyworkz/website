@@ -14,7 +14,7 @@ images:
   - /img/blog/blog-k8s-canary-banner-picture.png
 ---
 
-Earlier this week, we had our first Skyworkz Office Day for 2023. I love the Office Days. Not just because of catching up with all of our team members, but also because during those Office Days someone just might throw you a fun curveball. "How would you approach XYZ?"
+Earlier this week, we had our first Skyworkz Office Day for 2023. I love the Office Days. Not just because of catching up with our team, but also because during those Office Days someone just might throw you a fun curveball. "How would you approach XYZ?"
 
 This time it was Jeroen who threw me a curveball. He was looking at Canary Releasing for Kubernetes workloads, as he wanted to test an overhauled version of a backend API without immediately replacing the existing one. Of course the Kubernetes ecosystem offers various great solutions for release patterns like this, like [Argo Rollouts](https://argoproj.github.io/argo-rollouts/). But if you're only looking at applying the pattern for a first/single time, implementing Rollouts to get it done is a little overkill. Also, they didn't quite have time for that..
 
@@ -40,7 +40,7 @@ One of the most widely-used Kubernetes ingress controllers is the [Nginx Ingress
 
 **Step 1**: Create Kubernetes manifests for v1 and v2 of your service, so that there are separate `Deployment` and `Service` resources for both versions. Make sure both will use the same Namespace.
 
-**Step 2**: Deploy separate `Ingress` resources for v1 and v2, but make sure they use the same hostname.
+**Step 2**: Create separate `Ingress` resources for v1 and v2, but make sure they use the same hostname.
 
 **Step 3**: Add annotations to the `Ingress` for v2:
 
