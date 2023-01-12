@@ -1,9 +1,7 @@
 ---
-title: "HashiCorp Waypoint! What point?
-"
+title: "HashiCorp Waypoint! What point?"
 description: "Hashicorp Waypoint"
-summary: 'In October 2020, HashiCorp re-entered the space of DevOps and CI/CD by releasing the first version (v0.1) of Waypoint. The tool focuses heavily on developers, claiming that: "Developers just want to deploy!". In this blog post, the primary value of DevOps and CI/CD is explained as a better balancing of agile development efforts and stability-focused SRE efforts. Holding on to this train of though, there currently are a couple of caveats that either need to be addressed by organisations looking to adopt Waypoint v0.1, or require some attention from HashiCorp. 
-'
+summary: 'In October 2020, HashiCorp re-entered the space of DevOps and CI/CD by releasing the first version (v0.1) of Waypoint. The tool focuses heavily on developers, claiming that: "Developers just want to deploy!". In this blog post, the primary value of DevOps and CI/CD is explained as a better balancing of agile development efforts and stability-focused SRE efforts. Holding on to this train of though, there currently are a couple of caveats that either need to be addressed by organisations looking to adopt Waypoint v0.1, or require some attention from HashiCorp.'
 id: "blog"
 date: "2020-11-03"
 author: "Tom Kennes"
@@ -85,7 +83,7 @@ If you recognize the snippet above, you must have already made your way into CI/
 <br>
 {{< /raw >}}
 
-Whereas product development focuses on features and require agility, large scale systems demand stability in operating. There is this fine balance between agility and stability. Focus too much on features, and your pigs will break their legs once they are thrown over the wall. Focus too much on stable infrastructure and your pigs will not attract that lucrative business. Compare this to financial investments, where we are trying to maximize the expected value (feature development) of our portfolio while simultaneously minimizing risk (or instability). 
+Whereas product development focuses on features and require agility, large scale systems demand stability in operating. There is this fine balance between agility and stability. Focus too much on features, and your pigs will break their legs once they are thrown over the wall. Focus too much on stable infrastructure and your pigs will not attract that lucrative business. Compare this to financial investments, where we are trying to maximize the expected value (feature development) of our portfolio while simultaneously minimizing risk (or instability).
 {{< raw >}}
 <br>
 <br>
@@ -103,7 +101,7 @@ In turn this gave rise to a whole range of tools focusing on flexible infrastruc
 <br>
 {{< /raw >}}
 
-Most of these tools are pretty awesome, to say the least, and developers and operations engineers alike have been very keen to adopt them. However, unlike propagandists or salespeople might say, the usage of these frameworks and tools is not a silver bullet. The balance between stability and agility differs per company and even per project. Working with sensitive data or legacy systems might require more stability and might benefit the most from a well-organised structured approach. Small innovation-focused projects like POCs, POVs or spikes need something somewhat valuable somewhat fast and might be able to take on more risk. One of the biggest challenges in all these projects and teams is finding THEIR right balance, allowing THEM to achieve THEIR highest velocity. 
+Most of these tools are pretty awesome, to say the least, and developers and operations engineers alike have been very keen to adopt them. However, unlike propagandists or salespeople might say, the usage of these frameworks and tools is not a silver bullet. The balance between stability and agility differs per company and even per project. Working with sensitive data or legacy systems might require more stability and might benefit the most from a well-organised structured approach. Small innovation-focused projects like POCs, POVs or spikes need something somewhat valuable somewhat fast and might be able to take on more risk. One of the biggest challenges in all these projects and teams is finding THEIR right balance, allowing THEM to achieve THEIR highest velocity.
 {{< raw >}}
 <br>
 <br>
@@ -138,7 +136,7 @@ But first; let's step into a typical Waypoint user according to HashiCorp. E.g. 
 <br>
 {{< /raw >}}
 
-To start off, you need to install {{<raw>}}<a href="https://docs.docker.com/desktop/">Docker</a>{{</raw>}} and a {{<raw>}} <a href="https://learn.hashicorp.com/tutorials/waypoint/get-started-install?in=waypoint/get-started-kubernetes">waypoint server</a> {{</raw>}} though... 
+To start off, you need to install {{<raw>}}<a href="https://docs.docker.com/desktop/">Docker</a>{{</raw>}} and a {{<raw>}} <a href="https://learn.hashicorp.com/tutorials/waypoint/get-started-install?in=waypoint/get-started-kubernetes">waypoint server</a> {{</raw>}} though...
 {{< raw >}}
 <br>
 <br>
@@ -149,7 +147,7 @@ And then, deploy!
 <br>
 {{< /raw >}}
 
-Right, so... What do we need? Waypoint requires you to write a .hcl-file (HashiCorp Configuration Language, a mix between JSON and YAML), define a build, deploy and optionally also a release step in there. Here, deploying an application can be seen as staging it, whereas releasing covers configuration around it (load balancers, DNS, etc). 
+Right, so... What do we need? Waypoint requires you to write a .hcl-file (HashiCorp Configuration Language, a mix between JSON and YAML), define a build, deploy and optionally also a release step in there. Here, deploying an application can be seen as staging it, whereas releasing covers configuration around it (load balancers, DNS, etc).
 {{< raw >}}
 <br>
 <br>
@@ -243,14 +241,14 @@ Truth be told, running ```waypoint up```, clicking the provided URL and seeing m
 
 
 {{<raw>}}<h3 class="display-5">Security</h3> {{</raw>}}
-As mentioned earlier, in order for Waypoint to work, you need to install a Waypoint server, where data containing information about earlier builds, deployments, releases as well as logs are stored. 
+As mentioned earlier, in order for Waypoint to work, you need to install a Waypoint server, where data containing information about earlier builds, deployments, releases as well as logs are stored.
 {{< raw >}}
 <br>
 <br>
 {{< /raw >}}
 
 
-Both the CLI and the UI authenticate to the server with tokens, which is not yet optimized for maintainability. A token gives access to all builds and deployments, but this does not imply that it would also be possible for the user to actually deploy. The build and deploy actions are executed locally when running ```waypoint up/build/deploy/release``` rather than by the server itself. This means that users require to have the credentials corresponding to the deployment platform locally, which might need some explanation towards your risk management department. The only type of access currently available is full access, so fine-grained RBAC access is rightfully present on the {{<raw>}}<a href="https://www.waypointproject.io/docs/roadmap">roadmap</a>{{</raw>}}. Same for a mechanism to revoke tokens, audit token usage, inspect an existing token, etc. 
+Both the CLI and the UI authenticate to the server with tokens, which is not yet optimized for maintainability. A token gives access to all builds and deployments, but this does not imply that it would also be possible for the user to actually deploy. The build and deploy actions are executed locally when running ```waypoint up/build/deploy/release``` rather than by the server itself. This means that users require to have the credentials corresponding to the deployment platform locally, which might need some explanation towards your risk management department. The only type of access currently available is full access, so fine-grained RBAC access is rightfully present on the {{<raw>}}<a href="https://www.waypointproject.io/docs/roadmap">roadmap</a>{{</raw>}}. Same for a mechanism to revoke tokens, audit token usage, inspect an existing token, etc.
 {{< raw >}}
 <br>
 <br>
@@ -275,7 +273,7 @@ It is easy to go back to older build and deployments, analyse their logs and rol
 {{<raw>}}<h3 class="display-5">Automation</h3> {{</raw>}}
 As mentioned previously, Waypoint makes use of the {{<raw>}}<a href="https://buildpacks.io/">CNCF Heroku Buildpacks</a>{{</raw>}} to detect how the code should be packaged into a container image, and thereupon deploys that image using a container orchestrator of choice. Heroku essentially does a similar thing, only that it deploys and hosts for you as well. Instead, Waypoint sits somewhere in the middle between Heroku and fully in-house, because it does not take away the need to understand the platform you are deploying onto. For some scenarious this might be a perfect balance (see <a href="#Conclusion">conclusion</a>)
 
-Keep in mind that developers might not need to understand containerization and infrastructure, but as an organisation you still need to rely on technical platform expertise when using Waypoint. 
+Keep in mind that developers might not need to understand containerization and infrastructure, but as an organisation you still need to rely on technical platform expertise when using Waypoint.
 {{< raw >}}
 <br>
 <br>
@@ -284,7 +282,7 @@ Keep in mind that developers might not need to understand containerization and i
 
 
 {{<raw>}}<h3 class="display-5">HashiCorp Otto</h3> {{</raw>}}
-One of the first things that might have come to your mind when reading about Waypoint, might the earlier HashiCorp deployment tool called Otto. Indeed, both tools seem to attempt to provide a solution for the same problem, and it is a bit suspicious that HashiCorp decommissioned Otto simultaneously with releasing Waypoint to the public. It is also important to note that Otto has not been very popular to begin with. The opensource community never really has embraced Otto, nor did it attain enough vendor support. Of course it remains to be seen whether Waypoint would be able to avoid the fat of Otto. 
+One of the first things that might have come to your mind when reading about Waypoint, might the earlier HashiCorp deployment tool called Otto. Indeed, both tools seem to attempt to provide a solution for the same problem, and it is a bit suspicious that HashiCorp decommissioned Otto simultaneously with releasing Waypoint to the public. It is also important to note that Otto has not been very popular to begin with. The opensource community never really has embraced Otto, nor did it attain enough vendor support. Of course it remains to be seen whether Waypoint would be able to avoid the fat of Otto.
 {{< raw >}}
 <br>
 <br>
@@ -324,4 +322,3 @@ When combined with other products form the HashiCorp ecosystem, Waypoint might b
 {{< /raw >}}
 
 Overal, there is room for improvement, but I like where Waypoint is going. HashiCorp is actively developing the product and has already laid out a {{<raw>}}<a href="https://www.waypointproject.io/docs/roadmap">roadmap</a>{{</raw>}} displaying some of their intentions. If they manage to get backing from the open-source community to buy into their idea, I am certain that I will have to revise some of these comments in the future!
-
