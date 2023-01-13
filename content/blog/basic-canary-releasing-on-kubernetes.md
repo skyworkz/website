@@ -44,7 +44,7 @@ One of the most widely-used Kubernetes ingress controllers is the [Nginx Ingress
 
 **Step 3**: Add annotations to the `Ingress` for v2:
 
-- to mark an `Ingress` as Canary, add `nginx.ingress.kubernetes.io/canary: "true"`
+- to mark an `Ingress` as Canary, add `nginx.ingress.kubernetes.io/canary: "true"` (_only_ add this to the Ingress of v2, don't set any canary-related annotations on the Ingress for v1)
 - for weight-based splitting, add: `nginx.ingress.kubernetes.io/canary-weight: "20"` (this sends 20% of traffic to v2)
 
 _**NOTE**: You can find a full working code example at the end of this blog post_
@@ -241,3 +241,7 @@ $ while true; do curl -sL ${ECHO_URL}; sleep 1; done
 "echo-v2"
 ...
 ```
+
+As you can see, roughly 20% of our requests are going to `echo-v2`. Keep in mind that Nginx will do this balancing based on certain time slices, so if you would run the same command with `sleep 10` instead you might be getting more random results. Try playing with the ` nginx.ingress.kubernetes.io/canary-weight` value to see how the behaviour changes as more or less traffic is sent to `echo-v2`.
+
+Now you know how to set up basic Canary Releasing on Kubernetes without adding extra tooling. If you want to apply this method of releasing to all your services though, I do highly recommend checking out purpose-built tooling like Argo Rollouts, which allow you to further finetune the behaviour, automate promotion based on analysis, and much more.
