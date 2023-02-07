@@ -14,6 +14,14 @@ The easiest way to work on the Skyworkz website is to use GitPod. GitPod offers 
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/skyworkz/website)
 
+Note: If you're not allowed to push a branch, it's probably because the permissions granted to gitpod for github are not sufficient.
+To fix this:
+* Navigate to [the integrations page](https://gitpod.io/user/integrations) in gitpod.io
+* Press the hamburger button for the github integration
+* Click edit permissions
+* Check the public_repo/repo permissions (or all, since sooner or later you might run into other issues.)
+* Try again..
+
 ### Optional: using a Docker image for building the code
 If for some reason, you can't or don't want to use Gitpod, you can use a local Docker setup. If you encounter problems when using `hugo` after `npm install` like `hugo` complaining about SASS stuff, you can use the bundled `Dockerfile` as follows:
 ```bash
