@@ -54,3 +54,4 @@ Currently, the maintainers team consists of:
 - Bas
 - Benny
 - Lee
+- Florian
