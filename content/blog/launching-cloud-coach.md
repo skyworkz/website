@@ -6,15 +6,17 @@ summary: After helping many startups over the past year, we've looked at how we 
 author: Benny Cornelissen
 tags:
   - cloud
+  - startup
+  - service
 slug: launching-cloud-coach
 date: 2023-02-27
 images:
   - /img/icons/developer.svg
 ---
 
-There is great value in cloud technology for startups, but having a dedicated skilled Platform Team often isn’t financially viable until they become scale-ups. The past few years we've been involved with many startups and their cloud journeys. Some of these startups migrated to cloud setups using our [Cloud Kickstart](/services/kickstart/), while other companies were already using cloud setups but struggled with knowledge gaps or performance issues.
+There is great value in cloud technology for startups, but having a dedicated skilled Cloud Platform Team often isn’t financially viable until they become scale-ups. The past  years we've been involved with many product-based startups and their cloud journeys. Some of these startups migrated to cloud setups using our [Cloud Kickstart](/services/kickstart/), while other companies were already using cloud setups but struggled with knowledge gaps or performance issues.
 
-These past months we've taken some time to not just look at the value we added to these clients, but more importantly, look at what we can learn from our engagements and improve our offerings. When looking at the startups, we felt an improved offering would have to achieve a couple of objectives:
+The past few months we've taken some time to not just look at the value we added to these clients, but more importantly, look at what we can learn from our engagements and improve our offerings. When looking at the startups, we felt an improved offering would have to achieve a couple of objectives:
 
 - **Financially Sustainable**: we need to offer real value to these clients, but with a cost structure that isn't going to put them out of business.
 - **Build Up Your Client**: we want our clients to get better at building and running cloud platforms, all the way to the point where they actually don't need our help anymore.
@@ -23,7 +25,7 @@ These past months we've taken some time to not just look at the value we added t
 - **Make It Personal**: every client should have a primary contact person.
 
 ## Introducing Cloud Coach
-Today we are officially launching our new Cloud Coach service. This service is aimed a startups who either already have cloud setups or are going to migrate using our Cloud Kickstart service. With Cloud Coach, we help companies leverage cloud technology effectively by being involved advisors and sparring partners. We help them make the right decisions, gather the right skills, and build the right things the right way; all while also offering a safety net should things go wrong.
+Today we are officially launching our new [Cloud Coach](/services/cloudcoach/) service. This service is aimed at product-based startups who either already have cloud setups or are going to migrate using our Cloud Kickstart service. With Cloud Coach, we help companies leverage cloud technology effectively by being involved advisors and sparring partners. We help them make the right decisions, gather the right skills, and build the right things the right way; all while also offering a safety net should things go wrong.
 
 So how does it work?
 
@@ -40,4 +42,5 @@ This makes it easy and convenient to reach out for a quick question, but also me
 ## Familiar Faces
 We don’t believe in sending a different random engineer to help you every time, even if you’re ‘just a small startup’. Every Cloud Coach client gets a dedicated Cloud Consultant, and they will have an Expert Squad to back them up or to join in when specific expertise is required. Those same people will monitor your Slack Support channel. Familiar faces, who know your people and your setup.
 
-## Getting On Board
+## Getting Your Personal Coach
+If you think Cloud Coach might be a good fit for your company, or if you want to discuss a move to the cloud, feel free to [reach out](/contact/). Coffee is on us!
