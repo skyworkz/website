@@ -11,11 +11,6 @@ icon: developer.svg
 There is great value in cloud technology for startups, but having a dedicated skilled Platform Team often isn’t financially viable until they become scale-ups. With our Cloud Coach service, we help your engineers leverage cloud technology effectively by being involved advisors and sparring partners. We help you make the right decisions, gather the right skills, and build the right things the right way; all while also offering active support should things go wrong.
 
 
-Our Cloud Coach service helps startups be successful in using cloud technology in a financially sustainable way. Our service consists of 2 parts;
-
-- Hands-off Coaching
-- Slack Support
-
 {{% /col-left-10 %}}
 
 {{<col-right-2>}}
@@ -42,7 +37,7 @@ When needed we can schedule extra sessions for deep-dives, architecture sessions
 {{<section>}}
 {{% col-left-10 title="Engineering-friendly Support" %}}
 
-Our Slack Support offers direct access to our team of experts for quick questions, or for active help should things go wrong. If your latest deployment took down your website, just ping us on Slack and we will debug *with* you. Every Cloud Coach client gets their own private Slack Connect channel that works right in your existing Slack workspace. It's convenient, and we are engineers too.
+Our Slack Support offers direct access to our team of experts for quick questions, or for active help should things go wrong. If your latest deployment took down your website, just ping us on Slack and we will debug *with* you. Every Cloud Coach client gets their own private Slack Connect channel that works right in your existing Slack Workspace.
 
 {{% /col-right-10 %}}
 
