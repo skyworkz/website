@@ -43,4 +43,4 @@ This makes it easy and convenient to reach out for a quick question, but also me
 We don’t believe in sending a different random engineer to help you every time, even if you’re ‘just a small startup’. Every Cloud Coach client gets a dedicated Cloud Consultant, and they will have an Expert Squad to back them up or to join in when specific expertise is required. Those same people will monitor your Slack Support channel. Familiar faces, who know your people and your setup.
 
 ## Getting Your Personal Coach
-If you think Cloud Coach might be a good fit for your company, or if you want to discuss a move to the cloud, feel free to [reach out](/contact/). Coffee is on us!
+If you think Cloud Coach might be a good fit for your company, or if you want to discuss a move to the cloud, please fill in [our short questionnaire](https://app.formester.com/survey/454e32d9-af60-4b65-b6d4-341e46e18105) and we'll reach out to you. Coffee is on us!
