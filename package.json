@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "popper.js": "^1.16.1",
-    "webpack": "^5.60.0"
+    "webpack": "^5.76.0"
   },
   "devDependencies": {
     "@fullcalendar/core": "^4.4.2",
