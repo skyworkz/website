@@ -21,22 +21,22 @@ However, KubeCon also left me thinking that I am no longer its target audience. 
 
 We'll get to that, let's first lead off with couple of stand-out talks that I feel are worth a (re)-watch:
 
-### 1.  [Enabling Real-Time Media in Kubernetes, Giles Heron](https://youtu.be/1_cxXzhY4Xg)
+### 1. Enabling Real-Time Media in Kubernetes, Giles Heron
 {{< youtube 1_cxXzhY4Xg >}}
 
 Since Kubecon Valencia, every Kubecon keynote I watch seems to be capturing less and less of my interest. A lot of sales pitches, not a lot of substance.
 
 Then on the last day of the conference, Giles took me on a journey to a world I knew surprisingly little about (Football, but also real-time, low latency live video distribution) and delivered a clear and concise story of a man that just wants to watch his football matches with less latency, so his mates won't text him about a goal that he hasn't seen happen yet on his web stream.
 
-## 2. Back to the Future: Next-Generation Cloud Native Security, Andrew Martin & Matt Jarvis
-https://youtu.be/tPeQQaZcjBs
+### 2. Back to the Future: Next-Generation Cloud Native Security, Andrew Martin & Matt Jarvis
+{{< youtube tPeQQaZcjBs>}}
 
 Last year I quickly became a fan during Andrew Martin's excellent (and slightly chaotic) (talk)[https://youtu.be/1HbwfpE4XKY] at Kubecon Valencia, and ever since then I've made sure to keep an eye on whatever talks are coming from Controlplane.
 
 This year, both he and Matt Jarvis from Snyk gave us a quick history lesson and made some predictions about the near-to-short term future of Cloud Native security, touching on everything from RISC to AI, WASM to Quantum Computing and much, much more.
 
-## 3. Malicious Compliance: Reflections on Trusting Container Scanners, Ian Coldwater, Duffie Cooley, Brad Geesaman, Rory McCune, Datadog
-https://youtu.be/9weGi0csBZM
+### 3. Malicious Compliance: Reflections on Trusting Container Scanners, Ian Coldwater, Duffie Cooley, Brad Geesaman, Rory McCune, Datadog
+{{< youtube 9weGi0csBZM>}}
 
 Out of all the Kubecon 2023 talks, this one gave me the most pause. At my current assignment, we're hard at work trying to get our development teams on standardized pipelines with built-in security scanning, making slow but steady progress. 
 
