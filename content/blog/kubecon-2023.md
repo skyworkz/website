@@ -19,10 +19,10 @@ Yes, it was a well run event, it was filled with interesting talks and like last
 
 However, KubeCon also left me thinking that I am no longer its target audience. Why? 
 
-We'll get to that, let's first lead off with couple of stand-out talks that I feel are worth a (re)-watch.
+We'll get to that, let's first lead off with couple of stand-out talks that I feel are worth a (re)-watch:
 
-## 1.  Enabling Real-Time Media in Kubernetes, Giles Heron
-https://youtu.be/1_cxXzhY4Xg
+### 1.  [Enabling Real-Time Media in Kubernetes, Giles Heron](https://youtu.be/1_cxXzhY4Xg)
+{{< youtube 1_cxXzhY4Xg >}}
 
 Since Kubecon Valencia, every Kubecon keynote I watch seems to be capturing less and less of my interest. A lot of sales pitches, not a lot of substance.
 
