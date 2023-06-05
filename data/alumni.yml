@@ -53,3 +53,10 @@ members:
       Cloud Engineer | Indian cook and food lover | Motorcyclist
     description: >
       Dushyant joined us as a Cloud Engineer, and then schooled us on Indian food.
+  - category: Engineering
+    image: "ahmed.jpg"
+    name: Ahmed Elfakharany
+    teaser: >
+      Cloud Engineer | Trainer | Reader
+    description: >
+      Ahmed joined us as an experienced DevOps and Cloud engineer, we've pushed him to his limits and he learned at lightning speed, which is quite fast ...

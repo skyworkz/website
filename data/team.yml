@@ -122,12 +122,16 @@ members:
 
       You can find Fábio on [LinkedIn](https://linkedin.com/in/fabio-dev).
   - category: Engineering
-    image: "ahmed.jpg"
-    name: Ahmed Elfakharany
+    image: "stefanleenen.jpg"
+    name: Stefan Leenen
     teaser: >
-      Cloud Engineer | Trainer | Reader
+      Cloud Engineer | Backend developer | Hockey player & coach
     description: >
-      Ahmed is an experienced DevOps and cloud engineer. He works with AWS as the main cloud platform. He has experience with IaC tools, CI/CD and automation stuff in general.
+      Stefan is an experienced developer and cloud engineer with experience in startup/scale-ups, constantly evolving the platform as the requirements change.
+
+      Outside of work he can be found on the hockey field either playing with his own team or training/coaching youth teams.
+
+      You can find Stefan  on [LinkedIn](https://www.linkedin.com/in/stefan-leenen-13a31521/)
   - category: Engineering
     image: "lee.jpg"
     name: Lee Beenen
@@ -204,3 +208,25 @@ members:
       In his free time he enjoys playing Minecraft with his kids, boardgames, reading books and enjoying the outdoors.
 
       You can find Florian on [LinkedIn](https://www.linkedin.com/in/florian-vorenkamp/).
+
+  - category: Engineering
+    image: aliaksandr.jpg
+    name: Aliaksandr Huzen
+    teaser: Cloud Solution Architect | Hands-on | Dogs | Snowboarding  | Books | Movies
+    description: |-
+      Aliaksandr is a hands-on cloud solution architect with over 15 years of experience in infrastructure design and application development in production environments. He is constantly seeking challenges and opportunities to provide value to businesses.
+
+      Aliaksandr is an avid dog lover and a passionate snowboarding enthusiast.
+
+      You can find Aliaksandr on [LinkedIn](https://www.linkedin.com/in/aliaksandr-huzen/).
+
+  - category: Engineering
+     image: yaron.jpg
+     name: Yaron Tal
+     teaser: Cloud Engineer | DevSecOps | Biker | Father of 3
+     description: |-
+       Yaron is a developer, turned platform engineer with an interest in the security and compliance aspects of the software development lifecycle. His main focusus are on CI/CD, Kubernetes and supply chain security.
+
+       With three daughters he doesn't have a lot of time for hobbies, but when he does he likes to ride his motorcycle, tinker with tech and watch series.
+
+       You can find Yaron on [LinkedIn](https://www.linkedin.com/in/yrntal).
