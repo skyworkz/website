@@ -11,41 +11,35 @@ slug: my-first-day-at-skyworkz
 date: 2023-06-05
 ---
 
-Starting a new job is always exciting; new people, a new environment, a new assignment... you name it. After having worked with the same company (Piggy Loyalty) for 7.5 years, it felt like an extra big step, leaving behind amazing people and also that feeling of comfort.
+Starting a new job is always an exciting experience - new people, a fresh environment, and a different set of responsibilities. After spending 7.5 years at the same company, [Piggy Loyalty](https://www.piggy.eu), it felt like a significant leap, leaving behind amazing colleagues and the comfort of familiarity.
 
-## What to do on a first day?
-### Expectations
+## What to Expect on Your First Day?
 
-What do you expect from a first day at a new job? I've asked ChatGPT and it came back with this list:
+When starting a new job, what are your expectations for the first day? I asked ChatGPT for its insights, and it provided the following list:
 
-* Onboarding and Orientation: Employees generally expect to receive a thorough onboarding process, including an orientation session that familiarizes them with the company culture, policies, procedures, and their specific job responsibilities. This may involve meeting with HR representatives, signing necessary paperwork, and receiving an introduction to their team or colleagues.
+* Onboarding and Orientation: Employees generally anticipate a comprehensive onboarding process that includes an orientation session. This familiarizes them with the company's culture, policies, procedures, and their specific job responsibilities. It may involve meeting with HR representatives, completing necessary paperwork, and being introduced to their team or colleagues.
 
-* Training and Support: New employees often anticipate receiving the necessary training and support to perform their job effectively. They expect to receive guidance and resources that will help them understand their role, learn new skills, and become acquainted with the tools, systems, and processes required for their work.
+* Training and Support: New employees often look forward to receiving the necessary training and support to perform their job effectively. They expect guidance and resources that will help them understand their role, learn new skills, and become acquainted with the tools, systems, and processes required for their work.
 
-* Clear Expectations: People expect to receive clear and specific expectations from their supervisor or manager regarding their job performance. This includes understanding their goals, objectives, and key performance indicators, as well as any specific deadlines or targets they need to meet.
+* Clear Expectations: People expect their supervisor or manager to provide clear and specific expectations regarding their job performance. This includes understanding goals, objectives, key performance indicators, as well as any deadlines or targets they need to meet.
 
-For me this list feels and sounds pretty clinical. My worst experience ever at a new job, was when I came into the office and there was nobody there and nothing was setup or arranged. So to me, the above list can be summarized into: Make somebody feel welcome and have any things they might require or need ready. This can be simple things like a desk, their e-mail address set up, etc.
+While this list may sound clinical, it is essential to make someone feel welcome and ensure they have everything they need. Simple gestures like having a prepared workspace and setting up their email address can go a long way in making a positive impression.
 
-### And what did I do?
-
-For most of us, your first day is probably (and hopefully?!) a mix of the above list. Getting to know a lot of new people and having to remember their names. Luckily I already know a few people at Skyworkz, since we've worked with them in the past! So what to do then when your expectations have already been met before you even have your first day? Well... visit a conference offcourse! Bas mentioned he was going to visit the AWS Summit in Amsterdam and encouraged me to also sign-up and join with some other colleagues.
+## My First Day Experience
+For most of us, the first day on a new job is likely a mix of the aforementioned expectations. Getting to know numerous new people and trying to remember their names can be overwhelming. Fortunately, I already knew a few individuals at Skyworkz due to our previous collaborations. So, what did I do when my expectations were already met before my first day? Well, I decided to attend a conference!
 
 ## AWS Summit
-For me it was the first time visiting a conference organized by one of the big cloud providers. My experience in the cloud has mostly been with GCP, so I was curious to see and learn more about AWS. What are they working on, their ideas, plans, etc.
+Attending a conference organized by one of the major cloud providers, AWS, was a new experience for me. As someone with primarily GCP cloud experience, I was curious to learn more about AWS, their ongoing projects, ideas, and future plans.
 
-The keynote talk was quite interesting and perhaps not surprisingly the big hype word was "Generative AI". AWS is working on a lot of services and new ideas. Most of these sadly aren't available to the general public yet, but for all you AWS users out there, definitely keep an eye on these developments.
+The keynote talk was particularly interesting, and it came as no surprise that "Generative AI" was the buzzword of the event. AWS showcased numerous services and shared their innovative ideas. While most of these are not yet available to the general public, AWS users should definitely keep an eye on these developments.
 
 ### CodeWhisperer
-[Amazon CodeWhisperer](https://aws.amazon.com/codewhisperer/) is a service I wanted to highlight, since this can already be used and fits in line with ChatGPT, Github Co-pilot, etc. If you're looking into code generation and working with AWS, CodeWhisperer is maybe something you should try out. According to their website: "In addition to general purpose code suggestions, CodeWhisperer has additional training to provide code suggestions for using AWS APIs." So it should arguebly be able to generate better working code for any AWS services/API's you use.
+One service I wanted to highlight is [Amazon CodeWhisperer](https://aws.amazon.com/codewhisperer/). It aligns with tools like ChatGPT and Github Co-pilot, focusing on code generation and working with AWS. CodeWhisperer claims to provide code suggestions specifically tailored to AWS APIs, aiming to generate better working code for any AWS services you use.
 
-While I understand that this summit is (mostly) used as a marketing tool, I would have liked to have seen more in-depth talks or workshops. Some of my new colleagues felt the same way. But all in all it was a nice day and well organized for sure!
+Although I understand that conferences like this primarily serve as marketing tools, I wished there were more in-depth talks or workshops. Some of my new colleagues shared the same sentiment. Nonetheless, it was a well-organized event, and I had an enjoyable day overall!
 
-
-## Blipz
-
-Speaking of well organised events and new technologies, last year I was invited to [Blipz](https://www.blipz.io/), "The Tech conference with a twist
-in cooperation with Dataworkz, Skyworkz, Groundworkz, Lemonshark, Cyberseals and Codebeez"! It was a great success, with many interesting topics. And you guessed it, this year we're organizing another one! The call to papers has been closed, we've had a whopping 64 submissions this year! All this talk about Generative AI and it's extreme growth the last year also leads to a lot of discussion about how this will impact us. Here is a teaser for one of the keynotes:
-
+## Blipz On The Radar
+Speaking of well-organized events and emerging technologies, last year I had the privilege of being invited to [Blipz](https://www.blipz.io/), "The Tech conference with a twist," organized in cooperation with Dataworkz, Skyworkz, Groundworkz, Lemonshark, Cyberseals, and Codebeez. It was a tremendous success, featuring a wide range of interesting topics. And guess what? We are organizing another one this year! The call for papers has closed, and we received an impressive 64 submissions! As the conversation around Generative AI continues to grow, it sparks discussions about its impact on our lives. Here's a sneak peek at one of the keynotes:
 
 *In a world captivated by artificial intelligence (AI), where ChatGPT, deep learning, and Large Language Models dominate the headlines, a remarkable transformation is underway. While the debate rages on about job displacement versus job creation, the true impact of AI might lie elsewhere.*
 
@@ -53,6 +47,6 @@ in cooperation with Dataworkz, Skyworkz, Groundworkz, Lemonshark, Cyberseals and
 
 *What might change in how people work together? Join us as we delve into the fascinating realm of AI's (possible) future influence on our Ways of Working.*
 
+## New adventures
 
-
-Interested? Visit the [Blipz](https://www.blipz.io/) website and sign up! See you there!
+All in all, my first day at Skyworkz has been a blast. All this talk about Generative AI makes me excited to start working more with this technology and apply it for new clients, helping them grow their business.
