@@ -1,13 +1,13 @@
 ---
 id: blog
-title: My first day at Skyworkz
+title: Joining Skyworkz and hitting a conference on my first day
 description: Stefan reflects on his first day at Skyworkz; visiting the AWS Summit in Amsterdam and looking ahead to Blipz Conference.
 author: Stefan Leenen
 tags:
-  - AWS Summit 2023 Amsterdam
-  - Blipz 2023
+  - AWS
+  - Blipz
   - Generative AI
-slug: my-first-day-at-skyworkz
+slug: joining-skyworkz-and-hitting-a-conference-on-my-first-day
 date: 2023-06-05
 ---
 
@@ -32,6 +32,8 @@ For most of us, the first day on a new job is likely a mix of the aforementioned
 Attending a conference organized by one of the major cloud providers, AWS, was a new experience for me. As someone with primarily GCP cloud experience, I was curious to learn more about AWS, their ongoing projects, ideas, and future plans.
 
 The keynote talk was particularly interesting, and it came as no surprise that "Generative AI" was the buzzword of the event. AWS showcased numerous services and shared their innovative ideas. While most of these are not yet available to the general public, AWS users should definitely keep an eye on these developments.
+
+{{<img src="/img/blog/aws-summit-2023.jpg" class="img-fluid" title="AWS Summit 2023" >}}
 
 ### CodeWhisperer
 One service I wanted to highlight is [Amazon CodeWhisperer](https://aws.amazon.com/codewhisperer/). It aligns with tools like ChatGPT and Github Co-pilot, focusing on code generation and working with AWS. CodeWhisperer claims to provide code suggestions specifically tailored to AWS APIs, aiming to generate better working code for any AWS services you use.
