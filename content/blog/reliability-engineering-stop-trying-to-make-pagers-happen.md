@@ -9,14 +9,14 @@ tags:
   - Site Reliability Engineering
   - reliability
 slug: reliability-engineering-stop-trying-to-make-pagers-happen
-date: 2023-06-02
+date: 2023-06-08
 ---
 
 At Skyworkz we get to work with industry-leading clients and as a result, we get to work on a fair share of high-volume, mission critical systems. The kind that has to be available for >99.9%. But this blog isn't about some fancy technology, masterful hackery, or the next big thing in Cloud. It's not even about AI or LLMs, which is rare these days. I'm even writing this myself. Oldschool. Maybe even boring. It seems fitting, given today's subject: Reliability.
 
 Reliability isn't the most fancy topic, but for our clients, it's an essential topic. Shiny features won't make you money if your systems are broken all the time. And some systems are simply too essential. Reliability matters for a business' bottom line, and in some cases unreliable systems may even have legal implications.
 
-For many companies, discussing reliability means getting getting 'non-technical' people involved. Stakeholders with different perspectives looking to reduce risk, ensure compliance, or optimize revenue: Product Owner, Business Owner, Security & Risk, Business Continuity Management, and even Legal.
+For many companies, discussing reliability means getting 'non-technical' people involved. Stakeholders with different perspectives looking to reduce risk, ensure compliance, or optimize revenue: Product Owner, Business Owner, Security & Risk, Business Continuity Management, and even Legal.
 
 Typically, all those stakeholders agree on one thing: **we want our systems to work as intended all the time**.
 
@@ -48,10 +48,10 @@ So while Hermes achieved its desired **availability**, it wasn't perceived as **
 ## It's not _just_ about Availability
 So what's the deal here? Well, Hermes' availability number wasn't too ambitious to begin with (so fairly easy to achieve, even through sheer luck). But to achieve it, Hermes had to rely on someone to **manually revive it regularly**. And even worse, the person responsible for doing just that didn't have the necessary information or training to do it. Communication was lacking as well.
 
-However, none of these factors are really considered in the desired service level definitions mentioned earlier. Hermes is showing many signs that reliability is lacking, but none of them of them are a 'business concern'.
+However, none of these factors are really considered in the desired service level definitions mentioned earlier. Hermes is showing many signs that reliability is lacking, but none of them are a 'business concern'.
 
 ## Defining Availability _and_ Reliability
-Our current service level focuses primarily on the Availability of Information (from the [CIA Triad](https://www.itgovernance.co.uk/blog/what-is-the-cia-triad-and-why-is-it-important)), from which we get a Desired Availability (percentage), and from there we typically calculate the RTO. This view is too simplistic, and a little one-dimensional. Let's improve our definitions, so that we can also measure the right things, and make sure that when reliability is lacking, it becomes a business concern.
+Our current service level focuses primarily on the Availability of Information (from the [CIA Triad](https://www.itgovernance.co.uk/blog/what-is-the-cia-triad-and-why-is-it-important)), from which we get a Desired Availability (percentage), and from there we typically calculate the RTO. This view is too simplistic, and a little one-dimensional. Let's improve our definitions, so that we can also measure the right things, and make sure that when reliability is lacking, it does become a business concern.
 
 ### When do we consider our system available?
 Coming up with a percentage is easy, but it's not very useful unless we define what availability actually means.
@@ -84,7 +84,7 @@ Let's add a couple of new concepts:
 There are some other concepts we can add to this list later, but these are the ones you should start with.
 
 These concepts all matter in 3 different ways:
-- Defining Acceptable MTBF
+- Defining Acceptable Level (SLO)
 - Measuring long-term performance
 - Measuring short-term performance
 
@@ -95,7 +95,7 @@ If your landscape is designed to automatically recover failed workloads (for exa
 - Mean Time Between Failures (**MTBF**), for all failures regardless of how they are handled
 - Mean Time Between System Incidents (**MTBSI**), for failures that require human intervention
 
-In case of Hermes, Bob had to manually revive it 5 times over the course of a week, which is obviously bad. However, if a crashed Hermes Pod would simply be restarted without waking up Bob, nobody might have noticed. In both cases the failures would count against the MTBF, but in the case of Kubernetes handling the failure it wouldn't count against MTBSI.
+In case of Hermes, Bob had to manually revive it 5 times over the course of a week, which is obviously bad. However, if a all Pods for a Hermes Kubernetes Deployment crashed and would simply be restarted without waking up Bob, nobody might have noticed (even if Hermes was unavailable for a minute). In both cases the failures would count against the MTBF, but in the case of Kubernetes handling the failure it wouldn't count against MTBSI.
 
 ## On-call is not there to fix your lack of reliabilty
 The classic view on Availability typically specifies On-call as one of the default measures to ensure availability. This makes sense, when you look at things from a pure Availability perspective. Having someone on-call means someone starts fixing the issue sooner, which reduces the MTTR for out-of-office-hours failures and means it's easier to achieve your desired availability.
