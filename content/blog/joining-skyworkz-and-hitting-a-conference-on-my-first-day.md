@@ -9,6 +9,8 @@ tags:
   - Generative AI
 slug: joining-skyworkz-and-hitting-a-conference-on-my-first-day
 date: 2023-06-05
+images:
+- /img/blog/aws-summit-2023.jpg
 ---
 
 Starting a new job is always an exciting experience - new people, a fresh environment, and a different set of responsibilities. After spending 7.5 years at the same company, [Piggy Loyalty](https://www.piggy.eu), it felt like a significant leap, leaving behind amazing colleagues and the comfort of familiarity.
