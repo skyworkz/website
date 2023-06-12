@@ -10,6 +10,8 @@ tags:
   - reliability
 slug: reliability-engineering-stop-trying-to-make-pagers-happen
 date: 2023-06-08
+images:
+  - "/img/blog/blog-reliability-everyone-except-oncall.png"
 ---
 
 At Skyworkz we get to work with industry-leading clients and as a result, we get to work on a fair share of high-volume, mission critical systems. The kind that has to be available for >99.9%. But this blog isn't about some fancy technology, masterful hackery, or the next big thing in Cloud. It's not even about AI or LLMs, which is rare these days. I'm even writing this myself. Oldschool. Maybe even boring. It seems fitting, given today's subject: Reliability.
