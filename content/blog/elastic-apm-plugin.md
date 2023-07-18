@@ -2,6 +2,7 @@
 id: blog
 title: Writing a plugin for the Elastic APM Java agent
 description: This blog describes how to write a plugin for R2DBC for Elastic APM Java agent.
+summary: Application Performance Monitoring (or APM) is one of today's powerful tools to get useful information about your application. Why is my application slow? What do I need to improve? There's a vast ecosystem of APM agents available with support for a wide range of languages and frameworks. But what do you do when your framework isn't supported? You create a plugin for your APM agent. In this blog we'll dive into doing just that.
 author: Sven Rienstra
 tags:
   - Java
