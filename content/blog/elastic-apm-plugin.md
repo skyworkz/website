@@ -19,7 +19,7 @@ To record events on when for example a HTTP requests starts and ends, the agent 
 
 So what do you actually get by using these agents? In the example of Elastic APM you'll be able to see a timeline visualisation like below.
 
-{{<img src="https://www.elastic.co/guide/en/apm/guide/current/images/apm-distributed-tracing.png" class="img-fluid" title="Elastic APM dashboard" >}}
+{{<img src="/img/blog/apm-distributed-tracing.png" class="img-fluid" title="Elastic APM dashboard" >}}
 
 We can see which HTTP request are fired and what database calls are being made. This information can be extremely useful when trying to understand what's happening within your application, for example when looking into a performance issue.
 
