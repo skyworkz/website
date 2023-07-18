@@ -8,7 +8,7 @@ tags:
   - Elastic APM
   - R2DBC
 slug: elastic-apm-plugin
-date: 2023-07-12
+date: 2023-07-18
 ---
 
 As we all know observability is something we rely heavily on in our ever more complex landscape. In order to know if our applications are still doing what they should be doing we can't live without it. But also when something does go wrong it can provide us with very valuable insight of what is going on inside our application.
