@@ -2,6 +2,7 @@
 id: blog
 title: Running Self Hosted Agents in Azure Devops using an Azure AD Access Token
 description: Running Self Hosted Agents used to only be possible using Personal Access Tokens, which are a chore to rotate, bound to a single person and often way overprovisioned, making them a security risk. Is there a better way? Let's find out.
+summary: Have you always wanted to get away from Personal Access Tokens in Azure DevOps? In this article, we're going to take a look at how we can use Azure AD Access Tokens to run a Self Hosted Agent Pool in Azure DevOps and walk through the entire process step by step. Then, we're going to throw all that work away and automate it using Terraform so we never have to do that by hand again.
 author: Lee Beenen
 tags:
   - Azure Devops
@@ -9,6 +10,7 @@ tags:
   - Microsoft Entra ID
   - Active Directory
   - Self Hosted Agents
+  - Terraform
 slug: running-self-hosted-agents-with-ad-access-token
 date: 2023-08-17
 ---
@@ -24,6 +26,8 @@ Luckily, there's another [way](https://devblogs.microsoft.com/devops/introducing
 
 Sounds great! How though? Well that's what we're here for, so let's get going.
 
+<h3> Setting things up </h3>
+
 What you're going to need is:
 - An Azure subscription with Azure AD enabled
 - An Azure Devops (ADO) organization that is connected to a Directory inside aforementioned Azure Subscription
@@ -31,6 +35,7 @@ What you're going to need is:
 - Something to run a Self Hosted agent on. For more inspiration, check out [this article](https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view=azure-devops&tabs=browser#install)
   - Pro tip: If you're planning on running a Self Hosted Agent on a Debian VM, I've found it way easier to just run the agent as a docker/podman container instead of getting the Linux agent software working. There seems to be some unsolved bug in there that causes the agent not to be able to connect to Azure Devops, which is quite a limitation(!).
 
+<h3> Creating the App registration in the Azure Portal </h3>
 First up, as mentioned before, we're going to need an Azure environment that has Azure AD enabled. Log into your portal and head to "App Registrations". Register a new app, and give it a fitting name. I named mine "self-hosted-agent-pool-sp".
 
 Note: You're also going to have to set up either a Client Certificate or Client Secret for this App Registration. This will allow us to log into the Service Principal either through the Azure CLI, or use the Service Principal through an Azure Devops Service Connection for automation purposes. It's often easiest to get started with a Client Secret, but discussing the pro's and con's of Cert vs Secret falls outside of the scope of this blog.
@@ -50,6 +55,8 @@ If you forgot to do this, during login you'll get the error `No subscriptions fo
 {{<img src="/img/blog/no-role-assignment-error.png" class="img-fluid" title="No Role Assignment" >}}
 
 Of course, just giving the Service Principal permission to call the ADO API is not enough to do what we want to do here, we also have to give the SP the right permissions inside ADO.
+
+<h3> Assigning permissions in Azure DevOps </h3>
 
 First of all, navigate to the Users tab for your organization and add the service principal as a user with Basic permissions. We're going to make it a Project Contributor on the Azure Devops Project I've created earlier, conveniently named "SelfHostedAgent".
 
@@ -72,7 +79,7 @@ readonly ORGANIZATION="YOUR_ORG_HERE"
 readonly POOL_ID="YOUR_POOL_ID"
 readonly API_VERSION="7.1-preview.1"
 
-TOKEN=$(az account get-access-token \
+readonly TOKEN=$(az account get-access-token \
 --resource 499b84ac-1321-427f-aa17-267ca6975798 \
 --query "accessToken" \
 --output tsv)
@@ -111,6 +118,8 @@ It's easiest to set up the Service Connection (that will be passed to the `azure
 
 Right now, this'll output an empty array, as we've not added any agents to this new agent pool yet (or maybe you did, I don't wanna make too many assumptions).
 
+<h3> Finishing up </h3>
+
 So what's next? Well, we retrieve an Azure AD access token, and pass that along in place of the PAT, and we're set!
 
 One point of note, the Microsoft documentation (at this time of writing, I've sent them a note) is a little inconsistent as how to actually do this. At first, it refers to this [article](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow#get-a-token) which led me to think it was as easy as doing a straightforward curl request. It actually turned out to be that easy, but the access_token that this produced (which was also a valid JWT, leading me to believe I was on the right track) turned out to not be the right thing at all!
@@ -123,4 +132,8 @@ If you pass along the accessToken that results from this call and expose it as t
 
 {{<img src="/img/blog/self-hosted-agent-startup.png" class="img-fluid" title="Self Hosted Agent starting up" >}}
 
-Great! But I can understand that you don't actually want to clickops your way through this, so I also cooked up a small bit of [terraform](https://dev.azure.com/leebeenen0950/_git/SelfHostedAgent) that should get you up to speed. You'll still have to create at least one App Registration to let Terraform do what it needs to do, refer to the [README](https://dev.azure.com/leebeenen0950/_git/SelfHostedAgent?path=/README.md) for more details.
+<h3> Automating it </h3>
+
+Great! But let's not ClickOps our way through this. I cooked up a bit of [Terraform](https://dev.azure.com/leebeenen0950/_git/SelfHostedAgent) that helps you automate this. 
+
+You'll still have to create at least one App Registration to let Terraform do what it needs to do, refer to the [README](https://dev.azure.com/leebeenen0950/_git/SelfHostedAgent?path=/README.md) for more details.
