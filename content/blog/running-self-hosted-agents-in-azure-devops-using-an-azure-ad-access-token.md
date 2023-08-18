@@ -26,7 +26,7 @@ Luckily, there's another [way](https://devblogs.microsoft.com/devops/introducing
 
 Sounds great! How though? Well that's what we're here for, so let's get going.
 
-<h3> Setting things up </h3>
+{{<raw>}}<h3 class="display-5">Setting things up</h3> {{</raw>}}
 
 What you're going to need is:
 - An Azure subscription with Azure AD enabled
@@ -35,7 +35,8 @@ What you're going to need is:
 - Something to run a Self Hosted agent on. For more inspiration, check out [this article](https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view=azure-devops&tabs=browser#install)
   - Pro tip: If you're planning on running a Self Hosted Agent on a Debian VM, I've found it way easier to just run the agent as a docker/podman container instead of getting the Linux agent software working. There seems to be some unsolved bug in there that causes the agent not to be able to connect to Azure Devops, which is quite a limitation(!).
 
-<h3> Creating the App registration in the Azure Portal </h3>
+{{<raw>}}<h3 class="display-5">Creating the App registration in the Azure Portal</h3> {{</raw>}}
+
 First up, as mentioned before, we're going to need an Azure environment that has Azure AD enabled. Log into your portal and head to "App Registrations". Register a new app, and give it a fitting name. I named mine "self-hosted-agent-pool-sp".
 
 Note: You're also going to have to set up either a Client Certificate or Client Secret for this App Registration. This will allow us to log into the Service Principal either through the Azure CLI, or use the Service Principal through an Azure Devops Service Connection for automation purposes. It's often easiest to get started with a Client Secret, but discussing the pro's and con's of Cert vs Secret falls outside of the scope of this blog.
@@ -56,7 +57,7 @@ If you forgot to do this, during login you'll get the error `No subscriptions fo
 
 Of course, just giving the Service Principal permission to call the ADO API is not enough to do what we want to do here, we also have to give the SP the right permissions inside ADO.
 
-<h3> Assigning permissions in Azure DevOps </h3>
+{{<raw>}}<h3 class="display-5">Assigning permissions in Azure DevOps</h3> {{</raw>}}
 
 First of all, navigate to the Users tab for your organization and add the service principal as a user with Basic permissions. We're going to make it a Project Contributor on the Azure Devops Project I've created earlier, conveniently named "SelfHostedAgent".
 
@@ -118,7 +119,7 @@ It's easiest to set up the Service Connection (that will be passed to the `azure
 
 Right now, this'll output an empty array, as we've not added any agents to this new agent pool yet (or maybe you did, I don't wanna make too many assumptions).
 
-<h3> Finishing up </h3>
+{{<raw>}}<h3 class="display-5">Finishing up</h3> {{</raw>}}
 
 So what's next? Well, we retrieve an Azure AD access token, and pass that along in place of the PAT, and we're set!
 
@@ -132,7 +133,7 @@ If you pass along the accessToken that results from this call and expose it as t
 
 {{<img src="/img/blog/self-hosted-agent-startup.png" class="img-fluid" title="Self Hosted Agent starting up" >}}
 
-<h3> Automating it </h3>
+{{<raw>}}<h3 class="display-5">Automating it</h3> {{</raw>}}
 
 Great! But let's not ClickOps our way through this. I cooked up a bit of [Terraform](https://dev.azure.com/leebeenen0950/_git/SelfHostedAgent) that helps you automate this. 
 
