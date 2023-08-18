@@ -12,7 +12,7 @@ tags:
 slug: running-self-hosted-agents-with-ad-access-token
 date: 2023-08-17
 ---
-So if you're someone who runs any number of Azure Pipelines a day, at one point you might have considered running a self hosted agent pool.
+If you're someone who runs any number of Azure Pipelines a day, at one point you might have considered running a self hosted agent pool.
 
 Maybe you wanted to isolate your workload from the rest of your organization as you are getting sick of pipeline build queues filling up right when you are planning a very important release to production. Maybe you have very specific needs in terms of OS, tooling, whatever.
 
@@ -33,9 +33,11 @@ What you're going to need is:
 
 First up, as mentioned before, we're going to need an Azure environment that has Azure AD enabled. Log into your portal and head to "App Registrations". Register a new app, and give it a fitting name. I named mine "self-hosted-agent-pool-sp".
 
+Note: You're also going to have to set up either a Client Certificate or Client Secret for this App Registration. This will allow us to log into the Service Principal either through the Azure CLI, or use the Service Principal through an Azure Devops Service Connection for automation purposes. It's often easiest to get started with a Client Secret, but discussing the pro's and con's of Cert vs Secret falls outside of the scope of this blog.
+
 {{<img src="/img/blog/create-app-registration.png" class="img-fluid" title="Create app registration" >}}
 
-Next up, go to API Permissions and add the Azure Devops user_impersonation Delegated permission. This will allow the Service Principal to call the Azure Devops REST API, which is what the Agent software is doing when registering itself as a new agent inside a given agent pool.
+Next up, go to API Permissions and add the Azure Devops `user_impersonation` Delegated permission. This will allow the Service Principal to call the Azure Devops REST API, which is what the Agent software is doing when registering itself as a new agent inside a given agent pool.
 
 {{<img src="/img/blog/add-api-permissions-to-app-registration.png" class="img-fluid" title="Assign API Permissions" >}}
 
@@ -43,7 +45,7 @@ Afterwards, we need to assign a role to this app registration so that it is boun
 
 {{<img src="/img/blog/add-role-assignment.png" class="img-fluid" title="Add Role Assignment" >}}
 
-If you forgot to do this, during login you'll get the error "No subscriptions found for {ClientID}", hopefully pointing you towards fixing this by following the above.
+If you forgot to do this, during login you'll get the error `No subscriptions found for {ClientID}`, hopefully pointing you towards fixing this by following the above.
 
 {{<img src="/img/blog/no-role-assignment-error.png" class="img-fluid" title="No Role Assignment" >}}
 
@@ -55,18 +57,20 @@ First of all, navigate to the Users tab for your organization and add the servic
 
 Next up, we're going to navigate to the Agent Pool we've already created and make sure that the Service Principal (which is now treated the same as an ADO user) can actually Read & Manage the agent pool. For this, we need to add the User Permissions at the Organization Level and add our Service Principal as an Administrator.
 
-Why at the Organization level? If you set the Service Principal as an Administrator at the Project level, the agent will start up but it will give you an error message that somewhat resembles "{Service Principal} needs Manage permissions for pool {Pool Name} to perform the action" and then just error out. This probably has something to do with the fact that Agent Pools are actually an organization-level construct in ADO that are just shared between different projects based on permissions.
+Why at the Organization level? If you set the Service Principal as an Administrator at the Project level, the agent will start up but it will give you an error message that somewhat resembles `{Service Principal} needs Manage permissions for pool {Pool Name} to perform the action` and then just error out. This probably has something to do with the fact that Agent Pools are actually an organization-level construct in ADO that are just shared between different projects based on permissions.
 
 {{<img src="/img/blog/set-agent-pool-user-permissions.png" class="img-fluid" title="Set Agent Pool user permissions" >}}
 
 After this you should be set! To be sure, let's just run a little script to make sure that we've got the basics down so far.
 
 ```bash
-#/bin/bash
+#!/usr/bin/env bash
 
-ORGANIZATION="YOUR_ORG_HERE"
-POOL_ID="YOUR_POOL_ID"
-API_VERSION="7.1-preview.1"
+set -euo pipefail
+
+readonly ORGANIZATION="YOUR_ORG_HERE"
+readonly POOL_ID="YOUR_POOL_ID"
+readonly API_VERSION="7.1-preview.1"
 
 TOKEN=$(az account get-access-token \
 --resource 499b84ac-1321-427f-aa17-267ca6975798 \
@@ -103,15 +107,15 @@ steps:
     scriptPath: ./script.sh
 ```
 
-# TODO: Add a script that creates the service connection in azure devops, convenient and stuff
+It's easiest to set up the Service Connection (that will be passed to the `azureSubscription` input above) manually. Navigate to the project settings inside Azure Devops, create a new service connection (Azure Resource Manager -> Service Principal (Manual) and then fill in the ClientID, TenantID and either the Client Secret or the Client cert depending on what you set up earlier).
 
-Right now, this'll just output an empty array, as we've not added any agents to this new agent pool yet (or maybe you did, I don't wanna make too many assumptions).
+Right now, this'll output an empty array, as we've not added any agents to this new agent pool yet (or maybe you did, I don't wanna make too many assumptions).
 
 So what's next? Well, we retrieve an Azure AD access token, and pass that along in place of the PAT, and we're set!
 
-One point of note, the Microsoft documentation (at this time of writing, I've sent them a note) is a little inconsistent as how to actually do this. At first, it refers to this [article](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow#get-a-token) which led me to think it was as easy as just doing a trivial curl request. It turns out that it was that easy, but the access_token that this produced (which was also a valid JWT, leading me to believe I was on the right track) turns out to not be the right thing at all!
+One point of note, the Microsoft documentation (at this time of writing, I've sent them a note) is a little inconsistent as how to actually do this. At first, it refers to this [article](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow#get-a-token) which led me to think it was as easy as doing a straightforward curl request. It actually turned out to be that easy, but the access_token that this produced (which was also a valid JWT, leading me to believe I was on the right track) turned out to not be the right thing at all!
 
-Passing it along as a bearer token to the aforementioned request results in a frustrating 301 that redirects you to a 401, giving you no further information as to what, if anything, you did wrong.
+Passing it along as a bearer token to the earlier bash script results in a frustrating 301 that redirects you to a 401, giving you no further information as to what, if anything, you did wrong.
 
 Well you're in luck, I'm going to spill the beans on how to avoid making this mistake and wasting an afternoon: Just keep reading the [article](https://learn.microsoft.com/en-us/azure/devops/integrate/get-started/authentication/service-principal-managed-identity?view=azure-devops#q-can-i-use-a-service-principal-or-managed-identity-with-azure-cli), and use the `az account get-access-token` method from the actual example instead of curl'ing the oauth2 endpoint.
 
@@ -119,5 +123,3 @@ If you pass along the accessToken that results from this call and expose it as t
 
 {{<img src="/img/blog/self-hosted-agent-startup.png" class="img-fluid" title="Self Hosted Agent starting up" >}}
 
-
-#TODO: Now this is where we're going to link to a repo with some pipeline ready to use and maybe a small terraform module that sets up all the other mumbo-jumbo for ease of use.
