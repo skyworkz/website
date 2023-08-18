@@ -123,3 +123,4 @@ If you pass along the accessToken that results from this call and expose it as t
 
 {{<img src="/img/blog/self-hosted-agent-startup.png" class="img-fluid" title="Self Hosted Agent starting up" >}}
 
+Great! But I can understand that you don't actually want to clickops your way through this, so I also cooked up a small bit of [terraform](https://dev.azure.com/leebeenen0950/_git/SelfHostedAgent) that should get you up to speed. You'll still have to create at least one App Registration to let Terraform do what it needs to do, refer to the [README](https://dev.azure.com/leebeenen0950/_git/SelfHostedAgent?path=/README.md) for more details.
