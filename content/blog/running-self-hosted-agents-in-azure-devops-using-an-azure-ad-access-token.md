@@ -35,7 +35,7 @@ What you're going to need is:
 - Something to run a Self Hosted agent on. For more inspiration, check out [this article](https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view=azure-devops&tabs=browser#install)
   - Pro tip: If you're planning on running a Self Hosted Agent on a Debian VM, I've found it way easier to just run the agent as a docker/podman container instead of getting the Linux agent software working. There seems to be some unsolved bug in there that causes the agent not to be able to connect to Azure Devops, which is quite a limitation(!).
 
-## Creating the App registration in the Azure Portal
+### Creating the App registration
 
 First up, as mentioned before, we're going to need an Azure environment that has Azure AD enabled. Log into your portal and head to "App Registrations". Register a new app, and give it a fitting name. I named mine "self-hosted-agent-pool-sp".
 
@@ -133,7 +133,7 @@ If you pass along the accessToken that results from this call and expose it as t
 
 {{<img src="/img/blog/self-hosted-agent-startup.png" class="img-fluid" title="Self Hosted Agent starting up" >}}
 
-## Automating it
+### Automating it
 
 Great! But let's not ClickOps our way through this. I cooked up a bit of [Terraform](https://dev.azure.com/leebeenen0950/_git/SelfHostedAgent) that helps you automate this. 
 
