@@ -1,13 +1,13 @@
-    <section class="bg-white diagonal-box">
+    <section class="bg-white">
         <div class="container text-center">
           <div class="row">
-            <div class="col-lg-8 mx-auto content">
+            <div class="col-lg-8 mx-auto">
               <p class="text-muted font-weight-lighter mt-4 mb-2">Companies we work with:</p>
             </div>
           </div>
         </div>
         <div class="clients">
-          <div class="owl-carousel content">
+          <div class="owl-carousel">
               {{ with .Site.GetPage "section" "images" }}
               {{ $resources := .Resources.Match "clients/*" }}
               {{ range shuffle $resources }}

@@ -1,12 +1,12 @@
-    <div class="pt-5 pb-5 diagonal-box bg-muted">
-        <div class="text-center content">
+    <div class="pt-5 pb-5 bg-muted">
+        <div class="text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <p class="text-muted font-weight-lighter mt-2">Technologies we ♥ to work with:</p>
             </div>
           </div>
         </div>
-        <div class="clients content">
+        <div class="clients">
           <div class="owl-carousel">
               {{ with .Site.GetPage "section" "images" }}
               {{ $resources := .Resources.Match "technologies/*" }}
