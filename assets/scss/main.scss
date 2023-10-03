@@ -155,8 +155,12 @@ blockquote {
   font-size: 0.9rem;
 }
 
+.text-italic {
+  font-style: italic;
+}
+
 section {
-  padding-bottom: 7rem;
+  padding-bottom: 3rem;
 }
 
 strong {
@@ -828,6 +832,7 @@ span.navbar-toggler-icon {
  }
 
  .bg-pattern-dark {
+  background-color: $blue;
   }
 
  .bg-hero {
