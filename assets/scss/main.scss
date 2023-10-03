@@ -172,11 +172,12 @@ a {
   display: inline-block;
   font-weight: 600;
   color: $dark-orange;
+  text-decoration: underline;
 }
 
 a:hover {
   text-decoration: none;
-  color: $dark-orange-700;
+  color: $dark-orange;
 }
 
 
