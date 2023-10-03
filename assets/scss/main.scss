@@ -468,7 +468,7 @@ STYLE SWITCHER FOR DEMO
   font-weight: 600;
   font-size: 4rem;
   line-height: 1;
-  color: $teal;
+  color: $orange;
   text-shadow: 10px 10px 40px rgba(0,0,0,0.7);
 }
 
@@ -842,26 +842,12 @@ span.navbar-toggler-icon {
  */
 
  .bg-muted {
-  background:linear-gradient(to right, $color-gray-light-v3 0,#fff);
+  background:linear-gradient(to right, $color-gray-light 0,#fff);
  }
 
- .bg-pattern-dark {background-color: #2f4858;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='390' height='46.8' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%236c757d' stroke-width='5.3' stroke-opacity='0.09'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
- }
-
-
- .bg-diagonal:before {
-  content:"";
-  position:absolute;
-  top:-30%;
-  left:0;
-  z-index:-1;
-  display:block;
-  height:80%;
-  width:100%;
-  min-height: 800px;
-
-  //clip-path:polygon(0 12.3vw,100% 0,100% calc(100% - 12.3vw),0 100%)
+ .bg-pattern-dark {
+  background-color: $blue;
+  background-image: url("/img/hero-background.png");
  }
 
  .bg-hero {
