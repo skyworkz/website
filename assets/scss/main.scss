@@ -37,7 +37,7 @@
 }
 
 .btn {
-    font-family: "Maven Pro", sans-serif;
+    font-family: "proxima-nova", sans-serif;
 }
 
 .gradient-light {
@@ -96,7 +96,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "proxima-nova", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -464,7 +464,8 @@ STYLE SWITCHER FOR DEMO
 
 
 .hero-heading {
-  font-family: "Poppins", sans-serif;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 600;
   font-size: 4rem;
   line-height: 1;
   color: $teal;
@@ -1042,7 +1043,7 @@ a.text-primary:hover, a.text-primary:focus {
 
 .nav-link {
   font-weight: 600;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "proxima-nova", sans-serif;
   padding: 0.5rem 1rem;
   color: $teal;
   -webkit-transition: all 0.2s ease-in-out;
