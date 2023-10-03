@@ -44,13 +44,6 @@
   background-image: repeating-radial-gradient(circle at center center, transparent 0px, transparent 13px,rgba(0,0,0,0.03) 13px, rgba(0,0,0,0.03) 24px,transparent 24px, transparent 62px,rgba(0,0,0,0.03) 62px, rgba(0,0,0,0.03) 96px),repeating-radial-gradient(circle at center center, rgb(255,255,255) 0px, rgb(255,255,255) 14px,rgb(255,255,255) 14px, rgb(255,255,255) 18px,rgb(255,255,255) 18px, rgb(255,255,255) 28px,rgb(255,255,255) 28px, rgb(255,255,255) 32px); background-size: 21px 21px;
 }
 
-.diagonal-box {
-  transform: skewY(-4deg);
-  margin-top: -80px;
-  margin-bottom: 80px;
-}
-
-
 .inverse-diagonal-box {
   transform: skewY(4deg);
   margin-top: -80px;
@@ -66,7 +59,6 @@
 
 .content {
 	margin: 0 auto;
-	transform: skewY(4deg);
 }
 
 .deco-img-wide {
@@ -97,11 +89,11 @@ html {
 
 body {
   font-family: "proxima-nova", sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
+  color: $blue;
+  background-color: $color-gray-light
 }
 
 body:not(.modal){
@@ -112,8 +104,6 @@ pre {
   padding: 10px;
 }
 
-::-moz-selection { background: $yellow}
-::selection { background: $yellow; }
 
 .body {
   position: relative;
@@ -851,6 +841,8 @@ span.navbar-toggler-icon {
  }
 
  .bg-hero {
+  background-color: $blue;
+  background-image: url("/img/hero-background.png");
  }
 
 a {
