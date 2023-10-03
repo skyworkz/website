@@ -25,9 +25,6 @@
 
 .hero {
   background-color: $blue;
-  background: url("/img/hero-background.png");
-
-  background-size: cover;
 }
 
 .btn {
@@ -834,6 +831,8 @@ span.navbar-toggler-icon {
   }
 
  .bg-hero {
+  background: url("/img/hero-background.png");
+  background-size: cover;
  }
 
 a {
