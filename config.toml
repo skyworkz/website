@@ -1,5 +1,5 @@
 title = "Skyworkz"
-baseURL = "https://skyworkz.nl"
+baseURL = "https://blog.skyworkz.nl"
 languageCode = "en-us"
 enableRobotsTXT = true
 pygmentsCodeFences = true
