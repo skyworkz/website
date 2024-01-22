@@ -77,4 +77,7 @@ The negative prompts: *unrealistic eyes, photo realistic*
 
 
 ## Altering an existing image
-After I used the
+I was quite impressed with the image generation capabilites of a custom model from a prompt, so I was curious on whether I could alter an image using a model. For example, could I take a photo and turn it into an anime style image using a bit of prompt engineering and parameter tuning.
+So I decided to use the following image of myself and turn it into an anime style image:
+
+[A selfie, cropped to the *512 x 512* image size that would best work for an image-to-image render using stable diffusion.](img/blog/original.jpeg)
