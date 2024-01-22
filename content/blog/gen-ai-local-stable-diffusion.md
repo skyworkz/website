@@ -41,9 +41,40 @@ This type of technology is under my opinion as revolutionary as the transition f
 # Where can you get it, and how to use it:
 One can very easily get the model and code for stable diffusion from Stability-AI's [website](https://stability.ai/).
 The code is not too difficult to understand, but if one does not want the retrain a model or generate custom scripts here is a web-app that is user fiendly on github, [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui).
-This specific web-app does all the config that you need for a GPU, if you are running on Mac or Linux all of the nececary file installations are done when you execute the webui.sh script. Note that this was not tested on windows, but it looks as if it will also run there.
-This specific web-app does all the config that you need for a GPU, if you are running on Mac or Linux all of the nececary file installations are done when you execute the webui.sh script. Note that this was not tested on windows, but it looks as if it will also run there.
+This specific web-app does all the config that you need for a GPU, if you are running on Mac or Linux all of the nececary file installations are done when you execute the webui.sh script. Note that this was not tested on Windows, but it looks as if it will also run there. Moreover, if one has an AMD based GPU then on Linux you would first have to install [ROCM](https://www.amd.com/en/products/software/rocm.html) and on Windows you would have to use Direct-ML, which can both be a challenge to setup.
+An alternative popular option to AUTOMATIC1111's interface would be the [Comfy-UI](https://github.com/comfyanonymous/ComfyUI) web-app, which was not tested for this blog.
 
 ## Creating an image from a prompt
+The first step to start playing around with stable-diffussion, would be to download the code from github and execute the webui.sh script in a virtual Python environment, at the time of writing the latest version of the interface required Python 3.10.6.
+Upon the execution of the webui.sh script the first time all of the necerary dependancies are installed and the basic model, stable diffusion 1.5 is downloaded from hugginface's website.
+One can also download extra models from [hugginface's website](https://huggingface.co/stabilityai), there are various models that are retrained versions of the baseline stable diffussion model.
+The reason that one would use other models than the regular Stability-AI's stable diffusion model is that baseline model does not always deliver the desired output for a specific type of image, for example one would like to render a pixar-style image of a certain prompt which a custom trained model would deliver the best output.
+The user-interface of AUTOMATIC1111's webapp should look like this:
+
+![AUTOMATIC1111's web-app](img/blog/user-interface.png)
+
+At the top, the specific model that is selected for the image generation is shown. The models are all stored in the directory of the code `models/Stable-diffusion/`.
+The user-interface is quite intuitive, below the model selection pane there are tabs, of which the first two are only relevant to this blog; *txt2img* where a prompt generates an image, and *img2img* where one can give an image and a prompt as input and a new image is generated.
+And then in the pane below the tabs one sees the tuning parameters for the model that are used for the render and to the right the rendered image is displayed at the end of the render.
+
+![Selection of the model's checkpoint](img/blog/model-name.png)
+
+For this specific excercise I wanted to see what a typical model would render if given the prompt for an Anime style image of a machine learning engineer (or more precisely how it would render an anime image of myself.)
+I started playing around with the baseline model, and quikly discovered that it does not do very well trying to render anime style of images. So after searching around online for the best models for this type of output, I settled on the *protogenV22Anime* model.
+When creating an image one has to try and keep it to a size of *512 x 512* pixels, otherwise the generation process takes up an extensive amount of video memory.
+
+
+One thing to note here is that the models typically take up gigabytes of video memory, and if your GPU does not have enough memory to load the model you will not be able to use the models.
+I ran these models on a MacBook Pro with a M3 Pro CPU and 18 GB of shared memory between the GPU and the CPU, so it would not be an issue even is one used a specifically large model.
+For rendering images from prompts there are two parameters that are very important: The CFG scale and the sampling steps. The CFG-scale, or *classifier free guidance*-scale determance how strictly the stable diffusion model follows the prompts.
+While the sampling steps are the number of repetitions that the model uses to generate an image from the prompt.
+I used a CFG-scale of about 5.5 and sampling rate of 25 steps to generate a very impressive anime image of a machine learning engineer:
+
+![The generated anime image of a machine learning engineer from stable difussion.](img/blog/txt2img.png)
+
+The prompts used were: *old school anime style image of a machine learning engineer, working on a macbook pro, glasses, goatee,  blond hair, wearing a blue hoodie*.
+The negative prompts: *unrealistic eyes, photo realistic*
+
 
 ## Altering an existing image
+After I used the
