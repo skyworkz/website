@@ -83,3 +83,19 @@ I was quite impressed with the image generation capabilites of a custom model fr
 So I decided to use the following image of myself and turn it into an anime style image:
 
 {{<img src="/img/blog/original.jpeg" class="img-fluid" title="A selfie, cropped to the *512 x 512* image size that would best work for an image-to-image render using stable diffusion."  width=500>}}
+
+Before altering the image it was cropped to the ideal size of 512 x 512 pixles, this is also the same size of images rendered by prompt only due to memory and performance demands.
+The basic stable diffussion model did not render good results of and anime version of the input image,  the *anything-V3* model was chosen due to it's broad range of capabilities of image rendering.
+
+{{<img src="/img/blog/model-name.jpeg" class="img-fluid" title="The choice of the model used for altering a photo to an anime version."  width=250>}}
+
+One thing that is interesting in the naming of the model name shown above, is that the model is a pruned version of *anything-V3* is a slimmed down version which has any unececary artifacts pruned out.
+This means that the model is optimised for size, specifically GPU memory.
+If one wants to retrain the model, or make an altered version of *anything-V3* then one should use the full version, which is most cases takes up a few GB's more.
+
+For altering an image the render parameters had the following values: *CFG-Scale=8, Denoising strenght=0.5* and a batch of roughly 65 images were rendered.
+These values were chosen after reading up online a bit and doing a bit of *prompt and pray*-ing, which can be a bit of a time consuming exercise.
+The two best resulting images are:
+
+{{<img src="/img/blog/anime1.jpeg" class="img-fluid" style="float:left; margin-right: 10px;" title="The best version of an anime image of the photo uploaded."  width=350>}}
+{{<img src="/img/blog/anime2.jpeg" class="img-fluid" style="float:left" title="A tougher version with sharper edges of the anime image."  width=350>}}
