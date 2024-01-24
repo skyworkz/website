@@ -101,3 +101,12 @@ The two best resulting images are:
 
 {{<img src="/img/blog/anime1.jpeg" class="img-float" style="float:left; margin-right: 10px;" title="The best version of an anime image of the photo uploaded."  width="400">}}
 {{<img src="/img/blog/anime2.jpeg" class="img-float" style="float:left" title="A tougher version with sharper edges of the anime image."  width="400">}}
+
+These images are relativly close to the original photo and it is quite impressive to someone like myself who has not a strong artistic talent.
+
+Now, after quickly creating an image from a prompt and making different versions of a photo the question still remains: why should you care, or how can you benefit from it?
+In the first place it is good fun to be able to use these models as an outlet of your creative side, but as a software/data/machine learning engineer there is more benefits.
+If you are building a website or mobile app and you are in need of some visual content it can help you out if your budget is a bit on the tight side.
+Or if you are a startup and need some visual content for either social media or a website these types of models can be very effective if need to generate content in a short period.
+Currently Stability-AI are playing around with [text-to-video](https://stability.ai/news/stable-video-diffusion-open-ai-video-model) capabilities which at the time of writing can render short 4-second videos from prompts.
+This is still in testing phase, but in the near future we may see full fledged films rendered by generative AI in film theaters and on streaming services.
