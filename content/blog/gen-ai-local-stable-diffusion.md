@@ -54,13 +54,13 @@ One can also download extra models from [hugginface's website](https://huggingfa
 The reason that one would use other models than the regular Stability-AI's stable diffusion model is that baseline model does not always deliver the desired output for a specific type of image, for example one would like to render a pixar-style image of a certain prompt which a custom trained model would deliver the best output.
 The user-interface of AUTOMATIC1111's webapp should look like this:
 
-{{<img src="/img/blog/user-interface.png" class="img-wrap" title="AUTOMATIC1111's web-app" width="75%">}}
+{{<img src="/img/blog/user-interface.png" class="img-wrap" title="AUTOMATIC1111's web-app" width="650">}}
 
 At the top, the specific model that is selected for the image generation is shown. The models are all stored in the directory of the code `models/Stable-diffusion/`.
 The user-interface is quite intuitive, below the model selection pane there are tabs, of which the first two are only relevant to this blog; *txt2img* where a prompt generates an image, and *img2img* where one can give an image and a prompt as input and a new image is generated.
 And then in the pane below the tabs one sees the tuning parameters for the model that are used for the render and to the right the rendered image is displayed at the end of the render.
 
-{{<img src="/img/blog/model-name.png" class="img-wrap" title="Selection of the model's checkpoint"  width="75%">}}
+{{<img src="/img/blog/model-name.png" class="img-wrap" title="Selection of the model's checkpoint"  width="350">}}
 
 For this specific excercise I wanted to see what a typical model would render if given the prompt for an Anime style image of a machine learning engineer (or more precisely how it would render an anime image of myself.)
 I started playing around with the baseline model, and quikly discovered that it does not do very well trying to render anime style of images. So after searching around online for the best models for this type of output, I settled on the *protogenV22Anime* model.
@@ -72,7 +72,7 @@ For rendering images from prompts there are two parameters that are very importa
 While the sampling steps are the number of repetitions that the model uses to generate an image from the prompt.
 I used a CFG-scale of about 5.5 and sampling rate of 25 steps to generate a very impressive anime image of a machine learning engineer:
 
-{{<img src="/img/blog/txt2img.png" class="img-wrap" title="The generated anime image of a machine learning engineer from stable difussion." width="65%">}}
+{{<img src="/img/blog/txt2img.png" class="img-wrap" title="The generated anime image of a machine learning engineer from stable difussion." width="450">}}
 
 The prompts used were: *old school anime style image of a machine learning engineer, working on a macbook pro, glasses, goatee,  blond hair, wearing a blue hoodie*.
 The negative prompts: *unrealistic eyes, photo realistic*
@@ -82,22 +82,22 @@ The negative prompts: *unrealistic eyes, photo realistic*
 I was quite impressed with the image generation capabilites of a custom model from a prompt, so I was curious on whether I could alter an image using a model. For example, could I take a photo and turn it into an anime style image using a bit of prompt engineering and parameter tuning.
 So I decided to use the following image of myself and turn it into an anime style image:
 
-{{<img src="/img/blog/original.jpeg" class="img-wrap" title="A selfie, cropped to the *512 x 512* image size that would best work for an image-to-image render using stable diffusion."  width="60%">}}
+{{<img src="/img/blog/original.jpeg" class="img-wrap" title="A selfie, cropped to the *512 x 512* image size that would best work for an image-to-image render using stable diffusion."  width="450">}}
 
 Before altering the image it was cropped to the ideal size of 512 x 512 pixles, this is also the same size of images rendered by prompt only due to memory and performance demands.
 The basic stable diffussion model did not render good results of and anime version of the input image,  the *anything-V3* model was chosen due to it's broad range of capabilities of image rendering.
 
-{{<img src="/img/blog/model-name.jpeg" class="img-wrap" title="The choice of the model used for altering a photo to an anime version."  width="30%">}}
+{{<img src="/img/blog/model-name.jpeg" class="img-wrap" title="The choice of the model used for altering a photo to an anime version."  width="350">}}
 
 One thing that is interesting in the naming of the model name shown above, is that the model is a pruned version of *anything-V3* is a slimmed down version which has any unececary artifacts pruned out.
 This means that the model is optimised for size, specifically GPU memory.
 If one wants to retrain the model, or make an altered version of *anything-V3* then one should use the full version, which is most cases takes up a few GB's more.
 
-{{<img src="/img/blog/img2img.jpeg" class="img-wrap" style="float:left" title="The user interface of AUTOMATIC1111's webapp when altering an existing image according to a prompt."  width="65%">}}
+{{<img src="/img/blog/img2img.jpeg" class="img-wrap" style="float:left" title="The user interface of AUTOMATIC1111's webapp when altering an existing image according to a prompt."  width="750">}}
 
 For altering an image the render parameters had the following values: *CFG-Scale=8, Denoising strenght=0.5* and a batch of roughly 65 images were rendered.
 These values were chosen after reading up online a bit and doing a bit of *prompt and pray*-ing, which can be a bit of a time consuming exercise.
 The two best resulting images are:
 
-{{<img src="/img/blog/anime1.jpeg" class="img-wrap" style="float:left; margin-right: 10px;" title="The best version of an anime image of the photo uploaded."  width="45%">}}
-{{<img src="/img/blog/anime2.jpeg" class="img-wrap" style="float:left" title="A tougher version with sharper edges of the anime image."  width="45%">}}
+{{<img src="/img/blog/anime1.jpeg" class="img-wrap" style="float:left; margin-right: 10px;" title="The best version of an anime image of the photo uploaded."  width="400">}}
+{{<img src="/img/blog/anime2.jpeg" class="img-wrap" style="float:left" title="A tougher version with sharper edges of the anime image."  width="400">}}
