@@ -1,21 +1,21 @@
 ---
 title: "Using generative AI models to make a scetch from a photo"
-description: "Last year AWS released a new iteration of their API Gateway product: HTTP APIs. This new version promises lower prices, improved performance and some new features. Some features that are available in the older REST API are not (yet) available for HTTP APIs, though. The official comparison page gives a good overview of which features are available in both products."
+description: "Over the past year there has been an explosion of generative AI products. This has not just been the case with LLM-models such as "
 id: "blog"
 date: "2024-01-17"
 author: "Robert Czanik"
 canonicalUrl:
 audio: []
 series: []
-images:
-- "img/blog/original.jpeg"
-- "img/blog/anime1.png"
-- "img/blog/anime2.png"
--
+# images:
+#     - "img/blog/original.jpeg"
+#     - "img/blog/anime1.png"
+#     - "img/blog/anime2.png"
 tags: ["genai", "machinelearning", "images", "stablediffussion"]
 videos: []
 ---
-# What is generative AI and why use it?
+## What is generative AI and why use it?
+
 In this blog post generative AI is introduced, specifically one of the most popular prompt-to-image packages: Stable diffusion.
 First of all, the question is what is generative AI: Generative AI is software that uses some form of input from a user to generate content using a deep learing model.
 The input is usually given as text, in the form of a prompt which specifies the description of the type of content that you want to generate.
@@ -23,7 +23,8 @@ Output generated is usually in some form of media that can be viewed or intepret
 
 Now with a bit of a definition on what Gen-AI is what it does, I am going to give a bit of a summary on how fun it is to play around with some prompts on one of the most popular image-generating AI: Stable diffusion.
 
-# What is stable diffusion, who developed it, and why should you care:
+## What is stable diffusion, who developed it, and why should you care
+
 One of the most popular image Gen-AI packages is called stable diffusion, which takes in text prompts and generates images according to the prompt from a chosen specific model.
 The package was developed by the company [Stability-AI](https://stability.ai/), who strives to develop the largest opensource generative AI models, or packages for general public use.
 Founded in 2019, they were the original developers of the stable diffusion model where images can be generated from prompts.
@@ -38,31 +39,32 @@ It would be wise to become familiar, or at least being aware of this technology 
 This type of technology speeds up the development of visual content for blog posts, content creation, prototyping products, marketing for start-ups, or any other daily need for images could easily use this technology.
 This type of technology is under my opinion as revolutionary as the transition from film to digital photography, or even the invention of the printing press.
 
-# Where can you get it, and how to use it:
+## Where can you get it, and how to use it
+
 One can very easily get the model and code for stable diffusion from Stability-AI's [website](https://stability.ai/).
 The code is not too difficult to understand, but if one does not want the retrain a model or generate custom scripts here is a web-app that is user fiendly on github, [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui).
 This specific web-app does all the config that you need for a GPU, if you are running on Mac or Linux all of the nececary file installations are done when you execute the webui.sh script. Note that this was not tested on Windows, but it looks as if it will also run there. Moreover, if one has an AMD based GPU then on Linux you would first have to install [ROCM](https://www.amd.com/en/products/software/rocm.html) and on Windows you would have to use Direct-ML, which can both be a challenge to setup.
 An alternative popular option to AUTOMATIC1111's interface would be the [Comfy-UI](https://github.com/comfyanonymous/ComfyUI) web-app, which was not tested for this blog.
 
-## Creating an image from a prompt
+### Creating an image from a prompt
+
 The first step to start playing around with stable-diffussion, would be to download the code from github and execute the webui.sh script in a virtual Python environment, at the time of writing the latest version of the interface required Python 3.10.6.
 Upon the execution of the webui.sh script the first time all of the necerary dependancies are installed and the basic model, stable diffusion 1.5 is downloaded from hugginface's website.
 One can also download extra models from [hugginface's website](https://huggingface.co/stabilityai), there are various models that are retrained versions of the baseline stable diffussion model.
 The reason that one would use other models than the regular Stability-AI's stable diffusion model is that baseline model does not always deliver the desired output for a specific type of image, for example one would like to render a pixar-style image of a certain prompt which a custom trained model would deliver the best output.
 The user-interface of AUTOMATIC1111's webapp should look like this:
 
-![AUTOMATIC1111's web-app](img/blog/user-interface.png)
+{{<img src="/img/blog/user-interface.png" class="img-fluid" title="AUTOMATIC1111's web-app">}}
 
 At the top, the specific model that is selected for the image generation is shown. The models are all stored in the directory of the code `models/Stable-diffusion/`.
 The user-interface is quite intuitive, below the model selection pane there are tabs, of which the first two are only relevant to this blog; *txt2img* where a prompt generates an image, and *img2img* where one can give an image and a prompt as input and a new image is generated.
 And then in the pane below the tabs one sees the tuning parameters for the model that are used for the render and to the right the rendered image is displayed at the end of the render.
 
-![Selection of the model's checkpoint](img/blog/model-name.png)
+{{<img src="/img/blog/model-name.png" class="img-fluid" title="Selection of the model's checkpoint"  width=500>}}
 
 For this specific excercise I wanted to see what a typical model would render if given the prompt for an Anime style image of a machine learning engineer (or more precisely how it would render an anime image of myself.)
 I started playing around with the baseline model, and quikly discovered that it does not do very well trying to render anime style of images. So after searching around online for the best models for this type of output, I settled on the *protogenV22Anime* model.
 When creating an image one has to try and keep it to a size of *512 x 512* pixels, otherwise the generation process takes up an extensive amount of video memory.
-
 
 One thing to note here is that the models typically take up gigabytes of video memory, and if your GPU does not have enough memory to load the model you will not be able to use the models.
 I ran these models on a MacBook Pro with a M3 Pro CPU and 18 GB of shared memory between the GPU and the CPU, so it would not be an issue even is one used a specifically large model.
@@ -70,14 +72,14 @@ For rendering images from prompts there are two parameters that are very importa
 While the sampling steps are the number of repetitions that the model uses to generate an image from the prompt.
 I used a CFG-scale of about 5.5 and sampling rate of 25 steps to generate a very impressive anime image of a machine learning engineer:
 
-![The generated anime image of a machine learning engineer from stable difussion.](img/blog/txt2img.png)
+{{<img src="/img/blog/txt2img.png" class="img-fluid" title="The generated anime image of a machine learning engineer from stable difussion." width=500>}}
 
 The prompts used were: *old school anime style image of a machine learning engineer, working on a macbook pro, glasses, goatee,  blond hair, wearing a blue hoodie*.
 The negative prompts: *unrealistic eyes, photo realistic*
 
+### Altering an existing image
 
-## Altering an existing image
 I was quite impressed with the image generation capabilites of a custom model from a prompt, so I was curious on whether I could alter an image using a model. For example, could I take a photo and turn it into an anime style image using a bit of prompt engineering and parameter tuning.
 So I decided to use the following image of myself and turn it into an anime style image:
 
-[A selfie, cropped to the *512 x 512* image size that would best work for an image-to-image render using stable diffusion.](img/blog/original.jpeg)
+{{<img src="/img/blog/original.jpeg" class="img-fluid" title="A selfie, cropped to the *512 x 512* image size that would best work for an image-to-image render using stable diffusion."  width=500>}}
