@@ -1,6 +1,6 @@
 ---
 title: "Using generative AI models to make a sketch from a photo"
-description: "Over the past year there has been an explosion of generative AI products. This has not just been the case with LLM-models such as "
+description: "Over the past year there has been an explosion of generative AI products. This has not just been the case with LLM-models such as ChatGPT, but also image generation suites such as DALL-E. This blogpost explains how to run a generative AI model on your own computer and create images using prompts. Hint: You also need a very strong GPU."
 id: "blog"
 date: "2024-01-17"
 author: "Robert Czanik"
