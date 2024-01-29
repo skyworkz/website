@@ -99,8 +99,8 @@ For altering an image the render parameters had the following values: *CFG-Scale
 These values were chosen after reading up online a bit and doing a bit of *prompt and pray*-ing, which can be a bit of a time consuming exercise.
 The two best resulting images are:
 
-{{<img src="/img/blog/anime1.jpeg" class="img-float" style="float:left; margin-right: 10px;" title="The best version of an anime image of the photo uploaded."  width="400">}}
-{{<img src="/img/blog/anime2.jpeg" class="img-float" style="float:left" title="A tougher version with sharper edges of the anime image."  width="400">}}
+{{<img src="/img/blog/anime1.png" class="img-float" style="float:left; margin-right: 10px;" title="The best version of an anime image of the photo uploaded."  width="400">}}
+{{<img src="/img/blog/anime2.png" class="img-float" style="float:left" title="A tougher version with sharper edges of the anime image."  width="400">}}
 
 These images are relatively close to the original photo and it is quite impressive to someone like myself who has not a strong artistic talent.
 
