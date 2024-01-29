@@ -60,7 +60,7 @@ At the top, the specific model that is selected for the image generation is show
 The user-interface is quite intuitive, below the model selection pane there are tabs, of which the first two are only relevant to this blog; *txt2img* where a prompt generates an image, and *img2img* where one can give an image and a prompt as input and a new image is generated.
 And then in the pane below the tabs one sees the tuning parameters for the model that are used for the render and to the right the rendered image is displayed at the end of the render.
 
-{{<img src="/img/blog/model-name.png" class="img-float" title="Selection of the model's checkpoint"  width="350">}}
+{{<img src="/img/blog/stock-model.png" class="img-float" title="Selection of the model's checkpoint"  width="350">}}
 
 For this specific excercise I wanted to see what a typical model would render if given the prompt for an Anime style image of a machine learning engineer (or more precisely how it would render an anime image of myself.)
 I started playing around with the baseline model, and quickly discovered that it does not do very well trying to render anime style of images. So after searching around online for the best models for this type of output, I settled on the *protogenV22Anime* model.
@@ -87,13 +87,13 @@ So I decided to use the following image of myself and turn it into an anime styl
 Before altering the image it was cropped to the ideal size of 512 x 512 pixles, this is also the same size of images rendered by prompt only due to memory and performance demands.
 The basic Stable Diffusion model did not render good results of and anime version of the input image,  the *anything-V3* model was chosen due to it's broad range of capabilities of image rendering.
 
-{{<img src="/img/blog/model-name.jpeg" class="img-float" title="The choice of the model used for altering a photo to an anime version."  width="350">}}
+{{<img src="/img/blog/model-name.png" class="img-float" title="The choice of the model used for altering a photo to an anime version."  width="350">}}
 
 One thing that is interesting in the naming of the model name shown above, is that the model is a pruned version of *anything-V3* is a slimmed down version which has any unnecessary artifacts pruned out.
 This means that the model is optimised for size, specifically GPU memory.
 If one wants to retrain the model, or make an altered version of *anything-V3* then one should use the full version, which is most cases takes up a few GB's more.
 
-{{<img src="/img/blog/img2img.jpeg" class="img-float" style="float:left" title="The user interface of AUTOMATIC1111's webapp when altering an existing image according to a prompt."  width="750">}}
+{{<img src="/img/blog/img2img.jpeg" class="img-float" style="float:left" title="The user interface of AUTOMATIC1111's webapp when altering an existing image according to a prompt."  width="1200">}}
 
 For altering an image the render parameters had the following values: *CFG-Scale=8, Denoising strenght=0.5* and a batch of roughly 65 images were rendered.
 These values were chosen after reading up online a bit and doing a bit of *prompt and pray*-ing, which can be a bit of a time consuming exercise.
