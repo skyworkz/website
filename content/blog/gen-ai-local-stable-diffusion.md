@@ -93,7 +93,7 @@ One thing that is interesting in the naming of the model name shown above, is th
 This means that the model is optimised for size, specifically GPU memory.
 If one wants to retrain the model, or make an altered version of *anything-V3* then one should use the full version, which is most cases takes up a few GB's more.
 
-{{<img src="/img/blog/img2img.jpeg" class="img-float" style="float:left" title="The user interface of AUTOMATIC1111's webapp when altering an existing image according to a prompt."  width="1200">}}
+{{<img src="/img/blog/img2img.png" class="img-float" style="float:left" title="The user interface of AUTOMATIC1111's webapp when altering an existing image according to a prompt."  width="1200>}}
 
 For altering an image the render parameters had the following values: *CFG-Scale=8, Denoising strenght=0.5* and a batch of roughly 65 images were rendered.
 These values were chosen after reading up online a bit and doing a bit of *prompt and pray*-ing, which can be a bit of a time consuming exercise.
